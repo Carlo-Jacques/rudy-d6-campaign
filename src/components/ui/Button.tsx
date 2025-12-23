@@ -80,7 +80,8 @@ export default function Button({
 		);
 	}
 
-	const isExternal = href.startsWith("http");
+	const isExternal = href.startsWith("http") || href.startsWith("/documents/");
+
 
 	// External links render <a> and default to safe new-tab behavior unless overridden
 	if (isExternal) {
