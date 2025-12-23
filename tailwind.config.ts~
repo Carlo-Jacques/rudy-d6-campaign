@@ -1,0 +1,24 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./src/app/**/*.{ts,tsx}",
+    "./src/components/**/*.{ts,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        patriot: {
+          red: "#B31942",
+          blue: "#0A3161",
+          white: "#FFFFFF",
+          black: "#000000",
+        },
+      },
+    },
+  },
+  plugins: [],
+};
+
+export default config;
+

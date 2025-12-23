@@ -1,65 +1,106 @@
-import Image from "next/image";
+import Button from "@/components/ui/Button";
+import Link from "next/link";
+import { site } from "@/lib/site";
+import PlanSectionClient from "@/components/PlanSectionClient";
+import Hero from "@/components/Hero";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="overflow-x-hidden">
+      <Hero />
+
+      {/* PLEDGE */}
+      <section className="bg-patriot-red text-white">
+        <div className="mx-auto max-w-4xl px-4 py-16 text-center">
+          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">The pledge</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-white/90">
+            Rudy is asking District 6 voters for something simple: a mandate to deliver a clear 10-point plan. If
+            elected, progress will be reported publicly—so residents can measure outcomes, not slogans.
+          </p>
+          <p className="mt-6 text-xl font-bold font-serif italic text-white sm:text-2xl">
+            “If elected, I will keep the 10-point plan—and report progress monthly.”
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* 10-POINT PLAN */}
+      <section id="plan" className="bg-black/[0.02]">
+        <div className="mx-auto max-w-6xl px-4 py-12">
+          <div className="flex items-end justify-between gap-4">
+            <div>
+              <h2 className="text-2xl font-extrabold tracking-tight">The 10-Point Plan</h2>
+              <p className="mt-2 text-black/70">Short, specific commitments. Simple scorecard reporting.</p>
+            </div>
+            <Link href="/about-rudy" className="hidden text-sm font-semibold underline md:inline">
+              Why Rudy →
+            </Link>
+          </div>
+
+          <div className="mt-8">
+            <PlanSectionClient />
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* PETITION (print + mail for now) */}
+      <section id="petition" className="mx-auto max-w-6xl px-4 py-12">
+        <div className="rounded-3xl border border-black/10 bg-white p-6 sm:p-8">
+          <div className="w-full">
+            <h2 className="text-xl font-bold">
+              Help Put a Democrat on the Ballot — No Special Interests, No Ballot Tax
+            </h2>
+
+            <p className="mt-3 text-black/75">
+              To qualify for the ballot in District 6, candidates are forced to choose one of two paths:
+            </p>
+
+            <ul className="mt-4 list-disc space-y-2 pl-5 text-black/80">
+              <li>
+                Pay over <span className="font-semibold">$8,000</span> in fees, or
+              </li>
+              <li>
+                Collect <span className="font-semibold">1,500</span> valid voter petitions
+              </li>
+            </ul>
+
+            <p className="mt-4 text-black/75">
+              That fee isn’t about democracy — it’s a <span className="font-semibold">ballot tax</span> that favors insiders
+              and big donors.
+            </p>
+
+            <p className="mt-4 font-semibold text-black">I’m choosing the grassroots route.</p>
+
+            <p className="mt-4 text-black/75">
+              Instead of paying my way onto the ballot, I’m asking{" "}
+              <span className="font-semibold">Democratic voters in District 6</span> to help qualify this campaign the right
+              way: <span className="font-semibold">with petitions, not money</span>.
+            </p>
+
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+              <Button
+                href="/documents/petition_form.pdf"
+                variant="petition"
+                size="md"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download petition (PDF)
+              </Button>
+              <Button href="#" variant="ghost" size="md">
+                How to submit
+              </Button>
+            </div>
+
+            <div className="mt-4 text-xs text-black/60">
+              Print, sign, and mail back. We’ll add tracking and step-by-step instructions next.
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+    </main>
   );
 }
+

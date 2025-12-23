@@ -1,0 +1,256 @@
+"use client";
+
+import { useMemo, useState } from "react";
+import { AnimatePresence, LayoutGroup, MotionConfig, motion, useReducedMotion } from "framer-motion";
+
+type PlanItem = {
+  id: string;
+  number: number;
+  title: string;
+  bullets: string[];
+};
+
+const DEFAULT_OPEN_ID = "1";
+
+export default function TenPointPlan() {
+  const reduceMotion = useReducedMotion();
+  const [openId, setOpenId] = useState<string | null>(DEFAULT_OPEN_ID);
+
+  const items = useMemo<PlanItem[]>(
+    () => [
+      {
+        id: "1",
+        number: 1,
+        title: "Property Tax Reduction, Oversight & Waste Elimination",
+        bullets: [
+          "Audit every county department to eliminate waste and duplication.",
+          "Freeze property tax increases on primary homes.",
+          "Roll all verified savings directly into property tax reductions.",
+          "Freeze non-essential hiring and block non-critical equipment purchases.",
+          "End the $3.3M/year commissioner security package. I will decline all security and drive my own car to save taxpayers money.",
+          "Conduct a full audit of the Solid Waste Authority (SWA) to eliminate inflated administrative costs, excessive salaries, and unjustified capital spending.",
+          "Roll back construction debris dumping fees, which jumped from $40/ton to $80/ton — a 100% increase with no justification.",
+          "Require SWA to improve vegetation pickup, which has failed residents—especially in District 6.",
+          "Eliminate garbage/waste taxes on vacant property, where residents are being charged for trash collection on land that produces no garbage.",
+          "Require SWA to justify any future fee increases with a full public impact study and transparency.",
+        ],
+      },
+      {
+        id: "2",
+        number: 2,
+        title: "Delinquent Tax Relief & Homeowner Protection",
+        bullets: [
+          "Allow ANY payment method for late taxes.",
+          "Delay tax certificate sales until June of the delinquent year.",
+          "Increase early-payment discount from 4% to 10%.",
+          "Reduce delinquent interest from 18% to 9%.",
+          "Create income-based repayment plans.",
+          "Extend tax deed from 2 years to 5 years for primary homes.",
+          "Require early notices and repayment options.",
+        ],
+      },
+      {
+        id: "3",
+        number: 3,
+        title: "Government Services Reform (DMV & Tax Collector)",
+        bullets: [
+          "Open all Tax Collector lanes.",
+          "Restore walk-in service.",
+          "End the “two-transactions-only” rule.",
+          "Reopen the Royal Palm Beach DMV to relieve Westlake & Loxahatchee overflow.",
+          "Create customer service benchmarks for wait times and staffing.",
+        ],
+      },
+      {
+        id: "4",
+        number: 4,
+        title: "Affordable Housing, ADUs & Local Contractor Incentives",
+        bullets: [
+          "Cap rent increases with an inflation-based formula.",
+          "Fast-track workforce housing approvals.",
+          "Incentivize local contractors through reduced fees and priority permitting.",
+          "Legalize ADUs countywide.",
+          "Provide five free pre-approved ADU/small-home plans.",
+          "Establish a fast-track ADU permit lane (50% faster).",
+        ],
+      },
+      {
+        id: "5",
+        number: 5,
+        title: "Code Enforcement Reform & Inactive Permit Relief",
+        bullets: [
+          "End selective or retaliatory enforcement.",
+          "Require body-cam/video for all enforcement interactions.",
+          "Simplify Ag Exemption to a 15-minute online approval.",
+          "Inactive Permit Relief: Automatically close any permit older than 10 years — no inspections, no walk-throughs, no fines, and no enforcement.",
+          "Protect Acreage/Loxahatchee rural lifestyle from overregulation.",
+        ],
+      },
+      {
+        id: "6",
+        number: 6,
+        title: "AI-Powered Fast Permitting & Local Business Priority",
+        bullets: [
+          "Guarantee 5-working-day permit issuance for standard permits.",
+          "48-hour roof permits (45-hour target) for owner-builders & contractors.",
+          "Integrate AI plan review systems to eliminate delays.",
+          "Create a Small Contractor Fast-Track Lane.",
+          "Require departments to use Palm Beach County contractors first.",
+          "Reduce impact & inspection fees for local small businesses.",
+          "Establish a local contractor preference rule.",
+        ],
+      },
+      {
+        id: "7",
+        number: 7,
+        title: "Cut Food Costs & Improve Grocery Access",
+        bullets: [
+          "Grocery Relief Partnership with major chains.",
+          "Attract Aldi, Lidl, BJ’s and other discount grocers.",
+          "Run mobile farmers markets & county food co-ops.",
+          "Require price transparency and weekly online postings.",
+          "Reduce fees for affordable-price grocers.",
+        ],
+      },
+      {
+        id: "8",
+        number: 8,
+        title: "Reduce FPL Bills Through County–Utility Partnership",
+        bullets: [
+          "Expand FPL bill assistance and outreach.",
+          "Require infrastructure upgrades (underground lines, hardened poles).",
+          "Add solar co-ops, shared solar fields, and permit fee waivers.",
+          "Use county purchasing power to secure benefits for residents.",
+          "Energy-efficiency audits for seniors & low-income homes.",
+        ],
+      },
+      {
+        id: "9",
+        number: 9,
+        title: "Healthcare Access, Ambulance Billing Reform & Quality of Life",
+        bullets: [
+          "Open urgent care centers in Acreage, Loxahatchee & Westlake.",
+          "Deploy mobile mental health units.",
+          "Expand telehealth partnerships.",
+          "Create a County Emergency Medical Billing Reform Program.",
+          "Cap EMS charges and negotiate lower countywide rates.",
+          "Require payment plans before collections.",
+          "Create a Medical Debt Prevention Fund.",
+          "Ensure no resident is afraid to call 911 due to cost.",
+          "Expand youth centers, senior hubs, parks, and sports facilities.",
+        ],
+      },
+      {
+        id: "10",
+        number: 10,
+        title: "Infrastructure, Transportation, Port Efficiency & Fuel Savings Card",
+        bullets: [
+          "Full District 6 drainage/canal audit with public maintenance timelines.",
+          "Expand micro-transit, bus routes, and key road improvements.",
+          "Exercise county oversight over Tri-Rail, Palm Tran, and transit spending.",
+          "Cut administrative waste and reinvest savings to lower fares.",
+          "Require quarterly cost-per-rider transparency.",
+          "Improve routes, reliability, and service in District 6.",
+          "Cut waste at the Port of Palm Beach and reduce port fees that inflate fuel and shipping costs.",
+          "Create a County–Port Efficiency Compact to reinvest savings into stabilizing fuel-related fees.",
+          "Issue a Palm Beach County Fuel Savings Card to ALL residents for instant fuel discounts at gas pumps via partnerships with Wawa, RaceTrac, Mobil, Costco, Shell and others.",
+          "Grow eco-tourism, sports tourism, and cultural tourism to generate revenue and reduce the tax burden.",
+        ],
+      },
+    ],
+    []
+  );
+
+  const duration = reduceMotion ? 0 : 0.28;
+
+  return (
+    <MotionConfig transition={{ duration, ease: [0.22, 1, 0.36, 1] }}>
+      <LayoutGroup>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {items.map((item, idx) => {
+            const isOpen = openId === item.id;
+
+            return (
+              <motion.article
+                key={item.id}
+                layout
+                initial={reduceMotion ? false : { opacity: 0, y: 16 }}
+                whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
+                transition={{ delay: reduceMotion ? 0 : Math.min(idx, 6) * 0.04 }}
+                className={[
+                  "relative overflow-hidden rounded-2xl border border-black/10 bg-white",
+                  "shadow-sm",
+                ].join(" ")}
+              >
+                {/* Top accent bar (campaign blue) */}
+                <div className="absolute left-4 top-4 h-2 w-14 rounded-full bg-patriot-blue" />
+
+                <button
+                  type="button"
+                  onClick={() => setOpenId((prev) => (prev === item.id ? null : item.id))}
+                  className="w-full text-left"
+                  aria-expanded={isOpen}
+                  aria-controls={`plan-panel-${item.id}`}
+                >
+                  <motion.div
+                    layout
+                    whileHover={reduceMotion ? undefined : { y: -2, scale: 1.01 }}
+                    whileTap={reduceMotion ? undefined : { scale: 0.99 }}
+                    className="p-5 pt-8"
+                  >
+                    <div className="text-xs font-semibold text-black/50">Point {item.number}</div>
+
+                    <div className="mt-1 flex items-start justify-between gap-4">
+                      <h3 className="text-base font-extrabold leading-snug tracking-tight text-black">
+                        {item.title}
+                      </h3>
+
+                      <motion.span
+                        aria-hidden="true"
+                        animate={isOpen ? { rotate: 180 } : { rotate: 0 }}
+                        className="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-full border border-black/10 bg-white text-black/60"
+                      >
+                        ▼
+                      </motion.span>
+                    </div>
+
+                    <div className="mt-2 text-sm text-black/70">
+                      {isOpen ? "Tap to collapse" : "Tap to expand details"}
+                    </div>
+                  </motion.div>
+                </button>
+
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      id={`plan-panel-${item.id}`}
+                      key="content"
+                      layout
+                      initial={reduceMotion ? { opacity: 1 } : { opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={reduceMotion ? { opacity: 1 } : { opacity: 0 }}
+                      className="px-5 pb-5"
+                    >
+                      <div className="rounded-xl border border-black/10 bg-black/[0.02] p-4">
+                        <ul className="space-y-2 text-sm text-black/80">
+                          {item.bullets.map((b) => (
+                            <li key={b} className="flex gap-2">
+                              <span className="mt-[0.35rem] h-1.5 w-1.5 shrink-0 rounded-full bg-patriot-red" />
+                              <span>{b}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.article>
+            );
+          })}
+        </div>
+      </LayoutGroup>
+    </MotionConfig>
+  );
+}
+
