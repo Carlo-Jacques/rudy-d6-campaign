@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { site } from "@/lib/site";
 import { cn } from "@/lib/cn";
 import Button from "@/components/ui/Button";
@@ -10,6 +12,7 @@ type NavItem = { label: string; href: string };
 
 const NAV: NavItem[] = [
   { label: "About Rudy", href: "/about-rudy" },
+  { label: "Endorsements", href: "/endorsements" },
   { label: "District 6", href: "/district-6" },
   { label: "Volunteer", href: site.volunteerUrl },
   { label: "Donate", href: site.donateUrl },
@@ -17,6 +20,7 @@ const NAV: NavItem[] = [
 ];
 
 export default function Header() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -41,26 +45,79 @@ export default function Header() {
         scrolled ? "bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70" : "bg-white"
       )}
     >
-      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
+      <motion.div
+        className="mx-auto flex max-w-6xl items-center justify-between px-4"
+        animate={{
+          height: scrolled ? 56 : 67
+        }}
+        transition={{
+          type: "spring",
+          stiffness: 260,
+          damping: 35,
+          mass: 0.8
+        }}
+      >
         <Link href="/" className="flex items-center gap-2">
-          <div className="grid h-9 w-9 place-items-center rounded-full border border-black/15 font-semibold">
-            R
-          </div>
-          <div className="leading-tight">
-            <div className="text-sm font-semibold">{site.name}</div>
-            <div className="text-xs text-black/60">County Commissioner • {site.district}</div>
-          </div>
+          <motion.img
+            src="/img/logo-transparent.png"
+            alt="Rudy Campaign Logo"
+            className="w-auto object-contain"
+            animate={{
+              height: scrolled ? 40 : 48
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 260,
+              damping: 35,
+              mass: 0.8
+            }}
+          />
         </Link>
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-4 md:flex">
-          <Link className="text-sm font-medium text-black/80 hover:text-black" href="/about-rudy">
+          <Link
+            className={cn(
+              "text-sm font-medium transition-colors",
+              pathname === "/about-rudy"
+                ? "text-patriot-red"
+                : "text-black/80 hover:text-black"
+            )}
+            href="/about-rudy"
+          >
             About Rudy
           </Link>
-          <Link className="text-sm font-medium text-black/80 hover:text-black" href="/district-6">
+          <Link
+            className={cn(
+              "text-sm font-medium transition-colors",
+              pathname === "/endorsements"
+                ? "text-patriot-red"
+                : "text-black/80 hover:text-black"
+            )}
+            href="/endorsements"
+          >
+            Endorsements
+          </Link>
+          <Link
+            className={cn(
+              "text-sm font-medium transition-colors",
+              pathname === "/district-6"
+                ? "text-patriot-red"
+                : "text-black/80 hover:text-black"
+            )}
+            href="/district-6"
+          >
             District 6
           </Link>
-          <Link className="text-sm font-medium text-black/80 hover:text-black" href={site.volunteerUrl}>
+          <Link
+            className={cn(
+              "text-sm font-medium transition-colors",
+              pathname === site.volunteerUrl
+                ? "text-patriot-red"
+                : "text-black/80 hover:text-black"
+            )}
+            href={site.volunteerUrl}
+          >
             Volunteer
           </Link>
 
@@ -68,29 +125,25 @@ export default function Header() {
             Donate
           </Button>
 
-	<Button
-	  href="/documents/petition_form.pdf"
-	  variant="petition"
-	  size="md"
-	  target="_blank"
-	  rel="noopener noreferrer"
-	>
-	  Petition
-	</Button>
+          <Button
+            href={site.petitionUrl}
+            variant="petition"
+            size="md"
+          >
+            Petition
+          </Button>
         </nav>
 
         {/* Mobile controls */}
         <div className="flex items-center gap-2 md:hidden">
-	<Button
-	  href="/documents/petition_form.pdf"
-	  variant="petition"
-	  size="md"
-	  target="_blank"
-	  rel="noopener noreferrer"
-	>
-	  Petition
-	</Button>
-          
+          <Button
+            href={site.petitionUrl}
+            variant="petition"
+            size="md"
+          >
+            Petition
+          </Button>
+
 
           <button
             type="button"
@@ -102,7 +155,7 @@ export default function Header() {
             Menu
           </button>
         </div>
-      </div>
+      </motion.div>
 
       {/* Mobile menu panel */}
       {open && (
@@ -125,37 +178,62 @@ export default function Header() {
               <Link
                 href="/about-rudy"
                 onClick={() => setOpen(false)}
-                className="rounded-xl px-3 py-3 text-base font-semibold hover:bg-black/5"
+                className={cn(
+                  "rounded-xl px-3 py-3 text-base font-semibold transition-colors",
+                  pathname === "/about-rudy"
+                    ? "text-patriot-red bg-patriot-red/5"
+                    : "hover:bg-black/5"
+                )}
               >
                 About Rudy
               </Link>
               <Link
+                href="/endorsements"
+                onClick={() => setOpen(false)}
+                className={cn(
+                  "rounded-xl px-3 py-3 text-base font-semibold transition-colors",
+                  pathname === "/endorsements"
+                    ? "text-patriot-red bg-patriot-red/5"
+                    : "hover:bg-black/5"
+                )}
+              >
+                Endorsements
+              </Link>
+              <Link
                 href="/district-6"
                 onClick={() => setOpen(false)}
-                className="rounded-xl px-3 py-3 text-base font-semibold hover:bg-black/5"
+                className={cn(
+                  "rounded-xl px-3 py-3 text-base font-semibold transition-colors",
+                  pathname === "/district-6"
+                    ? "text-patriot-red bg-patriot-red/5"
+                    : "hover:bg-black/5"
+                )}
               >
                 District 6
               </Link>
               <Link
                 href={site.volunteerUrl}
                 onClick={() => setOpen(false)}
-                className="rounded-xl px-3 py-3 text-base font-semibold hover:bg-black/5"
+                className={cn(
+                  "rounded-xl px-3 py-3 text-base font-semibold transition-colors",
+                  pathname === site.volunteerUrl
+                    ? "text-patriot-red bg-patriot-red/5"
+                    : "hover:bg-black/5"
+                )}
               >
                 Volunteer
               </Link>
 
               <div className="mt-2 grid gap-2">
-		<Button
-		  href="/documents/petition_form.pdf"
-		  variant="petition"
-		  size="md"
-		  target="_blank"
-		  rel="noopener noreferrer"
-		  className="w-full"
-		>
-		  Petition
-		</Button>
-                
+                <Button
+                  href={site.petitionUrl}
+                  variant="petition"
+                  size="md"
+                  className="w-full"
+                >
+                  Petition
+                </Button>
+
                 <Button href={site.donateUrl} variant="donate" size="md" className="w-full">
                   Donate
                 </Button>

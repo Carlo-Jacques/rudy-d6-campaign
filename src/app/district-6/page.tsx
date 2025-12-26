@@ -141,7 +141,22 @@ export default function District6Page() {
                             priority
                         />
                         <div className="bg-white p-4 text-xs text-black/60">
-                            Map of District 6 boundaries
+                            <div className="mb-2">Map of District 6 boundaries</div>
+                            <div className="text-center">
+                                <a href="http://belleglade-fl.com/" target="_blank" rel="noopener noreferrer" className="text-patriot-blue hover:underline">Belle Glade</a>
+                                {" | "}
+                                <a href="http://www.loxahatcheegrovesfl.gov/" target="_blank" rel="noopener noreferrer" className="text-patriot-blue hover:underline">Loxahatchee Groves</a>
+                                {" | "}
+                                <a href="http://www.cityofpahokee.com/Pages/index" target="_blank" rel="noopener noreferrer" className="text-patriot-blue hover:underline">Pahokee</a>
+                                {" | "}
+                                <a href="http://www.royalpalmbeach.com/" target="_blank" rel="noopener noreferrer" className="text-patriot-blue hover:underline">Royal Palm Beach</a>
+                                {" | "}
+                                <a href="http://www.southbaycity.com/" target="_blank" rel="noopener noreferrer" className="text-patriot-blue hover:underline">South Bay</a>
+                                {" | "}
+                                <a href="http://www.wellingtonfl.gov/" target="_blank" rel="noopener noreferrer" className="text-patriot-blue hover:underline">Wellington</a>
+                                {" | "}
+                                <a href="https://www.westlakegov.com/" target="_blank" rel="noopener noreferrer" className="text-patriot-blue hover:underline">Westlake</a>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -8,6 +8,9 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: `${site.name} | ${site.district}`,
   description: "A simple, accountable 10-point plan for District 6.",
+  icons: {
+    icon: "/img/logo.png",
+  },
 };
 
 export default function RootLayout({

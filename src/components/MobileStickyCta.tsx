@@ -11,16 +11,14 @@ export default function MobileStickyCta() {
 
       <div className="relative border-t border-black/10 px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3">
         <div className="mx-auto flex max-w-6xl justify-center items-center gap-2">
-	<Button
-	  href="/documents/petition_form.pdf"
-	  variant="petition"
-	  size="md"
-	  target="_blank"
-	  rel="noopener noreferrer"
-	>
-	  Download petition (PDF)
-	</Button>
-          
+          <Button
+            href={site.petitionUrl}
+            variant="petition"
+            size="md"
+          >
+            Sign Petition
+          </Button>
+
 
           <Button href={site.donateUrl} variant="donate" size="md" className="shrink-0">
             Donate

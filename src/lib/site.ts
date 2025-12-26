@@ -3,12 +3,12 @@ export const site = {
   district: "District 6",
   donateUrl: "#donate", // replace later with real donation URL
   volunteerUrl: "/volunteer",
-  petitionUrl: "documents/petition_form.pdf",
+  petitionUrl: "/petition",
   social: {
-    facebook: "",
-    instagram: "",
-    x: "",
-    youtube: "",
+    facebook: "https://facebook.com",
+    instagram: "https://instagram.com",
+    x: "https://x.com",
+    youtube: "https://youtube.com",
   },
 };
 

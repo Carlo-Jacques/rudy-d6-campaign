@@ -1,17 +1,20 @@
 "use client";
 
 import Button from "@/components/ui/Button";
-import HeroVideo from "@/components/HeroVideo";
+
 
 export default function Hero() {
     return (
         <section className="relative h-[85dvh] min-h-[520px] overflow-hidden">
-            <div className="absolute inset-0 -z-10">
-                <HeroVideo />
-                <div className="absolute inset-0 bg-black/55" />
-            </div>
+            <div
+                className="absolute inset-0 z-0 bg-[url('/img/hero-background-mobile.png')] bg-cover bg-center bg-no-repeat md:bg-[url('/img/hero-background-desktop.png')]"
+                aria-hidden="true"
+            />
 
-            <div className="mx-auto flex h-full max-w-6xl items-center px-4">
+            {/* Dark overlay */}
+            <div className="absolute inset-0 z-[1] bg-black/55" />
+
+            <div className="relative z-10 mx-auto flex h-full max-w-6xl items-center px-4">
                 <div className="max-w-2xl">
                     <div className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold text-white">
                         County Commissioner • District 6

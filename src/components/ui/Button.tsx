@@ -9,6 +9,7 @@ type AnchorProps = React.AnchorHTMLAttributes<HTMLAnchorElement>;
 type NativeButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 type Props = {
+<<<<<<< HEAD
 	href?: string;
 	children: React.ReactNode;
 	className?: string;
@@ -17,6 +18,21 @@ type Props = {
 	prefetch?: boolean;
 } & Omit<AnchorProps, "href" | "className" | "children"> &
 	Omit<NativeButtonProps, "className" | "children">;
+=======
+  href?: string;
+  children: React.ReactNode;
+  className?: string;
+  variant?: ButtonVariant;
+  size?: ButtonSize;
+  prefetch?: boolean;
+  target?: string;
+  rel?: string;
+  // Button-specific props
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
+  onClick?: () => void;
+};
+>>>>>>> c5c45ac (V.2)
 
 const base =
 	"inline-flex items-center justify-center rounded-full font-semibold transition-all duration-200 ease-out " +
@@ -53,6 +69,7 @@ const variants: Record<ButtonVariant, string> = {
 };
 
 export default function Button({
+<<<<<<< HEAD
 	href,
 	children,
 	className,
@@ -60,6 +77,19 @@ export default function Button({
 	size = "md",
 	prefetch,
 	...rest
+=======
+  href,
+  children,
+  className,
+  variant = "ghost",
+  size = "md",
+  prefetch,
+  target,
+  rel,
+  type,
+  disabled,
+  onClick,
+>>>>>>> c5c45ac (V.2)
 }: Props) {
 	const classes = cn(base, sizes[size], variants[variant], className);
 
@@ -80,6 +110,7 @@ export default function Button({
 		);
 	}
 
+<<<<<<< HEAD
 	const isExternal = href.startsWith("http") || href.startsWith("/documents/");
 
 
@@ -108,4 +139,30 @@ export default function Button({
 			{children}
 		</Link>
 	);
+=======
+  if (isExternal) {
+    return (
+      <a
+        href={href}
+        className={classes}
+        target={target ?? "_blank"}
+        rel={rel ?? "noopener noreferrer"}
+      >
+        {children}
+      </a>
+    );
+  }
+
+  return (
+    <Link
+      href={href}
+      className={classes}
+      prefetch={prefetch}
+      target={target}
+      rel={rel}
+    >
+      {children}
+    </Link>
+  );
+>>>>>>> c5c45ac (V.2)
 }
