@@ -8,31 +8,19 @@ type ButtonSize = "sm" | "md" | "lg";
 type AnchorProps = React.AnchorHTMLAttributes<HTMLAnchorElement>;
 type NativeButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-type Props = {
-<<<<<<< HEAD
+type CommonProps = {
 	href?: string;
 	children: React.ReactNode;
 	className?: string;
 	variant?: ButtonVariant;
 	size?: ButtonSize;
 	prefetch?: boolean;
-} & Omit<AnchorProps, "href" | "className" | "children"> &
-	Omit<NativeButtonProps, "className" | "children">;
-=======
-  href?: string;
-  children: React.ReactNode;
-  className?: string;
-  variant?: ButtonVariant;
-  size?: ButtonSize;
-  prefetch?: boolean;
-  target?: string;
-  rel?: string;
-  // Button-specific props
-  type?: "button" | "submit" | "reset";
-  disabled?: boolean;
-  onClick?: () => void;
 };
->>>>>>> c5c45ac (V.2)
+
+// If href is present, allow anchor props (target/rel/etc). If not, allow button props.
+type Props =
+	| (CommonProps & { href: string } & Omit<AnchorProps, "href" | "className" | "children">)
+	| (CommonProps & { href?: undefined } & Omit<NativeButtonProps, "className" | "children">);
 
 const base =
 	"inline-flex items-center justify-center rounded-full font-semibold transition-all duration-200 ease-out " +
@@ -47,122 +35,71 @@ const sizes: Record<ButtonSize, string> = {
 };
 
 const variants: Record<ButtonVariant, string> = {
-	// PRIMARY: Petition (red)
 	petition:
 		"bg-patriot-red text-white shadow-sm " +
 		"hover:-translate-y-[1px] hover:shadow-md hover:bg-patriot-red/95",
 
-	// SECONDARY: Donate (blue)
 	donate:
 		"bg-patriot-blue text-white shadow-sm " +
 		"hover:-translate-y-[1px] hover:shadow-md hover:bg-patriot-blue/95",
 
-	// TERTIARY: Plan (white/blue outline)
 	plan:
 		"bg-white text-patriot-blue border border-patriot-blue/30 shadow-sm " +
 		"hover:-translate-y-[1px] hover:shadow-md hover:border-patriot-blue/50 hover:bg-patriot-blue/[0.03]",
 
-	// Utility/secondary link button
 	ghost:
 		"bg-transparent text-patriot-blue border border-patriot-blue/30 " +
 		"hover:-translate-y-[1px] hover:bg-patriot-blue/[0.04] hover:border-patriot-blue/45",
 };
 
-export default function Button({
-<<<<<<< HEAD
-	href,
-	children,
-	className,
-	variant = "ghost",
-	size = "md",
-	prefetch,
-	...rest
-=======
-  href,
-  children,
-  className,
-  variant = "ghost",
-  size = "md",
-  prefetch,
-  target,
-  rel,
-  type,
-  disabled,
-  onClick,
->>>>>>> c5c45ac (V.2)
-}: Props) {
+export default function Button(props: Props) {
+	const {
+		children,
+		className,
+		variant = "ghost",
+		size = "md",
+		prefetch,
+	} = props;
+
 	const classes = cn(base, sizes[size], variants[variant], className);
 
-	// Render <button> when no href is provided
-	if (!href) {
-		const { type, disabled, onClick, ...buttonRest } = rest as NativeButtonProps;
-
+	// 1) Render <button> when no href is provided
+	if (!("href" in props) || !props.href) {
+		const { href, ...buttonRest } = props as CommonProps & NativeButtonProps;
 		return (
-			<button
-				type={type ?? "button"}
-				disabled={disabled}
-				onClick={onClick}
-				className={classes}
-				{...buttonRest}
-			>
+			<button className={classes} {...buttonRest}>
 				{children}
 			</button>
 		);
 	}
 
-<<<<<<< HEAD
-	const isExternal = href.startsWith("http") || href.startsWith("/documents/");
+	const { href, ...anchorRest } = props as CommonProps & { href: string } & AnchorProps;
 
+	// Treat PDFs/docs as "external" so we can use target/rel safely.
+	const isExternal =
+		href.startsWith("http") ||
+		href.startsWith("mailto:") ||
+		href.startsWith("tel:") ||
+		href.startsWith("/documents/");
 
-	// External links render <a> and default to safe new-tab behavior unless overridden
+	// 2) External / asset links render <a>
 	if (isExternal) {
-		const { target, rel, ...anchorRest } = rest as AnchorProps;
+		const target = anchorRest.target ?? "_blank";
+		const rel = anchorRest.rel ?? "noopener noreferrer";
 
 		return (
-			<a
-				href={href}
-				className={classes}
-				target={target ?? "_blank"}
-				rel={rel ?? "noopener noreferrer"}
-				{...anchorRest}
-			>
+			<a href={href} className={classes} target={target} rel={rel} {...anchorRest}>
 				{children}
 			</a>
 		);
 	}
 
-	// Internal links render Next <Link>
-	// Note: Next <Link> does not accept all anchor props directly (e.g., target/rel).
-	// If you need target/rel for internal assets, pass an absolute URL or treat as external.
+	// 3) Internal links render Next <Link>
+	// NOTE: We do NOT forward target/rel to Link (keeps typing/build clean).
 	return (
 		<Link href={href} className={classes} prefetch={prefetch}>
 			{children}
 		</Link>
 	);
-=======
-  if (isExternal) {
-    return (
-      <a
-        href={href}
-        className={classes}
-        target={target ?? "_blank"}
-        rel={rel ?? "noopener noreferrer"}
-      >
-        {children}
-      </a>
-    );
-  }
-
-  return (
-    <Link
-      href={href}
-      className={classes}
-      prefetch={prefetch}
-      target={target}
-      rel={rel}
-    >
-      {children}
-    </Link>
-  );
->>>>>>> c5c45ac (V.2)
 }
+
