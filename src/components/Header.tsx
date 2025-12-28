@@ -67,7 +67,7 @@ export default function Header() {
       <motion.div
         className="mx-auto flex max-w-6xl items-center justify-between px-4"
         animate={{
-          height: scrolled ? 56 : 67
+          height: scrolled ? 70 : 100
         }}
         transition={{
           type: "spring",
@@ -82,7 +82,7 @@ export default function Header() {
             alt="Rudy Campaign Logo"
             className="w-auto object-contain"
             animate={{
-              height: scrolled ? 40 : 48
+              height: scrolled ? 60 : 86
             }}
             transition={{
               type: "spring",
