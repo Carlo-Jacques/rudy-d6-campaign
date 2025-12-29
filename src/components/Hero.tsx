@@ -51,7 +51,7 @@ export default function Hero() {
                     {/* Right side - Contact form */}
                     <div className="flex flex-col justify-center">
                         <div className="w-full rounded-2xl bg-white/10 p-6 backdrop-blur-sm sm:p-8">
-                            <h2 className="text-2xl font-bold text-white mb-4">Get in Touch</h2>
+                            <h2 className="text-2xl font-bold text-white mb-4">Call to Serve</h2>
                             <p className="text-sm text-white/80 mb-6">
                                 Have a question or want to get involved? Send us a message.
                             </p>
