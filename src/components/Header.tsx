@@ -60,8 +60,8 @@ export default function Header() {
     }
   }, [prioritiesOpen, aboutRudyOpen]);
 
-  const isPrioritiesPage = pathname?.startsWith("/priorities/");
-  const isAboutRudyPage = pathname?.startsWith("/about-rudy");
+  const isPrioritiesPage = pathname && pathname.startsWith("/priorities/") && pathname !== "/priorities";
+  const isAboutRudyPage = pathname && pathname.startsWith("/about-rudy");
 
   return (
     <header
@@ -208,7 +208,7 @@ export default function Header() {
               onClick={() => setPrioritiesOpen(!prioritiesOpen)}
               className={cn(
                 "text-sm font-medium transition-colors flex items-center gap-1",
-                isPrioritiesPage || pathname === "/" || pathname === "/#plan"
+                isPrioritiesPage
                   ? "text-patriot-red"
                   : "text-black/80 hover:text-black"
               )}
@@ -455,7 +455,7 @@ export default function Header() {
                   onClick={() => setPrioritiesOpen(!prioritiesOpen)}
                   className={cn(
                     "w-full rounded-xl px-3 py-3 text-left text-base font-semibold transition-colors flex items-center justify-between",
-                    isPrioritiesPage || pathname === "/" || pathname === "/#plan"
+                    isPrioritiesPage
                       ? "text-patriot-red bg-patriot-red/5"
                       : "hover:bg-black/5"
                   )}
