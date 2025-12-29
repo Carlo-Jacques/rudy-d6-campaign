@@ -15,10 +15,6 @@ export default function PetitionPage() {
                 <p className="text-lg mb-4">
                     If you live in District 6, please print, complete the petition and mail back to me at:
                 </p>
-                <address className="not-italic font-medium text-lg ml-4 mb-4 border-l-4 border-rudy-red pl-4 py-1">
-                    6521 Carol Street<br />
-                    Loxahatchee, FL 33470
-                </address>
             </div>
 
             <div className="w-full h-[800px] border border-gray-300 rounded-lg shadow-md overflow-hidden bg-gray-100">
