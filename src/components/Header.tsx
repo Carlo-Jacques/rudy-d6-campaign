@@ -25,7 +25,9 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [prioritiesOpen, setPrioritiesOpen] = useState(false);
+  const [aboutRudyOpen, setAboutRudyOpen] = useState(false);
   const prioritiesRef = useRef<HTMLDivElement>(null);
+  const aboutRudyRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -47,15 +49,19 @@ export default function Header() {
       if (prioritiesRef.current && !prioritiesRef.current.contains(event.target as Node)) {
         setPrioritiesOpen(false);
       }
+      if (aboutRudyRef.current && !aboutRudyRef.current.contains(event.target as Node)) {
+        setAboutRudyOpen(false);
+      }
     };
 
-    if (prioritiesOpen) {
+    if (prioritiesOpen || aboutRudyOpen) {
       document.addEventListener("mousedown", handleClickOutside);
       return () => document.removeEventListener("mousedown", handleClickOutside);
     }
-  }, [prioritiesOpen]);
+  }, [prioritiesOpen, aboutRudyOpen]);
 
   const isPrioritiesPage = pathname?.startsWith("/priorities/");
+  const isAboutRudyPage = pathname?.startsWith("/about-rudy");
 
   return (
     <header
@@ -95,17 +101,83 @@ export default function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-4 md:flex">
-          <Link
-            className={cn(
-              "text-sm font-medium transition-colors",
-              pathname === "/about-rudy"
-                ? "text-patriot-red"
-                : "text-black/80 hover:text-black"
-            )}
-            href="/about-rudy"
-          >
-            About Rudy
-          </Link>
+          {/* About Rudy Dropdown */}
+          <div className="relative" ref={aboutRudyRef}>
+            <button
+              type="button"
+              onClick={() => setAboutRudyOpen(!aboutRudyOpen)}
+              className={cn(
+                "text-sm font-medium transition-colors flex items-center gap-1",
+                isAboutRudyPage
+                  ? "text-patriot-red"
+                  : "text-black/80 hover:text-black"
+              )}
+            >
+              About Rudy
+              <svg
+                className={cn(
+                  "h-4 w-4 transition-transform",
+                  aboutRudyOpen ? "rotate-180" : ""
+                )}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            <AnimatePresence>
+              {aboutRudyOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute left-0 top-full mt-2 w-56 rounded-xl border border-black/10 bg-white shadow-xl z-50"
+                >
+                  <div className="p-2">
+                    <Link
+                      href="/about-rudy/bio"
+                      onClick={() => setAboutRudyOpen(false)}
+                      className={cn(
+                        "block rounded-lg px-4 py-3 text-sm transition-colors",
+                        pathname === "/about-rudy/bio"
+                          ? "bg-patriot-red/10 text-patriot-red font-semibold"
+                          : "hover:bg-black/5 text-black/80"
+                      )}
+                    >
+                      Bio
+                    </Link>
+                    <Link
+                      href="/about-rudy/preparedness"
+                      onClick={() => setAboutRudyOpen(false)}
+                      className={cn(
+                        "block rounded-lg px-4 py-3 text-sm transition-colors",
+                        pathname === "/about-rudy/preparedness"
+                          ? "bg-patriot-red/10 text-patriot-red font-semibold"
+                          : "hover:bg-black/5 text-black/80"
+                      )}
+                    >
+                      Preparedness
+                    </Link>
+                    <Link
+                      href="/about-rudy/why-i-want-to-run"
+                      onClick={() => setAboutRudyOpen(false)}
+                      className={cn(
+                        "block rounded-lg px-4 py-3 text-sm transition-colors",
+                        pathname === "/about-rudy/why-i-want-to-run"
+                          ? "bg-patriot-red/10 text-patriot-red font-semibold"
+                          : "hover:bg-black/5 text-black/80"
+                      )}
+                    >
+                      Why I want to run
+                    </Link>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
           <Link
             className={cn(
               "text-sm font-medium transition-colors",
@@ -219,7 +291,7 @@ export default function Header() {
           <Button
             href={site.petitionUrl}
             variant="petition"
-            size="md"
+            size="sm"
           >
             Petition
           </Button>
@@ -266,18 +338,91 @@ export default function Header() {
             </div>
 
             <div className="flex flex-col gap-1 p-4">
-              <Link
-                href="/about-rudy"
-                onClick={() => setOpen(false)}
-                className={cn(
-                  "rounded-xl px-3 py-3 text-base font-semibold transition-colors",
-                  pathname === "/about-rudy"
-                    ? "text-patriot-red bg-patriot-red/5"
-                    : "hover:bg-black/5"
-                )}
-              >
-                About Rudy
-              </Link>
+              {/* About Rudy Dropdown in Mobile */}
+              <div>
+                <button
+                  type="button"
+                  onClick={() => setAboutRudyOpen(!aboutRudyOpen)}
+                  className={cn(
+                    "w-full rounded-xl px-3 py-3 text-left text-base font-semibold transition-colors flex items-center justify-between",
+                    isAboutRudyPage
+                      ? "text-patriot-red bg-patriot-red/5"
+                      : "hover:bg-black/5"
+                  )}
+                >
+                  About Rudy
+                  <svg
+                    className={cn(
+                      "h-5 w-5 transition-transform",
+                      aboutRudyOpen ? "rotate-180" : ""
+                    )}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <AnimatePresence>
+                  {aboutRudyOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="ml-4 mt-1 space-y-1 border-l-2 border-black/10 pl-4">
+                        <Link
+                          href="/about-rudy/bio"
+                          onClick={() => {
+                            setAboutRudyOpen(false);
+                            setOpen(false);
+                          }}
+                          className={cn(
+                            "block rounded-lg px-3 py-2 text-sm transition-colors",
+                            pathname === "/about-rudy/bio"
+                              ? "bg-patriot-red/10 text-patriot-red font-semibold"
+                              : "text-black/70 hover:bg-black/5"
+                          )}
+                        >
+                          Bio
+                        </Link>
+                        <Link
+                          href="/about-rudy/preparedness"
+                          onClick={() => {
+                            setAboutRudyOpen(false);
+                            setOpen(false);
+                          }}
+                          className={cn(
+                            "block rounded-lg px-3 py-2 text-sm transition-colors",
+                            pathname === "/about-rudy/preparedness"
+                              ? "bg-patriot-red/10 text-patriot-red font-semibold"
+                              : "text-black/70 hover:bg-black/5"
+                          )}
+                        >
+                          Preparedness
+                        </Link>
+                        <Link
+                          href="/about-rudy/why-i-want-to-run"
+                          onClick={() => {
+                            setAboutRudyOpen(false);
+                            setOpen(false);
+                          }}
+                          className={cn(
+                            "block rounded-lg px-3 py-2 text-sm transition-colors",
+                            pathname === "/about-rudy/why-i-want-to-run"
+                              ? "bg-patriot-red/10 text-patriot-red font-semibold"
+                              : "text-black/70 hover:bg-black/5"
+                          )}
+                        >
+                          Why I want to run
+                        </Link>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
               <Link
                 href="/endorsements"
                 onClick={() => setOpen(false)}
