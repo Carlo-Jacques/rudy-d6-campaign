@@ -84,9 +84,10 @@ export default function Header() {
       >
         <Link href="/" className="flex items-center gap-2">
           <motion.img
-            src="/img/logo-transparent.png"
-            alt="Rudy Campaign Logo"
+            src="/img/logo-rudy.png"
+            alt="Rudolph Tinker for Palm Beach Commissioner District 6"
             className="w-auto object-contain"
+            style={{ height: "auto", maxHeight: "80px" }}
             animate={{
               height: scrolled ? 60 : 86
             }}
