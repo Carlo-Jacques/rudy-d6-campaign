@@ -71,9 +71,9 @@ export default function Header() {
       )}
     >
       <motion.div
-        className="mx-auto flex max-w-6xl items-center justify-between px-4"
+        className="mx-auto flex max-w-6xl flex-row items-center justify-between px-4 md:flex-col md:justify-center md:py-2"
         animate={{
-          height: scrolled ? 70 : 100
+          height: 220
         }}
         transition={{
           type: "spring",
@@ -82,7 +82,7 @@ export default function Header() {
           mass: 0.8
         }}
       >
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2 md:mb-3">
           <motion.img
             src="/img/logo-rudy.png"
             alt="Rudolph Tinker for Palm Beach Commissioner District 6"
@@ -101,7 +101,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-4 md:flex">
+        <nav className="hidden items-center gap-4 md:flex md:justify-center">
           {/* About Rudy Dropdown */}
           <div className="relative" ref={aboutRudyRef}>
             <button
