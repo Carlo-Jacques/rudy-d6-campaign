@@ -12,7 +12,7 @@ export default function DonatePage() {
         <main>
             {/* Above the fold - with background image */}
             <div 
-                className="relative min-h-screen bg-[url('/img/donate-rudy-background.jpg')] bg-cover bg-center bg-no-repeat bg-fixed"
+                className="relative min-h-screen bg-[url('/img/donate-rudy-background.webp')] bg-cover bg-center bg-no-repeat bg-fixed"
             >
                 {/* Content */}
                 <div className="relative z-10 min-h-screen">
