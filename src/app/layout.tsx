@@ -9,10 +9,7 @@ export const metadata: Metadata = {
   title: `${site.name} | ${site.district}`,
   description: "A simple, accountable 10-point plan for District 6.",
   icons: {
-    icon: [
-      { url: "/img/logo-640.webp", sizes: "any" },
-      { url: "/img/logo.png", sizes: "any", type: "image/png" },
-    ],
+    icon: "/img/logo.png",
   },
 };
 

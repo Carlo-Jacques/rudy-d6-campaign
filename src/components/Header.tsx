@@ -60,8 +60,14 @@ export default function Header() {
     }
   }, [prioritiesOpen, aboutRudyOpen]);
 
-  const isPrioritiesPage = pathname && pathname.startsWith("/priorities/") && pathname !== "/priorities";
-  const isAboutRudyPage = pathname && pathname.startsWith("/about-rudy");
+  const isPrioritiesPage = pathname?.startsWith("/priorities/");
+  const isAboutRudyPage = pathname?.startsWith("/about-rudy");
+  const isDonatePage = pathname === "/donate";
+
+  // Hide header on donate page
+  if (isDonatePage) {
+    return null;
+  }
 
   return (
     <header
@@ -71,9 +77,9 @@ export default function Header() {
       )}
     >
       <motion.div
-        className="mx-auto flex max-w-6xl flex-row items-center justify-between px-4 md:flex-col md:justify-center md:py-2"
+        className="mx-auto flex max-w-6xl items-center justify-between px-4"
         animate={{
-          height: 220
+          height: scrolled ? 70 : 100
         }}
         transition={{
           type: "spring",
@@ -82,12 +88,11 @@ export default function Header() {
           mass: 0.8
         }}
       >
-        <Link href="/" className="flex items-center gap-2 md:mb-3">
+        <Link href="/" className="flex items-center gap-2">
           <motion.img
-            src="/img/logo-rudy.png"
-            alt="Rudolph Tinker for Palm Beach Commissioner District 6"
+            src="/img/logo-transparent.png"
+            alt="Rudy Campaign Logo"
             className="w-auto object-contain"
-            style={{ height: "auto", maxHeight: "80px" }}
             animate={{
               height: scrolled ? 60 : 86
             }}
@@ -101,7 +106,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-4 md:flex md:justify-center">
+        <nav className="hidden items-center gap-4 md:flex">
           {/* About Rudy Dropdown */}
           <div className="relative" ref={aboutRudyRef}>
             <button
@@ -209,7 +214,7 @@ export default function Header() {
               onClick={() => setPrioritiesOpen(!prioritiesOpen)}
               className={cn(
                 "text-sm font-medium transition-colors flex items-center gap-1",
-                isPrioritiesPage
+                isPrioritiesPage || pathname === "/" || pathname === "/#plan"
                   ? "text-patriot-red"
                   : "text-black/80 hover:text-black"
               )}
@@ -456,7 +461,7 @@ export default function Header() {
                   onClick={() => setPrioritiesOpen(!prioritiesOpen)}
                   className={cn(
                     "w-full rounded-xl px-3 py-3 text-left text-base font-semibold transition-colors flex items-center justify-between",
-                    isPrioritiesPage
+                    isPrioritiesPage || pathname === "/" || pathname === "/#plan"
                       ? "text-patriot-red bg-patriot-red/5"
                       : "hover:bg-black/5"
                   )}
