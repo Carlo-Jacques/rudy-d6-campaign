@@ -20,7 +20,7 @@ export default function MobileStickyCta() {
           </Button>
 
 
-          <Button href={site.donateUrl} variant="donate" size="md" className="shrink-0">
+          <Button href={site.donateUrl} variant="donate" size="md" className="shrink-0" target="_blank">
             Donate
           </Button>
         </div>

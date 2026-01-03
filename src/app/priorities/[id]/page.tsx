@@ -116,7 +116,7 @@ export default async function PriorityPage({ params }: Props) {
             <Button href={site.petitionUrl} variant="petition" size="md">
               Sign the Petition
             </Button>
-            <Button href={site.donateUrl} variant="donate" size="md">
+            <Button href={site.donateUrl} variant="donate" size="md" target="_blank">
               Donate
             </Button>
           </div>

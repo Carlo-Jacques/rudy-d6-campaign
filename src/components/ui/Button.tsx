@@ -89,7 +89,17 @@ export default function Button(props: Props) {
     );
   }
 
-  // 3) Internal links render Next <Link>
+  // 3) Internal links render Next <Link> or <a> if target is provided
+  if (anchorRest.target) {
+    // Use regular <a> tag when target is specified (e.g., _blank)
+    const rel = anchorRest.rel ?? (anchorRest.target === "_blank" ? "noopener noreferrer" : undefined);
+    return (
+      <a href={href} className={classes} target={anchorRest.target} rel={rel} {...anchorRest}>
+        {children}
+      </a>
+    );
+  }
+
   return (
     <Link href={href} className={classes} prefetch={prefetch}>
       {children}

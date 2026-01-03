@@ -290,7 +290,7 @@ export default function Header() {
             Volunteer
           </Link>
 
-          <Button href={site.donateUrl} variant="donate" size="sm">
+          <Button href={site.donateUrl} variant="donate" size="sm" target="_blank">
             Donate
           </Button>
 
@@ -551,7 +551,7 @@ export default function Header() {
                   Petition
                 </Button>
 
-                <Button href={site.donateUrl} variant="donate" size="md" className="w-full">
+                <Button href={site.donateUrl} variant="donate" size="md" className="w-full" target="_blank">
                   Donate
                 </Button>
               </div>

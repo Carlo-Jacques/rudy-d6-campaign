@@ -1,7 +1,7 @@
 export const site = {
   name: "Rudy for County Commissioner",
   district: "District 6",
-  donateUrl: "#donate", // replace later with real donation URL
+  donateUrl: "/donate",
   volunteerUrl: "/volunteer",
   petitionUrl: "/petition",
   social: {
