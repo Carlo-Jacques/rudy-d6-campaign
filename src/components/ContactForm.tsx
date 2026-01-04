@@ -66,7 +66,7 @@ export default function ContactForm() {
             <div className="pt-2">
                 <button
                     type="submit"
-                    className="w-full rounded-full bg-patriot-red px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-200 ease-out hover:bg-patriot-blue hover:-translate-y-[1px] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-patriot-blue focus-visible:ring-offset-2 active:translate-y-[1px]"
+                    className="w-full rounded-full bg-green-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-200 ease-out hover:bg-green-700 hover:-translate-y-[1px] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2 active:translate-y-[1px]"
                 >
                     Send Message
                 </button>
