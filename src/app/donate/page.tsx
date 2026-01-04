@@ -72,9 +72,9 @@ export default function DonatePage() {
                                 <p className="text-xs leading-relaxed text-black/70">
                                     Florida law permits a maximum contribution of $1,000 per individual and $1,000 per corporation for the Primary Election. For the General Election, Florida law permits a maximum contribution of $1,000 per individual and $1,000 per corporation regardless of the amount given in the Primary Election. Contributions must be from a US Citizen or permanent resident in the US and are not deductible for Federal Tax purposes.
                                 </p>
-                                <p className="mt-3 text-xs font-semibold text-black">
-                                    Paid for by Rudy Tinker, Republican, for Palm Beach County Commission, District 6.
-                                </p>
+                                    <p className="mt-3 text-xs font-semibold text-black">
+                                        Paid for by Rudolph Tinker, Democrat, for Palm Beach County Commission, District 6.
+                                    </p>
                             </div>
                         </div>
                     </div>
