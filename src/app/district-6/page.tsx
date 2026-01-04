@@ -143,7 +143,11 @@ export default function District6Page() {
                         <div className="bg-white p-4 text-xs text-black/60">
                             <div className="mb-2">Map of District 6 boundaries</div>
                             <div className="text-center">
+                                <a href="http://www.theacreage.com/" target="_blank" rel="noopener noreferrer" className="text-patriot-blue hover:underline">The Acreage</a>
+                                {" | "}
                                 <a href="http://belleglade-fl.com/" target="_blank" rel="noopener noreferrer" className="text-patriot-blue hover:underline">Belle Glade</a>
+                                {" | "}
+                                <a href="">Loxahatchee</a>
                                 {" | "}
                                 <a href="http://www.loxahatcheegrovesfl.gov/" target="_blank" rel="noopener noreferrer" className="text-patriot-blue hover:underline">Loxahatchee Groves</a>
                                 {" | "}
