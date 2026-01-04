@@ -77,9 +77,12 @@ export default function Header() {
       )}
     >
       <motion.div
-        className="mx-auto flex max-w-6xl items-center justify-between px-4"
+        className={cn(
+          "mx-auto flex max-w-6xl px-4 md:py-2 overflow-hidden",
+          scrolled ? "flex-row items-center justify-between" : "flex-col items-center justify-center"
+        )}
         animate={{
-          height: scrolled ? 70 : 100
+          height: scrolled ? 100 : 250
         }}
         transition={{
           type: "spring",
@@ -88,13 +91,13 @@ export default function Header() {
           mass: 0.8
         }}
       >
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className={cn("flex items-center gap-2 shrink-0", scrolled ? "" : "md:mb-3")}>
           <motion.img
             src="/img/logo-transparent.png"
             alt="Rudy Campaign Logo"
             className="w-auto object-contain"
             animate={{
-              height: scrolled ? 60 : 86
+              height: scrolled ? 90 : 116
             }}
             transition={{
               type: "spring",
@@ -106,7 +109,10 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-4 md:flex">
+        <nav className={cn(
+          "hidden items-center gap-2 md:flex shrink-0",
+          scrolled ? "justify-end" : "justify-center flex-wrap"
+        )}>
           {/* About Rudolph Dropdown */}
           <div className="relative" ref={aboutRudyRef}>
             <button

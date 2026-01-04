@@ -82,21 +82,20 @@ export default function HomePage() {
 
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <Button
-                href="/documents/petition_form.pdf"
+                href="/petition"
                 variant="petition"
                 size="md"
-                target="_blank"
-                rel="noopener noreferrer"
               >
-                Download petition (PDF)
-              </Button>
-              <Button href="#" variant="ghost" size="md">
-                How to submit
+                Sign the Petition
               </Button>
             </div>
 
-            <div className="mt-4 text-xs text-black/60">
-              Print, sign, and mail back. We'll add tracking and step-by-step instructions next.
+            <div className="mt-6 p-4 bg-black/[0.02] rounded-lg border border-black/10">
+              <p className="text-sm font-semibold text-black mb-2">Print and mail to this address:</p>
+              <p className="text-sm text-black/80">
+                14611 Southern Blvd Unit # 634<br />
+                Loxahatchee FL 33470
+              </p>
             </div>
           </div>
         </div>
