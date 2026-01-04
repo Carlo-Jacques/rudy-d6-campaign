@@ -72,13 +72,20 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full border-b border-black/10",
-        scrolled ? "bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70" : "bg-white"
+        "sticky top-0 z-50 w-full border-b border-black/10 relative",
+        scrolled ? "bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70" : ""
       )}
+      style={{
+        backgroundImage: scrolled ? "none" : "url('/img/banner.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        opacity: scrolled ? 1 : 0.75
+      }}
     >
       <motion.div
         className={cn(
-          "mx-auto flex max-w-6xl px-4 md:py-2 overflow-hidden",
+          "mx-auto flex max-w-6xl px-4 md:py-2",
           scrolled ? "flex-row items-center justify-between" : "flex-col items-center justify-center"
         )}
         animate={{
@@ -146,7 +153,7 @@ export default function Header() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute left-0 top-full mt-2 w-56 rounded-xl border border-black/10 bg-white shadow-xl z-50"
+                  className="absolute left-0 top-full mt-2 w-56 rounded-xl border border-black/10 bg-white shadow-xl z-[100] max-h-[calc(100vh-120px)] overflow-y-auto"
                 >
                   <div className="p-2">
                     <Link
@@ -224,7 +231,7 @@ export default function Header() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute left-0 top-full mt-2 w-80 rounded-xl border border-black/10 bg-white shadow-xl z-50"
+                  className="absolute left-0 top-full mt-2 w-80 rounded-xl border border-black/10 bg-white shadow-xl z-[100] max-h-[calc(100vh-120px)] overflow-y-auto"
                 >
                   <div className="p-2">
                     {priorities.map((priority) => (
