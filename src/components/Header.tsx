@@ -12,7 +12,7 @@ import { priorities } from "@/lib/priorities";
 type NavItem = { label: string; href: string };
 
 const NAV: NavItem[] = [
-  { label: "About Rudy", href: "/about-rudy" },
+  { label: "About Rudolph", href: "/about-rudy" },
   { label: "Endorsements", href: "/endorsements" },
   { label: "District 6", href: "/district-6" },
   { label: "Volunteer", href: site.volunteerUrl },
@@ -107,7 +107,7 @@ export default function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-4 md:flex">
-          {/* About Rudy Dropdown */}
+          {/* About Rudolph Dropdown */}
           <div className="relative" ref={aboutRudyRef}>
             <button
               type="button"
@@ -119,7 +119,7 @@ export default function Header() {
                   : "text-black/80 hover:text-black"
               )}
             >
-              About Rudy
+              About Rudolph
               <svg
                 className={cn(
                   "h-4 w-4 transition-transform",
@@ -184,28 +184,6 @@ export default function Header() {
               )}
             </AnimatePresence>
           </div>
-          <Link
-            className={cn(
-              "text-sm font-medium transition-colors",
-              pathname === "/endorsements"
-                ? "text-patriot-red"
-                : "text-black/80 hover:text-black"
-            )}
-            href="/endorsements"
-          >
-            Endorsements
-          </Link>
-          <Link
-            className={cn(
-              "text-sm font-medium transition-colors",
-              pathname === "/district-6"
-                ? "text-patriot-red"
-                : "text-black/80 hover:text-black"
-            )}
-            href="/district-6"
-          >
-            District 6
-          </Link>
           
           {/* Priorities Dropdown */}
           <div className="relative" ref={prioritiesRef}>
@@ -277,6 +255,39 @@ export default function Header() {
               )}
             </AnimatePresence>
           </div>
+          <Link
+            className={cn(
+              "text-sm font-medium transition-colors",
+              pathname === "/endorsements"
+                ? "text-patriot-red"
+                : "text-black/80 hover:text-black"
+            )}
+            href="/endorsements"
+          >
+            Endorsements
+          </Link>
+          <Link
+            className={cn(
+              "text-sm font-medium transition-colors",
+              pathname === "/district-6"
+                ? "text-patriot-red"
+                : "text-black/80 hover:text-black"
+            )}
+            href="/district-6"
+          >
+            District 6
+          </Link>
+          <Link
+            className={cn(
+              "text-sm font-medium transition-colors",
+              pathname === "/news"
+                ? "text-patriot-red"
+                : "text-black/80 hover:text-black"
+            )}
+            href="/news"
+          >
+            News
+          </Link>
 
           <Link
             className={cn(
@@ -344,7 +355,7 @@ export default function Header() {
             </div>
 
             <div className="flex flex-col gap-1 p-4">
-              {/* About Rudy Dropdown in Mobile */}
+              {/* About Rudolph Dropdown in Mobile */}
               <div>
                 <button
                   type="button"
@@ -356,7 +367,7 @@ export default function Header() {
                       : "hover:bg-black/5"
                   )}
                 >
-                  About Rudy
+                  About Rudolph
                   <svg
                     className={cn(
                       "h-5 w-5 transition-transform",
@@ -429,30 +440,6 @@ export default function Header() {
                   )}
                 </AnimatePresence>
               </div>
-              <Link
-                href="/endorsements"
-                onClick={() => setOpen(false)}
-                className={cn(
-                  "rounded-xl px-3 py-3 text-base font-semibold transition-colors",
-                  pathname === "/endorsements"
-                    ? "text-patriot-red bg-patriot-red/5"
-                    : "hover:bg-black/5"
-                )}
-              >
-                Endorsements
-              </Link>
-              <Link
-                href="/district-6"
-                onClick={() => setOpen(false)}
-                className={cn(
-                  "rounded-xl px-3 py-3 text-base font-semibold transition-colors",
-                  pathname === "/district-6"
-                    ? "text-patriot-red bg-patriot-red/5"
-                    : "hover:bg-black/5"
-                )}
-              >
-                District 6
-              </Link>
               
               {/* Priorities Dropdown in Mobile */}
               <div>
@@ -527,6 +514,42 @@ export default function Header() {
                   )}
                 </AnimatePresence>
               </div>
+              <Link
+                href="/endorsements"
+                onClick={() => setOpen(false)}
+                className={cn(
+                  "rounded-xl px-3 py-3 text-base font-semibold transition-colors",
+                  pathname === "/endorsements"
+                    ? "text-patriot-red bg-patriot-red/5"
+                    : "hover:bg-black/5"
+                )}
+              >
+                Endorsements
+              </Link>
+              <Link
+                href="/district-6"
+                onClick={() => setOpen(false)}
+                className={cn(
+                  "rounded-xl px-3 py-3 text-base font-semibold transition-colors",
+                  pathname === "/district-6"
+                    ? "text-patriot-red bg-patriot-red/5"
+                    : "hover:bg-black/5"
+                )}
+              >
+                District 6
+              </Link>
+              <Link
+                href="/news"
+                onClick={() => setOpen(false)}
+                className={cn(
+                  "rounded-xl px-3 py-3 text-base font-semibold transition-colors",
+                  pathname === "/news"
+                    ? "text-patriot-red bg-patriot-red/5"
+                    : "hover:bg-black/5"
+                )}
+              >
+                News
+              </Link>
 
               <Link
                 href={site.volunteerUrl}

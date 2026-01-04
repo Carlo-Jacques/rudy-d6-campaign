@@ -3,6 +3,7 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 import PlanSectionClient from "@/components/PlanSectionClient";
 import Hero from "@/components/Hero";
+import NewsSection from "@/components/NewsSection";
 
 export default function HomePage() {
   return (
@@ -42,6 +43,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* NEWS */}
+      <NewsSection />
+
       {/* PETITION (print + mail for now) */}
       <section id="petition" className="mx-auto max-w-6xl px-4 py-12">
         <div className="rounded-3xl border border-black/10 bg-white p-6 sm:p-8">
@@ -64,14 +68,14 @@ export default function HomePage() {
             </ul>
 
             <p className="mt-4 text-black/75">
-              That fee isn’t about democracy — it’s a <span className="font-semibold">ballot tax</span> that favors insiders
+              That fee isn't about democracy — it's a <span className="font-semibold">ballot tax</span> that favors insiders
               and big donors.
             </p>
 
-            <p className="mt-4 font-semibold text-black">I’m choosing the grassroots route.</p>
+            <p className="mt-4 font-semibold text-black">I'm choosing the grassroots route.</p>
 
             <p className="mt-4 text-black/75">
-              Instead of paying my way onto the ballot, I’m asking{" "}
+              Instead of paying my way onto the ballot, I'm asking{" "}
               <span className="font-semibold">Democratic voters in District 6</span> to help qualify this campaign the right
               way: <span className="font-semibold">with petitions, not money</span>.
             </p>
@@ -92,7 +96,7 @@ export default function HomePage() {
             </div>
 
             <div className="mt-4 text-xs text-black/60">
-              Print, sign, and mail back. We’ll add tracking and step-by-step instructions next.
+              Print, sign, and mail back. We'll add tracking and step-by-step instructions next.
             </div>
           </div>
         </div>
