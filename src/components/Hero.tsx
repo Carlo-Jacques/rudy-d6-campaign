@@ -1,12 +1,11 @@
 "use client";
 
 import Button from "@/components/ui/Button";
-import ContactForm from "@/components/ContactForm";
 
 
 export default function Hero() {
     return (
-        <section className="relative min-h-[100dvh] overflow-hidden pt-[100px] md:pt-0 md:h-[100dvh] md:min-h-[520px]">
+        <section className="relative min-h-[100dvh] overflow-visible pt-[100px] md:pt-0 md:min-h-[100dvh]">
             <div
                 className="absolute inset-0 z-0 bg-[url('/img/hero-background-mobile.png')] bg-cover bg-center bg-no-repeat md:bg-[url('/img/hero-background-desktop.png')]"
                 aria-hidden="true"
@@ -15,8 +14,8 @@ export default function Hero() {
             {/* Dark overlay */}
             <div className="absolute inset-0 z-[1] bg-black/55" />
 
-            <div className="relative z-10 mx-auto flex min-h-[calc(100dvh-100px)] max-w-6xl items-center px-4 py-12 md:min-h-full md:py-0">
-                <div className="grid w-full grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
+            <div className="relative z-10 mx-auto flex min-h-[calc(100dvh-100px)] max-w-6xl items-center px-4 py-12 md:min-h-[100dvh] md:py-8">
+                <div className="grid w-full grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-2 lg:gap-12">
                     {/* Left side - Text content */}
                     <div className="flex flex-col justify-center">
                         <div className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold text-white w-fit">
@@ -46,14 +45,33 @@ export default function Hero() {
                         </div>
                     </div>
 
-                    {/* Right side - Contact form */}
+                    {/* Right side - Mailing address and PDF */}
                     <div className="flex flex-col justify-center">
                         <div className="w-full rounded-2xl bg-white/10 p-6 backdrop-blur-sm sm:p-8">
-                            <h2 className="text-2xl font-bold text-white mb-4">Get in Touch</h2>
-                            <p className="text-sm text-white/80 mb-6">
-                                Have a question or want to get involved? Send us a message.
-                            </p>
-                            <ContactForm />
+                            <h2 className="text-2xl font-bold text-white mb-4">Help Put a Democrat on the Ballot — Petitions, Not Pay-to-Play Politics</h2>
+                            
+                            {/* Mailing address */}
+                            <div className="mb-6 rounded-lg border border-white/20 bg-white/5 p-4 backdrop-blur-sm">
+                                <p className="text-sm font-semibold text-white mb-2">Complete and mail the petition to this address:</p>
+                                <p className="text-sm text-white/90 leading-relaxed">
+                                    14611 Southern Blvd Unit # 634<br />
+                                    Loxahatchee FL 33470
+                                </p>
+                            </div>
+
+                            {/* PDF Viewer */}
+                            <div className="w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] border border-white/20 rounded-lg overflow-hidden bg-white/10 backdrop-blur-sm">
+                                <iframe
+                                    src="/documents/petition_form.pdf#view=FitH"
+                                    className="w-full h-full"
+                                    title="Petition Form"
+                                >
+                                    <div className="flex flex-col items-center justify-center h-full p-8 text-center text-white/80">
+                                        <p className="mb-2">Your browser does not support inline PDF viewing.</p>
+                                        <a href="/documents/petition_form.pdf" className="text-white hover:underline font-medium">View the PDF here</a>
+                                    </div>
+                                </iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
