@@ -3,7 +3,7 @@ import { site } from "@/lib/site";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: `Preparedness | About Rudy | ${site.name}`,
+    title: `Preparedness | About Rudolph | ${site.name}`,
     description: "Rudolph's academic background, certifications, and professional licenses.",
 };
 
@@ -14,10 +14,10 @@ export default function PreparednessPage() {
             <div className="bg-black/[0.02] py-16 sm:py-20">
                 <div className="mx-auto max-w-4xl px-4">
                     <Link
-                        href="/about-rudy"
+                        href="/about-rudolph"
                         className="mb-4 inline-flex items-center gap-2 text-sm font-semibold text-patriot-blue hover:text-patriot-red transition-colors"
                     >
-                        ← Back to About Rudy
+                        ← Back to About Rudolph
                     </Link>
                     <div className="mt-4">
                         <h1 className="text-3xl font-extrabold tracking-tight text-black sm:text-4xl">

@@ -1,66 +1,65 @@
 "use client";
 
-import { useReducedMotion } from "framer-motion";
-import { motion, MotionConfig } from "framer-motion";
 import Link from "next/link";
 import { priorities } from "@/lib/priorities";
 
 export default function TenPointPlanModal() {
-  const reduceMotion = useReducedMotion();
-  const items = priorities;
-
   return (
-    <MotionConfig
-      transition={{
-        duration: reduceMotion ? 0 : 0.28,
-        ease: [0.22, 1, 0.36, 1],
-      }}
-    >
-      {/* Grid */}
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        {items.map((item) => (
-          <motion.div
-            key={item.id}
-            whileHover={reduceMotion ? undefined : { y: -3, scale: 1.01 }}
-            whileTap={reduceMotion ? undefined : { scale: 0.99 }}
-          >
-            <Link
-              href={`/priorities/${item.id}`}
-              className={[
-                "group relative block w-full overflow-hidden rounded-2xl md:rounded-3xl bg-white text-left",
-                "shadow-sm outline-none transition-all duration-300",
-                "ring-1 ring-black/10 hover:ring-0 hover:shadow-xl",
-                // Gradient border hack
-                "before:absolute before:inset-0 before:-z-10 before:p-[2px] before:bg-gradient-to-r before:from-patriot-red before:via-white before:to-patriot-blue before:opacity-0 hover:before:opacity-100 before:rounded-[inherit] before:content-[''] before:transition-opacity",
-                // Inner bg
-                "after:absolute after:inset-[1px] after:-z-10 after:bg-white after:rounded-[inherit] after:content-['']",
-                "focus-visible:ring-2 focus-visible:ring-patriot-blue/60 focus-visible:ring-offset-2",
-              ].join(" ")}
-            >
-              <div className="absolute left-5 top-5 h-2 w-16 rounded-full bg-patriot-blue" />
-              <div className="p-5 pt-8">
-                <div className="text-xs font-semibold text-black/50">Point {item.number}</div>
-                <div className="mt-1 text-base font-extrabold leading-snug tracking-tight text-black">
-                  {item.title}
-                </div>
-                <div className="mt-2 text-sm text-black/70">
-                  Click to view details
-                </div>
+    <div className="space-y-8">
+      {priorities.map((item) => (
+        <div key={item.id} className="bg-white">
+          {/* Top Section: Image on left, Banner on right */}
+          <div className="flex flex-col md:flex-row">
+            {/* Left side - Image */}
+            <div className="relative w-full md:w-1/2 h-64 md:h-80 overflow-hidden">
+              <img
+                src="/img/banner.png"
+                alt={item.title}
+                className="w-full h-full object-cover"
+              />
+              {/* Dark blue triangle overlay at bottom-right */}
+              <div className="absolute bottom-0 right-0 w-0 h-0 border-l-[100px] border-l-transparent border-b-[80px] border-b-[#0A3161]" />
+            </div>
 
-                <div className="mt-4 flex items-center gap-2 text-sm font-semibold text-patriot-blue">
-                  <span className="underline decoration-black/10 underline-offset-4 group-hover:decoration-patriot-blue/40">
-                    Learn more
-                  </span>
-                  <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">
-                    →
-                  </span>
-                </div>
-              </div>
-            </Link>
-          </motion.div>
-        ))}
-      </div>
-    </MotionConfig>
+            {/* Right side - Patriot Red Banner with Title */}
+            <div className="w-full md:w-1/2 bg-patriot-red flex items-center p-8 md:p-12">
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight">
+                {item.title}
+              </h3>
+            </div>
+          </div>
+
+          {/* Bottom Section: Body text on light background */}
+          <div className="bg-[#f0f4f8] p-8 md:p-12">
+            <p className="text-base md:text-lg text-black/85 leading-relaxed max-w-4xl mx-auto">
+              {item.bullets[0]}
+            </p>
+            
+            {/* Read more link */}
+            <div className="mt-6 max-w-4xl mx-auto">
+              <Link
+                href={`/priorities/${item.id}`}
+                className="inline-flex items-center gap-2 text-patriot-red font-semibold hover:text-patriot-blue transition-colors text-base md:text-lg"
+              >
+                Read more
+                <svg 
+                  className="w-5 h-5" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M13 7l5 5m0 0l-5 5m5-5H6" 
+                  />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
   );
 }
-

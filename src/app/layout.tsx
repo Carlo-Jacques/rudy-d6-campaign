@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-dvh bg-white text-black">
-        <Header />
+        {/* <Header /> */}
 
         {/* 
           Mobile bottom padding ensures content & footer

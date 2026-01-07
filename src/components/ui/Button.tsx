@@ -47,7 +47,7 @@ const variants: Record<ButtonVariant, string> = {
     "hover:-translate-y-[1px] hover:shadow-md hover:bg-patriot-blue/95",
   plan:
     "bg-white text-patriot-blue border border-patriot-blue/30 shadow-sm " +
-    "hover:-translate-y-[1px] hover:shadow-md hover:border-patriot-blue/50 hover:bg-patriot-blue/[0.03]",
+    "hover:-translate-y-[1px] hover:shadow-md hover:border-patriot-red/50 hover:bg-patriot-red hover:text-white",
   ghost:
     "bg-transparent text-patriot-blue border border-patriot-blue/30 " +
     "hover:-translate-y-[1px] hover:bg-patriot-blue/[0.04] hover:border-patriot-blue/45",

@@ -4,15 +4,19 @@ import { site } from "@/lib/site";
 import PlanSectionClient from "@/components/PlanSectionClient";
 import Hero from "@/components/Hero";
 import NewsSection from "@/components/NewsSection";
+import ActionWidgets from "@/components/ActionWidgets";
 
 export default function HomePage() {
   return (
-    <main className="overflow-x-hidden">
+    <main className="overflow-x-hidden w-full">
       <Hero />
 
+      {/* Action Widgets */}
+      <ActionWidgets />
+
       {/* PLEDGE */}
-      <section className="bg-patriot-red text-white">
-        <div className="mx-auto max-w-4xl px-4 py-16 text-center">
+      <section className="bg-patriot-red text-white w-full">
+        <div className="mx-auto max-w-7xl px-4 py-16 text-center" style={{ paddingLeft: '3.75vw', paddingRight: '3.75vw' }}>
           <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">The pledge</h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-white/90">
             Rudy is asking District 6 voters for something simple: a mandate to deliver a clear 10-point plan. If
@@ -25,14 +29,14 @@ export default function HomePage() {
       </section>
 
       {/* 10-POINT PLAN */}
-      <section id="plan" className="bg-black/[0.02]">
-        <div className="mx-auto max-w-6xl px-4 py-12">
+      <section id="plan" className="bg-black/[0.02] w-full">
+        <div className="mx-auto max-w-7xl px-4 py-12" style={{ paddingLeft: '3.75vw', paddingRight: '3.75vw' }}>
           <div className="flex items-end justify-between gap-4">
             <div>
               <h2 className="text-2xl font-extrabold tracking-tight">The 10-Point Plan</h2>
               <p className="mt-2 text-black/70">Short, specific commitments. Simple scorecard reporting.</p>
             </div>
-            <Link href="/about-rudy" className="hidden text-sm font-semibold underline md:inline">
+            <Link href="/about-rudolph" className="hidden text-sm font-semibold underline md:inline">
               Why Rudy →
             </Link>
           </div>
@@ -47,8 +51,9 @@ export default function HomePage() {
       <NewsSection />
 
       {/* PETITION (print + mail for now) */}
-      <section id="petition" className="mx-auto max-w-6xl px-4 py-12">
-        <div className="rounded-3xl border border-black/10 bg-white p-6 sm:p-8">
+      <section id="petition" className="w-full py-12">
+        <div className="mx-auto max-w-7xl px-4" style={{ paddingLeft: '3.75vw', paddingRight: '3.75vw' }}>
+          <div className="rounded-3xl border border-black/10 bg-white p-6 sm:p-8">
           <div className="w-full">
             <h2 className="text-xl font-bold">
               Help Put a Democrat on the Ballot — No Special Interests, No Ballot Tax
@@ -97,6 +102,7 @@ export default function HomePage() {
                 Loxahatchee FL 33470
               </p>
             </div>
+          </div>
           </div>
         </div>
       </section>

@@ -44,7 +44,7 @@ export default function NewsSection() {
 
   return (
     <section id="news" className="bg-white">
-      <div className="mx-auto max-w-6xl px-4 py-12">
+      <div className="mx-auto max-w-7xl px-4 py-12" style={{ paddingLeft: '3.75vw', paddingRight: '3.75vw' }}>
         <div className="mb-8">
           <h2 className="text-2xl font-extrabold tracking-tight">News</h2>
           <p className="mt-2 text-black/70">Latest updates and coverage</p>

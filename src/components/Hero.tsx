@@ -5,14 +5,21 @@ import Button from "@/components/ui/Button";
 
 export default function Hero() {
     return (
-        <section className="relative min-h-[100dvh] overflow-visible pt-[100px] md:pt-0 md:min-h-[100dvh]">
+        <section className="relative min-h-[100dvh] overflow-visible -mt-[120px] pt-[220px] md:pt-[120px] md:min-h-[calc(100dvh+120px)]">
             <div
-                className="absolute inset-0 z-0 bg-[url('/img/hero-background-mobile.png')] bg-cover bg-center bg-no-repeat md:bg-[url('/img/hero-background-desktop.png')]"
+                className="absolute inset-0 z-0 bg-[url('/img/Hero-Bg-Image.webp')] bg-cover bg-center bg-no-repeat"
                 aria-hidden="true"
             />
 
             {/* Dark overlay */}
-            <div className="absolute inset-0 z-[1] bg-black/55" />
+            <div className="absolute inset-0 z-[1] bg-black/55">
+                <img
+                    src="/img/hero-rudolph-tinker.webp"
+                    alt="Rudolph Tinker"
+                    className="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto h-[50%] sm:h-[55%] md:h-[65%] lg:h-[70%] max-w-[80%] sm:max-w-[85%] md:max-w-[90%] lg:max-w-[95%] object-contain"
+                    style={{ zIndex: -1 }}
+                />
+            </div>
 
             <div className="relative z-10 mx-auto flex min-h-[calc(100dvh-100px)] max-w-6xl items-center px-4 py-12 md:min-h-[100dvh] md:py-8">
                 <div className="grid w-full grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-2 lg:gap-12">
@@ -48,7 +55,7 @@ export default function Hero() {
                     {/* Right side - Mailing address and PDF */}
                     <div className="flex flex-col justify-center">
                         <div className="w-full rounded-2xl bg-white/10 p-6 backdrop-blur-sm sm:p-8">
-                            <h2 className="text-2xl font-bold text-white mb-4">Help Put a Democrat on the Ballot — Petitions, Not Pay-to-Play Politics</h2>
+                            <h3 className="text-2xl font-bold text-white mb-4">Help Put One of Us, Working for All of Us, on the Ballot — Petitions, Not Pay-to-Play Politics</h3>
                             
                             {/* Mailing address */}
                             <div className="mb-6 rounded-lg border border-white/20 bg-white/5 p-4 backdrop-blur-sm">

@@ -12,7 +12,7 @@ import { priorities } from "@/lib/priorities";
 type NavItem = { label: string; href: string };
 
 const NAV: NavItem[] = [
-  { label: "About Rudolph", href: "/about-rudy" },
+  { label: "About Rudolph", href: "/about-rudolph" },
   { label: "Endorsements", href: "/endorsements" },
   { label: "District 6", href: "/district-6" },
   { label: "Volunteer", href: site.volunteerUrl },
@@ -61,7 +61,7 @@ export default function Header() {
   }, [prioritiesOpen, aboutRudyOpen]);
 
   const isPrioritiesPage = pathname?.startsWith("/priorities/");
-  const isAboutRudyPage = pathname?.startsWith("/about-rudy");
+  const isAboutRudyPage = pathname?.startsWith("/about-rudolph");
   const isDonatePage = pathname === "/donate";
 
   // Hide header on donate page
@@ -157,11 +157,11 @@ export default function Header() {
                 >
                   <div className="p-2">
                     <Link
-                      href="/about-rudy/bio"
+                      href="/about-rudolph/bio"
                       onClick={() => setAboutRudyOpen(false)}
                       className={cn(
                         "block rounded-lg px-4 py-3 text-sm transition-colors",
-                        pathname === "/about-rudy/bio"
+                        pathname === "/about-rudolph/bio"
                           ? "bg-patriot-red/10 text-patriot-red font-semibold"
                           : "hover:bg-black/5 text-black/80"
                       )}
@@ -169,11 +169,11 @@ export default function Header() {
                       Bio
                     </Link>
                     <Link
-                      href="/about-rudy/preparedness"
+                      href="/about-rudolph/preparedness"
                       onClick={() => setAboutRudyOpen(false)}
                       className={cn(
                         "block rounded-lg px-4 py-3 text-sm transition-colors",
-                        pathname === "/about-rudy/preparedness"
+                        pathname === "/about-rudolph/preparedness"
                           ? "bg-patriot-red/10 text-patriot-red font-semibold"
                           : "hover:bg-black/5 text-black/80"
                       )}
@@ -181,11 +181,11 @@ export default function Header() {
                       Preparedness
                     </Link>
                     <Link
-                      href="/about-rudy/why-i-want-to-run"
+                      href="/about-rudolph/why-i-want-to-run"
                       onClick={() => setAboutRudyOpen(false)}
                       className={cn(
                         "block rounded-lg px-4 py-3 text-sm transition-colors",
-                        pathname === "/about-rudy/why-i-want-to-run"
+                        pathname === "/about-rudolph/why-i-want-to-run"
                           ? "bg-patriot-red/10 text-patriot-red font-semibold"
                           : "hover:bg-black/5 text-black/80"
                       )}
@@ -404,14 +404,14 @@ export default function Header() {
                     >
                       <div className="ml-4 mt-1 space-y-1 border-l-2 border-black/10 pl-4">
                         <Link
-                          href="/about-rudy/bio"
+                          href="/about-rudolph/bio"
                           onClick={() => {
                             setAboutRudyOpen(false);
                             setOpen(false);
                           }}
                           className={cn(
                             "block rounded-lg px-3 py-2 text-sm transition-colors",
-                            pathname === "/about-rudy/bio"
+                            pathname === "/about-rudolph/bio"
                               ? "bg-patriot-red/10 text-patriot-red font-semibold"
                               : "text-black/70 hover:bg-black/5"
                           )}
@@ -419,14 +419,14 @@ export default function Header() {
                           Bio
                         </Link>
                         <Link
-                          href="/about-rudy/preparedness"
+                          href="/about-rudolph/preparedness"
                           onClick={() => {
                             setAboutRudyOpen(false);
                             setOpen(false);
                           }}
                           className={cn(
                             "block rounded-lg px-3 py-2 text-sm transition-colors",
-                            pathname === "/about-rudy/preparedness"
+                            pathname === "/about-rudolph/preparedness"
                               ? "bg-patriot-red/10 text-patriot-red font-semibold"
                               : "text-black/70 hover:bg-black/5"
                           )}
@@ -434,14 +434,14 @@ export default function Header() {
                           Preparedness
                         </Link>
                         <Link
-                          href="/about-rudy/why-i-want-to-run"
+                          href="/about-rudolph/why-i-want-to-run"
                           onClick={() => {
                             setAboutRudyOpen(false);
                             setOpen(false);
                           }}
                           className={cn(
                             "block rounded-lg px-3 py-2 text-sm transition-colors",
-                            pathname === "/about-rudy/why-i-want-to-run"
+                            pathname === "/about-rudolph/why-i-want-to-run"
                               ? "bg-patriot-red/10 text-patriot-red font-semibold"
                               : "text-black/70 hover:bg-black/5"
                           )}
