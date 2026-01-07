@@ -57,7 +57,6 @@ export default function BioPage() {
                             <em>He believes government should work for everyday people — not special interests.</em>
                         </p>
 
-                        <hr />
 
                         <p>
                             Born in <strong>The Bahamas</strong>, Rudy was raised by a devoted single mother and grandmother in a close,
@@ -73,7 +72,6 @@ export default function BioPage() {
                             <strong>For Rudy, service was never a slogan — it was a way of life.</strong>
                         </p>
 
-                        <hr />
 
                         <p>
                             After graduating high school in <strong>1996</strong>, Rudy enrolled at <strong>Florida Atlantic University</strong>.
@@ -86,7 +84,6 @@ export default function BioPage() {
                             facing small business owners.
                         </p>
 
-                        <hr />
 
                         <p>
                             In <strong>2002</strong>, Rudy was hand-selected as a <strong>Congressional Intern</strong> for Congressman
@@ -97,7 +94,6 @@ export default function BioPage() {
                             serving honorably from <strong>2002 to 2005</strong> in support of the <strong>Global War on Terror</strong>.
                         </p>
 
-                        <hr />
 
                         <p>
                             While on active duty, Rudy purchased his first home in <strong>Loxahatchee</strong> in <strong>2003</strong> — the
@@ -107,7 +103,6 @@ export default function BioPage() {
                             his commitment to <strong>family</strong>, <strong>faith</strong>, and <strong>stability</strong>.
                         </p>
 
-                        <hr />
 
                         <p>
                             In <strong>2008</strong>, tragedy struck when one of his triplet daughters, <strong>Oriya Isabel Tinker</strong>,
@@ -121,7 +116,7 @@ export default function BioPage() {
                             understand hardship through lived experience.
                         </p>
 
-                        <hr />
+                        
 
                         <p>
                             Today, Rudy is a small business owner, operating a construction and consulting firm that works directly in
@@ -132,7 +127,6 @@ export default function BioPage() {
                             farmers, and small businesses.
                         </p>
 
-                        <hr />
 
                         <p>
                             Rudy also serves as an educator, teaching <strong>American Government</strong> at <strong>Palm Beach State College</strong>'s
@@ -147,7 +141,6 @@ export default function BioPage() {
                             directly affect people's lives.
                         </p>
 
-                        <hr />
 
                         <p>
                             After decades of service — as a veteran, father, contractor, educator, and community member — Rudy is running for
