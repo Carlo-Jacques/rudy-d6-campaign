@@ -12,18 +12,20 @@ export default function Hero() {
             />
 
             {/* Dark overlay */}
-            <div className="absolute inset-0 z-[1] bg-black/55">
-                <img
-                    src="/img/hero-rudolph-tinker.webp"
-                    alt="Rudolph Tinker"
-                    className="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto h-[50%] sm:h-[55%] md:h-[65%] lg:h-[70%] max-w-[80%] sm:max-w-[85%] md:max-w-[90%] lg:max-w-[95%] object-contain"
-                    style={{ zIndex: -1 }}
-                />
+            <div className="absolute top-0 bottom-0 left-0 right-0 z-[1] bg-black/55">
+                <div className="relative h-full max-w-6xl mx-auto px-4 flex justify-end items-end flex-wrap" style={{ textAlign: 'right' }}>
+                    <img
+                        src="/img/hero-rudolph-tinker.webp"
+                        alt="Rudolph Tinker"
+                        className="w-auto h-[50%] sm:h-[55%] md:h-[65%] lg:h-[70%] max-w-[80%] sm:max-w-[85%] md:max-w-[90%] lg:max-w-[95%] object-contain"
+                        style={{ zIndex: -1 }}
+                    />
+                </div>
             </div>
 
             <div className="relative z-10 mx-auto flex min-h-[calc(100dvh-100px)] max-w-6xl items-center px-4 py-12 md:min-h-[100dvh] md:py-8">
                 <div className="grid w-full grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-2 lg:gap-12">
-                    {/* Left side - Text content */}
+                    {/* Left side - Content */}
                     <div className="flex flex-col justify-center">
                         <div className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold text-white w-fit">
                             County Commissioner • District 6
@@ -50,11 +52,9 @@ export default function Hero() {
                                 See the 10 Points
                             </Button>
                         </div>
-                    </div>
 
-                    {/* Right side - Mailing address and PDF */}
-                    <div className="flex flex-col justify-center">
-                        <div className="w-full rounded-2xl bg-white/10 p-6 backdrop-blur-sm sm:p-8">
+                        {/* Mailing address and PDF */}
+                        <div className="mt-8 w-full rounded-2xl bg-white/10 p-6 backdrop-blur-sm sm:p-8">
                             <h3 className="text-2xl font-bold text-white mb-4">Help Put One of Us, Working for All of Us, on the Ballot — Petitions, Not Pay-to-Play Politics</h3>
                             
                             {/* Mailing address */}
@@ -80,6 +80,10 @@ export default function Hero() {
                                 </iframe>
                             </div>
                         </div>
+                    </div>
+
+                    {/* Right side - Blank */}
+                    <div className="flex flex-col justify-center">
                     </div>
                 </div>
             </div>

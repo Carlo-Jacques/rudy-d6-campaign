@@ -4,6 +4,7 @@ import Link from "next/link";
 import { priorities, getPriorityById } from "@/lib/priorities";
 import { site } from "@/lib/site";
 import Button from "@/components/ui/Button";
+import ContentContainer from "@/components/ContentContainer";
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -46,7 +47,7 @@ export default async function PriorityPage({ params }: Props) {
     <main className="bg-white">
       {/* Header */}
       <div className="bg-black/[0.02] py-16 sm:py-20">
-        <div className="mx-auto max-w-4xl px-4">
+        <ContentContainer>
           <Link
             href="/#plan"
             className="mb-4 inline-flex items-center gap-2 text-sm font-semibold text-patriot-blue hover:text-patriot-red transition-colors"
@@ -59,11 +60,11 @@ export default async function PriorityPage({ params }: Props) {
               {priority.title}
             </h1>
           </div>
-        </div>
+        </ContentContainer>
       </div>
 
       {/* Content */}
-      <div className="mx-auto max-w-4xl px-4 py-12">
+      <ContentContainer className="py-12">
         <div className="rounded-2xl border border-black/10 bg-black/[0.02] p-6 sm:p-8">
           <ul className="space-y-4 text-base text-black/85 sm:text-lg">
             {priority.bullets.map((bullet, index) => (
@@ -121,7 +122,7 @@ export default async function PriorityPage({ params }: Props) {
             </Button>
           </div>
         </div>
-      </div>
+      </ContentContainer>
     </main>
   );
 }

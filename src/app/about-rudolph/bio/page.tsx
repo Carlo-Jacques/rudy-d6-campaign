@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import { site } from "@/lib/site";
 import Link from "next/link";
+import ContentContainer from "@/components/ContentContainer";
+import BioImage from "@/components/BioImage";
 
 export const metadata: Metadata = {
     title: `Bio | About Rudolph | ${site.name}`,
@@ -24,7 +26,7 @@ export default function BioPage() {
                 <div className="absolute inset-0 bg-black/50 z-0" />
                 
                 {/* Content */}
-                <div className="relative z-10 mx-auto max-w-4xl px-4">
+                <ContentContainer className="relative z-10">
                     <Link
                         href="/about-rudolph"
                         className="group mb-4 inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-patriot-red transition-all duration-200"
@@ -37,18 +39,21 @@ export default function BioPage() {
                             Bio 
                         </h1>
                     </div>
-                </div>
+                </ContentContainer>
             </div>
 
             {/* Content */}
-            <div className="mx-auto max-w-4xl px-4 py-12">
-                <style dangerouslySetInnerHTML={{__html: `
-                    .bio-article p {
-                        line-height: 2.0 !important;
-                    }
-                `}} />
-                <article className="bio-article prose prose-lg max-w-none prose-headings:font-extrabold prose-strong:font-bold prose-p:text-black/80 prose-p:mb-6 prose-h2:mt-10 prose-h2:mb-6">
-                    <section className="bio">
+            <ContentContainer className="py-12">
+                <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12 lg:items-start">
+                    {/* Left side - Content (second on mobile, left on desktop) */}
+                    <div className="order-2 lg:order-1">
+                        <style dangerouslySetInnerHTML={{__html: `
+                            .bio-article p {
+                                line-height: 2.0 !important;
+                            }
+                        `}} />
+                        <article className="bio-article prose prose-lg max-w-none prose-headings:font-extrabold prose-strong:font-bold prose-p:text-black/80 prose-p:mb-6 prose-h2:mt-10 prose-h2:mb-6">
+                            <section className="bio">
                         <p>
                             <strong>Rudolph "Rudy" Tinker</strong> is a <strong>U.S. Army veteran</strong>, <strong>Certified General Contractor</strong>,
                             <strong>small business owner</strong>, and <strong>educator</strong> who has lived, worked, and raised his family in
@@ -153,9 +158,16 @@ export default function BioPage() {
                             <br />
                             <strong>He is one of us — working for all of us.</strong>
                         </p>
-                    </section>
-                </article>
-            </div>
+                            </section>
+                        </article>
+                    </div>
+
+                    {/* Right side - Image (first on mobile, right on desktop) */}
+                    <div className="order-1 lg:order-2 lg:sticky lg:top-12 lg:self-start">
+                        <BioImage />
+                    </div>
+                </div>
+            </ContentContainer>
         </main>
     );
 }

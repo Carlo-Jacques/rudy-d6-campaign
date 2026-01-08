@@ -1,6 +1,7 @@
 import VolunteerForm from "@/components/VolunteerForm";
 import { site } from "@/lib/site";
 import { Metadata } from "next";
+import ContentContainer from "@/components/ContentContainer";
 
 export const metadata: Metadata = {
     title: `Volunteer | ${site.name}`,
@@ -11,21 +12,31 @@ export default function VolunteerPage() {
     return (
         <main className="bg-white">
             {/* Header */}
-            <div className="bg-black/[0.02] py-20 sm:py-24">
-                <div className="mx-auto max-w-2xl px-4 text-center">
-                    <h1 className="text-4xl font-extrabold tracking-tight text-black sm:text-5xl">
+            <div className="relative py-20 sm:py-24"
+            style={{
+                        backgroundImage: "url('/img/volunteer-banner.webp')",
+                        backgroundSize: "cover",
+                        backgroundPosition: "center top",
+                        backgroundRepeat: "no-repeat",
+                        backgroundColor: "#00214e",
+                        }}
+                        >
+                {/* Background overlay */}
+                <div className="absolute inset-0 bg-black/50 z-0" />
+                <ContentContainer className="relative z-10 text-center max-w-2xl">
+                    <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
                         Join the Team
                     </h1>
-                    <p className="mt-4 text-lg text-black/70">
+                    <p className="mt-4 text-lg text-white/90">
                         This campaign is powered by neighbors like you. Whether you can knock on doors, make calls, or just host a sign—we need your help.
                     </p>
-                </div>
+                </ContentContainer>
             </div>
 
             {/* Form Section */}
-            <div className="mx-auto max-w-xl px-4 py-12 sm:py-20">
+            <ContentContainer className="py-12 sm:py-20 max-w-xl">
                 <VolunteerForm />
-            </div>
+            </ContentContainer>
         </main>
     );
 }

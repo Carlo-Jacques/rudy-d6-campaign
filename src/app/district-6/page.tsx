@@ -1,6 +1,7 @@
 import { site } from "@/lib/site";
 import { Metadata } from "next";
 import Image from "next/image";
+import ContentContainer from "@/components/ContentContainer";
 
 export const metadata: Metadata = {
     title: `District 6 | ${site.name}`,
@@ -11,16 +12,26 @@ export default function District6Page() {
     return (
         <main className="bg-white">
             {/* Header */}
-            <div className="bg-black/[0.02] py-20 sm:py-24">
-                <div className="mx-auto max-w-4xl px-4 text-center">
-                    <h1 className="text-4xl font-extrabold tracking-tight text-black sm:text-5xl">
+            <div className="relative py-20 sm:py-24"
+            style={{
+                        backgroundImage: "url('/img/district-6-banner.webp')",
+                        backgroundSize: "cover",
+                        backgroundPosition: "center center",
+                        backgroundRepeat: "no-repeat",
+                        backgroundColor: "#00214e",
+                        }}
+                        >
+                {/* Background overlay */}
+                <div className="absolute inset-0 bg-black/50 z-0" />
+                <ContentContainer className="relative z-10 text-center">
+                    <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
                         About Palm Beach County <br className="hidden sm:block" />
                         Commission District 6
                     </h1>
-                </div>
+                </ContentContainer>
             </div>
 
-            <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-4 py-12 lg:grid-cols-2 lg:py-20">
+            <ContentContainer className="grid grid-cols-1 gap-12 py-12 lg:grid-cols-2 lg:py-20">
                 {/* Left Column: Content */}
                 <div className="prose text-black/80 lg:prose-lg">
                     <p className="lead font-medium text-black">
@@ -164,7 +175,7 @@ export default function District6Page() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </ContentContainer>
         </main>
     );
 }

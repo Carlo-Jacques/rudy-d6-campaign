@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { site } from "@/lib/site";
 import Button from "@/components/ui/Button";
+import ContentContainer from "@/components/ContentContainer";
 
 export const metadata: Metadata = {
     title: `Petition | ${site.name}`,
@@ -14,15 +15,15 @@ export default function PetitionPage() {
         <main className="bg-white">
             {/* Header */}
             <div className="bg-black/[0.02] py-16 sm:py-20">
-                <div className="mx-auto max-w-4xl px-4">
+                <ContentContainer>
                     <h1 className="text-3xl font-extrabold tracking-tight text-black sm:text-4xl">
                         Sign the Petition
                     </h1>
-                </div>
+                </ContentContainer>
             </div>
 
             {/* Content */}
-            <div className="mx-auto max-w-4xl px-4 py-12">
+            <ContentContainer className="py-12">
                 <div className="rounded-3xl border border-black/10 bg-white p-6 sm:p-8 mb-8">
                     <h2 className="text-2xl font-bold mb-6">
                         Help Put a Democrat on the Ballot — No Special Interests, No Ballot Tax
@@ -85,7 +86,7 @@ export default function PetitionPage() {
                         </div>
                     </iframe>
                 </div>
-            </div>
+            </ContentContainer>
         </main>
     );
 }

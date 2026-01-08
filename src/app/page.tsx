@@ -4,15 +4,11 @@ import { site } from "@/lib/site";
 import PlanSectionClient from "@/components/PlanSectionClient";
 import Hero from "@/components/Hero";
 import NewsSection from "@/components/NewsSection";
-import ActionWidgets from "@/components/ActionWidgets";
 
 export default function HomePage() {
   return (
     <main className="overflow-x-hidden w-full">
       <Hero />
-
-      {/* Action Widgets */}
-      <ActionWidgets />
 
       {/* PLEDGE */}
       <section className="bg-patriot-red text-white w-full">
@@ -29,7 +25,8 @@ export default function HomePage() {
       </section>
 
       {/* 10-POINT PLAN */}
-      <section id="plan" className="bg-black/[0.02] w-full">
+      <section id="plan" className="w-full overflow-hidden">
+        {/* Header */}
         <div className="mx-auto max-w-7xl px-4 py-12" style={{ paddingLeft: '3.75vw', paddingRight: '3.75vw' }}>
           <div className="flex items-end justify-between gap-4">
             <div>
@@ -40,10 +37,11 @@ export default function HomePage() {
               Why Rudy →
             </Link>
           </div>
+        </div>
 
-          <div className="mt-8">
-            <PlanSectionClient />
-          </div>
+        {/* Two-column layout - full width */}
+        <div className="w-full relative">
+          <PlanSectionClient />
         </div>
       </section>
 

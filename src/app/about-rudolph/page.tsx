@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { site } from "@/lib/site";
 import Link from "next/link";
+import ContentContainer from "@/components/ContentContainer";
 
 export const metadata: Metadata = {
     title: `About Rudolph | ${site.name}`,
@@ -12,18 +13,18 @@ export default function AboutRudolphPage() {
         <main className="bg-white">
             {/* Header */}
             <div className="bg-black/[0.02] py-16 sm:py-20">
-                <div className="mx-auto max-w-4xl px-4 text-center">
+                <ContentContainer className="text-center">
                     <h1 className="text-3xl font-extrabold tracking-tight text-black sm:text-4xl">
                         About Rudolph
                     </h1>
                     <p className="mt-4 text-lg text-black/70">
                         Learn more about the candidate and his vision for District 6.
                     </p>
-                </div>
+                </ContentContainer>
             </div>
 
             {/* Content */}
-            <div className="mx-auto max-w-4xl px-4 py-12">
+            <ContentContainer className="py-12">
                 <div className="grid gap-6 sm:grid-cols-3">
                     <Link
                         href="/about-rudolph/bio"
@@ -61,8 +62,9 @@ export default function AboutRudolphPage() {
                         </p>
                     </Link>
                 </div>
-            </div>
+            </ContentContainer>
         </main>
     );
 }
+
 

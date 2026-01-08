@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { site } from "@/lib/site";
 import Link from "next/link";
+import ContentContainer from "@/components/ContentContainer";
 
 export const metadata: Metadata = {
     title: `Preparedness | About Rudolph | ${site.name}`,
@@ -11,27 +12,38 @@ export default function PreparednessPage() {
     return (
         <main className="bg-white">
             {/* Header */}
-            <div className="bg-black/[0.02] py-16 sm:py-20">
-                <div className="mx-auto max-w-4xl px-4">
+            <div className="relative py-16 sm:py-20"
+            style={{
+                        backgroundImage: "url('/img/banner-head.jpg')",
+                        backgroundSize: "cover",
+                        backgroundPosition: "center center",
+                        backgroundRepeat: "no-repeat",
+                        backgroundColor: "#00214e",
+                        }}
+                        >
+                {/* Background overlay */}
+                <div className="absolute inset-0 bg-black/50 z-0" />
+                <ContentContainer className="relative z-10">
                     <Link
                         href="/about-rudolph"
-                        className="mb-4 inline-flex items-center gap-2 text-sm font-semibold text-patriot-blue hover:text-patriot-red transition-colors"
+                        className="group mb-4 inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-patriot-red transition-all duration-200"
                     >
-                        ← Back to About Rudolph
+                        <span className="group-hover:-translate-x-1 transition-transform duration-200">←</span>
+                        <span>Back to About Rudolph</span>
                     </Link>
                     <div className="mt-4">
-                        <h1 className="text-3xl font-extrabold tracking-tight text-black sm:text-4xl">
+                        <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
                             Preparedness
                         </h1>
-                        <p className="mt-2 text-lg text-black/70">
+                        <p className="mt-2 text-lg text-white/70">
                             Rudolph believes preparation matters. His academic background includes:
                         </p>
                     </div>
-                </div>
+                </ContentContainer>
             </div>
 
             {/* Content */}
-            <div className="mx-auto max-w-4xl px-4 py-12">
+            <ContentContainer className="py-12">
                 {/* Academic Background */}
                 <div className="mb-12">
                     <h2 className="text-2xl font-bold text-black mb-6">Academic Background</h2>
@@ -144,8 +156,9 @@ export default function PreparednessPage() {
                         </li>
                     </ul>
                 </div>
-            </div>
+            </ContentContainer>
         </main>
     );
 }
+
 

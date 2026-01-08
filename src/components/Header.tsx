@@ -12,7 +12,7 @@ import { priorities } from "@/lib/priorities";
 type NavItem = { label: string; href: string };
 
 const NAV: NavItem[] = [
-  { label: "About Rudolph", href: "/about-rudolph" },
+  { label: "About Rudy", href: "/about-rudy" },
   { label: "Endorsements", href: "/endorsements" },
   { label: "District 6", href: "/district-6" },
   { label: "Volunteer", href: site.volunteerUrl },
@@ -61,35 +61,19 @@ export default function Header() {
   }, [prioritiesOpen, aboutRudyOpen]);
 
   const isPrioritiesPage = pathname?.startsWith("/priorities/");
-  const isAboutRudyPage = pathname?.startsWith("/about-rudolph");
-  const isDonatePage = pathname === "/donate";
-
-  // Hide header on donate page
-  if (isDonatePage) {
-    return null;
-  }
+  const isAboutRudyPage = pathname?.startsWith("/about-rudy");
 
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full border-b border-black/10 relative",
-        scrolled ? "bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70" : ""
+        "sticky top-0 z-50 w-full border-b border-black/10",
+        scrolled ? "bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70" : "bg-white"
       )}
-      style={{
-        backgroundImage: scrolled ? "none" : "url('/img/banner.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        opacity: scrolled ? 1 : 0.75
-      }}
     >
       <motion.div
-        className={cn(
-          "mx-auto flex max-w-6xl px-4 md:py-2",
-          scrolled ? "flex-row items-center justify-between" : "flex-col items-center justify-center"
-        )}
+        className="mx-auto flex max-w-6xl items-center justify-between px-4"
         animate={{
-          height: scrolled ? 100 : 250
+          height: scrolled ? 70 : 100
         }}
         transition={{
           type: "spring",
@@ -98,13 +82,13 @@ export default function Header() {
           mass: 0.8
         }}
       >
-        <Link href="/" className={cn("flex items-center gap-2 shrink-0", scrolled ? "" : "md:mb-3")}>
+        <Link href="/" className="flex items-center gap-2">
           <motion.img
             src="/img/logo-transparent.png"
             alt="Rudy Campaign Logo"
             className="w-auto object-contain"
             animate={{
-              height: scrolled ? 90 : 116
+              height: scrolled ? 60 : 86
             }}
             transition={{
               type: "spring",
@@ -116,11 +100,8 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className={cn(
-          "hidden items-center gap-2 md:flex shrink-0",
-          scrolled ? "justify-end" : "justify-center flex-wrap"
-        )}>
-          {/* About Rudolph Dropdown */}
+        <nav className="hidden items-center gap-4 md:flex">
+          {/* About Rudy Dropdown */}
           <div className="relative" ref={aboutRudyRef}>
             <button
               type="button"
@@ -132,7 +113,7 @@ export default function Header() {
                   : "text-black/80 hover:text-black"
               )}
             >
-              About Rudolph
+              About Rudy
               <svg
                 className={cn(
                   "h-4 w-4 transition-transform",
@@ -153,15 +134,15 @@ export default function Header() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute left-0 top-full mt-2 w-56 rounded-xl border border-black/10 bg-white shadow-xl z-[100] max-h-[calc(100vh-120px)] overflow-y-auto"
+                  className="absolute left-0 top-full mt-2 w-56 rounded-xl border border-black/10 bg-white shadow-xl z-50"
                 >
                   <div className="p-2">
                     <Link
-                      href="/about-rudolph/bio"
+                      href="/about-rudy/bio"
                       onClick={() => setAboutRudyOpen(false)}
                       className={cn(
                         "block rounded-lg px-4 py-3 text-sm transition-colors",
-                        pathname === "/about-rudolph/bio"
+                        pathname === "/about-rudy/bio"
                           ? "bg-patriot-red/10 text-patriot-red font-semibold"
                           : "hover:bg-black/5 text-black/80"
                       )}
@@ -169,11 +150,11 @@ export default function Header() {
                       Bio
                     </Link>
                     <Link
-                      href="/about-rudolph/preparedness"
+                      href="/about-rudy/preparedness"
                       onClick={() => setAboutRudyOpen(false)}
                       className={cn(
                         "block rounded-lg px-4 py-3 text-sm transition-colors",
-                        pathname === "/about-rudolph/preparedness"
+                        pathname === "/about-rudy/preparedness"
                           ? "bg-patriot-red/10 text-patriot-red font-semibold"
                           : "hover:bg-black/5 text-black/80"
                       )}
@@ -181,11 +162,11 @@ export default function Header() {
                       Preparedness
                     </Link>
                     <Link
-                      href="/about-rudolph/why-i-want-to-run"
+                      href="/about-rudy/why-i-want-to-run"
                       onClick={() => setAboutRudyOpen(false)}
                       className={cn(
                         "block rounded-lg px-4 py-3 text-sm transition-colors",
-                        pathname === "/about-rudolph/why-i-want-to-run"
+                        pathname === "/about-rudy/why-i-want-to-run"
                           ? "bg-patriot-red/10 text-patriot-red font-semibold"
                           : "hover:bg-black/5 text-black/80"
                       )}
@@ -197,6 +178,28 @@ export default function Header() {
               )}
             </AnimatePresence>
           </div>
+          <Link
+            className={cn(
+              "text-sm font-medium transition-colors",
+              pathname === "/endorsements"
+                ? "text-patriot-red"
+                : "text-black/80 hover:text-black"
+            )}
+            href="/endorsements"
+          >
+            Endorsements
+          </Link>
+          <Link
+            className={cn(
+              "text-sm font-medium transition-colors",
+              pathname === "/district-6"
+                ? "text-patriot-red"
+                : "text-black/80 hover:text-black"
+            )}
+            href="/district-6"
+          >
+            District 6
+          </Link>
           
           {/* Priorities Dropdown */}
           <div className="relative" ref={prioritiesRef}>
@@ -231,7 +234,7 @@ export default function Header() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute left-0 top-full mt-2 w-80 rounded-xl border border-black/10 bg-white shadow-xl z-[100] max-h-[calc(100vh-120px)] overflow-y-auto"
+                  className="absolute left-0 top-full mt-2 w-80 rounded-xl border border-black/10 bg-white shadow-xl z-50"
                 >
                   <div className="p-2">
                     {priorities.map((priority) => (
@@ -268,39 +271,6 @@ export default function Header() {
               )}
             </AnimatePresence>
           </div>
-          <Link
-            className={cn(
-              "text-sm font-medium transition-colors",
-              pathname === "/endorsements"
-                ? "text-patriot-red"
-                : "text-black/80 hover:text-black"
-            )}
-            href="/endorsements"
-          >
-            Endorsements
-          </Link>
-          <Link
-            className={cn(
-              "text-sm font-medium transition-colors",
-              pathname === "/district-6"
-                ? "text-patriot-red"
-                : "text-black/80 hover:text-black"
-            )}
-            href="/district-6"
-          >
-            District 6
-          </Link>
-          <Link
-            className={cn(
-              "text-sm font-medium transition-colors",
-              pathname === "/news"
-                ? "text-patriot-red"
-                : "text-black/80 hover:text-black"
-            )}
-            href="/news"
-          >
-            News
-          </Link>
 
           <Link
             className={cn(
@@ -314,7 +284,7 @@ export default function Header() {
             Volunteer
           </Link>
 
-          <Button href={site.donateUrl} variant="donate" size="sm" target="_blank">
+          <Button href={site.donateUrl} variant="donate" size="sm">
             Donate
           </Button>
 
@@ -368,7 +338,7 @@ export default function Header() {
             </div>
 
             <div className="flex flex-col gap-1 p-4">
-              {/* About Rudolph Dropdown in Mobile */}
+              {/* About Rudy Dropdown in Mobile */}
               <div>
                 <button
                   type="button"
@@ -380,7 +350,7 @@ export default function Header() {
                       : "hover:bg-black/5"
                   )}
                 >
-                  About Rudolph
+                  About Rudy
                   <svg
                     className={cn(
                       "h-5 w-5 transition-transform",
@@ -404,14 +374,14 @@ export default function Header() {
                     >
                       <div className="ml-4 mt-1 space-y-1 border-l-2 border-black/10 pl-4">
                         <Link
-                          href="/about-rudolph/bio"
+                          href="/about-rudy/bio"
                           onClick={() => {
                             setAboutRudyOpen(false);
                             setOpen(false);
                           }}
                           className={cn(
                             "block rounded-lg px-3 py-2 text-sm transition-colors",
-                            pathname === "/about-rudolph/bio"
+                            pathname === "/about-rudy/bio"
                               ? "bg-patriot-red/10 text-patriot-red font-semibold"
                               : "text-black/70 hover:bg-black/5"
                           )}
@@ -419,14 +389,14 @@ export default function Header() {
                           Bio
                         </Link>
                         <Link
-                          href="/about-rudolph/preparedness"
+                          href="/about-rudy/preparedness"
                           onClick={() => {
                             setAboutRudyOpen(false);
                             setOpen(false);
                           }}
                           className={cn(
                             "block rounded-lg px-3 py-2 text-sm transition-colors",
-                            pathname === "/about-rudolph/preparedness"
+                            pathname === "/about-rudy/preparedness"
                               ? "bg-patriot-red/10 text-patriot-red font-semibold"
                               : "text-black/70 hover:bg-black/5"
                           )}
@@ -434,14 +404,14 @@ export default function Header() {
                           Preparedness
                         </Link>
                         <Link
-                          href="/about-rudolph/why-i-want-to-run"
+                          href="/about-rudy/why-i-want-to-run"
                           onClick={() => {
                             setAboutRudyOpen(false);
                             setOpen(false);
                           }}
                           className={cn(
                             "block rounded-lg px-3 py-2 text-sm transition-colors",
-                            pathname === "/about-rudolph/why-i-want-to-run"
+                            pathname === "/about-rudy/why-i-want-to-run"
                               ? "bg-patriot-red/10 text-patriot-red font-semibold"
                               : "text-black/70 hover:bg-black/5"
                           )}
@@ -453,6 +423,30 @@ export default function Header() {
                   )}
                 </AnimatePresence>
               </div>
+              <Link
+                href="/endorsements"
+                onClick={() => setOpen(false)}
+                className={cn(
+                  "rounded-xl px-3 py-3 text-base font-semibold transition-colors",
+                  pathname === "/endorsements"
+                    ? "text-patriot-red bg-patriot-red/5"
+                    : "hover:bg-black/5"
+                )}
+              >
+                Endorsements
+              </Link>
+              <Link
+                href="/district-6"
+                onClick={() => setOpen(false)}
+                className={cn(
+                  "rounded-xl px-3 py-3 text-base font-semibold transition-colors",
+                  pathname === "/district-6"
+                    ? "text-patriot-red bg-patriot-red/5"
+                    : "hover:bg-black/5"
+                )}
+              >
+                District 6
+              </Link>
               
               {/* Priorities Dropdown in Mobile */}
               <div>
@@ -527,42 +521,6 @@ export default function Header() {
                   )}
                 </AnimatePresence>
               </div>
-              <Link
-                href="/endorsements"
-                onClick={() => setOpen(false)}
-                className={cn(
-                  "rounded-xl px-3 py-3 text-base font-semibold transition-colors",
-                  pathname === "/endorsements"
-                    ? "text-patriot-red bg-patriot-red/5"
-                    : "hover:bg-black/5"
-                )}
-              >
-                Endorsements
-              </Link>
-              <Link
-                href="/district-6"
-                onClick={() => setOpen(false)}
-                className={cn(
-                  "rounded-xl px-3 py-3 text-base font-semibold transition-colors",
-                  pathname === "/district-6"
-                    ? "text-patriot-red bg-patriot-red/5"
-                    : "hover:bg-black/5"
-                )}
-              >
-                District 6
-              </Link>
-              <Link
-                href="/news"
-                onClick={() => setOpen(false)}
-                className={cn(
-                  "rounded-xl px-3 py-3 text-base font-semibold transition-colors",
-                  pathname === "/news"
-                    ? "text-patriot-red bg-patriot-red/5"
-                    : "hover:bg-black/5"
-                )}
-              >
-                News
-              </Link>
 
               <Link
                 href={site.volunteerUrl}
@@ -587,7 +545,7 @@ export default function Header() {
                   Petition
                 </Button>
 
-                <Button href={site.donateUrl} variant="donate" size="md" className="w-full" target="_blank">
+                <Button href={site.donateUrl} variant="donate" size="md" className="w-full">
                   Donate
                 </Button>
               </div>
