@@ -10,15 +10,25 @@ export const metadata: Metadata = {
 
 export default function AboutRudolphPage() {
     return (
-        <main className="bg-white">
+        <main className="bg-white" style={{ height: '80dvh' }}>
             {/* Header */}
-            <div className="bg-black/[0.02] py-16 sm:py-20">
-                <ContentContainer className="text-center">
-                    <h1 className="text-3xl font-extrabold tracking-tight text-black sm:text-4xl">
+            <div className="relative py-16 sm:py-20"
+                style={{
+                    backgroundImage: "url('/img/about-rudolph-banner.webp')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center top",
+                    backgroundRepeat: "no-repeat",
+                    backgroundColor: "#00214e",
+                }}
+            >
+                {/* Background overlay */}
+                <div className="absolute inset-0 bg-black/70 z-0" />
+                <ContentContainer className="relative z-10 text-center">
+                    <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
                         About Rudolph
                     </h1>
-                    <p className="mt-4 text-lg text-black/70">
-                        Learn more about the candidate and his vision for District 6.
+                    <p className="mt-4 text-lg text-white/70">
+                        Learn more Rudolph Tinker and his vision for District 6.
                     </p>
                 </ContentContainer>
             </div>
