@@ -47,7 +47,7 @@ export default function Footer() {
               <p>14611 Southern Boulevard</p>
               <p>Unit 634</p>
               <p>Loxahatchee, FL 33470</p>
-              <p>Phone: <span className="font-semibold">(932) 733-3390</span></p>
+              <p>Phone: <a href="tel:5616601580" className="font-semibold text-white/80 hover:text-white transition-colors">(561) 660-1580</a> | <a href="tel:5616602436" className="font-semibold text-white/80 hover:text-white transition-colors">(561) 660-2436</a></p>
               <p>E-mail: <a href="mailto:info@rudolphtinker.com" className="text-sm font-medium text-white/80 hover:text-white transition-colors">info@rudolphtinker.com</a></p>
             </div>
             <Link href="/privacy" className="mt-6 inline-block text-sm font-medium text-white/80 hover:text-white transition-colors uppercase">
