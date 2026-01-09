@@ -89,7 +89,7 @@ export default async function PetitionPage({
         </div>
 
         {/* PDF Viewer */}
-        <div className="w-full h-[177vh] border border-black/10 rounded-lg shadow-md overflow-hidden bg-gray-100">
+        <div className="w-full h-[1600px] border border-black/10 rounded-lg shadow-md overflow-hidden bg-gray-100">
           <iframe
             src={`${pdfUrl}#view=FitH`}
             className="w-full h-full"
