@@ -1,6 +1,6 @@
-import { redirect } from '@/i18n/navigation';
-import { routing } from '@/i18n/routing';
+// src/app/page.tsx
+import {redirect} from '@/i18n/navigation';
 
 export default function RootPage() {
-  redirect('/');
-}
+  redirect({href: '/', locale: 'en'});
+}import { routing } from '@/i18n/routing';

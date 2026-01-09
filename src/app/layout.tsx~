@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import { site } from "@/lib/site";
 import MobileStickyCta from "@/components/MobileStickyCta";
 
+
 export const metadata: Metadata = {
   title: `${site.name} | ${site.district}`,
   description: "A simple, accountable 10-point plan for District 6.",
