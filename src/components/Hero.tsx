@@ -2,10 +2,12 @@
 
 import Button from "@/components/ui/Button";
 import { useTranslations } from 'next-intl';
+import { useState } from 'react';
 
 
 export default function Hero() {
     const t = useTranslations('hero');
+    const [showFallback, setShowFallback] = useState(false);
     
     return (
         <section className="relative min-h-[100dvh] overflow-visible -mt-[120px] pt-[220px] md:pt-[120px] md:min-h-[calc(100dvh+120px)]">
@@ -69,17 +71,19 @@ export default function Hero() {
                             </div>
 
                             {/* PDF Viewer */}
-                            <div className="w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] border border-white/20 rounded-lg overflow-hidden bg-white/10 backdrop-blur-sm">
+                            <div className="relative w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] border border-white/20 rounded-lg overflow-hidden bg-white/10 backdrop-blur-sm">
                                 <iframe
                                     src="/documents/petition_form.pdf#view=FitH"
                                     className="w-full h-full"
                                     title="Petition Form"
-                                >
-                                    <div className="flex flex-col items-center justify-center h-full p-8 text-center text-white/80">
+                                    onError={() => setShowFallback(true)}
+                                />
+                                {showFallback && (
+                                    <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center text-white/80 bg-white/10 backdrop-blur-sm">
                                         <p className="mb-2">{t('pdfNotSupported')}</p>
                                         <a href="/documents/petition_form.pdf" className="text-white hover:underline font-medium">{t('viewPdf')}</a>
                                     </div>
-                                </iframe>
+                                )}
                             </div>
                         </div>
                     </div>

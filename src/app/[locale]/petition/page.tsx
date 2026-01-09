@@ -96,12 +96,11 @@ export default async function PetitionPage({
               src={`${pdfUrl}#view=FitH`}
               className="w-full h-full"
               title="Petition Form"
-            >
-              <div className="flex flex-col items-center justify-center h-full p-8 text-center text-gray-500">
-                <p className="mb-2">{t('pdfNotSupported')}</p>
-                <a href={pdfUrl} className="text-patriot-blue hover:underline font-medium">{t('downloadLink')}</a>
-              </div>
-            </iframe>
+            />
+          </div>
+          <div className="mt-4 text-center">
+            <p className="text-sm text-gray-600 mb-2">{t('pdfNotSupported')}</p>
+            <a href={pdfUrl} className="text-patriot-blue hover:underline font-medium">{t('downloadLink')}</a>
           </div>
         </RevealOnScroll>
       </ContentContainer>
