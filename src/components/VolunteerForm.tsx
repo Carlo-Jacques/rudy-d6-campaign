@@ -2,18 +2,20 @@
 
 import Button from "@/components/ui/Button";
 import { useId, useState } from "react";
-
-const volunteerOptions = [
-    { label: "Host a meet & greet", icon: "🏠", value: "Host a meet & greet" },
-    { label: "Knock doors", icon: "🚪", value: "Knock doors" },
-    { label: "Make phone calls", icon: "📞", value: "Make phone calls" },
-    { label: "Place a yard sign", icon: "🏡", value: "Place a yard sign" },
-    { label: "Help on Election Day", icon: "🗳️", value: "Help on Election Day" },
-];
+import { useTranslations } from 'next-intl';
 
 export default function VolunteerForm() {
+    const t = useTranslations('volunteer');
     const id = useId();
     const [selectedActivities, setSelectedActivities] = useState<string[]>([]);
+
+    const volunteerOptions = [
+        { label: t('activities.hostMeetGreet'), icon: "🏠", value: "hostMeetGreet" },
+        { label: t('activities.knockDoors'), icon: "🚪", value: "knockDoors" },
+        { label: t('activities.makeCalls'), icon: "📞", value: "makeCalls" },
+        { label: t('activities.placeYardSign'), icon: "🏡", value: "placeYardSign" },
+        { label: t('activities.helpElectionDay'), icon: "🗳️", value: "helpElectionDay" },
+    ];
 
     const toggleActivity = (value: string) => {
         setSelectedActivities((prev) =>
@@ -28,7 +30,7 @@ export default function VolunteerForm() {
             <div className="grid gap-6 sm:grid-cols-2">
                 <div className="sm:col-span-2">
                     <span className="block text-sm font-semibold text-gray-900 mb-4">
-                        How would you like to volunteer?
+                        {t('howToVolunteer')}
                     </span>
                     <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                         {volunteerOptions.map((option) => {
@@ -64,7 +66,7 @@ export default function VolunteerForm() {
 
                 <div className="sm:col-span-2">
                     <label htmlFor={`${id}-name`} className="block text-sm font-semibold text-gray-900">
-                        Full Name
+                        {t('form.fullName')}
                     </label>
                     <input
                         type="text"
@@ -77,7 +79,7 @@ export default function VolunteerForm() {
 
                 <div className="sm:col-span-2">
                     <label htmlFor={`${id}-address`} className="block text-sm font-semibold text-gray-900">
-                        Address
+                        {t('form.address')}
                     </label>
                     <input
                         type="text"
@@ -90,7 +92,7 @@ export default function VolunteerForm() {
 
                 <div>
                     <label htmlFor={`${id}-phone`} className="block text-sm font-semibold text-gray-900">
-                        Phone Number
+                        {t('form.phoneNumber')}
                     </label>
                     <input
                         type="tel"
@@ -103,7 +105,7 @@ export default function VolunteerForm() {
 
                 <div>
                     <label htmlFor={`${id}-email`} className="block text-sm font-semibold text-gray-900">
-                        Email
+                        {t('form.email')}
                     </label>
                     <input
                         type="email"
@@ -121,7 +123,7 @@ export default function VolunteerForm() {
                     variant="donate"
                     size="lg"
                 >
-                    Join the team
+                    {t('form.submitButton')}
                 </Button>
             </div>
         </form>

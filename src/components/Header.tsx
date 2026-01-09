@@ -1,26 +1,17 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
+import { useTranslations } from 'next-intl';
 import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { site } from "@/lib/site";
 import { cn } from "@/lib/cn";
 import Button from "@/components/ui/Button";
 import { priorities } from "@/lib/priorities";
-
-type NavItem = { label: string; href: string };
-
-const NAV: NavItem[] = [
-  { label: "About Rudy", href: "/about-rudy" },
-  { label: "Endorsements", href: "/endorsements" },
-  { label: "District 6", href: "/district-6" },
-  { label: "Volunteer", href: site.volunteerUrl },
-  { label: "Donate", href: site.donateUrl },
-  { label: "Petition", href: site.petitionUrl },
-];
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function Header() {
+  const t = useTranslations('common');
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -113,7 +104,7 @@ export default function Header() {
                   : "text-black/80 hover:text-black"
               )}
             >
-              About Rudy
+              {t('aboutRudy')}
               <svg
                 className={cn(
                   "h-4 w-4 transition-transform",
@@ -147,7 +138,7 @@ export default function Header() {
                           : "hover:bg-black/5 text-black/80"
                       )}
                     >
-                      Bio
+                      {t('bio')}
                     </Link>
                     <Link
                       href="/about-rudy/preparedness"
@@ -159,7 +150,7 @@ export default function Header() {
                           : "hover:bg-black/5 text-black/80"
                       )}
                     >
-                      Preparedness
+                      {t('preparedness')}
                     </Link>
                     <Link
                       href="/about-rudy/why-i-want-to-run"
@@ -171,7 +162,7 @@ export default function Header() {
                           : "hover:bg-black/5 text-black/80"
                       )}
                     >
-                      Why I want to run
+                      {t('whyIWantToRun')}
                     </Link>
                   </div>
                 </motion.div>
@@ -187,7 +178,7 @@ export default function Header() {
             )}
             href="/endorsements"
           >
-            Endorsements
+            {t('endorsements')}
           </Link>
           <Link
             className={cn(
@@ -198,7 +189,7 @@ export default function Header() {
             )}
             href="/district-6"
           >
-            District 6
+            {t('district6')}
           </Link>
           
           {/* Priorities Dropdown */}
@@ -213,7 +204,7 @@ export default function Header() {
                   : "text-black/80 hover:text-black"
               )}
             >
-              Priorities
+              {t('priorities')}
               <svg
                 className={cn(
                   "h-4 w-4 transition-transform",
@@ -263,7 +254,7 @@ export default function Header() {
                         onClick={() => setPrioritiesOpen(false)}
                         className="block rounded-lg px-4 py-2 text-sm font-semibold text-patriot-blue hover:bg-patriot-blue/5 transition-colors"
                       >
-                        View All Priorities →
+                        {t('viewAll')} →
                       </Link>
                     </div>
                   </div>
@@ -281,11 +272,11 @@ export default function Header() {
             )}
             href={site.volunteerUrl}
           >
-            Volunteer
+            {t('volunteer')}
           </Link>
 
           <Button href={site.donateUrl} variant="donate" size="sm">
-            Donate
+            {t('donate')}
           </Button>
 
           <Button
@@ -293,18 +284,22 @@ export default function Header() {
             variant="petition"
             size="sm"
           >
-            Petition
+            {t('petition')}
           </Button>
+
+          <LanguageSwitcher />
         </nav>
 
         {/* Mobile controls */}
         <div className="flex items-center gap-2 md:hidden">
+          <LanguageSwitcher />
+          
           <Button
             href={site.petitionUrl}
             variant="petition"
             size="md"
           >
-            Petition
+            {t('petition')}
           </Button>
 
 
@@ -315,7 +310,7 @@ export default function Header() {
             onClick={() => setOpen(true)}
             className="rounded-full border border-black/15 px-3 py-2 text-sm font-semibold text-black hover:bg-black/5"
           >
-            Menu
+            {t('menu')}
           </button>
         </div>
       </motion.div>
@@ -327,13 +322,13 @@ export default function Header() {
 
           <div className="absolute right-0 top-0 h-full w-[84%] max-w-sm bg-white shadow-xl">
             <div className="flex h-14 items-center justify-between border-b border-black/10 px-4">
-              <div className="text-sm font-semibold">Menu</div>
+              <div className="text-sm font-semibold">{t('menu')}</div>
               <button
                 type="button"
                 onClick={() => setOpen(false)}
                 className="rounded-full border border-black/15 px-3 py-2 text-sm font-semibold hover:bg-black/5"
               >
-                Close
+                {t('close')}
               </button>
             </div>
 
@@ -350,7 +345,7 @@ export default function Header() {
                       : "hover:bg-black/5"
                   )}
                 >
-                  About Rudy
+                  {t('aboutRudy')}
                   <svg
                     className={cn(
                       "h-5 w-5 transition-transform",
@@ -386,7 +381,7 @@ export default function Header() {
                               : "text-black/70 hover:bg-black/5"
                           )}
                         >
-                          Bio
+                          {t('bio')}
                         </Link>
                         <Link
                           href="/about-rudy/preparedness"
@@ -401,7 +396,7 @@ export default function Header() {
                               : "text-black/70 hover:bg-black/5"
                           )}
                         >
-                          Preparedness
+                          {t('preparedness')}
                         </Link>
                         <Link
                           href="/about-rudy/why-i-want-to-run"
@@ -416,7 +411,7 @@ export default function Header() {
                               : "text-black/70 hover:bg-black/5"
                           )}
                         >
-                          Why I want to run
+                          {t('whyIWantToRun')}
                         </Link>
                       </div>
                     </motion.div>
@@ -433,7 +428,7 @@ export default function Header() {
                     : "hover:bg-black/5"
                 )}
               >
-                Endorsements
+                {t('endorsements')}
               </Link>
               <Link
                 href="/district-6"
@@ -445,7 +440,7 @@ export default function Header() {
                     : "hover:bg-black/5"
                 )}
               >
-                District 6
+                {t('district6')}
               </Link>
               
               {/* Priorities Dropdown in Mobile */}
@@ -460,7 +455,7 @@ export default function Header() {
                       : "hover:bg-black/5"
                   )}
                 >
-                  Priorities
+                  {t('priorities')}
                   <svg
                     className={cn(
                       "h-5 w-5 transition-transform",
@@ -514,7 +509,7 @@ export default function Header() {
                           }}
                           className="block rounded-lg px-3 py-2 text-sm font-semibold text-patriot-blue hover:bg-patriot-blue/5 transition-colors"
                         >
-                          View All →
+                          {t('viewAll')} →
                         </Link>
                       </div>
                     </motion.div>
@@ -532,7 +527,7 @@ export default function Header() {
                     : "hover:bg-black/5"
                 )}
               >
-                Volunteer
+                {t('volunteer')}
               </Link>
 
               <div className="mt-2 grid gap-2">
@@ -542,11 +537,11 @@ export default function Header() {
                   size="md"
                   className="w-full"
                 >
-                  Petition
+                  {t('petition')}
                 </Button>
 
                 <Button href={site.donateUrl} variant="donate" size="md" className="w-full">
-                  Donate
+                  {t('donate')}
                 </Button>
               </div>
 

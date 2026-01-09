@@ -1,9 +1,12 @@
 "use client";
 
 import Button from "@/components/ui/Button";
+import { useTranslations } from 'next-intl';
 
 
 export default function Hero() {
+    const t = useTranslations('hero');
+    
     return (
         <section className="relative min-h-[100dvh] overflow-visible -mt-[120px] pt-[220px] md:pt-[120px] md:min-h-[calc(100dvh+120px)]">
             <div
@@ -28,15 +31,15 @@ export default function Hero() {
                     {/* Left side - Content */}
                     <div className="flex flex-col justify-center">
                         <div className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold text-white w-fit">
-                            County Commissioner • District 6
+                            {t('badge')}
                         </div>
 
                         <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-white sm:text-5xl">
-                            A 10-Point Plan—Kept.
+                            {t('title')}
                         </h1>
 
                         <p className="mt-4 text-base text-white/85 sm:text-lg">
-                            Clear promises. Public progress. Real accountability for District 6.
+                            {t('subtitle')}
                         </p>
 
                         <div className="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -45,24 +48,23 @@ export default function Hero() {
                                 variant="petition"
                                 size="md"
                             >
-                                Sign the Petition
+                                {t('signPetition')}
                             </Button>
 
                             <Button href="#plan" variant="plan" size="md">
-                                See the 10 Points
+                                {t('seePoints')}
                             </Button>
                         </div>
 
                         {/* Mailing address and PDF */}
                         <div className="mt-8 w-full rounded-2xl bg-white/10 p-6 backdrop-blur-sm sm:p-8">
-                            <h3 className="text-2xl font-bold text-white mb-4">Help Put One of Us, Working for All of Us, on the Ballot — Petitions, Not Pay-to-Play Politics</h3>
+                            <h3 className="text-2xl font-bold text-white mb-4">{t('helpTitle')}</h3>
                             
                             {/* Mailing address */}
                             <div className="mb-6 rounded-lg border border-white/20 bg-white/5 p-4 backdrop-blur-sm">
-                                <p className="text-sm font-semibold text-white mb-2">Complete and mail the petition to this address:</p>
-                                <p className="text-sm text-white/90 leading-relaxed">
-                                    14611 Southern Blvd Unit # 634<br />
-                                    Loxahatchee FL 33470
+                                <p className="text-sm font-semibold text-white mb-2">{t('mailAddress')}</p>
+                                <p className="text-sm text-white/90 leading-relaxed whitespace-pre-line">
+                                    {t('address')}
                                 </p>
                             </div>
 
@@ -74,8 +76,8 @@ export default function Hero() {
                                     title="Petition Form"
                                 >
                                     <div className="flex flex-col items-center justify-center h-full p-8 text-center text-white/80">
-                                        <p className="mb-2">Your browser does not support inline PDF viewing.</p>
-                                        <a href="/documents/petition_form.pdf" className="text-white hover:underline font-medium">View the PDF here</a>
+                                        <p className="mb-2">{t('pdfNotSupported')}</p>
+                                        <a href="/documents/petition_form.pdf" className="text-white hover:underline font-medium">{t('viewPdf')}</a>
                                     </div>
                                 </iframe>
                             </div>
