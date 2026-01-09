@@ -3,7 +3,6 @@ import Button from "@/components/ui/Button";
 import ContentContainer from "@/components/ContentContainer";
 import { site } from "@/lib/site";
 import { Metadata } from "next";
-import RevealOnScroll from "@/components/RevealOnScroll";
 
 export async function generateMetadata({
   params,
@@ -90,19 +89,17 @@ export default async function PetitionPage({
         </div>
 
         {/* PDF Viewer */}
-        <RevealOnScroll delay={0.2}>
-          <div className="w-full h-[177vh] border border-black/10 rounded-lg shadow-md overflow-hidden bg-gray-100">
-            <iframe
-              src={`${pdfUrl}#view=FitH`}
-              className="w-full h-full"
-              title="Petition Form"
-            />
-          </div>
-          <div className="mt-4 text-center">
-            <p className="text-sm text-gray-600 mb-2">{t('pdfNotSupported')}</p>
-            <a href={pdfUrl} className="text-patriot-blue hover:underline font-medium">{t('downloadLink')}</a>
-          </div>
-        </RevealOnScroll>
+        <div className="w-full h-[177vh] border border-black/10 rounded-lg shadow-md overflow-hidden bg-gray-100">
+          <iframe
+            src={`${pdfUrl}#view=FitH`}
+            className="w-full h-full"
+            title="Petition Form"
+          />
+        </div>
+        <div className="mt-4 text-center">
+          <p className="text-sm text-gray-600 mb-2">{t('pdfNotSupported')}</p>
+          <a href={pdfUrl} className="text-patriot-blue hover:underline font-medium">{t('downloadLink')}</a>
+        </div>
       </ContentContainer>
     </main>
   );
