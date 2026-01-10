@@ -21,7 +21,7 @@ export default async function HomePage({
 
       {/* PLEDGE */}
       <section className="bg-patriot-red text-white w-full">
-        <div className="mx-auto max-w-7xl px-4 py-16 text-center" style={{ paddingLeft: '3.75vw', paddingRight: '3.75vw' }}>
+        <div className="mx-auto max-w-7xl px-4 py-16 text-center" style={{ paddingLeft: "calc(1rem + 20px)", paddingRight: "calc(1rem + 20px)" }}>
           <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">{t('pledge.title')}</h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-white/90">
             {t('pledge.description')}
@@ -35,7 +35,7 @@ export default async function HomePage({
       {/* 10-POINT PLAN */}
       <section id="plan" className="w-full overflow-hidden">
         {/* Header */}
-        <div className="mx-auto max-w-7xl px-4 py-12" style={{ paddingLeft: '3.75vw', paddingRight: '3.75vw' }}>
+        <div className="mx-auto max-w-7xl px-4 py-12" style={{ paddingLeft: "calc(1rem + 20px)", paddingRight: "calc(1rem + 20px)" }}>
           <div className="flex items-end justify-between gap-4">
             <div>
               <h2 className="text-2xl font-extrabold tracking-tight">{t('plan.title')}</h2>
@@ -58,7 +58,7 @@ export default async function HomePage({
 
       {/* PETITION (print + mail for now) */}
       <section id="petition" className="w-full py-12">
-        <div className="mx-auto max-w-7xl px-4" style={{ paddingLeft: '3.75vw', paddingRight: '3.75vw' }}>
+        <div className="mx-auto max-w-7xl px-4" style={{ paddingLeft: "calc(1rem + 20px)", paddingRight: "calc(1rem + 20px)" }}>
           <div className="rounded-3xl border border-black/10 bg-white p-6 sm:p-8">
           <div className="w-full">
             <h2 className="text-xl font-bold">

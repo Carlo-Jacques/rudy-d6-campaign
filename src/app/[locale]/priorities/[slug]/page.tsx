@@ -1,24 +1,24 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
-import { priorities, getPriorityById } from "@/lib/priorities";
+import { Link } from "@/i18n/navigation";
+import { priorities, getPriorityBySlug, getPriorityById } from "@/lib/priorities";
 import { site } from "@/lib/site";
 import Button from "@/components/ui/Button";
 import ContentContainer from "@/components/ContentContainer";
 
 type Props = {
-  params: Promise<{ id: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 };
 
 export async function generateStaticParams() {
   return priorities.map((priority) => ({
-    id: priority.id,
+    slug: priority.slug,
   }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { id } = await params;
-  const priority = getPriorityById(id);
+  const { slug } = await params;
+  const priority = getPriorityBySlug(slug);
 
   if (!priority) {
     return {
@@ -33,15 +33,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function PriorityPage({ params }: Props) {
-  const { id } = await params;
-  const priority = getPriorityById(id);
+  const { slug } = await params;
+  const priority = getPriorityBySlug(slug);
 
   if (!priority) {
     notFound();
   }
 
-  const prevPriority = id !== "1" ? getPriorityById(String(Number(id) - 1)) : null;
-  const nextPriority = id !== "10" ? getPriorityById(String(Number(id) + 1)) : null;
+  const prevPriority = priority.number !== 1 ? getPriorityById(String(priority.number - 1)) : null;
+  const nextPriority = priority.number !== 10 ? getPriorityById(String(priority.number + 1)) : null;
 
   return (
     <main className="bg-white">
@@ -80,7 +80,7 @@ export default async function PriorityPage({ params }: Props) {
         <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:justify-between">
           {prevPriority ? (
             <Link
-              href={`/priorities/${prevPriority.id}`}
+              href={`/priorities/${prevPriority.slug}`}
               className="group flex items-center gap-2 rounded-xl border border-black/10 bg-white px-6 py-4 text-sm font-semibold text-black transition-all hover:border-patriot-blue hover:bg-patriot-blue/5"
             >
               <span className="transition-transform group-hover:-translate-x-1">←</span>
@@ -95,7 +95,7 @@ export default async function PriorityPage({ params }: Props) {
 
           {nextPriority ? (
             <Link
-              href={`/priorities/${nextPriority.id}`}
+              href={`/priorities/${nextPriority.slug}`}
               className="group ml-auto flex items-center gap-2 rounded-xl border border-black/10 bg-white px-6 py-4 text-sm font-semibold text-black transition-all hover:border-patriot-blue hover:bg-patriot-blue/5 sm:ml-0"
             >
               <div className="flex flex-col text-right">

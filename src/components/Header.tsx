@@ -231,11 +231,11 @@ export default function Header() {
                     {priorities.map((priority) => (
                       <Link
                         key={priority.id}
-                        href={`/priorities/${priority.id}`}
+                        href={`/priorities/${priority.slug}`}
                         onClick={() => setPrioritiesOpen(false)}
                         className={cn(
                           "block rounded-lg px-4 py-3 text-sm transition-colors",
-                          pathname === `/priorities/${priority.id}`
+                          pathname === `/priorities/${priority.slug}`
                             ? "bg-patriot-red/10 text-patriot-red font-semibold"
                             : "hover:bg-black/5 text-black/80"
                         )}
@@ -481,14 +481,14 @@ export default function Header() {
                         {priorities.map((priority) => (
                           <Link
                             key={priority.id}
-                            href={`/priorities/${priority.id}`}
+                            href={`/priorities/${priority.slug}`}
                             onClick={() => {
                               setPrioritiesOpen(false);
                               setOpen(false);
                             }}
                             className={cn(
                               "block rounded-lg px-3 py-2 text-sm transition-colors",
-                              pathname === `/priorities/${priority.id}`
+                              pathname === `/priorities/${priority.slug}`
                                 ? "bg-patriot-red/10 text-patriot-red font-semibold"
                                 : "text-black/70 hover:bg-black/5"
                             )}

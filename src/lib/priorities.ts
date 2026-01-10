@@ -1,13 +1,28 @@
 export type PriorityItem = {
   id: string;
+  slug: string;
   number: number;
   title: string;
   bullets: string[];
 };
 
+// Helper function to convert title to slug
+function titleToSlug(title: string): string {
+  return title
+    .replace(/[&]/g, "and")
+    .replace(/[()]/g, "")
+    .replace(/[–—]/g, "-")
+    .replace(/[^\w\s-]/g, "")
+    .trim()
+    .split(/\s+/)
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join("-");
+}
+
 export const priorities: PriorityItem[] = [
   {
     id: "1",
+    slug: "Property-Tax-Reduction-Oversight-and-Waste-Elimination",
     number: 1,
     title: "Property Tax Reduction, Oversight & Waste Elimination",
     bullets: [
@@ -25,6 +40,7 @@ export const priorities: PriorityItem[] = [
   },
   {
     id: "2",
+    slug: "Delinquent-Tax-Relief-and-Homeowner-Protection",
     number: 2,
     title: "Delinquent Tax Relief & Homeowner Protection",
     bullets: [
@@ -39,6 +55,7 @@ export const priorities: PriorityItem[] = [
   },
   {
     id: "3",
+    slug: "Government-Services-Reform-DMV-and-Tax-Collector",
     number: 3,
     title: "Government Services Reform (DMV & Tax Collector)",
     bullets: [
@@ -51,6 +68,7 @@ export const priorities: PriorityItem[] = [
   },
   {
     id: "4",
+    slug: "Affordable-Housing-ADUs-and-Local-Contractor-Incentives",
     number: 4,
     title: "Affordable Housing, ADUs & Local Contractor Incentives",
     bullets: [
@@ -64,6 +82,7 @@ export const priorities: PriorityItem[] = [
   },
   {
     id: "5",
+    slug: "Code-Enforcement-Reform-Inactive-Permit-Relief",
     number: 5,
     title: "Code Enforcement Reform & Inactive Permit Relief",
     bullets: [
@@ -76,6 +95,7 @@ export const priorities: PriorityItem[] = [
   },
   {
     id: "6",
+    slug: "AI-Powered-Fast-Permitting-and-Local-Business-Priority",
     number: 6,
     title: "AI-Powered Fast Permitting & Local Business Priority",
     bullets: [
@@ -90,6 +110,7 @@ export const priorities: PriorityItem[] = [
   },
   {
     id: "7",
+    slug: "Cut-Food-Costs-and-Improve-Grocery-Access",
     number: 7,
     title: "Cut Food Costs & Improve Grocery Access",
     bullets: [
@@ -102,6 +123,7 @@ export const priorities: PriorityItem[] = [
   },
   {
     id: "8",
+    slug: "Reduce-FPL-Bills-Through-County-Utility-Partnership",
     number: 8,
     title: "Reduce FPL Bills Through County–Utility Partnership",
     bullets: [
@@ -114,6 +136,7 @@ export const priorities: PriorityItem[] = [
   },
   {
     id: "9",
+    slug: "Healthcare-Access-Ambulance-Billing-Reform-and-Quality-of-Life",
     number: 9,
     title: "Healthcare Access, Ambulance Billing Reform & Quality of Life",
     bullets: [
@@ -130,6 +153,7 @@ export const priorities: PriorityItem[] = [
   },
   {
     id: "10",
+    slug: "Infrastructure-Transportation-Port-Efficiency-and-Fuel-Savings-Card",
     number: 10,
     title: "Infrastructure, Transportation, Port Efficiency & Fuel Savings Card",
     bullets: [
@@ -148,5 +172,9 @@ export const priorities: PriorityItem[] = [
 
 export function getPriorityById(id: string): PriorityItem | undefined {
   return priorities.find((p) => p.id === id);
+}
+
+export function getPriorityBySlug(slug: string): PriorityItem | undefined {
+  return priorities.find((p) => p.slug === slug);
 }
 
