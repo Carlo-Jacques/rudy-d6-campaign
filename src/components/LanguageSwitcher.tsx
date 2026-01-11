@@ -13,7 +13,11 @@ const languages = [
   { code: 'ru', name: 'Русский', flag: '🇷🇺' },
 ];
 
-export default function LanguageSwitcher() {
+interface LanguageSwitcherProps {
+  scrolled?: boolean;
+}
+
+export default function LanguageSwitcher({ scrolled = false }: LanguageSwitcherProps) {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -30,7 +34,12 @@ export default function LanguageSwitcher() {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 rounded-lg border border-black/15 hover:bg-black/5 transition-colors text-sm font-medium"
+        className={cn(
+          "flex items-center gap-2 px-3 py-2 rounded-lg border transition-colors text-sm font-medium",
+          scrolled 
+            ? "border-black/15 hover:bg-black/5 text-black/80" 
+            : "border-white/30 hover:bg-white/10 text-white"
+        )}
         aria-label="Change language"
       >
         <span>{currentLanguage.flag}</span>

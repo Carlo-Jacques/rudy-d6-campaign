@@ -36,7 +36,7 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body className="min-h-dvh bg-white text-black">
         <NextIntlClientProvider messages={messages}>
-          {/* <Header /> */}
+          <Header />
 
           {/* 
             Mobile bottom padding ensures content & footer

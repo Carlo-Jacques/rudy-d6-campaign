@@ -52,19 +52,30 @@ export default function Header() {
   }, [prioritiesOpen, aboutRudyOpen]);
 
   const isPrioritiesPage = pathname?.startsWith("/priorities/");
-  const isAboutRudyPage = pathname?.startsWith("/about-rudy");
+  const isAboutRudyPage = pathname?.startsWith("/about-rudolph");
+  const isHomePage = pathname === "/" || pathname === "/en" || pathname === "/es" || pathname === "/ht" || pathname === "/ru";
 
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full border-b border-black/10",
-        scrolled ? "bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70" : "bg-white"
+        "fixed top-0 z-50 w-full border-b",
+        isHomePage 
+          ? (scrolled 
+              ? "bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-black/10" 
+              : "bg-transparent border-transparent")
+          : "bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-black/10"
       )}
     >
       <motion.div
-        className="mx-auto flex max-w-6xl items-center justify-between px-4"
+        className={cn(
+          "mx-auto flex max-w-7xl",
+          isHomePage
+            ? (scrolled ? "flex-row items-center justify-between" : "flex-col items-center justify-center")
+            : "flex-row items-center justify-between"
+        )}
+        style={{ paddingLeft: "calc(1rem + 20px)", paddingRight: "calc(1rem + 20px)" }}
         animate={{
-          height: scrolled ? 70 : 100
+          height: isHomePage ? (scrolled ? 70 : 150) : 70
         }}
         transition={{
           type: "spring",
@@ -73,13 +84,13 @@ export default function Header() {
           mass: 0.8
         }}
       >
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className={cn("flex items-center gap-2", isHomePage && !scrolled ? "mb-2" : "")}>
           <motion.img
-            src="/img/logo-transparent.png"
+            src="/img/logo-rudy.webp"
             alt="Rudy Campaign Logo"
-            className="w-auto object-contain"
+            className="w-auto object-contain rounded-full"
             animate={{
-              height: scrolled ? 60 : 86
+              height: isHomePage ? (scrolled ? 60 : 86) : 60
             }}
             transition={{
               type: "spring",
@@ -101,7 +112,7 @@ export default function Header() {
                 "text-sm font-medium transition-colors flex items-center gap-1",
                 isAboutRudyPage
                   ? "text-patriot-red"
-                  : "text-black/80 hover:text-black"
+                  : (isHomePage && !scrolled) ? "text-white hover:text-white/80" : "text-black/80 hover:text-black"
               )}
             >
               {t('aboutRudy')}
@@ -129,11 +140,11 @@ export default function Header() {
                 >
                   <div className="p-2">
                     <Link
-                      href="/about-rudy/bio"
+                      href="/about-rudolph/bio"
                       onClick={() => setAboutRudyOpen(false)}
                       className={cn(
                         "block rounded-lg px-4 py-3 text-sm transition-colors",
-                        pathname === "/about-rudy/bio"
+                        pathname === "/about-rudolph/bio"
                           ? "bg-patriot-red/10 text-patriot-red font-semibold"
                           : "hover:bg-black/5 text-black/80"
                       )}
@@ -141,11 +152,11 @@ export default function Header() {
                       {t('bio')}
                     </Link>
                     <Link
-                      href="/about-rudy/preparedness"
+                      href="/about-rudolph/preparedness"
                       onClick={() => setAboutRudyOpen(false)}
                       className={cn(
                         "block rounded-lg px-4 py-3 text-sm transition-colors",
-                        pathname === "/about-rudy/preparedness"
+                        pathname === "/about-rudolph/preparedness"
                           ? "bg-patriot-red/10 text-patriot-red font-semibold"
                           : "hover:bg-black/5 text-black/80"
                       )}
@@ -153,11 +164,11 @@ export default function Header() {
                       {t('preparedness')}
                     </Link>
                     <Link
-                      href="/about-rudy/why-i-want-to-run"
+                      href="/about-rudolph/why-i-want-to-run"
                       onClick={() => setAboutRudyOpen(false)}
                       className={cn(
                         "block rounded-lg px-4 py-3 text-sm transition-colors",
-                        pathname === "/about-rudy/why-i-want-to-run"
+                        pathname === "/about-rudolph/why-i-want-to-run"
                           ? "bg-patriot-red/10 text-patriot-red font-semibold"
                           : "hover:bg-black/5 text-black/80"
                       )}
@@ -174,7 +185,7 @@ export default function Header() {
               "text-sm font-medium transition-colors",
               pathname === "/endorsements"
                 ? "text-patriot-red"
-                : "text-black/80 hover:text-black"
+                : scrolled ? "text-black/80 hover:text-black" : "text-white hover:text-white/80"
             )}
             href="/endorsements"
           >
@@ -185,7 +196,7 @@ export default function Header() {
               "text-sm font-medium transition-colors",
               pathname === "/district-6"
                 ? "text-patriot-red"
-                : "text-black/80 hover:text-black"
+                : scrolled ? "text-black/80 hover:text-black" : "text-white hover:text-white/80"
             )}
             href="/district-6"
           >
@@ -201,7 +212,7 @@ export default function Header() {
                 "text-sm font-medium transition-colors flex items-center gap-1",
                 isPrioritiesPage || pathname === "/" || pathname === "/#plan"
                   ? "text-patriot-red"
-                  : "text-black/80 hover:text-black"
+                  : (isHomePage && !scrolled) ? "text-white hover:text-white/80" : "text-black/80 hover:text-black"
               )}
             >
               {t('priorities')}
@@ -268,7 +279,7 @@ export default function Header() {
               "text-sm font-medium transition-colors",
               pathname === site.volunteerUrl
                 ? "text-patriot-red"
-                : "text-black/80 hover:text-black"
+                : scrolled ? "text-black/80 hover:text-black" : "text-white hover:text-white/80"
             )}
             href={site.volunteerUrl}
           >
@@ -287,12 +298,12 @@ export default function Header() {
             {t('petition')}
           </Button>
 
-          <LanguageSwitcher />
+          <LanguageSwitcher scrolled={isHomePage ? scrolled : true} />
         </nav>
 
         {/* Mobile controls */}
         <div className="flex items-center gap-2 md:hidden">
-          <LanguageSwitcher />
+          <LanguageSwitcher scrolled={isHomePage ? scrolled : true} />
           
           <Button
             href={site.petitionUrl}
@@ -308,7 +319,12 @@ export default function Header() {
             aria-label="Open menu"
             aria-expanded={open}
             onClick={() => setOpen(true)}
-            className="rounded-full border border-black/15 px-3 py-2 text-sm font-semibold text-black hover:bg-black/5"
+            className={cn(
+              "rounded-full px-3 py-2 text-sm font-semibold transition-colors",
+              (isHomePage && !scrolled)
+                ? "border border-white/30 bg-white text-patriot-blue hover:bg-white/90"
+                : "border border-black/15 text-black hover:bg-black/5"
+            )}
           >
             {t('menu')}
           </button>
@@ -369,14 +385,14 @@ export default function Header() {
                     >
                       <div className="ml-4 mt-1 space-y-1 border-l-2 border-black/10 pl-4">
                         <Link
-                          href="/about-rudy/bio"
+                          href="/about-rudolph/bio"
                           onClick={() => {
                             setAboutRudyOpen(false);
                             setOpen(false);
                           }}
                           className={cn(
                             "block rounded-lg px-3 py-2 text-sm transition-colors",
-                            pathname === "/about-rudy/bio"
+                            pathname === "/about-rudolph/bio"
                               ? "bg-patriot-red/10 text-patriot-red font-semibold"
                               : "text-black/70 hover:bg-black/5"
                           )}
@@ -384,14 +400,14 @@ export default function Header() {
                           {t('bio')}
                         </Link>
                         <Link
-                          href="/about-rudy/preparedness"
+                          href="/about-rudolph/preparedness"
                           onClick={() => {
                             setAboutRudyOpen(false);
                             setOpen(false);
                           }}
                           className={cn(
                             "block rounded-lg px-3 py-2 text-sm transition-colors",
-                            pathname === "/about-rudy/preparedness"
+                            pathname === "/about-rudolph/preparedness"
                               ? "bg-patriot-red/10 text-patriot-red font-semibold"
                               : "text-black/70 hover:bg-black/5"
                           )}
@@ -399,14 +415,14 @@ export default function Header() {
                           {t('preparedness')}
                         </Link>
                         <Link
-                          href="/about-rudy/why-i-want-to-run"
+                          href="/about-rudolph/why-i-want-to-run"
                           onClick={() => {
                             setAboutRudyOpen(false);
                             setOpen(false);
                           }}
                           className={cn(
                             "block rounded-lg px-3 py-2 text-sm transition-colors",
-                            pathname === "/about-rudy/why-i-want-to-run"
+                            pathname === "/about-rudolph/why-i-want-to-run"
                               ? "bg-patriot-red/10 text-patriot-red font-semibold"
                               : "text-black/70 hover:bg-black/5"
                           )}
