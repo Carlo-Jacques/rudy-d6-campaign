@@ -46,17 +46,28 @@ export default async function PriorityPage({ params }: Props) {
   return (
     <main className="bg-white">
       {/* Header */}
-      <div className="bg-black/[0.02] py-16 sm:py-20">
-        <ContentContainer>
+      <div 
+        className="relative py-16 sm:py-20"
+        style={{
+          backgroundImage: "url('/img/rudolph-tinker-plan.webp')",
+          backgroundSize: "cover",
+          backgroundPosition: "center top",
+          backgroundRepeat: "no-repeat",
+          backgroundColor: "#00214e",
+        }}
+      >
+        {/* Background overlay */}
+        <div className="absolute inset-0 bg-black/70 z-0" />
+        <ContentContainer className="relative z-10">
           <Link
             href="/#plan"
-            className="mb-4 inline-flex items-center gap-2 text-sm font-semibold text-patriot-blue hover:text-patriot-red transition-colors"
+            className="mb-4 inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-patriot-red transition-colors"
           >
             ← Back to 10-Point Plan
           </Link>
           <div className="mt-4">
-            <div className="text-sm font-semibold text-black/50">Priority {priority.number} of 10</div>
-            <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-black sm:text-4xl">
+            <div className="text-sm font-semibold text-white/70">Priority {priority.number} of 10</div>
+            <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
               {priority.title}
             </h1>
           </div>

@@ -14,12 +14,12 @@ export default async function EndorsementsPage({
     return (
         <main className="min-h-screen bg-white">
             {/* Hero Section */}
-            <section className="border-b border-black/10 bg-gradient-to-b from-gray-50 to-white py-16">
+            <section className="bg-patriot-blue py-20 sm:py-24">
                 <ContentContainer>
-                    <h1 className="text-4xl font-bold text-black md:text-5xl">
+                    <h1 className="text-4xl font-bold text-white md:text-5xl">
                         {t('endorsements')}
                     </h1>
-                    <p className="mt-4 text-lg text-black/70 md:text-xl">
+                    <p className="mt-4 text-lg text-white/80 md:text-xl">
                         Proud to be supported by community leaders and organizations across District 6.
                     </p>
                 </ContentContainer>
