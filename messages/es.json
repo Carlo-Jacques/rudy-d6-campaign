@@ -42,6 +42,38 @@
       "signPetition": "Firmar la petición",
       "printAndMail": "Imprime y envía por correo a esta dirección:",
       "address": "14611 Southern Blvd Unit # 634\nLoxahatchee FL 33470"
+    },
+    "testimonials": {
+      "title": "Lo que dicen los estudiantes sobre el Dr. Tinker",
+      "items": [
+        {
+          "quote": "Gracias por ser un excelente profesor. Me enseñó a trabajar duro e hizo que la clase fuera divertida. No podría haber pedido una mejor manera de comenzar mi carrera de regreso a clases.",
+          "author": "KM"
+        },
+        {
+          "quote": "Es exigente pero justo y realmente quiere que tengas éxito. Si te esfuerzas, él trabajará contigo y te ayudará a intentar llegar hasta el final. Realmente disfruté de su clase y de las personas en ella.",
+          "author": "Estudiante"
+        },
+        {
+          "quote": "El Dr. Tinker fue honestamente un gran profesor, muy interactivo si odias las clases aburridas. También es muy comprensivo y siempre está dispuesto a ayudar a los estudiantes que tienen dificultades pero se esfuerzan; ningún estudiante se queda atrás.",
+          "author": "Estudiante"
+        },
+        {
+          "quote": "El Dr. Tinker tiene mucho conocimiento sobre este tema. Le gusta la participación en clase. Sus pruebas se basan en lo que enseñó en la clase anterior y si te quedas atascado en una pregunta, él te ayudará. El examen de mitad de período se basa en las primeras cuatro lecciones y el final en las últimas cuatro. La carga de trabajo es muy manejable si te esfuerzas.",
+          "author": "Estudiante"
+        },
+        {
+          "quote": "Siendo mi primera vez en la universidad, disfruté mucho de mi clase de gobierno estadounidense con el Dr. Tinker. Aunque sus pruebas son escritas a mano, sus lecciones son muy claras y he aprendido mucho. Siempre lograba hacernos reír y trabajar duro.",
+          "author": "Estudiante"
+        }
+      ]
+    },
+    "news": {
+      "title": "Noticias",
+      "subtitle": "Últimas actualizaciones y cobertura",
+      "all": "Todo",
+      "readMore": "Leer más →",
+      "noArticles": "No se encontraron artículos en esta categoría."
     }
   },
   "aboutRudolph": {
@@ -141,4 +173,3 @@
     }
   }
 }
-

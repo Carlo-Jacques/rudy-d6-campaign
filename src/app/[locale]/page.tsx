@@ -5,6 +5,7 @@ import { site } from "@/lib/site";
 import PlanSectionClient from "@/components/PlanSectionClient";
 import Hero from "@/components/Hero";
 import NewsSection from "@/components/NewsSection";
+import Testimonials from "@/components/Testimonials";
 
 export default async function HomePage({
   params,
@@ -52,6 +53,9 @@ export default async function HomePage({
           <PlanSectionClient />
         </div>
       </section>
+
+      {/* TESTIMONIALS */}
+      <Testimonials />
 
       {/* NEWS */}
       <NewsSection />

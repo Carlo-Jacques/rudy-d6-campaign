@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Link } from "@/i18n/navigation";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 type NewsArticle = {
   id: string;
@@ -35,6 +36,7 @@ const articles: NewsArticle[] = [
 const categories = ["All", ...Array.from(new Set(articles.map((a) => a.category)))];
 
 export default function NewsSection() {
+  const t = useTranslations("home.news");
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const filteredArticles =
@@ -46,8 +48,8 @@ export default function NewsSection() {
     <section id="news" className="bg-white">
       <div className="mx-auto max-w-7xl px-4 py-12" style={{ paddingLeft: "calc(1rem + 20px)", paddingRight: "calc(1rem + 20px)" }}>
         <div className="mb-8">
-          <h2 className="text-2xl font-extrabold tracking-tight">News</h2>
-          <p className="mt-2 text-black/70">Latest updates and coverage</p>
+          <h2 className="text-2xl font-extrabold tracking-tight">{t("title")}</h2>
+          <p className="mt-2 text-black/70">{t("subtitle")}</p>
         </div>
 
         {/* Filter buttons */}
@@ -58,14 +60,13 @@ export default function NewsSection() {
               onClick={() => setSelectedCategory(category)}
               className={`
                 rounded-full px-4 py-2 text-sm font-semibold transition-all
-                ${
-                  selectedCategory === category
-                    ? "bg-patriot-red text-white"
-                    : "bg-black/5 text-black/80 hover:bg-black/10"
+                ${selectedCategory === category
+                  ? "bg-patriot-red text-white"
+                  : "bg-black/5 text-black/80 hover:bg-black/10"
                 }
               `}
             >
-              {category}
+              {category === "All" ? t("all") : category}
             </button>
           ))}
         </div>
@@ -101,7 +102,7 @@ export default function NewsSection() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 text-sm font-semibold text-patriot-blue hover:text-patriot-red transition-colors"
               >
-                Read more →
+                {t("readMore")}
               </Link>
             </motion.article>
           ))}
@@ -110,7 +111,7 @@ export default function NewsSection() {
         {/* Placeholder for pagination (when more articles are added) */}
         {filteredArticles.length === 0 && (
           <div className="py-12 text-center text-black/60">
-            No articles found in this category.
+            {t("noArticles")}
           </div>
         )}
       </div>
