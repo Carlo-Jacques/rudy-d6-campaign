@@ -10,6 +10,7 @@
     "bio": "Bio",
     "preparedness": "Preparedness",
     "whyIWantToRun": "Why I Want to Run",
+    "veteran": "Veteran",
     "menu": "Menu",
     "close": "Close",
     "viewAll": "View All",
@@ -22,7 +23,8 @@
     "urls": {
       "donate": "/donate",
       "volunteer": "/volunteer",
-      "petition": "/petition"
+      "petition": "/petition",
+      "veteran": "/veteran"
     }
   },
   "mobileCta": {
@@ -104,7 +106,7 @@
   },
   "hero": {
     "badge": "Palm Beach County Commissioner • District 6",
-    "title": "A 10-Point Plan—Kept.",
+    "title": "One of Us, Working for All of Us",
     "subtitle": "Clear promises. Public progress. Real accountability for District 6.",
     "signPetition": "Sign the Petition",
     "seePoints": "See the 10 Points",
@@ -211,6 +213,38 @@
       "employerCheck": "I am not making this contribution on behalf of an employer",
       "citizenCheck": "I am a U.S. citizen or permanent resident",
       "submit": "Submit Donation"
+    }
+  },
+  "veteran": {
+    "title": "Veteran Service & Advocacy",
+    "headerTitle": "Veteran Service & Advocacy",
+    "headerDescription": "Rudolph Tinker's military service history and advocacy for veterans in Palm Beach County.",
+    "metaDescription": "Rudolph Tinker's military service history and advocacy for veterans in Palm Beach County.",
+    "service": {
+      "title": "A Legacy of Service",
+      "subtitle": "Rudolph Tinker’s Army Journey",
+      "content": "<p>Rudolph \"Rudy\" Tinker enlisted in the <strong>United States Army</strong> in 2002, driven by a deep sense of duty following the events of September 11th. Serving honorably from <strong>2002 to 2005</strong> during the Global War on Terror, Rudy learned the true meaning of leadership, discipline, and sacrifice.</p><p>His service wasn't just about the uniform; it was about protecting the values we hold dear and ensuring that those who serve our country are never forgotten when they return home. Today, he brings that same mission-driven focus to his campaign for County Commission.</p>"
+    },
+    "va": {
+      "title": "Palm Beach County VA",
+      "subtitle": "Supporting Our Heroes Locally",
+      "content": "<p>The <strong>West Palm Beach VA Medical Center</strong> is a lifeline for thousands of veterans in our community. Rudy believes that local government must play a proactive role in partnering with the VA to ensure veterans have seamless access to healthcare, mental health resources, and housing assistance.</p><p>As your Commissioner, Rudy will advocate for expanded transportation options for veterans to reach the VA and push for local initiatives that bridge the gap between federal benefits and local needs.</p>"
+    },
+    "share": {
+      "title": "Share Your Story",
+      "subtitle": "Your Service Matters",
+      "description": "Are you a veteran or a family member of one in District 6? We want to hear your story. Share your experiences, challenges, or photos of your service. Together, we can ensure West Palm Beach remains a community that honors those who served.",
+      "form": {
+        "name": "Full Name",
+        "email": "Email Address",
+        "story": "Your Story",
+        "upload": "Upload Images or Documents",
+        "submit": "Share Story"
+      },
+      "thankYou": {
+        "title": "Thank You for Sharing",
+        "description": "We have received your story. Thank you for your service and for contributing to our community's history."
+      }
     }
   }
 }

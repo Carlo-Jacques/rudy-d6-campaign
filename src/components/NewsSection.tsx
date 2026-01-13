@@ -16,6 +16,14 @@ type NewsArticle = {
 
 const articles: NewsArticle[] = [
   {
+    id: "0",
+    date: "1/9/2026",
+    category: "Aid",
+    title: "CAFCI Packs Shipping Container of Hurricane Relief Supplies Bound for Jamaica",
+    excerpt: "After Hurricane Melissa struck Jamaica, Caribbean-Americans for Community Involvement volunteers and local partners spent two months collecting and loading a 40-foot container",
+    url: "https://gotowncrier.com/2026/01/cafci-packs-shipping-container-of-hurricane-relief-supplies-bound-for-jamaica/",
+  },
+  {
     id: "1",
     date: "1/1/2026",
     category: "AI",

@@ -3,27 +3,37 @@ import EndorsementForm from "@/components/EndorsementForm";
 import ContentContainer from "@/components/ContentContainer";
 
 export default async function EndorsementsPage({
-  params,
+    params,
 }: {
-  params: Promise<{ locale: string }>;
+    params: Promise<{ locale: string }>;
 }) {
     const { locale } = await params;
     setRequestLocale(locale);
     const t = await getTranslations('common');
-    
+
     return (
-        <main className="min-h-screen bg-white">
+        <main className="bg-white">
             {/* Hero Section */}
-            <section className="bg-patriot-blue py-20 sm:py-24">
-                <ContentContainer>
-                    <h1 className="text-4xl font-bold text-white md:text-5xl">
+            <div className="relative py-20 sm:py-24"
+                style={{
+                    backgroundImage: "url('/img/endorsements-background.webp')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundColor: "rgb(0, 33, 78)",
+                }}
+            >
+                {/* Background overlay */}
+                <div className="absolute inset-0 bg-black/50 z-0" />
+                <ContentContainer className="relative z-10 text-center">
+                    <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
                         {t('endorsements')}
                     </h1>
-                    <p className="mt-4 text-lg text-white/80 md:text-xl">
+                    <p className="mt-4 text-lg text-white/80 max-w-2xl mx-auto md:text-xl">
                         Proud to be supported by community leaders and organizations across District 6.
                     </p>
                 </ContentContainer>
-            </section>
+            </div>
 
             {/* Endorsements Grid */}
             <section className="py-16">

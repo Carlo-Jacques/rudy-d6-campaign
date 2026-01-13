@@ -115,6 +115,19 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href={t('urls.veteran')}
+                  className={cn(
+                    "text-sm font-medium transition-colors",
+                    pathname === t('urls.veteran')
+                      ? "text-patriot-red"
+                      : "text-white/80 hover:text-white"
+                  )}
+                >
+                  {t('veteran')}
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/news"
                   className={cn(
                     "text-sm font-medium transition-colors",
@@ -219,14 +232,14 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href={site.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-white text-white hover:bg-white hover:text-[#00214e] transition-all"
-                aria-label="Flickr"
+                aria-label="LinkedIn"
               >
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M0 12c0-3.314 2.686-6 6-6s6 2.686 6 6-2.686 6-6 6-6-2.686-6-6zm12 0c0-3.314 2.686-6 6-6s6 2.686 6 6-2.686 6-6 6-6-2.686-6-6z" />
+                  <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0.5 23.5h4V7.98h-4V23.5zM8 7.98h3.8v2.12h.05c.53-1 1.82-2.12 3.75-2.12C20.1 7.98 22 10.12 22 14.7v8.8h-4v-7.8c0-1.86-.03-4.25-2.59-4.25-2.6 0-3 2.03-3 4.12v7.93H8V7.98z" />
                 </svg>
               </a>
             </div>

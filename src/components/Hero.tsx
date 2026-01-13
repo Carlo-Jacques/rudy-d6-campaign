@@ -14,7 +14,7 @@ export default function Hero() {
     return (
         <section className="relative overflow-visible">
             {/* Patriot red to transparent gradient overlay */}
-            <div className="absolute bottom-0 left-0 right-0 top-0 z-[1] pointer-events-none" style={{ background: 'linear-gradient(to top, rgb(0 0 0) 0%, rgba(0, 0, 0, 0) 50%)' }}></div>
+            <div className="absolute bottom-0 left-0 right-0 top-0 z-[1] pointer-events-none" style={{ background: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 45%, rgba(0,0,0,0.3) 100%)' }}></div>
 
             {/* ABOVE THE FOLD - First Vertical Div */}
             <div className="relative min-h-[110dvh]">
@@ -24,7 +24,7 @@ export default function Hero() {
                 />
 
                 {/* Dark overlay */}
-                <div className="absolute top-0 bottom-0 left-0 right-0 z-[1] bg-black/55">
+                <div className="absolute top-0 bottom-0 left-0 right-0 z-[1]">
                     <div className="relative h-full max-w-6xl mx-auto px-4 flex justify-center md:justify-end items-end flex-wrap" style={{ textAlign: 'right' }}>
                         <img
                             src="/img/hero-rudolph-tinker.webp"

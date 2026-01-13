@@ -202,6 +202,17 @@ export default function Header() {
           >
             {t('district6')}
           </Link>
+          <Link
+            className={cn(
+              "text-sm font-medium transition-colors",
+              pathname === t('urls.veteran')
+                ? "text-patriot-red"
+                : scrolled ? "text-black hover:text-black" : "text-white hover:text-white/80"
+            )}
+            href={t('urls.veteran')}
+          >
+            {t('veteran')}
+          </Link>
 
           {/* Priorities Dropdown */}
           <div className="relative" ref={prioritiesRef}>
@@ -457,6 +468,18 @@ export default function Header() {
                 )}
               >
                 {t('district6')}
+              </Link>
+              <Link
+                href={t('urls.veteran')}
+                onClick={() => setOpen(false)}
+                className={cn(
+                  "rounded-xl px-3 py-3 text-base font-semibold transition-colors",
+                  pathname === t('urls.veteran')
+                    ? "text-patriot-red bg-patriot-red/5"
+                    : "hover:bg-black/5"
+                )}
+              >
+                {t('veteran')}
               </Link>
 
               {/* Priorities Dropdown in Mobile */}
