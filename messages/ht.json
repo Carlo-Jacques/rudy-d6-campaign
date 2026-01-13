@@ -171,5 +171,36 @@
       "description": "Nou te resevwa enfòmasyon ou. Yon moun nan ekip la pral kontakte ou byento pou kòmanse.",
       "returnHome": "Retounen nan Kay la"
     }
+  },
+  "donate": {
+    "title": "Fè yon Don",
+    "metaDescription": "Sipòte kanpay Rudy Tinker pou Komisyonè Konte Palm Beach Distri 6.",
+    "supportTitle": "Sipòte Kanpay la",
+    "supportDescription": "Kontribisyon ou ede nou jwenn plis votè epi reyalize plan 10 pwen nou an pou Distri 6.",
+    "whyTitle": "Poukisa Sipò Ou Enpòtan",
+    "whyDescription": "Fè yon kanpay baz vle di konte sou sipòtè tankou ou, pa sou enterè espesyal oswa gwo donatè. Chak kontribisyon ede nou:",
+    "benefit1": "Rive jwenn votè nan tout Distri 6 ak mesaj nou an",
+    "benefit2": "Bati yon kanpay ki konsantre sou responsablite, pa sou politik",
+    "benefit3": "Reyalize plan 10 pwen nou an pou yon chanjman reyèl",
+    "disclaimer": "Lwa Florid pèmèt yon kontribisyon maksimòm $1,000 pou chak moun ak $1,000 pou chak kòporasyon pou Eleksyon Primè a. Pou Eleksyon Jeneral la, lwa Florid pèmèt yon kontribisyon maksimòm $1,000 pou chak moun ak $1,000 pou chak kòporasyon kèlkeswa kantite lajan yo te bay nan Eleksyon Primè a. Kontribisyon yo dwe soti nan yon sitwayen ameriken oswa rezidan pèmanan Ozetazini epi yo pa dediktib pou taks federal.",
+    "paidFor": "Peye pa Rudolph Tinker, Demokrat, pou Komisyon Konte Palm Beach, Distri 6.",
+    "form": {
+      "firstName": "Prenon",
+      "lastName": "Non",
+      "email": "Adrès Imèl",
+      "phone": "Nimewo Telefòn",
+      "address": "Adrès Ri",
+      "city": "Vil",
+      "state": "Eta",
+      "zip": "Kòd Postal",
+      "amount": "Kantite Kontribisyon",
+      "maxContribution": "Kontribisyon maksimòm: $1,000 pou chak moun pa eleksyon",
+      "paymentMethod": "Metòd Peman",
+      "creditCard": "Kat Kredi",
+      "check": "Chèk",
+      "employerCheck": "Mwen pa fè kontribisyon sa a nan non yon patwon",
+      "citizenCheck": "Mwen se yon sitwayen ameriken oswa rezidan pèmanan",
+      "submit": "Voye Don an"
+    }
   }
 }

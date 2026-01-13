@@ -2,16 +2,18 @@
 
 import { useId } from "react";
 import Button from "@/components/ui/Button";
+import { useTranslations } from "next-intl";
 
 export default function DonateForm() {
     const id = useId();
+    const t = useTranslations("donate.form");
 
     return (
         <form action="/api/form/donate" method="POST" className="space-y-6">
             <div className="grid gap-6 sm:grid-cols-2">
                 <div>
                     <label htmlFor={`${id}-firstName`} className="block text-sm font-semibold text-gray-900 mb-2">
-                        First Name *
+                        {t('firstName')} *
                     </label>
                     <input
                         type="text"
@@ -19,13 +21,13 @@ export default function DonateForm() {
                         id={`${id}-firstName`}
                         required
                         className="block w-full rounded-md border-0 bg-white py-2.5 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-patriot-blue sm:text-sm sm:leading-6"
-                        placeholder="First name"
+                        placeholder={t('firstName')}
                     />
                 </div>
 
                 <div>
                     <label htmlFor={`${id}-lastName`} className="block text-sm font-semibold text-gray-900 mb-2">
-                        Last Name *
+                        {t('lastName')} *
                     </label>
                     <input
                         type="text"
@@ -33,13 +35,13 @@ export default function DonateForm() {
                         id={`${id}-lastName`}
                         required
                         className="block w-full rounded-md border-0 bg-white py-2.5 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-patriot-blue sm:text-sm sm:leading-6"
-                        placeholder="Last name"
+                        placeholder={t('lastName')}
                     />
                 </div>
 
                 <div className="sm:col-span-2">
                     <label htmlFor={`${id}-email`} className="block text-sm font-semibold text-gray-900 mb-2">
-                        Email Address *
+                        {t('email')} *
                     </label>
                     <input
                         type="email"
@@ -53,7 +55,7 @@ export default function DonateForm() {
 
                 <div className="sm:col-span-2">
                     <label htmlFor={`${id}-phone`} className="block text-sm font-semibold text-gray-900 mb-2">
-                        Phone Number *
+                        {t('phone')} *
                     </label>
                     <input
                         type="tel"
@@ -67,7 +69,7 @@ export default function DonateForm() {
 
                 <div className="sm:col-span-2">
                     <label htmlFor={`${id}-address`} className="block text-sm font-semibold text-gray-900 mb-2">
-                        Street Address *
+                        {t('address')} *
                     </label>
                     <input
                         type="text"
@@ -81,7 +83,7 @@ export default function DonateForm() {
 
                 <div>
                     <label htmlFor={`${id}-city`} className="block text-sm font-semibold text-gray-900 mb-2">
-                        City *
+                        {t('city')} *
                     </label>
                     <input
                         type="text"
@@ -89,13 +91,13 @@ export default function DonateForm() {
                         id={`${id}-city`}
                         required
                         className="block w-full rounded-md border-0 bg-white py-2.5 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-patriot-blue sm:text-sm sm:leading-6"
-                        placeholder="City"
+                        placeholder={t('city')}
                     />
                 </div>
 
                 <div>
                     <label htmlFor={`${id}-state`} className="block text-sm font-semibold text-gray-900 mb-2">
-                        State *
+                        {t('state')} *
                     </label>
                     <input
                         type="text"
@@ -110,7 +112,7 @@ export default function DonateForm() {
 
                 <div>
                     <label htmlFor={`${id}-zip`} className="block text-sm font-semibold text-gray-900 mb-2">
-                        ZIP Code *
+                        {t('zip')} *
                     </label>
                     <input
                         type="text"
@@ -125,7 +127,7 @@ export default function DonateForm() {
 
                 <div className="sm:col-span-2">
                     <label htmlFor={`${id}-amount`} className="block text-sm font-semibold text-gray-900 mb-2">
-                        Contribution Amount *
+                        {t('amount')} *
                     </label>
                     <div className="relative">
                         <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">$</span>
@@ -141,12 +143,12 @@ export default function DonateForm() {
                             placeholder="0.00"
                         />
                     </div>
-                    <p className="mt-1 text-xs text-gray-500">Maximum contribution: $1,000 per individual per election</p>
+                    <p className="mt-1 text-xs text-gray-500">{t('maxContribution')}</p>
                 </div>
 
                 <div className="sm:col-span-2">
                     <label className="block text-sm font-semibold text-gray-900 mb-2">
-                        Payment Method *
+                        {t('paymentMethod')} *
                     </label>
                     <div className="space-y-2">
                         <div className="flex items-center">
@@ -160,7 +162,7 @@ export default function DonateForm() {
                                 defaultChecked
                             />
                             <label htmlFor={`${id}-payment-credit`} className="ml-3 block text-sm leading-6 text-gray-900">
-                                Credit Card
+                                {t('creditCard')}
                             </label>
                         </div>
                         <div className="flex items-center">
@@ -172,7 +174,7 @@ export default function DonateForm() {
                                 className="h-4 w-4 border-gray-300 text-patriot-blue focus:ring-patriot-blue"
                             />
                             <label htmlFor={`${id}-payment-check`} className="ml-3 block text-sm leading-6 text-gray-900">
-                                Check
+                                {t('check')}
                             </label>
                         </div>
                     </div>
@@ -187,7 +189,7 @@ export default function DonateForm() {
                             className="mt-1 h-4 w-4 rounded border-gray-300 text-patriot-blue focus:ring-patriot-blue"
                         />
                         <label htmlFor={`${id}-employer`} className="ml-3 block text-sm leading-6 text-gray-900">
-                            I am not making this contribution on behalf of an employer
+                            {t('employerCheck')}
                         </label>
                     </div>
                 </div>
@@ -202,7 +204,7 @@ export default function DonateForm() {
                             className="mt-1 h-4 w-4 rounded border-gray-300 text-patriot-blue focus:ring-patriot-blue"
                         />
                         <label htmlFor={`${id}-us-citizen`} className="ml-3 block text-sm leading-6 text-gray-900">
-                            I am a U.S. citizen or permanent resident *
+                            {t('citizenCheck')} *
                         </label>
                     </div>
                 </div>
@@ -215,13 +217,9 @@ export default function DonateForm() {
                     size="lg"
                     className="w-full"
                 >
-                    Submit Donation
+                    {t('submit')}
                 </Button>
             </div>
         </form>
     );
 }
-
-
-
-

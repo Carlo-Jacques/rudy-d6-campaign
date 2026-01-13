@@ -19,7 +19,7 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  
+
   // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(locale as any)) {
     notFound();
@@ -33,26 +33,24 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
-      <body className="min-h-dvh bg-white text-black">
-        <NextIntlClientProvider messages={messages}>
-          <Header />
+    <div className="min-h-dvh bg-white text-black">
+      <NextIntlClientProvider messages={messages}>
+        <Header />
 
-          {/* 
-            Mobile bottom padding ensures content & footer
-            are not hidden behind sticky petition bar 
-          */}
-          <div>
-            {children}
-          </div>
+        {/* 
+          Mobile bottom padding ensures content & footer
+          are not hidden behind sticky petition bar 
+        */}
+        <div>
+          {children}
+        </div>
 
-          {/* Mobile-only sticky CTA */}
-          <MobileStickyCta />
+        {/* Mobile-only sticky CTA */}
+        <MobileStickyCta />
 
-          <Footer />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+        <Footer />
+      </NextIntlClientProvider>
+    </div>
   );
 }
 

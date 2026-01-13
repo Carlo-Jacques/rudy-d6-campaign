@@ -171,5 +171,36 @@
       "description": "Hemos recibido tu información. Alguien del equipo se pondrá en contacto contigo pronto para comenzar.",
       "returnHome": "Volver al Inicio"
     }
+  },
+  "donate": {
+    "title": "Donar",
+    "metaDescription": "Apoye la campaña de Rudy Tinker para Comisionado del Condado de Palm Beach Distrito 6.",
+    "supportTitle": "Apoye la Campaña",
+    "supportDescription": "Su contribución nos ayuda a llegar a más votantes y cumplir con nuestro plan de 10 puntos para el Distrito 6.",
+    "whyTitle": "Por Qué su Apoyo es Importante",
+    "whyDescription": "Llevar a cabo una campaña de base significa depender de simpatizantes como usted, no de intereses especiales o grandes donantes. Cada contribución nos ayuda a:",
+    "benefit1": "Llegar a los votantes en todo el Distrito 6 con nuestro mensaje",
+    "benefit2": "Construir una campaña enfocada en la rendición de cuentas, no en la política",
+    "benefit3": "Cumplir con nuestro plan de 10 puntos para un cambio real",
+    "disclaimer": "La ley de Florida permite una contribución máxima de $1,000 por individuo y $1,000 por corporación para las Elecciones Primarias. Para las Elecciones Generales, la ley de Florida permite una contribución máxima de $1,000 por individuo y $1,000 por corporación independientemente del monto entregado en las Elecciones Primarias. Las contribuciones deben ser de un ciudadano estadounidense o residente permanente en los EE. UU. y no son deducibles para fines de impuestos federales.",
+    "paidFor": "Pagado por Rudolph Tinker, Demócrata, para la Comisión del Condado de Palm Beach, Distrito 6.",
+    "form": {
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "email": "Correo Electrónico",
+      "phone": "Número de Teléfono",
+      "address": "Dirección",
+      "city": "Ciudad",
+      "state": "Estado",
+      "zip": "Código Postal",
+      "amount": "Monto de la Contribución",
+      "maxContribution": "Contribución máxima: $1,000 por individuo por elección",
+      "paymentMethod": "Método de Pago",
+      "creditCard": "Tarjeta de Crédito",
+      "check": "Cheque",
+      "employerCheck": "No estoy realizando esta contribución en nombre de un empleador",
+      "citizenCheck": "Soy ciudadano estadounidense o residente permanente",
+      "submit": "Enviar Donación"
+    }
   }
 }

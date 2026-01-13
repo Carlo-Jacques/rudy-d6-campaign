@@ -171,5 +171,36 @@
       "description": "We've received your information. Someone from the team will reach out to you soon to get you started.",
       "returnHome": "Return to Home"
     }
+  },
+  "donate": {
+    "title": "Donate",
+    "metaDescription": "Support Rudy Tinker's campaign for Palm Beach County Commissioner District 6.",
+    "supportTitle": "Support the Campaign",
+    "supportDescription": "Your contribution helps us reach more voters and deliver on our 10-point plan for District 6.",
+    "whyTitle": "Why Your Support Matters",
+    "whyDescription": "Running a grassroots campaign means relying on supporters like you, not special interests or big donors. Every contribution helps us:",
+    "benefit1": "Reach voters across District 6 with our message",
+    "benefit2": "Build a campaign focused on accountability, not politics",
+    "benefit3": "Deliver on our 10-point plan for real change",
+    "disclaimer": "Florida law permits a maximum contribution of $1,000 per individual and $1,000 per corporation for the Primary Election. For the General Election, Florida law permits a maximum contribution of $1,000 per individual and $1,000 per corporation regardless of the amount given in the Primary Election. Contributions must be from a US Citizen or permanent resident in the US and are not deductible for Federal Tax purposes.",
+    "paidFor": "Paid for by Rudolph Tinker, Democrat, for Palm Beach County Commission, District 6.",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "address": "Street Address",
+      "city": "City",
+      "state": "State",
+      "zip": "ZIP Code",
+      "amount": "Contribution Amount",
+      "maxContribution": "Maximum contribution: $1,000 per individual per election",
+      "paymentMethod": "Payment Method",
+      "creditCard": "Credit Card",
+      "check": "Check",
+      "employerCheck": "I am not making this contribution on behalf of an employer",
+      "citizenCheck": "I am a U.S. citizen or permanent resident",
+      "submit": "Submit Donation"
+    }
   }
 }
