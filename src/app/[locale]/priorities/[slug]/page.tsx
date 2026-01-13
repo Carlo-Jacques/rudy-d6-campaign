@@ -79,15 +79,7 @@ export default async function PriorityPage({ params }: Props) {
       {/* Content */}
       <ContentContainer className="py-12">
         <div className="rounded-2xl border border-black/10 bg-black/[0.02] p-6 sm:p-8">
-          {priority.image && (
-            <div className="mb-8 overflow-hidden rounded-xl shadow-lg border-2 border-patriot-blue/10">
-              <img
-                src={priority.image}
-                alt={priority.title}
-                className="w-full h-auto object-cover max-h-[500px]"
-              />
-            </div>
-          )}
+
           <ul className="space-y-4 text-base text-black/85 sm:text-lg">
             {priority.bullets.map((bullet, index) => (
               <li key={index} className="flex gap-3">
@@ -145,7 +137,7 @@ export default async function PriorityPage({ params }: Props) {
           </div>
         </div>
       </ContentContainer>
-    </main>
+    </main >
   );
 }
 
