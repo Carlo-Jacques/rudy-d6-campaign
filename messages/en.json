@@ -1,6 +1,6 @@
 {
   "common": {
-    "aboutRudy": "About Rudy",
+    "aboutRudy": "About Rudolph",
     "endorsements": "Endorsements",
     "district6": "District 6",
     "volunteer": "Volunteer",
@@ -18,7 +18,12 @@
     "privacyPolicy": "Privacy Policy",
     "paidForBy": "Paid for by Rudolph Tinker",
     "copyright": "Copyright",
-    "allRightsReserved": "All Rights Reserved"
+    "allRightsReserved": "All Rights Reserved",
+    "urls": {
+      "donate": "/donate",
+      "volunteer": "/volunteer",
+      "petition": "/petition"
+    }
   },
   "mobileCta": {
     "signPetition": "Sign Petition",
@@ -28,7 +33,7 @@
   "home": {
     "pledge": {
       "title": "The pledge",
-      "description": "Rudy is asking District 6 voters for something simple: a mandate to deliver a clear 10-point plan. If elected, progress will be reported publicly—so residents can measure outcomes, not slogans.",
+      "description": "Rudolph Tinker is asking District 6 voters for something simple: a mandate to deliver a clear 10-point plan. If elected, progress will be reported publicly—so residents can measure outcomes, not slogans.",
       "quote": "If elected, I will keep the 10-point plan—and report progress monthly."
     },
     "plan": {

@@ -14,7 +14,7 @@ export default function Hero() {
     return (
         <section className="relative overflow-visible">
             {/* Patriot red to transparent gradient overlay */}
-            <div className="absolute bottom-0 left-0 right-0 top-0 z-[1] pointer-events-none" style={{ background: 'linear-gradient(to top, #B31942 0%, #B31942 30%, rgba(179, 25, 66, 0.6) 50%, rgba(0, 0, 0, 0) 100%)' }}></div>
+            <div className="absolute bottom-0 left-0 right-0 top-0 z-[1] pointer-events-none" style={{ background: 'linear-gradient(to top, rgb(0 0 0) 0%, rgba(0, 0, 0, 0) 50%)' }}></div>
 
             {/* ABOVE THE FOLD - First Vertical Div */}
             <div className="relative min-h-[110dvh]">

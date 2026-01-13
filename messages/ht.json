@@ -1,6 +1,6 @@
 {
   "common": {
-    "aboutRudy": "Sou Rudy",
+    "aboutRudy": "Sou Rudolph",
     "endorsements": "Sipò",
     "district6": "Distri 6",
     "volunteer": "Volontè",
@@ -18,7 +18,12 @@
     "privacyPolicy": "Règleman sou enfòmasyon prive",
     "paidForBy": "Peye pa Rudolph Tinker",
     "copyright": "Dwa otè",
-    "allRightsReserved": "Tout dwa rezève"
+    "allRightsReserved": "Tout dwa rezève",
+    "urls": {
+      "donate": "/donate",
+      "volunteer": "/volunteer",
+      "petition": "/petition"
+    }
   },
   "mobileCta": {
     "signPetition": "Siyen Petisyon an",

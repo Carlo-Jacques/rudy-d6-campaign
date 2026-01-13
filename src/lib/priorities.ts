@@ -4,6 +4,7 @@ export type PriorityItem = {
   number: number;
   title: string;
   bullets: string[];
+  image?: string;
 };
 
 // Helper function to convert title to slug
@@ -37,6 +38,7 @@ export const priorities: PriorityItem[] = [
       "Eliminate garbage/waste taxes on vacant property, where residents are being charged for trash collection on land that produces no garbage.",
       "Require SWA to justify any future fee increases with a full public impact study and transparency.",
     ],
+    image: "/img/rudolph-tinker-slashing-property-tax.png",
   },
   {
     id: "2",
@@ -52,6 +54,7 @@ export const priorities: PriorityItem[] = [
       "Extend tax deed from 2 years to 5 years for primary homes.",
       "Require early notices and repayment options.",
     ],
+    image: "/img/rudolph-tinker-slashing-property-tax.png",
   },
   {
     id: "3",

@@ -1,6 +1,6 @@
 {
   "common": {
-    "aboutRudy": "Acerca de Rudy",
+    "aboutRudy": "Acerca de Rudolph",
     "endorsements": "Endosos",
     "district6": "Distrito 6",
     "volunteer": "Voluntario",
@@ -18,7 +18,12 @@
     "privacyPolicy": "Política de privacidad",
     "paidForBy": "Pagado por Rudolph Tinker",
     "copyright": "Derechos de autor",
-    "allRightsReserved": "Todos los derechos reservados"
+    "allRightsReserved": "Todos los derechos reservados",
+    "urls": {
+      "donate": "/donate",
+      "volunteer": "/volunteer",
+      "petition": "/petition"
+    }
   },
   "mobileCta": {
     "signPetition": "Firmar Petición",

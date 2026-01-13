@@ -3,8 +3,10 @@
 import { Link, usePathname } from "@/i18n/navigation";
 import { site } from "@/lib/site";
 import { cn } from "@/lib/cn";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations('common');
   const year = new Date().getFullYear();
   const pathname = usePathname();
 
@@ -15,7 +17,7 @@ export default function Footer() {
   return (
     <footer className="relative w-full text-white overflow-hidden">
       {/* Footer Background */}
-      <div 
+      <div
         className="absolute inset-0 z-0"
         style={{
           backgroundImage: "url('/img/footer-wide.webp')",
@@ -26,7 +28,7 @@ export default function Footer() {
         }}
         aria-hidden="true"
       />
-      
+
       {/* Dark overlay for text readability */}
       <div className="absolute inset-0 z-[1] bg-[#00214e]/85" />
 
@@ -59,22 +61,22 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold uppercase mb-4">Quick Links</h3>
             <ul className="space-y-2">
-                  <li>
-                    <Link 
-                      href="/about-rudolph" 
-                      className={cn(
-                        "text-sm font-medium transition-colors",
-                        pathname?.startsWith("/about-rudolph")
-                          ? "text-patriot-red"
-                          : "text-white/80 hover:text-white"
-                      )}
-                    >
-                      About Rudolph
-                    </Link>
-                  </li>
               <li>
-                <Link 
-                  href="/#plan" 
+                <Link
+                  href="/about-rudolph"
+                  className={cn(
+                    "text-sm font-medium transition-colors",
+                    pathname?.startsWith("/about-rudolph")
+                      ? "text-patriot-red"
+                      : "text-white/80 hover:text-white"
+                  )}
+                >
+                  About Rudolph
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#plan"
                   className={cn(
                     "text-sm font-medium transition-colors",
                     pathname?.startsWith("/priorities") || pathname === "/" || pathname === "/#plan"
@@ -86,8 +88,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/endorsements" 
+                <Link
+                  href="/endorsements"
                   className={cn(
                     "text-sm font-medium transition-colors",
                     pathname === "/endorsements"
@@ -99,8 +101,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/district-6" 
+                <Link
+                  href="/district-6"
                   className={cn(
                     "text-sm font-medium transition-colors",
                     pathname === "/district-6"
@@ -112,8 +114,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/news" 
+                <Link
+                  href="/news"
                   className={cn(
                     "text-sm font-medium transition-colors",
                     pathname === "/news"
@@ -125,11 +127,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href={site.volunteerUrl} 
+                <Link
+                  href={t('urls.volunteer')}
                   className={cn(
                     "text-sm font-medium transition-colors",
-                    pathname === site.volunteerUrl
+                    pathname === t('urls.volunteer')
                       ? "text-patriot-red"
                       : "text-white/80 hover:text-white"
                   )}
@@ -138,11 +140,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href={site.donateUrl} 
+                <Link
+                  href={t('urls.donate')}
                   className={cn(
                     "text-sm font-medium transition-colors",
-                    pathname === site.donateUrl
+                    pathname === t('urls.donate')
                       ? "text-patriot-red"
                       : "text-white/80 hover:text-white"
                   )}
@@ -151,11 +153,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href={site.petitionUrl} 
+                <Link
+                  href={t('urls.petition')}
                   className={cn(
                     "text-sm font-medium transition-colors",
-                    pathname === site.petitionUrl
+                    pathname === t('urls.petition')
                       ? "text-patriot-red"
                       : "text-white/80 hover:text-white"
                   )}
@@ -169,7 +171,7 @@ export default function Footer() {
           {/* Right Column - Connect with Rudolph */}
           <div>
             <h3 className="text-lg font-bold uppercase mb-4">Connect with Rudolph</h3>
-            
+
             {/* Social Media Icons */}
             <div className="flex gap-3 mb-6">
               <a

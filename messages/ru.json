@@ -1,6 +1,6 @@
 {
   "common": {
-    "aboutRudy": "О Руди",
+    "aboutRudy": "О Рудольфе",
     "endorsements": "Поддержка",
     "district6": "Округ 6",
     "volunteer": "Волонтёр",
@@ -18,7 +18,12 @@
     "privacyPolicy": "Политика конфиденциальности",
     "paidForBy": "Оплачено Рудольфом Тинкером",
     "copyright": "Авторское право",
-    "allRightsReserved": "Все права защищены"
+    "allRightsReserved": "Все права защищены",
+    "urls": {
+      "donate": "/donate",
+      "volunteer": "/volunteer",
+      "petition": "/petition"
+    }
   },
   "mobileCta": {
     "signPetition": "Подписать петицию",

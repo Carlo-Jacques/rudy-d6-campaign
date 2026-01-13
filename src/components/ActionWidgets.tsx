@@ -1,23 +1,25 @@
 "use client";
 
 import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 export default function ActionWidgets() {
+  const t = useTranslations('common');
   return (
     <div className="relative -mt-20 z-10 mb-0 w-full" style={{ marginTop: "-120px" }}>
       {/* Gradient overlay from patriot red (bottom) to transparent (top) - spans full width */}
-      <div 
+      <div
         className="absolute inset-0 pointer-events-none z-0"
         style={{
-          background: 'linear-gradient(to top, #B31942 35%, transparent 100%)',
+          background: 'linear-gradient(to top, rgb(0 0 0) 0%, rgba(0, 0, 0, 0) 50%)',
         }}
       />
       {/* Content container - constrained width */}
       <div className="relative z-10 mx-auto max-w-7xl px-4" style={{ paddingLeft: '3.75vw', paddingRight: '3.75vw' }}>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Register to vote */}
-          <Link 
-            href="#" 
+          <Link
+            href="#"
             className="action-item group bg-[#14468c] text-white rounded-lg p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
             <div className="icon-wrapper mb-4">
@@ -30,8 +32,8 @@ export default function ActionWidgets() {
           </Link>
 
           {/* Attend Events */}
-          <Link 
-            href="#" 
+          <Link
+            href="#"
             className="action-item group bg-[#0d2f5d] text-white rounded-lg p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
             <div className="icon-wrapper mb-4">
@@ -44,8 +46,8 @@ export default function ActionWidgets() {
           </Link>
 
           {/* Get Involved */}
-          <Link 
-            href="#" 
+          <Link
+            href="#"
             className="action-item group bg-[#0d2f5d] text-white rounded-lg p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
             <div className="icon-wrapper mb-4">
@@ -58,8 +60,8 @@ export default function ActionWidgets() {
           </Link>
 
           {/* Donate */}
-          <Link 
-            href="/donate" 
+          <Link
+            href={t('urls.donate')}
             className="action-item group bg-patriot-red text-white rounded-lg p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
             <div className="icon-wrapper mb-4">

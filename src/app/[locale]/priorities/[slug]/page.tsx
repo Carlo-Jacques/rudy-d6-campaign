@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { priorities, getPriorityBySlug, getPriorityById } from "@/lib/priorities";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { site } from "@/lib/site";
 import Button from "@/components/ui/Button";
 import ContentContainer from "@/components/ContentContainer";
@@ -33,8 +34,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function PriorityPage({ params }: Props) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const priority = getPriorityBySlug(slug);
+  const t_common = await getTranslations('common');
 
   if (!priority) {
     notFound();
@@ -46,7 +48,7 @@ export default async function PriorityPage({ params }: Props) {
   return (
     <main className="bg-white">
       {/* Header */}
-      <div 
+      <div
         className="relative py-16 sm:py-20"
         style={{
           backgroundImage: "url('/img/rudolph-tinker-plan.webp')",
@@ -77,6 +79,15 @@ export default async function PriorityPage({ params }: Props) {
       {/* Content */}
       <ContentContainer className="py-12">
         <div className="rounded-2xl border border-black/10 bg-black/[0.02] p-6 sm:p-8">
+          {priority.image && (
+            <div className="mb-8 overflow-hidden rounded-xl shadow-lg border-2 border-patriot-blue/10">
+              <img
+                src={priority.image}
+                alt={priority.title}
+                className="w-full h-auto object-cover max-h-[500px]"
+              />
+            </div>
+          )}
           <ul className="space-y-4 text-base text-black/85 sm:text-lg">
             {priority.bullets.map((bullet, index) => (
               <li key={index} className="flex gap-3">
@@ -125,10 +136,10 @@ export default async function PriorityPage({ params }: Props) {
             Help make this priority a reality by signing the petition and supporting the campaign.
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <Button href={site.petitionUrl} variant="petition" size="md">
+            <Button href={t_common('urls.petition')} variant="petition" size="md">
               Sign the Petition
             </Button>
-            <Button href={site.donateUrl} variant="donate" size="md" target="_blank">
+            <Button href={t_common('urls.donate')} variant="donate" size="md" target="_blank">
               Donate
             </Button>
           </div>

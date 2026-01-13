@@ -59,10 +59,10 @@ export default function Header() {
     <header
       className={cn(
         "fixed top-0 z-50 w-full border-b",
-        isHomePage 
-          ? (scrolled 
-              ? "bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-black/10" 
-              : "bg-transparent border-transparent")
+        isHomePage
+          ? (scrolled
+            ? "bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-black/10"
+            : "bg-transparent border-transparent")
           : "bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-black/10"
       )}
     >
@@ -112,7 +112,7 @@ export default function Header() {
                 "text-sm font-medium transition-colors flex items-center gap-1",
                 isAboutRudyPage
                   ? "text-patriot-red"
-                  : (isHomePage && !scrolled) ? "text-white hover:text-white/80" : "text-black/80 hover:text-black"
+                  : (isHomePage && !scrolled) ? "text-white hover:text-white/80" : "text-black hover:text-black"
               )}
             >
               {t('aboutRudy')}
@@ -185,7 +185,7 @@ export default function Header() {
               "text-sm font-medium transition-colors",
               pathname === "/endorsements"
                 ? "text-patriot-red"
-                : scrolled ? "text-black/80 hover:text-black" : "text-white hover:text-white/80"
+                : scrolled ? "text-black hover:text-black" : "text-white hover:text-white/80"
             )}
             href="/endorsements"
           >
@@ -196,13 +196,13 @@ export default function Header() {
               "text-sm font-medium transition-colors",
               pathname === "/district-6"
                 ? "text-patriot-red"
-                : scrolled ? "text-black/80 hover:text-black" : "text-white hover:text-white/80"
+                : scrolled ? "text-black hover:text-black" : "text-white hover:text-white/80"
             )}
             href="/district-6"
           >
             {t('district6')}
           </Link>
-          
+
           {/* Priorities Dropdown */}
           <div className="relative" ref={prioritiesRef}>
             <button
@@ -212,7 +212,7 @@ export default function Header() {
                 "text-sm font-medium transition-colors flex items-center gap-1",
                 isPrioritiesPage || pathname === "/" || pathname === "/#plan"
                   ? "text-patriot-red"
-                  : (isHomePage && !scrolled) ? "text-white hover:text-white/80" : "text-black/80 hover:text-black"
+                  : (isHomePage && !scrolled) ? "text-white hover:text-white/80" : "text-black hover:text-black"
               )}
             >
               {t('priorities')}
@@ -277,21 +277,21 @@ export default function Header() {
           <Link
             className={cn(
               "text-sm font-medium transition-colors",
-              pathname === site.volunteerUrl
+              pathname === t('urls.volunteer')
                 ? "text-patriot-red"
-                : scrolled ? "text-black/80 hover:text-black" : "text-white hover:text-white/80"
+                : scrolled ? "text-black hover:text-black" : "text-white hover:text-white/80"
             )}
-            href={site.volunteerUrl}
+            href={t('urls.volunteer')}
           >
             {t('volunteer')}
           </Link>
 
-          <Button href={site.donateUrl} variant="donate" size="sm">
+          <Button href={t('urls.donate')} variant="donate" size="sm">
             {t('donate')}
           </Button>
 
           <Button
-            href={site.petitionUrl}
+            href={t('urls.petition')}
             variant="petition"
             size="sm"
           >
@@ -304,9 +304,9 @@ export default function Header() {
         {/* Mobile controls */}
         <div className="flex items-center gap-2 md:hidden">
           <LanguageSwitcher scrolled={isHomePage ? scrolled : true} />
-          
+
           <Button
-            href={site.petitionUrl}
+            href={t('urls.petition')}
             variant="petition"
             size="md"
           >
@@ -348,7 +348,7 @@ export default function Header() {
               </button>
             </div>
 
-            <div className="flex flex-col gap-1 p-4">
+            <div className="flex flex-col gap-1 p-4 bg-white">
               {/* About Rudy Dropdown in Mobile */}
               <div>
                 <button
@@ -458,7 +458,7 @@ export default function Header() {
               >
                 {t('district6')}
               </Link>
-              
+
               {/* Priorities Dropdown in Mobile */}
               <div>
                 <button
@@ -534,11 +534,11 @@ export default function Header() {
               </div>
 
               <Link
-                href={site.volunteerUrl}
+                href={t('urls.volunteer')}
                 onClick={() => setOpen(false)}
                 className={cn(
                   "rounded-xl px-3 py-3 text-base font-semibold transition-colors",
-                  pathname === site.volunteerUrl
+                  pathname === t('urls.volunteer')
                     ? "text-patriot-red bg-patriot-red/5"
                     : "hover:bg-black/5"
                 )}
@@ -548,7 +548,7 @@ export default function Header() {
 
               <div className="mt-2 grid gap-2">
                 <Button
-                  href={site.petitionUrl}
+                  href={t('urls.petition')}
                   variant="petition"
                   size="md"
                   className="w-full"
@@ -556,7 +556,7 @@ export default function Header() {
                   {t('petition')}
                 </Button>
 
-                <Button href={site.donateUrl} variant="donate" size="md" className="w-full">
+                <Button href={t('urls.donate')} variant="donate" size="md" className="w-full">
                   {t('donate')}
                 </Button>
               </div>
