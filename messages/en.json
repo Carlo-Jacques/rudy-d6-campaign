@@ -20,6 +20,11 @@
     "copyright": "Copyright",
     "allRightsReserved": "All Rights Reserved"
   },
+  "mobileCta": {
+    "signPetition": "Sign Petition",
+    "donate": "Donate",
+    "disclaimer": "Petition first. Print, sign, mail. We’ll add tracking next."
+  },
   "home": {
     "pledge": {
       "title": "The pledge",

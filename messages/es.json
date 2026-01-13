@@ -20,6 +20,11 @@
     "copyright": "Derechos de autor",
     "allRightsReserved": "Todos los derechos reservados"
   },
+  "mobileCta": {
+    "signPetition": "Firmar Petición",
+    "donate": "Donar",
+    "disclaimer": "Petición primero. Imprimir, firmar, enviar por correo. Agregaremos el seguimiento próximamente."
+  },
   "home": {
     "pledge": {
       "title": "El compromiso",

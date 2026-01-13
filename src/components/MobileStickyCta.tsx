@@ -2,8 +2,11 @@
 
 import Button from "@/components/ui/Button";
 import { site } from "@/lib/site";
+import { useTranslations } from "next-intl";
 
 export default function MobileStickyCta() {
+  const t = useTranslations("mobileCta");
+
   return (
     <div className="fixed inset-x-0 bottom-0 z-[60] md:hidden">
       {/* Subtle backdrop for readability over content */}
@@ -16,20 +19,19 @@ export default function MobileStickyCta() {
             variant="petition"
             size="md"
           >
-            Sign Petition
+            {t("signPetition")}
           </Button>
 
 
-          <Button href={site.donateUrl} variant="donate" size="md" className="shrink-0" target="_blank">
-            Donate
+          <Button href={site.donateUrl} variant="donate" size="md" className="shrink-0">
+            {t("donate")}
           </Button>
         </div>
 
         <div className="mx-auto mt-2 max-w-6xl text-center text-[11px] text-black/60">
-          Petition first. Print, sign, mail. We’ll add tracking next.
+          {t("disclaimer")}
         </div>
       </div>
     </div>
   );
 }
-

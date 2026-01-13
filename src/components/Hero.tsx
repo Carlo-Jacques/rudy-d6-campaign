@@ -10,14 +10,14 @@ export default function Hero() {
     const t = useTranslations('hero');
     const tHome = useTranslations('home');
     const [showFallback, setShowFallback] = useState(false);
-    
+
     return (
         <section className="relative overflow-visible">
             {/* Patriot red to transparent gradient overlay */}
             <div className="absolute bottom-0 left-0 right-0 top-0 z-[1] pointer-events-none" style={{ background: 'linear-gradient(to top, #B31942 0%, #B31942 30%, rgba(179, 25, 66, 0.6) 50%, rgba(0, 0, 0, 0) 100%)' }}></div>
-            
+
             {/* ABOVE THE FOLD - First Vertical Div */}
-            <div className="relative min-h-[100dvh]">
+            <div className="relative min-h-[110dvh]">
                 <div
                     className="absolute inset-0 z-0 bg-[url('/img/Hero-Bg-Image.webp')] bg-cover bg-center bg-no-repeat"
                     aria-hidden="true"
@@ -35,7 +35,7 @@ export default function Hero() {
                     </div>
                 </div>
 
-                <div className="relative z-10 mx-auto flex min-h-[calc(100dvh-100px)] max-w-7xl items-center pt-[2vh] pb-12 md:min-h-[100dvh] md:pb-8" style={{ paddingLeft: "calc(1rem + 20px)", paddingRight: "calc(1rem + 20px)" }}>
+                <div className="relative z-10 mx-auto flex min-h-[calc(110dvh-100px)] max-w-7xl items-center pt-[2vh] pb-12 md:pb-8" style={{ paddingLeft: "calc(1rem + 20px)", paddingRight: "calc(1rem + 20px)" }}>
                     <div className="grid w-full grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-2 lg:gap-12">
                         {/* Left side - Content */}
                         <div className="flex flex-col justify-center w-full max-w-2xl">
@@ -138,7 +138,7 @@ export default function Hero() {
                                 <p className="text-white text-base leading-relaxed mb-6">
                                     Rudolph "Rudy" Tinker is a U.S. Army veteran, small business owner, contractor, and educator who has called Palm Beach County District 6 home for more than 20 years and believes government should work for the people it serves. He is running because taxes and costs keep rising while waste, poor planning, and unaccountable county decisions hurt families and small businesses. His 10-Point Plan delivers clear, practical solutions to cut waste, lower costs, reform county services, and restore responsible, people-first leadership.
                                 </p>
-                                <Link 
+                                <Link
                                     href="/about-rudolph"
                                     className="inline-flex items-center text-white font-semibold hover:text-patriot-red transition-colors"
                                 >
