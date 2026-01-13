@@ -10,6 +10,7 @@
     "bio": "Biyografi",
     "preparedness": "Preparasyon",
     "whyIWantToRun": "Poukisa mwen vle kandide",
+    "veteran": "Veteran",
     "menu": "Meni",
     "close": "Fèmen",
     "viewAll": "Wè tout",
@@ -22,7 +23,8 @@
     "urls": {
       "donate": "/donate",
       "volunteer": "/volunteer",
-      "petition": "/petition"
+      "petition": "/petition",
+      "veteran": "/veteran"
     }
   },
   "mobileCta": {
@@ -131,7 +133,7 @@
     "title": "Poukisa mwen ap kandide pou Distri 6",
     "description": "Rudolph Tinker eksplike poukisa li ap kandide pou Komisyon Konte Palm Beach Distri 6.",
     "backToAbout": "Retounen nan Sou Rudolph",
-    "content": "<p>Mwen ap kandide pou Komisyon Konte Palm Beach Distri 6 paske gouvènman konte a pèdi kontak ak reyalite — epi moun chak jou ap peye pri a.</p><p>Pou kòmanse, taks pwopriyete yo kontinye monte ak ti kras pou montre pou sa.</p><p>Pi mal, abòdabilite kontinye ap andeyò rive pou anpil rezidan – sa dwe sispann!</p><p>E fanmi yo ap sere pou chak kòb, pandan ke administratè konte yo ap gaspiye lajan epi pwoteje tèt yo olye piblik la.</p><p>An reyalite, dapre Chèf Finansye Florid la, Konte Palm Beach te siyale pou plis pase <strong>$344 milyon</strong> nan depans gaspiye oswa kesyonab. Sa pa politik — se lajan kontribyab ki te ka ale nan direksyon taks pwopriyete ki pi ba, ranje wout, amelyore drenaj, soulaje trafik, epi finalman envesti nan kominote ki te inyore pandan plizyè deseni!</p><p>Olye, rezidan yo di ke \"pa gen lajan.\" Sa tradui nan gonfle bidjè piblik yo san yo pa responsab.</p><p><strong>E isit la se ENJOU!</strong></p><p>Tout <strong>sèt</strong> Komisyonè Konte Palm Beach te apwouve inanimite kontra sekirite <strong>$3.3 milyon</strong> ak Biwo Chèf Konte Palm Beach (PBSO) sou 4 novanm 2025. Lè ou divize nimewo sa a pa sèt komisyonè, sa soti nan apeprè <strong>$471,000 pou chak komisyonè</strong> — plis pase kat fwa salè anyèl yon komisyonè.</p><p><strong>KITE SA SINK IN!</strong></p><p>Nan yon moman kote mèt kay yo ap lite, taks yo ap monte, epi kominote yo di yo aksepte mwens, politisyen yo ap depanse plis pase <strong>400%</strong> salè yo sou detay sekirite finanse pa kontribyab yo!</p><p><strong>Ki wont!</strong></p><p>Mwen vle klè: <strong>Mwen p ap aksepte yon detay sekirite finanse pa kontribyab tankou sa – janm!</strong></p><p>Sèvis piblik pa sou izole tèt ou nan moun ou sèvi. Ou pa ta dwe nan biwo piblik si ou pa disponib pou moun ou sèvi.</p><p>Pi mal se ke pandan politisyen yo ap pwoteje tèt yo, kominote tankou Loxahatchee Groves ap pèdi sèvis aplikasyon lalwa akòz gwo pri kontra polis yo.</p><p>Fanmi yo di pa gen ase resous — men yon jan kanmenm toujou gen lajan pou pwoteje ofisyèl eli yo.</p><p><strong>Sa pa lidèchip!</strong></p><p><strong>Sa se privilèj!</strong></p><p><strong>E desizyon tankou sa yo ak anpil lòt efò depans gaspiye bezwen fini jodi a!</strong></p><p>Kòm yon kontraktè jeneral ki gen lisans, mwen wè premye men ki jan move planifikasyon ak move desizyon konte ogmante depans pou tout moun. Kòm yon veteran, ki te sèvi onorabman nan Lame Etazini, mwen konnen lidèchip vle di responsabilite, responsabilite, ak sèvis — pa ego! E kòm yon edikatè, mwen anseye moun ki jan gouvènman an sipoze fonksyone, paske kominote enfòme mande yon pi bon gouvènman.</p><p>Ou ta dwe konnen - <strong>Mwen pa kandide pou pwoteje estati quo a!</strong></p><p><strong>Mwen kandide pou chanje ki jan Konte nou an fè biznis!</strong></p><p><strong>Ase gaspiyaj!</strong></p><p><strong>Ase neglijans!</strong></p><p><strong>Ase ak politisyen ki ap pwoteje tèt yo pandan fanmi Konte Palm Beach ap lite!</strong></p><p>Chak kominote Konte Palm Beach merite tande. Chak kominote Konte Palm Beach merite <strong>RESPE</strong>. E chak desizyon ta dwe fèt ak moun ki viv avèk li nan tèt.</p><p>Mwen kandide paske Distri 6 merite <strong>lidèchip REYÈL</strong> ki koute, planifye responsab, depanse avèk sajès, epi parèt nan travay!</p><h2>Mwen se Rudolph \"Rudy\" Tinker!</h2><p><em>Youn nan nou — K ap travay pou tout nou!</em></p><p><strong>Vote Rudy pou Distri 6!</strong></p>"
+    "content": "<p class=\"mb-6\">Mwen ap kandide pou Komisyon Konte Palm Beach Distri 6 paske gouvènman konte a pèdi kontak ak reyalite — epi moun chak jou ap peye pri a.</p><p class=\"mb-6\">Pou kòmanse, taks pwopriyete yo kontinye monte ak ti kras pou montre pou sa.</p><p class=\"mb-6\">Pi mal, abòdabilite kontinye ap andeyò rive pou anpil rezidan – sa dwe sispann!</p><p class=\"mb-6\">E fanmi yo ap sere pou chak kòb, pandan ke administratè konte yo ap gaspiye lajan epi pwoteje tèt yo olye piblik la.</p><p class=\"mb-6\">An reyalite, dapre Chèf Finansye Florid la, Konte Palm Beach te siyale pou plis pase <strong>$344 milyon</strong> nan depans gaspiye oswa kesyonab. Sa pa politik — se lajan kontribyab ki te ka ale nan direksyon taks pwopriyete ki pi ba, ranje wout, amelyore drenaj, soulaje trafik, epi finalman envesti nan kominote ki te inyore pandan plizyè deseni!</p><p class=\"mb-6\">Olye, rezidan yo di ke \"pa gen lajan.\" Sa tradui nan gonfle bidjè piblik yo san yo pa responsab.</p><p class=\"mb-6\"><strong>E isit la se ENJOU!</strong></p><p class=\"mb-6\">Tout <strong>sèt</strong> Komisyonè Konte Palm Beach te apwouve inanimite kontra sekirite <strong>$3.3 milyon</strong> ak Biwo Chèf Konte Palm Beach (PBSO) sou 4 novanm 2025. Lè ou divize nimewo sa a pa sèt komisyonè, sa soti nan apeprè <strong>$471,000 pou chak komisyonè</strong> — plis pase kat fwa salè anyèl yon komisyonè.</p><p class=\"mb-6\"><strong>KITE SA SINK IN!</strong></p><p class=\"mb-6\">Nan yon moman kote mèt kay yo ap lite, taks yo ap monte, epi kominote yo di yo aksepte mwens, politisyen yo ap depanse plis pase <strong>400%</strong> salè yo sou detay sekirite finanse pa kontribyab yo!</p><p class=\"mb-6\"><strong>Ki wont!</strong></p><p class=\"mb-6\">Mwen vle klè: <strong>Mwen p ap aksepte yon detay sekirite finanse pa kontribyab tankou sa – janm!</strong></p><p class=\"mb-6\">Sèvis piblik pa sou izole tèt ou nan moun ou sèvi. Ou pa ta dwe nan biwo piblik si ou pa disponib pou moun ou sèvi.</p><p class=\"mb-6\">Pi mal se ke pandan politisyen yo ap pwoteje tèt yo, kominote tankou Loxahatchee Groves ap pèdi sèvis aplikasyon lalwa akòz gwo pri kontra polis yo.</p><p class=\"mb-6\">Fanmi yo di pa gen ase resous — men yon jan kanmenm toujou gen lajan pou pwoteje ofisyèl eli yo.</p><p class=\"mb-6\"><strong>Sa pa lidèchip!</strong></p><p class=\"mb-6\"><strong>Sa se privilèj!</strong></p><p class=\"mb-6\"><strong>E desizyon tankou sa yo ak anpil lòt efò depans gaspiye bezwen fini jodi a!</strong></p><p class=\"mb-6\">Kòm yon kontraktè jeneral ki gen lisans, mwen wè premye men ki jan move planifikasyon ak move desizyon konte ogmante depans pou tout moun. Kòm yon veteran, ki te sèvi onorabman nan Lame Etazini, mwen konnen lidèchip vle di responsabilite, responsabilite, ak sèvis — pa ego! E kòm yon edikatè, mwen anseye moun ki jan gouvènman an sipoze fonksyone, paske kominote enfòme mande yon pi bon gouvènman.</p><p class=\"mb-6\">Ou ta dwe konnen - <strong>Mwen pa kandide pou pwoteje estati quo a!</strong></p><p class=\"mb-6\"><strong>Mwen kandide pou chanje ki jan Konte nou an fè biznis!</strong></p><p class=\"mb-6\"><strong>Ase gaspiyaj!</strong></p><p class=\"mb-6\"><strong>Ase neglijans!</strong></p><p class=\"mb-6\"><strong>Ase ak politisyen ki ap pwoteje tèt yo pandan fanmi Konte Palm Beach ap lite!</strong></p><p class=\"mb-6\">Chak kominote Konte Palm Beach merite tande. Chak kominote Konte Palm Beach merite <strong>RESPE</strong>. E chak desizyon ta dwe fèt ak moun ki viv avèk li nan tèt.</p><p class=\"mb-6\">Mwen kandide paske Distri 6 merite <strong>lidèchip REYÈL</strong> ki koute, planifye responsab, depanse avèk sajès, epi parèt nan travay!</p><h2 class=\"mb-6\">Mwen se Rudolph \"Rudy\" Tinker!</h2><p class=\"mb-6\"><em>Youn nan nou — K ap travay pou tout nou!</em></p><p><strong>Vote Rudy pou Distri 6!</strong></p>"
   },
   "district6": {
     "title": "Distri 6",
@@ -211,6 +213,38 @@
       "employerCheck": "Mwen pa fè kontribisyon sa a nan non yon patwon",
       "citizenCheck": "Mwen se yon sitwayen ameriken oswa rezidan pèmanan",
       "submit": "Voye Don an"
+    }
+  },
+  "veteran": {
+    "title": "Sèvis ak Defans pou Veteran yo",
+    "headerTitle": "Sèvis ak Defans pou Veteran yo",
+    "headerDescription": "Istwa sèvis militè Rudolph Tinker ak angajman li pou veteran yo nan Konte Palm Beach.",
+    "metaDescription": "Istwa sèvis militè Rudolph Tinker ak angajman li pou veteran yo nan Konte Palm Beach.",
+    "service": {
+      "title": "Yon Eritaj Sèvis",
+      "subtitle": "Vwayaj Rudolph Tinker nan Lame a",
+      "content": "<p>Rudolph \"Rudy\" Tinker te angaje nan <strong>Lame Etazini</strong> an 2002, ak yon gwo sans devwa apre evènman 11 Septanm yo. Li te sèvi avèk onè soti <strong>2002 rive 2005</strong> pandan Global War on Terror (Gè Mondyal kont Teworis), kote Rudy aprann vrè sans lidèchip, disiplin, ak sakrifis.</p><p>Sèvis li a pa t sèlman sou mete inifòm; se te sou pwoteje valè nou kenbe chè epi asire ke moun ki sèvi peyi nou an pa janm bliye lè yo retounen lakay yo. Jodi a, li pote menm konsantrasyon sou misyon sa a nan kanpay li pou Komisyon Konte a.</p>"
+    },
+    "va": {
+      "title": "VA Konte Palm Beach",
+      "subtitle": "Sipòte Ewo Nou yo Lokalman",
+      "content": "<p><strong>Sant Medikal VA West Palm Beach</strong> la se yon soutyen enpòtan pou dè milye veteran nan kominote nou an. Rudy kwè gouvènman lokal la dwe jwe yon wòl aktif, an patenarya ak VA a, pou asire veteran yo gen aksè san pwoblèm a swen sante, resous pou sante mantal, ak asistans lojman.</p><p>Kòm Komisyonè ou, Rudy pral defann plis opsyon transpò pou veteran yo rive nan VA a epi pouse inisyativ lokal ki fè lyen ant avantaj federal yo ak bezwen lokal yo.</p>"
+    },
+    "share": {
+      "title": "Pataje Istwa Ou",
+      "subtitle": "Sèvis Ou Enpòtan",
+      "description": "Èske ou se yon veteran oswa yon manm fanmi yon veteran nan Distri 6? Nou vle tande istwa ou. Pataje eksperyans ou, defi ou, oswa foto sèvis ou. Ansanm, nou ka asire West Palm Beach rete yon kominote ki onore moun ki te sèvi.",
+      "form": {
+        "name": "Non konplè",
+        "email": "Adrès imel",
+        "story": "Istwa ou",
+        "upload": "Telechaje foto oswa dokiman",
+        "submit": "Pataje istwa"
+      },
+      "thankYou": {
+        "title": "Mèsi paske ou pataje",
+        "description": "Nou resevwa istwa ou. Mèsi pou sèvis ou, epi mèsi paske ou kontribye nan istwa kominote nou an."
+      }
     }
   }
 }

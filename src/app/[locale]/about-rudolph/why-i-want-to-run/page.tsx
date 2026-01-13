@@ -12,7 +12,7 @@ export async function generateMetadata({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('whyIWantToRun');
-  
+
   return {
     title: `${t('title')} | About Rudolph | ${site.name}`,
     description: t('description'),
@@ -28,7 +28,7 @@ export default async function WhyIWantToRunPage({
   setRequestLocale(locale);
   const t = await getTranslations('whyIWantToRun');
   const messages = await getMessages();
-  const content = (messages.whyIWantToRun as any)?.content || '';
+  const content = t.raw("content") as string;
 
   return (
     <main className="bg-white">
@@ -62,14 +62,18 @@ export default async function WhyIWantToRunPage({
 
       {/* Content */}
       <ContentContainer className="py-12">
-        <style dangerouslySetInnerHTML={{__html: `
-          .why-i-run-article p {
-            line-height: 2.0 !important;
-          }
-        `}} />
-        <article className="why-i-run-article prose prose-lg max-w-none prose-headings:font-extrabold prose-strong:font-bold prose-p:text-black/80 prose-p:mb-6 prose-h2:mt-10 prose-h2:mb-6">
-          <div dangerouslySetInnerHTML={{ __html: content }} />
-        </article>
+        <article
+          className="
+            prose prose-lg max-w-none
+            prose-p:my-4 sm:prose-p:my-5 lg:prose-p:my-6
+            prose-p:leading-relaxed
+            prose-p:text-black/80
+            prose-headings:font-extrabold
+            prose-strong:font-bold
+            prose-h2:mt-10 prose-h2:mb-6
+            "
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
       </ContentContainer>
     </main>
   );

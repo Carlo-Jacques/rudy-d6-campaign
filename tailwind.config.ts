@@ -1,23 +1,24 @@
 import type { Config } from "tailwindcss";
+import typography from "@tailwindcss/typography";
 
 const config: Config = {
   content: [
-    "./src/app/**/*.{ts,tsx}",
-    "./src/components/**/*.{ts,tsx}",
-    "./src/lib/**/*.{ts,tsx}",
+    "./src/app/**/*.{ts,tsx,mdx}",
+    "./src/components/**/*.{ts,tsx,mdx}",
+    "./src/lib/**/*.{ts,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
         patriot: {
-          red: "#B31942",   // Flag red
-          blue: "#0A3161",  // Flag blue
+          red: "#B31942",
+          blue: "#0A3161",
           white: "#FFFFFF",
         },
       },
     },
   },
-  plugins: [],
+  plugins: [typography],
 };
 
 export default config;

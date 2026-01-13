@@ -1,10 +1,16 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 import ContentContainer from '@/components/ContentContainer';
 import VeteranStoryForm from '@/components/VeteranStoryForm';
 
-export default function VeteranPage() {
-    const t = useTranslations('veteran');
+export default async function VeteranPage({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}) {
+    const { locale } = await params;
+    setRequestLocale(locale);
+    const t = await getTranslations('veteran');
 
     return (
         <main className="bg-white">
