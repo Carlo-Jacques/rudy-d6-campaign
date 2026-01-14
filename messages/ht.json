@@ -10,7 +10,7 @@
     "bio": "Biyografi",
     "preparedness": "Preparasyon",
     "whyIWantToRun": "Poukisa mwen vle kandide",
-    "veteran": "Veteran",
+    "veterans": "Veteran yo",
     "menu": "Meni",
     "close": "Fèmen",
     "viewAll": "Wè tout",
@@ -24,7 +24,7 @@
       "donate": "/donate",
       "volunteer": "/volunteer",
       "petition": "/petition",
-      "veteran": "/veteran"
+      "veterans": "/veterans"
     }
   },
   "mobileCta": {
@@ -114,7 +114,8 @@
     "mailAddress": "Ranpli epi voye petisyon an nan adrès sa a:",
     "address": "14611 Southern Blvd Unit # 634\nLoxahatchee FL 33470",
     "pdfNotSupported": "Navigatè ou a pa sipòte wè PDF anligne.",
-    "viewPdf": "Wè PDF la isit la"
+    "viewPdf": "Wè PDF la isit la",
+    "aboutRudy": "Rudolph \"Rudy\" Tinker se yon veteran Lame Etazini, pwopriyetè ti biznis, kontraktè, ak edikatè. Li rele Distri 6 Konte Palm Beach lakay li depi plis pase 27 ane, epi li kwè gouvènman dwe travay pou pèp li sèvi. Li kandide paske taks ak pri lavi yo ap monte san rete, pandan gaspiyaj, move planifikasyon, ak desizyon konte ki pa responsab ap fè fanmi ak ti biznis soufri. Plan 10 Pwen li a bay solisyon klè, pratik pou koupe gaspiyaj, bese depans, amelyore sèvis konte yo, epi retabli yon lidèchip responsab ki mete moun an premye."
   },
   "bio": {
     "title": "Biyografi",
@@ -215,7 +216,7 @@
       "submit": "Voye Don an"
     }
   },
-  "veteran": {
+  "veterans": {
     "title": "Sèvis ak Defans pou Veteran yo",
     "headerTitle": "Sèvis ak Defans pou Veteran yo",
     "headerDescription": "Istwa sèvis militè Rudolph Tinker ak angajman li pou veteran yo nan Konte Palm Beach.",

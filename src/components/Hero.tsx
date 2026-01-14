@@ -136,7 +136,7 @@ export default function Hero() {
                         <div className="flex flex-col justify-center items-center md:items-start">
                             <div className="rounded-3xl border border-white/20 bg-white/20 backdrop-blur-md p-6 sm:p-8 shadow-lg" style={{ zIndex: 1 }}>
                                 <p className="text-white text-base leading-relaxed mb-6">
-                                    Rudolph "Rudy" Tinker is a U.S. Army veteran, small business owner, contractor, and educator who has called Palm Beach County District 6 home for more than 20 years and believes government should work for the people it serves. He is running because taxes and costs keep rising while waste, poor planning, and unaccountable county decisions hurt families and small businesses. His 10-Point Plan delivers clear, practical solutions to cut waste, lower costs, reform county services, and restore responsible, people-first leadership.
+                                    {t('aboutRudy')}
                                 </p>
                                 <Link
                                     href="/about-rudolph"

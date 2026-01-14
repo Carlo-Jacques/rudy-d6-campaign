@@ -5,7 +5,7 @@ import { useId, useState } from "react";
 import { useTranslations } from 'next-intl';
 
 export default function VeteranStoryForm() {
-    const t = useTranslations('veteran.share.form');
+    const t = useTranslations('veterans.share.form');
     const id = useId();
     const [fileName, setFileName] = useState<string>("");
 

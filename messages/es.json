@@ -10,7 +10,7 @@
     "bio": "Biografía",
     "preparedness": "Preparación",
     "whyIWantToRun": "Por qué quiero postularme",
-    "veteran": "Veteranos",
+    "veterans": "Veteranos",
     "menu": "Menú",
     "close": "Cerrar",
     "viewAll": "Ver todo",
@@ -24,7 +24,7 @@
       "donate": "/donate",
       "volunteer": "/volunteer",
       "petition": "/petition",
-      "veteran": "/veteran"
+      "veterans": "/veterans"
     }
   },
   "mobileCta": {
@@ -114,7 +114,8 @@
     "mailAddress": "Completa y envía la petición a esta dirección:",
     "address": "14611 Southern Blvd Unit # 634\nLoxahatchee FL 33470",
     "pdfNotSupported": "Tu navegador no admite la visualización de PDF en línea.",
-    "viewPdf": "Ver el PDF aquí"
+    "viewPdf": "Ver el PDF aquí",
+    "aboutRudy": "Rudolph \"Rudy\" Tinker es veterano del Ejército de los Estados Unidos, pequeño empresario, contratista y educador. Ha llamado hogar al Distrito 6 del Condado de Palm Beach por más de 27 años y cree firmemente que el gobierno debe trabajar para la gente a la que sirve.\n\nSe postula porque los impuestos y el costo de la vida siguen subiendo, mientras el despilfarro, la mala planificación y decisiones del condado sin rendición de cuentas perjudican a las familias y a los pequeños negocios.\n\nSu Plan de 10 Puntos ofrece soluciones claras y prácticas para eliminar el desperdicio, reducir costos, reformar los servicios del condado y devolver un liderazgo responsable, cercano y centrado en la gente."
   },
   "bio": {
     "title": "Biografía",
@@ -215,7 +216,7 @@
       "submit": "Enviar Donación"
     }
   },
-  "veteran": {
+  "veterans": {
     "title": "Servicio y Defensa de los Veteranos",
     "headerTitle": "Servicio y Defensa de los Veteranos",
     "headerDescription": "La trayectoria militar de Rudolph Tinker y su defensa de los veteranos en el Condado de Palm Beach.",

@@ -10,7 +10,7 @@ export default async function VeteranPage({
 }) {
     const { locale } = await params;
     setRequestLocale(locale);
-    const t = await getTranslations('veteran');
+    const t = await getTranslations('veterans');
 
     return (
         <main className="bg-white">
@@ -51,10 +51,10 @@ export default async function VeteranPage({
                         </div>
                         <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl">
                             <Image
-                                src="/img/military-rudolph-tinker-portrait.webp"
+                                src="/img/military_rudolph_tinker_portrait.webp"
                                 alt="Rudolph Tinker Military Portrait"
                                 fill
-                                className="object-cover"
+                                className="object-cover object-top"
                                 priority
                             />
                         </div>

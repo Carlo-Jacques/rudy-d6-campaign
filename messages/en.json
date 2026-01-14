@@ -10,7 +10,7 @@
     "bio": "Bio",
     "preparedness": "Preparedness",
     "whyIWantToRun": "Why I Want to Run",
-    "veteran": "Veteran",
+    "veterans": "Veterans",
     "menu": "Menu",
     "close": "Close",
     "viewAll": "View All",
@@ -24,7 +24,7 @@
       "donate": "/donate",
       "volunteer": "/volunteer",
       "petition": "/petition",
-      "veteran": "/veteran"
+      "veterans": "/veterans"
     }
   },
   "mobileCta": {
@@ -34,7 +34,7 @@
   },
   "home": {
     "pledge": {
-      "title": "The pledge",
+      "title": "My Pledge to District 6",
       "description": "Rudolph Tinker is asking District 6 voters for something simple: a mandate to deliver a clear 10-point plan. If elected, progress will be reported publicly—so residents can measure outcomes, not slogans.",
       "quote": "If elected, I will keep the 10-point plan—and report progress monthly."
     },
@@ -107,18 +107,19 @@
   "hero": {
     "badge": "Palm Beach County Commissioner • District 6",
     "title": "One of Us, Working for All of Us",
-    "subtitle": "Clear promises. Public progress. Real accountability for District 6.",
+    "subtitle": "No Excuses. Just Results. Get R Done for District 6. Period.",
     "signPetition": "Sign the Petition",
     "seePoints": "See the 10 Points",
     "helpTitle": "Help Put One of Us, Working for All of Us, on the Ballot — Petitions, Not Pay-to-Play Politics",
     "mailAddress": "Complete and mail the petition to this address:",
     "address": "14611 Southern Blvd Unit # 634\nLoxahatchee FL 33470",
     "pdfNotSupported": "Your browser does not support inline PDF viewing.",
-    "viewPdf": "View the PDF here"
+    "viewPdf": "View the PDF here",
+    "aboutRudy": "Rudolph \"Rudy\" Tinker is a U.S. Army veteran, small business owner, contractor, and educator who has called Palm Beach County District 6 home for more than 27 years and believes government should work for the people it serves. He is running because taxes and costs keep rising while waste, poor planning, and unaccountable county decisions hurt families and small businesses. His 10-Point Plan delivers clear, practical solutions to cut waste, lower costs, reform county services, and restore responsible, people-first leadership."
   },
   "bio": {
     "title": "Bio",
-    "description": "Learn about Rudolph 'Rudy' Tinker's background, service, and commitment to Palm Beach County District 6.",
+    "description": "Learn about Rudolph \"Rudy\" Tinker's background, service, and commitment to Palm Beach County District 6.",
     "backToAbout": "Back to About Rudolph",
     "content": "<p><strong>Rudolph \"Rudy\" Tinker</strong> is a <strong>U.S. Army veteran</strong>, <strong>Certified General Contractor</strong>, <strong>small business owner</strong>, and <strong>educator</strong> who has lived, worked, and raised his family in <strong>Palm Beach County District 6</strong> for more than two decades.<br /><br /><em>He believes government should work for everyday people — not special interests.</em></p><p>Born in <strong>The Bahamas</strong>, Rudy was raised by a devoted single mother and grandmother in a close, multigenerational family that instilled in him the values of <strong>faith</strong>, <strong>discipline</strong>, <strong>hard work</strong>, and <strong>service to others</strong>.<br /><br />As a child, he immigrated to the United States with his grandmother in search of opportunity.<br /><br />They settled in <strong>Hallandale Beach, Florida</strong>, where he completed high school and became deeply involved in his community through volunteer work, neighborhood cleanups, food drives, crime-prevention efforts, and the <strong>Hallandale Police Explorer Program</strong>.<br /><br /><strong>For Rudy, service was never a slogan — it was a way of life.</strong></p><p>After graduating high school in <strong>1996</strong>, Rudy enrolled at <strong>Florida Atlantic University</strong>.<br /><br />While initially pursuing medicine, he worked multiple jobs to pay his way through college and ultimately chose <strong>Political Science</strong>, recognizing that good government affects every family, every neighborhood, and every opportunity.<br /><br />During this time, he also launched a small retail business in Palm Beach County, learning firsthand the challenges facing small business owners.</p><p>In <strong>2002</strong>, Rudy was hand-selected as a <strong>Congressional Intern</strong> for Congressman <strong>Alcee Hastings</strong>, representing the office at civic events during the difficult months following the <strong>September 11th</strong> attacks.<br /><br />That same year, he graduated college, married young, and enlisted in the <strong>United States Army</strong>, serving honorably from <strong>2002 to 2005</strong> in support of the <strong>Global War on Terror</strong>.</p><p>While on active duty, Rudy purchased his first home in <strong>Loxahatchee</strong> in <strong>2003</strong> — the community he has proudly called home for more than <strong>23 years</strong>.<br /><br />After leaving active service, he became the father of triplet daughters, a responsibility that profoundly shaped his commitment to <strong>family</strong>, <strong>faith</strong>, and <strong>stability</strong>.</p><p>In <strong>2008</strong>, tragedy struck when one of his triplet daughters, <strong>Oriya Isabel Tinker</strong>, passed away due to complications from a congenital heart condition.<br /><br />For nearly three years, Rudy's life revolved around hospitals, emergency visits, and the daily realities of caring for children with complex medical needs.<br /><br />As the sole provider for his household, he experienced firsthand the emotional, physical, and financial pressures facing working families — an experience that deepened his empathy and strengthened his belief that leaders must understand hardship through lived experience.</p><p>Today, Rudy is a small business owner, operating a construction and consulting firm that works directly in neighborhoods across <strong>Palm Beach County District 6</strong>.<br /><br />His work places him on job sites every day, navigating permitting, zoning, drainage, infrastructure challenges, housing affordability, insurance pressures, and the real-world impact of county decisions on working families, farmers, and small businesses.</p><p>Rudy also serves as an educator, teaching <strong>American Government</strong> at <strong>Palm Beach State College</strong>'s <strong>Loxahatchee</strong> and <strong>Belle Glade</strong> Campus.<br /><br />In addition to higher education, he has taught at <strong>Pahokee Middle–Senior High School</strong> and <strong>Glades Central High School</strong>, working directly with students and families throughout the Glades and western communities.<br /><br />In his classrooms, Rudy teaches the <strong>U.S. Constitution</strong>, the <strong>Bill of Rights</strong>, voting rights, and how local government decisions — from zoning and budgeting to property taxes and public services — directly affect people's lives.</p><p>After decades of service — as a veteran, father, contractor, educator, and community member — Rudy is running for public office because he knows District 6 deserves leadership that <strong>listens</strong>, <strong>plans responsibly</strong>, <strong>shows up in every community</strong>, and <strong>puts people first</strong>.</p><p><strong>Rudolph \"Rudy\" Tinker is not a career politician.</strong><br /><strong>He is one of us — working for all of us.</strong></p>"
   },
@@ -215,9 +216,9 @@
       "submit": "Submit Donation"
     }
   },
-  "veteran": {
-    "title": "Veteran Service & Advocacy",
-    "headerTitle": "Veteran Service & Advocacy",
+  "veterans": {
+    "title": "Veterans' Service & Advocacy",
+    "headerTitle": "Veterans' Service & Advocacy",
     "headerDescription": "Rudolph Tinker's military service history and advocacy for veterans in Palm Beach County.",
     "metaDescription": "Rudolph Tinker's military service history and advocacy for veterans in Palm Beach County.",
     "service": {
@@ -233,7 +234,7 @@
     "share": {
       "title": "Share Your Story",
       "subtitle": "Your Service Matters",
-      "description": "Are you a veteran or a family member of one in District 6? We want to hear your story. Share your experiences, challenges, or photos of your service. Together, we can ensure West Palm Beach remains a community that honors those who served.",
+      "description": "Are you a veteran or a family member of one in District 6? We want to hear your story. Share your experiences, challenges, or photos of your service. Together, we can ensure Palm Beach County remains a community that honors those who served.",
       "form": {
         "name": "Full Name",
         "email": "Email Address",

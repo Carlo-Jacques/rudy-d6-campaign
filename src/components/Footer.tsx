@@ -115,15 +115,15 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href={t('urls.veteran')}
+                  href={t('urls.veterans')}
                   className={cn(
                     "text-sm font-medium transition-colors",
-                    pathname === t('urls.veteran')
+                    pathname === t('urls.veterans')
                       ? "text-patriot-red"
                       : "text-white/80 hover:text-white"
                   )}
                 >
-                  {t('veteran')}
+                  {t('veterans')}
                 </Link>
               </li>
               <li>
