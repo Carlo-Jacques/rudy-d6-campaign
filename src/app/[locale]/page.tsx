@@ -24,7 +24,7 @@ export default async function HomePage({
       <section className="bg-patriot-red text-white w-full">
         <div className="mx-auto max-w-7xl px-4 py-16 text-center" style={{ paddingLeft: "calc(1rem + 20px)", paddingRight: "calc(1rem + 20px)" }}>
           <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">{t('pledge.title')}</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-white/90">
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-white whitespace-pre-line">
             {t('pledge.description')}
           </p>
           <p className="mt-6 text-xl font-bold font-serif italic text-white sm:text-2xl">

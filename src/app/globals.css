@@ -71,3 +71,14 @@ select {
     font-family: Arial, Helvetica, sans-serif;
   }
 }
+
+.responsive-nowrap {
+  white-space: normal;
+  /* mobile default */
+}
+
+@media (min-width: 1024px) {
+  .responsive-nowrap {
+    white-space: nowrap;
+  }
+}

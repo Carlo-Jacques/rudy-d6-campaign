@@ -37,7 +37,7 @@ export default async function VeteranPage({
             </div>
 
             {/* Service History Section */}
-            <section className="py-20">
+            <section>
                 <ContentContainer>
                     <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
                         <div>
@@ -49,9 +49,9 @@ export default async function VeteranPage({
                             </h3>
                             <div className="mt-6 text-lg leading-relaxed text-gray-700" dangerouslySetInnerHTML={{ __html: t.raw('service.content') }} />
                         </div>
-                        <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl">
+                        <div className="relative aspect-[4/5] overflow-hidden">
                             <Image
-                                src="/img/military_rudolph_tinker_portrait.webp"
+                                src="/img/military_rudolph_tinker_portrait_transparent.webp"
                                 alt="Rudolph Tinker Military Portrait"
                                 fill
                                 className="object-cover object-top"
@@ -78,36 +78,40 @@ export default async function VeteranPage({
             </section>
 
             {/* Share Your Story Section */}
-            <section className="relative py-24 overflow-hidden">
-                {/* Background Image with Overlay */}
-                <div className="absolute inset-0 z-0">
-                    <Image
-                        src="/img/military-rudolph-tinker-garage.webp"
-                        alt="Background"
-                        fill
-                        className="object-cover opacity-15 grayscale"
-                    />
-                    <div className="absolute inset-0 bg-white/20" />
-                </div>
-
-                <ContentContainer className="relative z-10">
-                    <div className="mx-auto max-w-4xl">
-                        <div className="rounded-3xl bg-white p-8 shadow-2xl border border-gray-100 md:p-12">
-                            <div className="mb-12 text-center">
+            <section className="py-24">
+                <ContentContainer>
+                    <div className="gap-12 lg:flex lg:items-stretch">
+                        {/* Left Side: Form (3/5) */}
+                        <div className="lg:w-3/5">
+                            <div className="mb-12">
                                 <h2 className="text-sm font-bold uppercase tracking-widest text-patriot-red">
-                                    {t('share.subtitle')}
+                                    {t("share.subtitle")}
                                 </h2>
                                 <h3 className="mt-2 text-3xl font-extrabold tracking-tight text-black sm:text-4xl">
-                                    {t('share.title')}
+                                    {t("share.title")}
                                 </h3>
-                                <p className="mt-4 text-lg text-gray-600">
-                                    {t('share.description')}
-                                </p>
+                                <p className="mt-4 text-lg text-gray-600">{t("share.description")}</p>
                             </div>
 
-                            <VeteranStoryForm />
+                            <div className="rounded-3xl bg-white p-8 shadow-2xl border border-gray-100 md:p-12">
+                                <VeteranStoryForm />
+                            </div>
+                        </div>
+
+                        {/* Right Side: Portrait (2/5) */}
+                        <div className="lg:w-2/5">
+                            <div className="relative h-full min-h-[520px] overflow-hidden rounded-2xl shadow-2xl">
+                                <Image
+                                    src="/img/rudolph_tinker_army_overcoat_2.webp"
+                                    alt="Rudolph Tinker Military Portrait"
+                                    fill
+                                    className="object-cover object-top"
+                                    priority
+                                />
+                            </div>
                         </div>
                     </div>
+
                 </ContentContainer>
             </section>
         </main>

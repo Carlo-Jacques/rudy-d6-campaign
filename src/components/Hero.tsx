@@ -43,11 +43,11 @@ export default function Hero() {
                                 {t('badge')}
                             </div>
 
-                            <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-white sm:text-5xl">
+                            <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-white sm:text-5xl responsive-nowrap">
                                 {t('title')}
                             </h1>
 
-                            <p className="mt-4 text-base text-white/85 sm:text-lg">
+                            <p className="mt-4 text-base text-white sm:text-lg">
                                 {t('subtitle')}
                             </p>
 
