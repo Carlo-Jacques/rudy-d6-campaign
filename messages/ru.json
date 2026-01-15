@@ -21,7 +21,7 @@
     "copyright": "Авторское право",
     "allRightsReserved": "Все права защищены",
     "urls": {
-      "donate": "/donate",
+      "donate": "https://secure.actblue.com/donate/rudolph-tinker-1",
       "volunteer": "/volunteer",
       "petition": "/petition",
       "veterans": "/veterans"
@@ -34,9 +34,8 @@
   },
   "home": {
     "pledge": {
-      "title": "Обязательство",
-      "description": "Руди просит избирателей округа 6 о простом: мандате на выполнение четкого 10-пунктового плана. Если избран, прогресс будет публично отчитываться—чтобы жители могли измерять результаты, а не лозунги.\n\nВы заплатили. Я выполняю. Или я ухожу.\n\nОдин из нас. Работаю для всех нас.",
-      "quote": "Если избран, я буду придерживаться 10-пунктового плана—и ежемесячно отчитываться о прогрессе."
+      "title": "Моё обязательство",
+      "description": "Вы заплатили. Я выполняю. Или я ухожу.\n\nОдин из нас. Работаю для всех нас."
     },
     "plan": {
       "title": "10-пунктовый план",
@@ -59,24 +58,24 @@
       "title": "Что студенты говорят о докторе Тинтере",
       "items": [
         {
-          "quote": "Thank you for being such a great Professor. You taught me to work hard & made class fun. I couldn't have asked for a better way to kick off my back to school career.",
+          "quote": "Спасибо за то, что вы такой замечательный преподаватель. Вы научили меня усердно работать и сделали занятия интересными. Я не мог(ла) представить себе лучшего начала моего возвращения к учебе.",
           "author": "KM"
         },
         {
-          "quote": "He is tough but fair and really wants you to succeed. If you put in the effort, he will work with you and help try to get you to the end. I really enjoyed his class and the people in it.",
-          "author": "Student"
+          "quote": "Он строгий, но справедливый и действительно хочет, чтобы вы добились успеха. Если вы прикладываете усилия, он будет работать с вами и помогать дойти до конца. Мне очень понравился его курс и люди в группе.",
+          "author": "Студент"
         },
         {
-          "quote": "Dr Tinker was honestly a great professor very interactive if you hate boring classes. He is also very supportive and is always willing to help students who are struggling but trying, no students left behind.",
-          "author": "Student"
+          "quote": "Доктор Тинкер — честно говоря, отличный профессор, очень интерактивный, особенно если вы не любите скучные занятия. Он также очень поддерживает студентов и всегда готов помочь тем, кто испытывает трудности, но старается. Никто не остается позади.",
+          "author": "Студент"
         },
         {
-          "quote": "Dr. Tinker is knowledgeable in this subject. He likes participation in the class. His quizzes are based on what he taught you in the previous class and if you're stuck on a question he will help you along. The midterm is based on the first four lessons and then the final is based on the last four lessons. Very manageable workload if you try.",
-          "author": "Student"
+          "quote": "Доктор Тинкер хорошо разбирается в предмете. Он поощряет участие в занятиях. Его тесты основаны на материале предыдущего урока, и если вы застряли на вопросе, он поможет. Промежуточный экзамен охватывает первые четыре урока, а финальный — последние четыре. Нагрузка вполне посильная, если стараться.",
+          "author": "Студент"
         },
         {
-          "quote": "As my first time in college I really enjoyed my American government class with Dr Tinker. Even though his quizzes are hand written, very clear lectures and I've learned a lot. Always was able to make us laugh and work hard.",
-          "author": "Student"
+          "quote": "Поскольку это был мой первый опыт обучения в колледже, мне очень понравился курс по американскому правительству с доктором Тинкером. Несмотря на то, что его тесты написаны от руки, лекции очень понятные, и я многому научился. Он всегда умел рассмешить нас и мотивировать работать усердно.",
+          "author": "Студент"
         }
       ]
     },

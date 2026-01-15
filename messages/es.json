@@ -21,7 +21,7 @@
     "copyright": "Derechos de autor",
     "allRightsReserved": "Todos los derechos reservados",
     "urls": {
-      "donate": "/donate",
+      "donate": "https://secure.actblue.com/donate/rudolph-tinker-1",
       "volunteer": "/volunteer",
       "petition": "/petition",
       "veterans": "/veterans"
@@ -35,8 +35,7 @@
   "home": {
     "pledge": {
       "title": "El compromiso",
-      "description": "Rudy está pidiendo a los votantes del Distrito 6 algo simple: un mandato para entregar un plan claro de 10 puntos. Si es elegido, el progreso se reportará públicamente, para que los residentes puedan medir resultados, no eslóganes.\n\nTú pagaste. Yo cumplo. O me voy.\n\nUno de los nuestros. Trabajando por todos nosotros.",
-      "quote": "Si soy elegido, mantendré el plan de 10 puntos e informaré el progreso mensualmente."
+      "description": "Tú pagaste. Yo cumplo. O me voy.\n\nUno de los nuestros. Trabajando por todos nosotros."
     },
     "plan": {
       "title": "El Plan de 10 Puntos",

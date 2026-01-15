@@ -21,7 +21,7 @@
     "copyright": "Dwa otè",
     "allRightsReserved": "Tout dwa rezève",
     "urls": {
-      "donate": "/donate",
+      "donate": "https://secure.actblue.com/donate/rudolph-tinker-1",
       "volunteer": "/volunteer",
       "petition": "/petition",
       "veterans": "/veterans"
@@ -34,9 +34,8 @@
   },
   "home": {
     "pledge": {
-      "title": "Angajman an",
-      "description": "Rudy ap mande votè Distri 6 yo yon bagay senp: yon manda pou lage yon plan klè 10 pwen. Si li eli, pwogrè a pral rapòte piblikman—pou rezidan yo ka mezire rezilta, pa sou slogan.\n\nOu peye. Mwen livre. Oswa m ale.\n\nYonn nan nou. K ap travay pou nou tout.",
-      "quote": "Si mwen eli, mwen pral kenbe plan 10 pwen an—epi rapòte pwogrè chak mwa."
+      "title": "Angajman Mwen",
+      "description": "Ou peye. Mwen livre. Oswa m ale.\n\nYonn nan nou. K ap travay pou nou tout."
     },
     "plan": {
       "title": "Plan 10 Pwen an",
@@ -59,24 +58,24 @@
       "title": "Sa elèv yo di sou Dr. Tinker",
       "items": [
         {
-          "quote": "Thank you for being such a great Professor. You taught me to work hard & made class fun. I couldn't have asked for a better way to kick off my back to school career.",
+          "quote": "Li sevè men li jis, epi li vrèman vle ou reyisi. Si ou fè efò, li ap travay avèk ou epi ede ou rive jouk nan fen an. Mwen te vrèman apresye klas li a ak moun ki te ladan l.",
           "author": "KM"
         },
         {
-          "quote": "He is tough but fair and really wants you to succeed. If you put in the effort, he will work with you and help try to get you to the end. I really enjoyed his class and the people in it.",
-          "author": "Student"
+          "quote": "Mèsi anpil paske ou se yon pwofesè ekstraòdinè. Ou te anseye m travay di epi ou te fè klas la amizan. Mwen pa t ka mande yon pi bon fason pou kòmanse retou mwen lekòl.",
+          "author": "Estidyan"
         },
         {
-          "quote": "Dr Tinker was honestly a great professor very interactive if you hate boring classes. He is also very supportive and is always willing to help students who are struggling but trying, no students left behind.",
-          "author": "Student"
+          "quote": "Dr Tinker te onètman yon gwo pwofesè, trè entèaktif si ou pa renmen klas raz. Li sipòtif anpil tou epi li toujou dispoze ede etidyan k ap lite men k ap fè efò. Pa gen etidyan ki rete dèyè.",
+          "author": "Etidyan"
         },
         {
-          "quote": "Dr. Tinker is knowledgeable in this subject. He likes participation in the class. His quizzes are based on what he taught you in the previous class and if you're stuck on a question he will help you along. The midterm is based on the first four lessons and then the final is based on the last four lessons. Very manageable workload if you try.",
-          "author": "Student"
+          "quote": "Dr Tinker gen anpil konesans sou sijè a. Li renmen patisipasyon nan klas la. Ti tès li yo baze sou sa li te anseye nan klas anvan an, epi si ou bloke sou yon kesyon, li ap ede ou. Egzamen mitan-semès la baze sou kat premye leson yo, epi egzamen final la sou kat dènye leson yo. Chaj travay la trè jere si ou eseye.",
+          "author": "Etidyan"
         },
         {
-          "quote": "As my first time in college I really enjoyed my American government class with Dr Tinker. Even though his quizzes are hand written, very clear lectures and I've learned a lot. Always was able to make us laugh and work hard.",
-          "author": "Student"
+          "quote": "Kòm se te premye fwa mwen nan kolèj, mwen te vrèman renmen klas gouvènman ameriken mwen an avèk Dr Tinker. Menm si ti tès li yo ekri a la men, leson yo trè klè epi mwen aprann anpil. Li toujou konn fè nou ri epi fè nou travay di.",
+          "author": "Etidyan"
         }
       ]
     },

@@ -27,9 +27,6 @@ export default async function HomePage({
           <p className="mx-auto mt-4 max-w-2xl text-lg text-white whitespace-pre-line">
             {t('pledge.description')}
           </p>
-          <p className="mt-6 text-xl font-bold font-serif italic text-white sm:text-2xl">
-            "{t('pledge.quote')}"
-          </p>
         </div>
       </section>
 

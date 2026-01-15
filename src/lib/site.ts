@@ -1,5 +1,5 @@
 export const site = {
-  name: "Rudy for County Commissioner",
+  name: "Rudolph Tinker for County Commissioner",
   district: "District 6",
   // donateUrl: "/donate",
   // volunteerUrl: "/volunteer",

@@ -21,7 +21,7 @@
     "copyright": "Copyright",
     "allRightsReserved": "All Rights Reserved",
     "urls": {
-      "donate": "/donate",
+      "donate": "https://secure.actblue.com/donate/rudolph-tinker-1",
       "volunteer": "/volunteer",
       "petition": "/petition",
       "veterans": "/veterans"
@@ -35,8 +35,7 @@
   "home": {
     "pledge": {
       "title": "My Pledge to District 6",
-      "description": "You paid. I deliver. Or I’m gone.\n\nOne of Us. Working for All of Us.\n\nRudolph Tinker is asking District 6 voters for something simple: a mandate to deliver a clear 10-point plan. If elected, progress will be reported publicly—so residents can measure outcomes, not slogans.",
-      "quote": "If elected, I will keep the 10-point plan—and report progress monthly."
+      "description": "You paid. I deliver. Or I’m gone.\n\nOne of Us. Working for All of Us."
     },
     "plan": {
       "title": "The 10-Point Plan",
