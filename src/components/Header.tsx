@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { site } from "@/lib/site";
 import { cn } from "@/lib/cn";
 import Button from "@/components/ui/Button";
-import { priorities } from "@/lib/priorities";
+import { landingPageTiles } from "@/lib/priorities";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function Header() {
@@ -250,23 +250,23 @@ export default function Header() {
                   className="absolute left-0 top-full mt-2 w-80 rounded-xl border border-black/10 bg-white shadow-xl z-50"
                 >
                   <div className="p-2">
-                    {priorities.map((priority) => (
+                    {landingPageTiles.map((tile) => (
                       <Link
-                        key={priority.id}
-                        href={`/priorities/${priority.slug}`}
+                        key={tile.id}
+                        href={`/priorities${tile.slug}`}
                         onClick={() => setPrioritiesOpen(false)}
                         className={cn(
                           "block rounded-lg px-4 py-3 text-sm transition-colors",
-                          pathname === `/priorities/${priority.slug}`
+                          pathname === `/priorities${tile.slug}`
                             ? "bg-patriot-red/10 text-patriot-red font-semibold"
                             : "hover:bg-black/5 text-black/80"
                         )}
                       >
                         <div className="flex items-start gap-3">
                           <span className="mt-0.5 shrink-0 text-xs font-semibold text-patriot-blue">
-                            {priority.number}
+                            {tile.id}
                           </span>
-                          <span className="flex-1 leading-snug">{priority.title}</span>
+                          <span className="flex-1 leading-snug">{tile.title}</span>
                         </div>
                       </Link>
                     ))}
@@ -517,26 +517,26 @@ export default function Header() {
                       className="overflow-hidden"
                     >
                       <div className="ml-4 mt-1 space-y-1 border-l-2 border-black/10 pl-4">
-                        {priorities.map((priority) => (
+                        {landingPageTiles.map((tile) => (
                           <Link
-                            key={priority.id}
-                            href={`/priorities/${priority.slug}`}
+                            key={tile.id}
+                            href={`/priorities${tile.slug}`}
                             onClick={() => {
                               setPrioritiesOpen(false);
                               setOpen(false);
                             }}
                             className={cn(
                               "block rounded-lg px-3 py-2 text-sm transition-colors",
-                              pathname === `/priorities/${priority.slug}`
+                              pathname === `/priorities${tile.slug}`
                                 ? "bg-patriot-red/10 text-patriot-red font-semibold"
                                 : "text-black/70 hover:bg-black/5"
                             )}
                           >
                             <div className="flex items-start gap-2">
                               <span className="shrink-0 text-xs font-semibold text-patriot-blue">
-                                {priority.number}.
+                                {tile.id}.
                               </span>
-                              <span className="flex-1 leading-snug">{priority.title}</span>
+                              <span className="flex-1 leading-snug">{tile.title}</span>
                             </div>
                           </Link>
                         ))}

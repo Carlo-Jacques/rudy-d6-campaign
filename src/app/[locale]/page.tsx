@@ -36,8 +36,8 @@ export default async function HomePage({
         <div className="mx-auto max-w-7xl px-4 py-12" style={{ paddingLeft: "calc(1rem + 20px)", paddingRight: "calc(1rem + 20px)" }}>
           <div className="flex items-end justify-between gap-4">
             <div>
-              <h2 className="text-2xl font-extrabold tracking-tight">{t('plan.title')}</h2>
-              <p className="mt-2 text-black/70">{t('plan.subtitle')}</p>
+              <h2 className="text-2xl font-extrabold tracking-tight">Campaign Priorities</h2>
+              <p className="mt-2 text-black/70">Our roadmap for real change in District 6.</p>
             </div>
             <Link href="/about-rudolph" className="hidden text-sm font-semibold underline md:inline">
               {t('plan.whyRudy')}

@@ -20,11 +20,11 @@ type CommonProps = {
 // If href is present, allow anchor props (target/rel/etc). If not, allow button props.
 type Props =
   | (CommonProps &
-      { href: string } &
-      Omit<AnchorProps, "href" | "className" | "children">)
+  { href: string } &
+    Omit<AnchorProps, "href" | "className" | "children">)
   | (CommonProps &
-      { href?: undefined } &
-      Omit<NativeButtonProps, "className" | "children">);
+  { href?: undefined } &
+    Omit<NativeButtonProps, "className" | "children">);
 
 const base =
   "inline-flex items-center justify-center rounded-full font-semibold transition-all duration-200 ease-out " +
@@ -68,7 +68,7 @@ export default function Button(props: Props) {
     );
   }
 
-  const { href, ...anchorRest } = props as CommonProps & { href: string } & AnchorProps;
+  const { href, className: _c, ...anchorRest } = props as CommonProps & { href: string } & AnchorProps;
 
   // Treat PDFs/docs as "external" so we can use target/rel safely.
   const isExternal =
