@@ -9,8 +9,8 @@ export interface PriorityTile {
 export const priorityIds = [
   "property-taxes",
   "government-services",
-  "glades-first",
   "youth-engagement",
+  "glades-first",
   "infrastructure",
   "public-safety",
   "small-business"

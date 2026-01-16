@@ -331,6 +331,22 @@
           }
         ]
       },
+      "youth-engagement": {
+        "slug": "/western-area-youth-engagement",
+        "title": "Compromiso de la juventud del área occidental",
+        "sections": [
+          {
+            "heading": "Idle time creates problems. Opportunity builds futures.",
+            "bullets": [
+              "Give kids something to do, somewhere to go, and a future to build—right here in our western communities.",
+              "Gimnasios comunitarios y centros recreativos",
+              "Centro acuático",
+              "Deportes de motor",
+              "Parque BMX"
+            ]
+          }
+        ]
+      },
       "glades-first": {
         "slug": "/glades-first-initiative",
         "title": "Iniciativa Glades Primero",
@@ -359,22 +375,6 @@
             "bullets": [
               "Proteger a las comunidades de Glades del humo, las quemas y la contaminación industrial del aire que daña la salud.",
               "Garantizar agua potable limpia y proteger los canales, pozos y el lago Okeechobee de la contaminación."
-            ]
-          }
-        ]
-      },
-      "youth-engagement": {
-        "slug": "/western-area-youth-engagement",
-        "title": "Compromiso de la juventud del área occidental",
-        "sections": [
-          {
-            "heading": "Idle time creates problems. Opportunity builds futures.",
-            "bullets": [
-              "Give kids something to do, somewhere to go, and a future to build—right here in our western communities.",
-              "Gimnasios comunitarios y centros recreativos",
-              "Centro acuático",
-              "Deportes de motor",
-              "Parque BMX"
             ]
           }
         ]
