@@ -21,12 +21,13 @@ export default async function HomePage({
       <Hero />
 
       {/* PLEDGE */}
-      <section className="bg-patriot-red text-white w-full">
+      <section className="text-white w-full">
         <div className="mx-auto max-w-7xl px-4 py-16 text-center" style={{ paddingLeft: "calc(1rem + 20px)", paddingRight: "calc(1rem + 20px)" }}>
-          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">{t('pledge.title')}</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-white whitespace-pre-line">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight whitespace-pre-line text-flag-gradient">
+            {t('pledge.title')}
             {t('pledge.description')}
-          </p>
+          </h2>
+
         </div>
       </section>
 
