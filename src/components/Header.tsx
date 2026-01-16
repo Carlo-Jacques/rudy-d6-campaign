@@ -12,6 +12,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function Header() {
   const t = useTranslations('common');
+  const t_priorities = useTranslations('priorities.items');
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -264,9 +265,9 @@ export default function Header() {
                       >
                         <div className="flex items-start gap-3">
                           <span className="mt-0.5 shrink-0 text-xs font-semibold text-patriot-blue">
-                            {tile.id}
+                            {(landingPageTiles.indexOf(tile) + 1).toString().padStart(2, '0')}
                           </span>
-                          <span className="flex-1 leading-snug">{tile.title}</span>
+                          <span className="flex-1 leading-snug">{t_priorities(`${tile.id}.title`)}</span>
                         </div>
                       </Link>
                     ))}
@@ -517,7 +518,7 @@ export default function Header() {
                       className="overflow-hidden"
                     >
                       <div className="ml-4 mt-1 space-y-1 border-l-2 border-black/10 pl-4">
-                        {landingPageTiles.map((tile) => (
+                        {landingPageTiles.map((tile, idx) => (
                           <Link
                             key={tile.id}
                             href={`/priorities${tile.slug}`}
@@ -534,9 +535,9 @@ export default function Header() {
                           >
                             <div className="flex items-start gap-2">
                               <span className="shrink-0 text-xs font-semibold text-patriot-blue">
-                                {tile.id}.
+                                {(idx + 1).toString().padStart(2, '0')}.
                               </span>
-                              <span className="flex-1 leading-snug">{tile.title}</span>
+                              <span className="flex-1 leading-snug">{t_priorities(`${tile.id}.title`)}</span>
                             </div>
                           </Link>
                         ))}

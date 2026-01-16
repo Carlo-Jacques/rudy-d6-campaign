@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
-import { getPriorityPageBySlug, getPriorityTileBySlug, landingPageTiles } from "@/lib/priorities";
+import { getPriorityIdBySlug, landingPageTiles, priorityIds, getPrioritySlugById } from "@/lib/priorities";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { site } from "@/lib/site";
 import Button from "@/components/ui/Button";
@@ -18,44 +18,60 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  const page = getPriorityPageBySlug(slug);
+  const { slug, locale } = await params;
+  const id = getPriorityIdBySlug(slug);
 
-  if (!page) {
-    const tile = getPriorityTileBySlug(slug);
-    if (tile) {
-      return {
-        title: `${tile.title} | ${site.name}`,
-        description: tile.subtitle,
-      };
-    }
+  if (!id) {
     return {
       title: "Priority Not Found",
     };
   }
 
+  const t = await getTranslations(`priorities.items.${id}`);
+
+  let description = "";
+  try {
+    const sections = t.raw('sections');
+    description = sections?.[0]?.bullets?.[0] || "";
+  } catch (e) { }
+
   return {
-    title: page.seo.title,
-    description: page.seo.metaDescription,
+    title: t('title') + ` | ${site.name}`,
+    description,
   };
 }
 
 export default async function PriorityPage({ params }: Props) {
   const { slug, locale } = await params;
   setRequestLocale(locale);
-  const page = getPriorityPageBySlug(slug);
-  const tile = getPriorityTileBySlug(slug);
-  const t_common = await getTranslations('common');
+  const id = getPriorityIdBySlug(slug);
 
-  if (!tile && !page) {
+  if (!id) {
     notFound();
   }
 
-  // Use page data if available, otherwise fallback to tile data
-  const title = page ? page.h1 : tile?.title;
-  const tldr = page ? page.tldr : [];
-  const content = page ? page.content : [];
-  const bridgesTo = page ? page.bridgesTo : [];
+  const t_common = await getTranslations('common');
+  const t_labels = await getTranslations('priorities.labels');
+  const t_priority = await getTranslations(`priorities.items.${id}`);
+
+  // Fetch all sections
+  let sections: any[] = [];
+  try {
+    sections = t_priority.raw('sections') || [];
+  } catch (e) {
+    console.error(`Error loading sections for ${id}`, e);
+  }
+
+  // Prepare circular navigation data
+  const currentIndex = priorityIds.indexOf(id);
+  const prevIndex = (currentIndex - 1 + priorityIds.length) % priorityIds.length;
+  const nextIndex = (currentIndex + 1) % priorityIds.length;
+
+  const prevId = priorityIds[prevIndex];
+  const nextId = priorityIds[nextIndex];
+
+  const t_prev = await getTranslations(`priorities.items.${prevId}`);
+  const t_next = await getTranslations(`priorities.items.${nextId}`);
 
   return (
     <main className="bg-white min-h-screen">
@@ -73,17 +89,12 @@ export default async function PriorityPage({ params }: Props) {
             href="/#plan"
             className="mb-8 inline-flex items-center gap-2 text-sm font-bold text-white/80 hover:text-white transition-colors"
           >
-            ← Back to Priorities
+            ← {t_common('aboutRudy')}
           </Link>
           <div className="max-w-4xl">
             <h1 className="text-4xl font-black tracking-tight text-white sm:text-6xl uppercase leading-tight">
-              {title}
+              {t_priority('title')}
             </h1>
-            {tile && !page && (
-              <p className="mt-6 text-xl text-white/90 leading-relaxed max-w-2xl">
-                {tile.subtitle}
-              </p>
-            )}
           </div>
         </ContentContainer>
       </div>
@@ -92,116 +103,52 @@ export default async function PriorityPage({ params }: Props) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           {/* Main Content */}
           <div className="lg:col-span-8">
-            {tldr.length > 0 && (
-              <div className="mb-12 bg-patriot-red/5 border-l-4 border-patriot-red p-8 rounded-r-2xl">
-                <h2 className="text-sm font-black uppercase tracking-widest text-patriot-red mb-4">The Impact</h2>
-                <ul className="space-y-4">
-                  {tldr.map((item, i) => (
-                    <li key={i} className="text-xl font-bold text-black flex gap-3 italic">
-                      <span>"{item}"</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
             <div className="prose prose-lg prose-slate max-w-none">
-              {page?.whyThisMatters && (
-                <p className="text-2xl font-medium text-gray-900 leading-snug mb-12">
-                  {page.whyThisMatters}
-                </p>
-              )}
-
-              {content.map((block, i) => {
-                if (block.type === "paragraph") {
-                  return <p key={i} className="text-lg text-gray-700 leading-relaxed mb-8">{block.text}</p>;
-                }
-                if (block.type === "h2") {
-                  return <h2 key={i} className="text-3xl font-black text-black mt-16 mb-6 uppercase border-b-2 border-patriot-red inline-block pb-2">{block.text}</h2>;
-                }
-                if (block.type === "list") {
-                  return (
-                    <ul key={i} className="space-y-4 mb-8">
-                      {block.items?.map((item, j) => (
-                        <li key={j} className="flex gap-4 items-start text-lg text-gray-700">
-                          <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  );
-                }
-                return null;
-              })}
-
-              {!page && (
-                <div className="bg-gray-50 border border-gray-100 rounded-3xl p-12 text-center my-12">
-                  <h2 className="text-2xl font-bold text-black mb-4">Detailed Plan Coming Soon</h2>
-                  <p className="text-gray-600">We are currently finalizing the specific implementation details for this priority. Please check back soon or sign up for our newsletter to stay updated.</p>
+              {sections.map((section: any, i: number) => (
+                <div key={i} className="mb-12">
+                  {section.heading && (
+                    <h2 className="text-3xl font-black text-black mt-16 mb-6 uppercase border-b-2 border-patriot-red inline-block pb-2">
+                      {section.heading}
+                    </h2>
+                  )}
+                  <ul className="space-y-4 mb-8">
+                    {section.bullets.map((bullet: string, j: number) => (
+                      <li key={j} className="flex gap-4 items-start text-lg text-gray-700">
+                        <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red" />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              )}
+              ))}
             </div>
-
-            {bridgesTo && bridgesTo.length > 0 && (
-              <div className="mt-20 pt-12 border-t border-gray-100">
-                <h3 className="text-sm font-black uppercase tracking-widest text-gray-400 mb-8">Next Steps in the Plan</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {bridgesTo.map((bridge, i) => (
-                    <Link
-                      key={i}
-                      href={`/priorities${bridge.href}`}
-                      className="group p-6 border border-gray-200 rounded-2xl hover:border-patriot-red hover:shadow-lg transition-all"
-                    >
-                      <span className="text-sm font-bold text-patriot-red block mb-1">Related Priority</span>
-                      <span className="text-lg font-bold text-black group-hover:text-patriot-red transition-colors">{bridge.label} →</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
 
             {/* Circular Navigation */}
             <div className="mt-20 pt-12 border-t border-gray-100">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                {(() => {
-                  const normalizedSlug = slug.startsWith("/") ? slug : `/${slug}`;
-                  const currentIndex = landingPageTiles.findIndex(t => t.slug === normalizedSlug);
-                  if (currentIndex === -1) return null;
+                <Link
+                  href={`/priorities${getPrioritySlugById(prevId)}`}
+                  className="group flex flex-col p-8 bg-gray-50 rounded-3xl hover:bg-patriot-red/5 hover:ring-2 hover:ring-patriot-red/20 transition-all"
+                >
+                  <span className="text-sm font-black uppercase tracking-widest text-gray-400 group-hover:text-patriot-red transition-colors flex items-center gap-2">
+                    ← {t_labels('prevPriority')}
+                  </span>
+                  <span className="mt-2 text-xl font-black text-black leading-tight uppercase">
+                    {t_prev('title')}
+                  </span>
+                </Link>
 
-                  const prevIndex = (currentIndex - 1 + landingPageTiles.length) % landingPageTiles.length;
-                  const nextIndex = (currentIndex + 1) % landingPageTiles.length;
-
-                  const prevTile = landingPageTiles[prevIndex];
-                  const nextTile = landingPageTiles[nextIndex];
-
-                  return (
-                    <>
-                      <Link
-                        href={`/priorities${prevTile.slug}`}
-                        className="group flex flex-col p-8 bg-gray-50 rounded-3xl hover:bg-patriot-red/5 hover:ring-2 hover:ring-patriot-red/20 transition-all"
-                      >
-                        <span className="text-sm font-black uppercase tracking-widest text-gray-400 group-hover:text-patriot-red transition-colors flex items-center gap-2">
-                          ← Previous Priority
-                        </span>
-                        <span className="mt-2 text-xl font-black text-black leading-tight uppercase">
-                          {prevTile.title}
-                        </span>
-                      </Link>
-
-                      <Link
-                        href={`/priorities${nextTile.slug}`}
-                        className="group flex flex-col p-8 bg-gray-50 rounded-3xl text-right hover:bg-patriot-red/5 hover:ring-2 hover:ring-patriot-red/20 transition-all"
-                      >
-                        <span className="text-sm font-black uppercase tracking-widest text-gray-400 group-hover:text-patriot-red transition-colors flex items-center gap-2 justify-end">
-                          Next Priority →
-                        </span>
-                        <span className="mt-2 text-xl font-black text-black leading-tight uppercase">
-                          {nextTile.title}
-                        </span>
-                      </Link>
-                    </>
-                  );
-                })()}
+                <Link
+                  href={`/priorities${getPrioritySlugById(nextId)}`}
+                  className="group flex flex-col p-8 bg-gray-50 rounded-3xl text-right hover:bg-patriot-red/5 hover:ring-2 hover:ring-patriot-red/20 transition-all"
+                >
+                  <span className="text-sm font-black uppercase tracking-widest text-gray-400 group-hover:text-patriot-red transition-colors flex items-center gap-2 justify-end">
+                    {t_labels('nextPriority')} →
+                  </span>
+                  <span className="mt-2 text-xl font-black text-black leading-tight uppercase">
+                    {t_next('title')}
+                  </span>
+                </Link>
               </div>
             </div>
           </div>
@@ -212,26 +159,20 @@ export default async function PriorityPage({ params }: Props) {
               <div className="bg-black text-white rounded-3xl p-8 shadow-2xl overflow-hidden relative">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-patriot-red/20 rounded-full -mr-16 -mt-16 blur-3xl"></div>
                 <div className="relative z-10">
-                  <h2 className="text-2xl font-black uppercase mb-4">Support This Goal</h2>
+                  <h2 className="text-2xl font-black uppercase mb-4">{t_labels('supportTitle')}</h2>
                   <p className="text-white/70 mb-8 font-medium">
-                    Help Rudolph deliver real results for District 6 by supporting the campaign today.
+                    {t_labels('supportDesc')}
                   </p>
                   <div className="space-y-4">
                     <Button href={t_common('urls.petition')} variant="petition" size="lg" className="w-full justify-center text-lg py-6">
-                      Sign the Petition
+                      {t_labels('petition')}
                     </Button>
                     <Button href={t_common('urls.donate')} variant="donate" size="lg" className="w-full justify-center text-lg py-6" target="_blank">
-                      Donate Now
+                      {t_labels('donate')}
                     </Button>
                   </div>
                 </div>
               </div>
-
-              {page?.shareExcerpt && (
-                <div className="mt-8 p-8 border-2 border-dashed border-gray-200 rounded-3xl italic text-gray-500">
-                  "{page.shareExcerpt}"
-                </div>
-              )}
             </div>
           </div>
         </div>

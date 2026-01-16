@@ -246,5 +246,254 @@
         "description": "We have received your story. Thank you for your service and for contributing to our community's history."
       }
     }
+  },
+  "priorities": {
+    "labels": {
+      "impact": "The Impact",
+      "supportTitle": "Support This Goal",
+      "supportDesc": "Help Rudolph deliver real results for District 6 by supporting the campaign today.",
+      "petition": "Sign the Petition",
+      "donate": "Donate Now",
+      "nextSteps": "Next Steps in the Plan",
+      "related": "Related Priority",
+      "prevPriority": "Previous Priority",
+      "nextPriority": "Next Priority"
+    },
+    "items": {
+      "property-taxes": {
+        "slug": "/property-tax",
+        "title": "Property Tax",
+        "sections": [
+          {
+            "heading": "Tax",
+            "bullets": [
+              "Provide a 100% county property tax exemption for homestead property owners age 65 and over who have maintained Palm Beach County residency and paid property taxes for at least 15 consecutive years, subject to Florida constitutional and statutory limits.",
+              "Twenty-five years paid. No more county property taxes.",
+              "Long-term Palm Beach County homeowners deserve real relief.",
+              "Freeze county property tax rates and implement annual rollbacks funded by eliminating wasteful county spending, prioritizing efficiency, audits, and administrative cost reductions."
+            ]
+          },
+          {
+            "heading": "Delinquent Tax",
+            "bullets": [
+              "Allow Any payment method for late property tax.",
+              "Delay tax certificate sales until July of the delinquent year.",
+              "Increase early payment discount from 4% to 10%.",
+              "Reduce delinquent interest from 18% to 9%",
+              "Extend Tax Deed application from 2 years to 5 ears on homestead homes."
+            ]
+          }
+        ]
+      },
+      "government-services": {
+        "slug": "/government-services",
+        "title": "Government Services",
+        "sections": [
+          {
+            "heading": "Code Enforcement",
+            "bullets": [
+              "Code enforcement has become legalized harassment.",
+              "If code enforcement can’t prove a real health or safety risk, they won’t fine you. Period",
+              "Cap & Eliminate Excessive Fines",
+              "Daily fines on homesteads will be capped and abolished where abusive.",
+              "Zero Selective Enforcement",
+              "Same rules, same treatment—no targeting by neighborhood, income, or politics",
+              "Stop importing bureaucrats. Hire locals who live in the community and understand how people actually live.",
+              "We’re shifting from Code Enforcement to Community Compliance & Assistance—focused on fixing problems, not punishing people."
+            ]
+          },
+          {
+            "heading": "Building Department",
+            "bullets": [
+              "Service, Not Obstruction",
+              "The Building Department exists to help projects move safely and legally—not to delay, intimidate, or over-complicate approvals.",
+              "Fast-Track for Minor & Residential Work",
+              "Establish guaranteed turnaround times for residential permits, repairs, and small projects—no months-long delays for basic work.",
+              "Right to Challenge Without Retaliation",
+              "Contractors and homeowners may appeal decisions without fear of blacklisting, delays, or targeted enforcement.",
+              "Automatic Amnesty for Old Permits",
+              "Any inactive permit 10, 20, or 30 years old on a property where Palm Beach County has continuously collected property taxes shall be administratively closed without penalty. You can’t tax a property for decades and then pretend the work never existed. Close the permit. Move on.",
+              "No Punishment for New Homeowners",
+              "Buyers will not be fined or penalized for permit issues created by prior owners. Responsibility follows the violator—not the victim.",
+              "Your roof protects your family.",
+              "Five days. Period. No homeowner waits weeks or months for a roof permit."
+            ]
+          },
+          {
+            "heading": "Agriculture Exemption Department",
+            "bullets": [
+              "If your land is zoned Residential Ag and you qualify, you get the exemption. No more games. No more denial.",
+              "If land is zoned for agriculture and is being used for any legitimate agricultural purpose, it qualifies. Letting land rest and grow is still land management, not neglect.",
+              "Intent Matters",
+              "Agricultural use includes preparation, recovery, rotation, and land conditioning—not just harvest.",
+              "If your land can reasonably support the animal with proper management, one cow can qualify—especially on residential-ag or small farm parcels."
+            ]
+          }
+        ]
+      },
+      "glades-first": {
+        "slug": "/glades-first-initiative",
+        "title": "Glades First Initiative",
+        "sections": [
+          {
+            "heading": "Affordable, Healthy Housing",
+            "bullets": [
+              "Safe, affordable housing and improved maintenance of existing neighborhoods are priorities, especially where poverty is high."
+            ]
+          },
+          {
+            "heading": "Respect the Glades Voice",
+            "bullets": [
+              "Ensure the Glades has a real seat at the table—fair county funding, representation, and follow-through, not election-season visits.",
+              "Major county decisions must include direct input from Glades residents."
+            ]
+          },
+          {
+            "heading": "Infrastructure Repair & Services",
+            "bullets": [
+              "Better roads, drainage, utilities, and public services are repeatedly cited as needed improvements that would make living conditions safer and fairer."
+            ]
+          },
+          {
+            "heading": "Clear Air and Water",
+            "bullets": [
+              "Protect Glades communities from smoke, burning, and industrial air pollution that harms health.",
+              "Ensure clean drinking water and protect canals, wells, and Lake Okeechobee from contamination."
+            ]
+          }
+        ]
+      },
+      "youth-engagement": {
+        "slug": "/western-area-youth-engagement",
+        "title": "Western Area Youth Engagement",
+        "sections": [
+          {
+            "heading": "Idle time creates problems. Opportunity builds futures.",
+            "bullets": [
+              "Give kids something to do, somewhere to go, and a future to build—right here in our western communities.",
+              "Community gyms & rec centers",
+              "Aqua center",
+              "Motor Sports",
+              "BMX Park"
+            ]
+          }
+        ]
+      },
+      "infrastructure": {
+        "slug": "/infrastructure",
+        "title": "Infrastructure",
+        "sections": [
+          {
+            "heading": "Fix Roads & Potholes",
+            "bullets": [
+              "Resurface unsafe roads and prioritize rural and Glades areas that have been ignored."
+            ]
+          },
+          {
+            "heading": "Inadequate Drainage & Flooding",
+            "bullets": [
+              "I will push for regular canal maintenance, improved culverts, and real flood control—not excuses."
+            ]
+          },
+          {
+            "heading": "Address Traffic & Growth Impacts",
+            "bullets": [
+              "I will demand road improvements keep pace with development to reduce congestion and accidents."
+            ]
+          },
+          {
+            "heading": "Existing Road Projects in district 6",
+            "bullets": [
+              "End road project delays in District 6. Get construction moving, fix unsafe roads, and relieve traffic congestion—now, not later."
+            ]
+          },
+          {
+            "heading": "Overdevelopment",
+            "bullets": [
+              "Stop reckless overdevelopment by requiring roads, drainage, water, and schools to be fully in place before new approvals, not after.",
+              "Put rural residents first—listen to them and respect how they want their neighborhoods preserved."
+            ]
+          }
+        ]
+      },
+      "public-safety": {
+        "slug": "/public-safety",
+        "title": "Commitments to Public Safety",
+        "sections": [
+          {
+            "heading": "Crush Violent Crime",
+            "bullets": [
+              "Partner with the Sheriff and local law enforcement to fund and support data-driven strategies that target violent crime and protect our communities."
+            ]
+          },
+          {
+            "heading": "Community Policing in Every Neighborhood",
+            "bullets": [
+              "Ensure community policing exists countywide by building long-term relationships, trust, and local partnerships that address the root causes of crime."
+            ]
+          },
+          {
+            "heading": "Transparency Builds Trust",
+            "bullets": [
+              "Support mandatory body-camera activation and require public release within 72 hours for major incidents to protect both citizens and officers."
+            ]
+          },
+          {
+            "heading": "Protect the Innocent",
+            "bullets": [
+              "Push for automatic clearing of records for innocent individuals and the removal of false arrests from law-enforcement databases."
+            ]
+          },
+          {
+            "heading": "Mental Health & Crisis Response",
+            "bullets": [
+              "Expand mental health and crisis response teams so the right professionals respond to non-violent emergencies, improving safety for everyone."
+            ]
+          }
+        ]
+      },
+      "small-business": {
+        "slug": "/small-business",
+        "title": "Small Business",
+        "sections": [
+          {
+            "heading": "Local First Contracting",
+            "bullets": [
+              "Prioritize District 6 and Palm Beach County small businesses for county contracts, repairs, and services."
+            ]
+          },
+          {
+            "heading": "Support Home-Based & Rural Businesses",
+            "bullets": [
+              "Protect home-based, agricultural, and rural businesses from overregulation while ensuring fair rules."
+            ]
+          },
+          {
+            "heading": "Lower the Cost of Doing Business",
+            "bullets": [
+              "Reduce fees where possible and fight unnecessary cost increases that hurt local operators."
+            ]
+          },
+          {
+            "heading": "Building Permits and Violations",
+            "bullets": [
+              "Streamline permits, inspections, and approvals so small businesses can open, expand, and hire without unnecessary delays. 5 day roofing Permits."
+            ]
+          },
+          {
+            "heading": "Engagement",
+            "bullets": [
+              "Visit local shops, farms, and home-based businesses to understand real challenges firsthand."
+            ]
+          },
+          {
+            "heading": "Clear, Plain Communication",
+            "bullets": [
+              "Provide simple guides and updates so owners know what’s required without needing lawyers or consultants."
+            ]
+          }
+        ]
+      }
+    }
   }
 }

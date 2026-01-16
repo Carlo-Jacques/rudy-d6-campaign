@@ -1,45 +1,41 @@
-import prioritiesData from "../../priorities-json.json";
+// This file now only defines the priority IDs and order.
+// Content is managed in the localization files (messages/*.json).
 
-export type PriorityTile = {
-  id: number;
-  title: string;
-  subtitle: string;
-  cta: string;
+export interface PriorityTile {
+  id: string;
   slug: string;
-};
-
-export type PriorityPageContent = {
-  type: "paragraph" | "h2" | "list";
-  text?: string;
-  items?: string[];
-};
-
-export type PriorityPage = {
-  slug: string;
-  seo: {
-    title: string;
-    metaDescription: string;
-  };
-  h1: string;
-  tldr: string[];
-  shareExcerpt: string;
-  whyThisMatters: string;
-  content: PriorityPageContent[];
-  bridgesTo?: {
-    label: string;
-    href: string;
-  }[];
-};
-
-export const landingPageTiles: PriorityTile[] = prioritiesData.landingPage.tiles;
-export const priorityPages: PriorityPage[] = prioritiesData.pages as PriorityPage[];
-
-export function getPriorityTileBySlug(slug: string): PriorityTile | undefined {
-  const normalizedSlug = slug.startsWith("/") ? slug : `/${slug}`;
-  return landingPageTiles.find((t) => t.slug === normalizedSlug);
 }
 
-export function getPriorityPageBySlug(slug: string): PriorityPage | undefined {
+export const priorityIds = [
+  "property-taxes",
+  "government-services",
+  "glades-first",
+  "youth-engagement",
+  "infrastructure",
+  "public-safety",
+  "small-business"
+];
+
+// Helper to get normalized slug from ID (matching en.json)
+export const getPrioritySlugById = (id: string): string => {
+  const mapping: Record<string, string> = {
+    "property-taxes": "/property-tax",
+    "government-services": "/government-services",
+    "glades-first": "/glades-first-initiative",
+    "youth-engagement": "/western-area-youth-engagement",
+    "infrastructure": "/infrastructure",
+    "public-safety": "/public-safety",
+    "small-business": "/small-business"
+  };
+  return mapping[id] || `/${id}`;
+};
+
+export const landingPageTiles: PriorityTile[] = priorityIds.map(id => ({
+  id,
+  slug: getPrioritySlugById(id)
+}));
+
+export function getPriorityIdBySlug(slug: string): string | undefined {
   const normalizedSlug = slug.startsWith("/") ? slug : `/${slug}`;
-  return priorityPages.find((p) => p.slug === normalizedSlug);
+  return landingPageTiles.find((t) => t.slug === normalizedSlug)?.id;
 }

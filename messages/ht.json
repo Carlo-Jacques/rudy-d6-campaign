@@ -1,24 +1,24 @@
 {
   "common": {
-    "aboutRudy": "Sou Rudolph",
-    "endorsements": "Sipò",
-    "district6": "Distri 6",
+    "aboutRudy": "Konsènan Rudolph",
+    "endorsements": "Aprobasyon",
+    "district6": "Distrik 6",
     "volunteer": "Volontè",
-    "donate": "Bay lajan",
+    "donate": "Fè yon don",
     "petition": "Petisyon",
     "priorities": "Priyorite",
     "bio": "Biyografi",
     "preparedness": "Preparasyon",
-    "whyIWantToRun": "Poukisa mwen vle kandide",
+    "whyIWantToRun": "Poukisa mwen vle kandida",
     "veterans": "Veteran yo",
     "menu": "Meni",
     "close": "Fèmen",
     "viewAll": "Wè tout",
     "quickLinks": "Lyen rapid",
     "connectWithRudolph": "Konekte ak Rudolph",
-    "privacyPolicy": "Règleman sou enfòmasyon prive",
+    "privacyPolicy": "Politik privite",
     "paidForBy": "Peye pa Rudolph Tinker",
-    "copyright": "Dwa otè",
+    "copyright": "Dwa dotè",
     "allRightsReserved": "Tout dwa rezève",
     "urls": {
       "donate": "https://secure.actblue.com/donate/rudolph-tinker-1",
@@ -28,14 +28,14 @@
     }
   },
   "mobileCta": {
-    "signPetition": "Siyen Petisyon an",
-    "donate": "Fè yon Don",
-    "disclaimer": "Petisyon an premye. Enprime, siyen, voye pa lapòs. N ap ajoute swivi apre."
+    "signPetition": "Siyen Petisyon",
+    "donate": "Fè yon don",
+    "disclaimer": "Petisyon an premye. Enprime, siyen, voye pa lapòs. Nou pral ajoute swivi a talè."
   },
   "home": {
     "pledge": {
-      "title": "Angajman Mwen",
-      "description": "Ou peye. Mwen livre. Oswa m ale.\n\nYonn nan nou. K ap travay pou nou tout."
+      "title": "Angajman an",
+      "description": "Ou te peye. Mwen akonpli. Oubyen mwen prale.\n\nYon moun nan mitan nou. K ap travay pou nou tout."
     },
     "plan": {
       "title": "Plan 10 Pwen an",
@@ -43,207 +43,456 @@
       "whyRudy": "Poukisa Rudy →"
     },
     "petition": {
-      "title": "Ede mete yon demokrat sou bilten vòt la — Pa gen enterè espesyal, pa gen taks sou bilten vòt",
-      "description": "Pou kalifye pou bilten vòt la nan Distri 6, kandida yo fòse yo chwazi youn nan de chemen:",
+      "title": "Ede mete yon Demokrat sou bilten vòt la — Pa gen enterè espesyal, pa gen taks sou bilten vòt la",
+      "description": "Pou kalifye pou bilten vòt la nan Distrik 6, kandida yo oblije chwazi youn nan de chemen:",
       "option1": "Peye plis pase $8,000 nan frè, oswa",
-      "option2": "Kolekte 1,500 petisyon votè valab",
-      "ballotTax": "Frè sa a pa sou demokrasi—se yon taks sou bilten vòt ki favorize moun ki andedan ak gwo donatè yo.",
-      "grassroots": "Mwen ap chwazi wout baz la.",
-      "ask": "Olye pou m peye wout mwen nan bilten vòt la, mwen ap mande votè demokrat Distri 6 yo pou ede kalifye kanpay sa a nan bon fason: ak petisyon, pa ak lajan.",
+      "option2": "Kolekte 1,500 petisyon valid nan men votè yo",
+      "ballotTax": "Frè sa a pa konsènan demokrasi, se yon taks sou bilten vòt ki favorize moun anndan yo ak gwo donatè yo.",
+      "grassroots": "Mwen chwazi wout baz la.",
+      "ask": "Olye pou m peye chemen m sou bilten vòt la, m ap mande votè Demokrat nan Distrik 6 yo pou yo ede kalifye kanpay sa a nan fason ki kòrèk la: ak petisyon, pa ak lajan.",
       "signPetition": "Siyen petisyon an",
-      "printAndMail": "Enprime epi voye nan adrès sa a:",
+      "printAndMail": "Enprime epi voye pa lapòs nan adrès sa a:",
       "address": "14611 Southern Blvd Unit # 634\nLoxahatchee FL 33470"
     },
     "testimonials": {
       "title": "Sa elèv yo di sou Dr. Tinker",
       "items": [
         {
-          "quote": "Li sevè men li jis, epi li vrèman vle ou reyisi. Si ou fè efò, li ap travay avèk ou epi ede ou rive jouk nan fen an. Mwen te vrèman apresye klas li a ak moun ki te ladan l.",
+          "quote": "Mèsi paske ou se yon pwofesè ekselan. Ou te aprann mwen travay di epi ou te fè klas la amizan. Mwen pa t ka mande pi bèl fason pou m te kòmanse karyè retou lekòl mwen.",
           "author": "KM"
         },
         {
-          "quote": "Mèsi anpil paske ou se yon pwofesè ekstraòdinè. Ou te anseye m travay di epi ou te fè klas la amizan. Mwen pa t ka mande yon pi bon fason pou kòmanse retou mwen lekòl.",
-          "author": "Estidyan"
+          "quote": "Li egzijan men li jis epi li vle ou reyisi toutbon. Si ou fè efò, l ap travay avèk ou epi l ap ede ou eseye rive nan bout la. Mwen te apresye klas li a ak moun ki te ladan l yo toutbon.",
+          "author": "Elèv"
         },
         {
-          "quote": "Dr Tinker te onètman yon gwo pwofesè, trè entèaktif si ou pa renmen klas raz. Li sipòtif anpil tou epi li toujou dispoze ede etidyan k ap lite men k ap fè efò. Pa gen etidyan ki rete dèyè.",
-          "author": "Etidyan"
+          "quote": "Dr. Tinker te vrèman yon gwo pwofesè, trè entèaktif si ou pa renmen klas ki annuye. Li konprann moun anpil tou epi li toujou dispoze ede elèv k ap lite men ki fè efò; pa gen okenn elèv ki rete dèyè.",
+          "author": "Elèv"
         },
         {
-          "quote": "Dr Tinker gen anpil konesans sou sijè a. Li renmen patisipasyon nan klas la. Ti tès li yo baze sou sa li te anseye nan klas anvan an, epi si ou bloke sou yon kesyon, li ap ede ou. Egzamen mitan-semès la baze sou kat premye leson yo, epi egzamen final la sou kat dènye leson yo. Chaj travay la trè jere si ou eseye.",
-          "author": "Etidyan"
+          "quote": "Dr. Tinker gen anpil konesans sou sijè sa a. Li renmen patisipasyon nan klas. Tès li yo baze sou sa li te anseye nan klas anvan an epi si ou bloke sou yon kesyon, l ap ede ou. Egzamen mitan tèm nan baze sou kat premye leson yo epi egzamen final la baze sou kat dènye leson yo. Chaj travay la trè jere si ou fè efò.",
+          "author": "Elèv"
         },
         {
-          "quote": "Kòm se te premye fwa mwen nan kolèj, mwen te vrèman renmen klas gouvènman ameriken mwen an avèk Dr Tinker. Menm si ti tès li yo ekri a la men, leson yo trè klè epi mwen aprann anpil. Li toujou konn fè nou ri epi fè nou travay di.",
-          "author": "Etidyan"
+          "quote": "Kòm se premye fwa m nan kolèj, mwen te apresye klas gouvènman Ameriken m nan avèk Dr. Tinker anpil. Malgre tès li yo ekri alamen, leson li yo trè klè epi mwen te aprann anpil. Li te toujou rive fè nou ri epi travay di.",
+          "author": "Elèv"
         }
       ]
     },
     "news": {
       "title": "Nouvèl",
-      "subtitle": "Dènye Mizajou ak Kouvèti",
+      "subtitle": "Dènye mizajou ak kouvèti",
       "all": "Tout",
       "readMore": "Li plis →",
-      "noArticles": "Pa gen okenn atik yo jwenn nan kategori sa a."
+      "noArticles": "Pa gen okenn atik yo te jwenn nan kategori sa a."
     }
   },
   "aboutRudolph": {
-    "title": "Sou Rudolph",
-    "description": "Aprann plis sou Rudolph Tinker ak vizyon li pou Distri 6.",
+    "title": "Konsènan Rudolph",
+    "description": "Aprann plis sou Rudolph Tinker ak vizyon li pou Distrik 6.",
     "bio": {
       "title": "Biyografi",
-      "description": "Aprann sou eksperyans ak bagaj Rudolph."
+      "description": "Aprann sou istwa ak eksperyans Rudolph."
     },
     "preparedness": {
       "title": "Preparasyon",
-      "description": "Bagaj akademik, sètifika, ak lisans pwofesyonèl."
+      "description": "Istwa akademik, sètifikasyon ak lisans pwofesyonèl."
     },
     "whyIWantToRun": {
-      "title": "Poukisa mwen vle kandide",
-      "description": "Dekouvri sa ki pouse kanpay Rudolph."
+      "title": "Poukisa mwen vle kandida",
+      "description": "Dekouvri sa k ap pouse kanpay Rudolph la."
     }
   },
   "hero": {
-    "badge": "Komisyonè Konte • Distri 6",
-    "title": "Youn Nan Nou, K ap Travay pou Tout Nou.",
-    "subtitle": "Pwomès klè. Pwogrè piblik. Responsabilite reyèl pou Distri 6.",
+    "badge": "Komisyonè Konte • Distrik 6",
+    "title": "Youn nan nou, k ap travay pou nou tout.",
+    "subtitle": "Pwomès klè. Pwogrè piblik. Responsablite reyèl pou Distrik 6.",
     "signPetition": "Siyen petisyon an",
     "seePoints": "Wè 10 pwen yo",
-    "helpTitle": "Ede mete youn nan nou, k ap travay pou tout nou, sou bilten vòt la — Petisyon, pa politik peye pou jwe",
+    "helpTitle": "Ede mete youn nan nou, k ap travay pou nou tout, sou bilten vòt la — Petisyon, pa politik peye-pou-jwe",
     "mailAddress": "Ranpli epi voye petisyon an nan adrès sa a:",
     "address": "14611 Southern Blvd Unit # 634\nLoxahatchee FL 33470",
-    "pdfNotSupported": "Navigatè ou a pa sipòte wè PDF anligne.",
-    "viewPdf": "Wè PDF la isit la",
-    "aboutRudy": "Rudolph \"Rudy\" Tinker se yon veteran Lame Etazini, pwopriyetè ti biznis, kontraktè, ak edikatè. Li rele Distri 6 Konte Palm Beach lakay li depi plis pase 27 ane, epi li kwè gouvènman dwe travay pou pèp li sèvi. Li kandide paske taks ak pri lavi yo ap monte san rete, pandan gaspiyaj, move planifikasyon, ak desizyon konte ki pa responsab ap fè fanmi ak ti biznis soufri. Plan 10 Pwen li a bay solisyon klè, pratik pou koupe gaspiyaj, bese depans, amelyore sèvis konte yo, epi retabli yon lidèchip responsab ki mete moun an premye."
+    "pdfNotSupported": "Navigatè w la pa sipòte gade PDF sou entènèt.",
+    "viewPdf": "Gade PDF la isit la",
+    "aboutRudy": "Rudolph \"Rudy\" Tinker se yon veteran Lame Etazini, pwopriyetè ti biznis, kontraktè, ak edikatè. Li konsidere Distrik 6 Konte Palm Beach kòm kay li depi plis pase 27 ane epi li kwè fèmman ke gouvènman an dwe travay pou moun li sèvi yo.\n\nLi kandida paske taks ak pri lavi kontinye ap ogmante, pandan gaspiyaj, move planifikasyon ak desizyon konte a san rann kont ap nwi fanmi yo ak ti biznis yo.\n\nPlan 10 Pwen li a ofri solisyon klè ak pratik pou elimine gaspiyaj, diminye depans, refòme sèvis konte yo epi retounen yon lidèchip ki responsab, ki pre moun ak ki santre sou pèp la."
   },
   "bio": {
     "title": "Biyografi",
-    "description": "Aprann sou bagaj, sèvis ak angajman Rudolph 'Rudy' Tinker pou Distri 6 Konte Palm Beach.",
-    "backToAbout": "Retounen nan Sou Rudolph",
-    "content": "<p><strong>Rudolph \"Rudy\" Tinker</strong> se yon <strong>veteran Lame Etazini</strong>, <strong>Kontraktè Jeneral Sètifye</strong>, <strong>pwopriyetè ti biznis</strong>, ak <strong>edikatè</strong> ki te viv, travay, epi leve fanmi li nan <strong>Distri 6 Konte Palm Beach</strong> pou plis pase de deseni.<br /><br /><em>Li kwè gouvènman an dwe travay pou moun chak jou — pa enterè espesyal.</em></p><p>Li fèt nan <strong>Bahamas yo</strong>, Rudy te grandi ak yon manman sèl devwe ak grann li nan yon fanmi pwòch, miltijenerasyon ki te enstile nan li valè <strong>lafwa</strong>, <strong>disiplin</strong>, <strong>travay di</strong>, ak <strong>sèvis pou lòt moun</strong>.<br /><br />Kòm yon timoun, li te imigre nan Etazini ak grann li nan rechèch opòtinite.<br /><br />Yo te etabli nan <strong>Hallandale Beach, Florid</strong>, kote li te fini lekòl segondè epi li te vin anfòlman enplike nan kominote li a atravè travay volontè, netwayaj katye, kanpay manje, efò prevansyon krim, ak <strong>Pwogram Eksploratè Polis Hallandale</strong>.<br /><br /><strong>Pou Rudy, sèvis pa janm te yon slogan — se te yon fason pou viv.</strong></p><p>Apre li te gradye nan lekòl segondè nan <strong>1996</strong>, Rudy te enskri nan <strong>Inivèsite Atlantik Florid</strong>.<br /><br />Pandan li te kòmanse nan medsin, li te travay plizyè travay pou peye fason li nan inivèsite epi finalman li te chwazi <strong>Syans Politik</strong>, rekonèt ke bon gouvènman afekte chak fanmi, chak katye, ak chak opòtinite.<br /><br />Pandan tan sa a, li te lanse tou yon ti biznis komèsyal nan Konte Palm Beach, aprann premye men defi ki fè fas pwopriyetè ti biznis yo.</p><p>Nan <strong>2002</strong>, Rudy te chwazi pèsonèlman kòm yon <strong>Entèn Kongrè</strong> pou Kongrèsman <strong>Alcee Hastings</strong>, reprezante biwo a nan evènman sivil pandan mwa difisil yo apre atak <strong>11 septanm</strong> yo.<br /><br />Menm ane sa a, li te gradye nan inivèsite, marye jèn, epi li te anrole nan <strong>Lame Etazini</strong>, sèvi onorabman soti <strong>2002 rive 2005</strong> nan sipò <strong>Lagè Global kont Tèwonis</strong>.</p><p>Pandan li te nan sèvis aktif, Rudy te achte premye kay li nan <strong>Loxahatchee</strong> nan <strong>2003</strong> — kominote a li te fè fyète rele kay pou plis pase <strong>23 ane</strong>.<br /><br />Apre li te kite sèvis aktif, li te vin papa twa pitit fi, yon responsabilite ki te fòme pwofondman angajman li nan <strong>fanmi</strong>, <strong>lafwa</strong>, ak <strong>estabilite</strong>.</p><p>Nan <strong>2008</strong>, trajedi te frape lè youn nan twa pitit fi li yo, <strong>Oriya Isabel Tinker</strong>, te mouri akòz konplikasyon nan yon kondisyon kè konjenital.<br /><br />Pou prèske twa ane, lavi Rudy te vire alantou lopital, vizit ijans, ak reyalite chak jou nan pran swen timoun ki gen bezwen medikal konplèks.<br /><br />Kòm sèl moun ki bay pou kay li a, li te eksperyans premye men presyon emosyonèl, fizik, ak finansyèl ki fè fas fanmi k ap travay yo — yon eksperyans ki te apwofondi anpati li epi ranfòse kwayans li ke lidè yo dwe konprann difikilte atravè eksperyans viv.</p><p>Jodi a, Rudy se yon pwopriyetè ti biznis, opere yon konpayi konstriksyon ak konsiltasyon ki travay dirèkteman nan katye atravè <strong>Distri 6 Konte Palm Beach</strong>.<br /><br />Travay li mete li sou sit travay chak jou, navige pèmi, zonaj, drenaj, defi enfrastrikti, abòdabilite lojman, presyon asirans, ak enpak reyèl desizyon konte yo sou fanmi k ap travay, kiltivatè, ak ti biznis.</p><p>Rudy sèvi tou kòm yon edikatè, anseye <strong>Gouvènman Ameriken</strong> nan <strong>Kolej Eta Palm Beach</strong> nan kampus <strong>Loxahatchee</strong> ak <strong>Belle Glade</strong>.<br /><br />Anplis edikasyon siperyè, li te anseye nan <strong>Lekòl Segondè Pahokee Middle–Senior</strong> ak <strong>Lekòl Segondè Glades Central</strong>, travay dirèkteman ak elèv ak fanmi nan tout rejyon Glades ak kominote lwès yo.<br /><br />Nan klas li yo, Rudy anseye <strong>Konstitisyon Etazini</strong>, <strong>Deklarasyon Dwa</strong>, dwa vòt, ak ki jan desizyon gouvènman lokal yo — soti nan zonaj ak bidjè rive nan taks pwopriyete ak sèvis piblik — afekte dirèkteman lavi moun.</p><p>Apre plizyè deseni nan sèvis — kòm yon veteran, papa, kontraktè, edikatè, ak manm kominote — Rudy ap kandide pou biwo piblik paske li konnen Distri 6 merite lidèchip ki <strong>koute</strong>, <strong>planifye responsab</strong>, <strong>parèt nan chak kominote</strong>, epi <strong>mete moun an premye</strong>.</p><p><strong>Rudolph \"Rudy\" Tinker pa yon politisyen karyè.</strong><br /><strong>Li se youn nan nou — k ap travay pou tout nou.</strong></p>"
+    "description": "Aprann sou background, sèvis ak angajman Rudolph 'Rudy' Tinker anvè Distrik 6 Konte Palm Beach.",
+    "backToAbout": "Retounen nan Konsènan Rudolph",
+    "content": "<p><strong>Rudolph \"Rudy\" Tinker</strong> se yon <strong>veteran Lame Ameriken</strong>, <strong>Kontraktè Jeneral Sètifye</strong>, <strong>pwopriyetè ti biznis</strong> ak <strong>edikatè</strong> ki te viv, travay epi leve fanmi l nan <strong>Distrik 6 Konte Palm Beach</strong> pandan plis pase de deseni.<br /><br /><em>Li kwè ke gouvènman an dwe travay pou moun òdinè, pa pou enterè espesyal.</em></p><p>Li te fèt nan <strong>Bahamas</strong>, se yon manman selibatè devwe ak grann li ki te leve Rudy nan yon fanmi sere ak plizyè jenerasyon ki te enkilke nan li valè <strong>lafwa</strong>, <strong>disiplin</strong>, <strong>travay di</strong> ak <strong>sèvis pou lòt moun</strong>.<br /><br />Lè l te timoun, li te imigre Ozetazini avèk grann li nan rechèch opòtinite.<br /><br />Yo te etabli nan <strong>Hallandale Beach, Florid</strong>, kote li te konplete lekòl segondè epi li te vin enplike pwofondman nan kominote l atravè travay volontè, netwayaj katye, kanpay manje, efò prevansyon krim ak <strong>Pwogram Esploratè Lapolis Hallandale</strong>.<br /><br /><strong>Pou Rudy, sèvis pa t janm yon eslogan — se te yon fason pou l viv.</strong></p><p>Apre li te fin gradye nan lekòl segondè an <strong>1996</strong>, Rudy te enskri nan <strong>Inivèsite Atlantik Florid</strong>.<br /><br />Malgre okòmansman li t ap pouswiv medsin, li te travay nan plizyè djòb pou l te ka peye etid inivèsitè l yo epi finalman li te chwazi <strong>Syans Politik</strong>, li te rekonèt ke yon bon gouvènman afekte chak fanmi, chak katye ak chak opòtinite.<br /><br />Pandan tan sa a, li te lanse tou yon ti biznis an detay nan Konte Palm Beach, li te aprann premye men defi mèt ti biznis yo ap fè fas.</p><p>An <strong>2002</strong>, Rudy te chwazi pèsonèlman kòm <strong>Stajyè Kongrè</strong> pou Manm Kongrè <strong>Alcee Hastings</strong>, li te reprezante biwo a nan evènman sivil pandan mwa difisil apre atak <strong>11 septanm</strong> yo.<br /><br />Menm ane sa a, li te gradye nan kolèj, li te marye jenn epi li te angaje nan <strong>Lame Etazini</strong>, li te sèvi onorabman soti <strong>2002 rive 2005</strong> nan sipò <strong>Lagè Global kont Teroris</strong>.</p><p>Pandan l te nan sèvis aktif, Rudy te achte premye kay li nan <strong>Loxahatchee</strong> an <strong>2003</strong> — kominote li te rele kay li avèk fyète pandan plis pase <strong>23 ane</strong>.<br /><br />Apre li fin kite sèvis aktif, li te vin papa pitit fi triplet, yon responsablite ki te fòme pwofondman angajman li anvè <strong>fanmi</strong>, <strong>lafwa</strong> ak <strong>estabilite</strong>.</p><p>An <strong>2008</strong>, trajedi te frape lè youn nan pitit fi triplet li yo, <strong>Oriya Isabel Tinker</strong>, te mouri akòz konplikasyon yon kondisyon kè konjenital.<br /><br />Pandan prèske twa ane, lavi Rudy te vire otou lopital, vizit ijans ak reyalite chak jou nan pran swen timoun ki gen bezwen medikal konplèks.<br /><br />Kòm sèl founisè nan kay li, li te fè eksperyans premye men presyon emosyonèl, fizik ak finansye fanmi k ap travay yo ap fè fas — yon eksperyans ki te apwofondi senpati li epi ranfòse kwayans li ke lidè yo dwe konprann advèsite atravè eksperyans vivan.</p><p>Jodi a, Rudy se yon pwopriyetè ti biznis, k ap opere yon konpayi konstriksyon ak konsiltasyon k ap travay dirèkteman nan katye atravè tout <strong>Distrik 6 Konte Palm Beach</strong>.<br /><br />Travay li mete l sou chanpyon chak jou, l ap navige pèmisyon, zonaj, drenaj, defi enfrastrikti, aksè a lojman, presyon asirans ak enpak reyèl desizyon konte a genyen sou fanmi k ap travay, kiltivatè ak ti biznis yo.</p><p>Rudy sèvi kòm edikatè tou, li anseye <strong>Gouvènman Ameriken</strong> nan <strong>Kolèj Eta Palm Beach</strong> nan kanpis <strong>Loxahatchee</strong> ak <strong>Belle Glade</strong>.<br /><br />Anplis edikasyon siperyè, li te anseye nan <strong>Lekòl Segondè Pahokee Middle–Senior</strong> ak <strong>Lekòl Segondè Glades Central</strong>, li te travay dirèkteman ak elèv ak fanmi yo nan tout rejyon Glades la ak kominote lwès yo.<br /><br />Nan salklas li yo, Rudy anseye <strong>Konstitisyon Ameriken an</strong>, <strong>Deklarasyon Dwa yo</strong>, dwa vòt ak fason desizyon gouvènman lokal yo — soti nan zonaj ak bidjè rive nan taks sou pwopriyete ak sèvis piblik — afekte dirèkteman lavi moun.</p><p>Apre dè dekad sèvis — kòm yon veteran, papa, kontraktè, edikatè ak manm kominote a — Rudy kandida pou yon pòs piblik paske li konnen Distrik 6 merite yon lidèchip ki <strong>koute</strong>, <strong>planifye nan fason responsab</strong>, <strong>parèt nan chak kominote</strong> epi <strong>mete moun an premye</strong>.</p><p><strong>Rudolph \"Rudy\" Tinker pa yon politisyen karyè.</strong><br /><strong>Li se youn nan nou — k ap travay pou nou tout.</strong></p>"
   },
   "preparedness": {
     "title": "Preparasyon",
-    "description": "Bagaj akademik, sètifika, ak lisans pwofesyonèl Rudolph.",
-    "backToAbout": "Retounen nan Sou Rudolph",
-    "subtitle": "Rudolph kwè preparasyon enpòtan. Bagaj akademik li gen ladan:",
-    "content": "<div class=\"mb-12\"><h2 class=\"text-2xl font-bold text-black mb-6\">Bagaj Akademik</h2><ul class=\"space-y-3 text-base text-black/85\"><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Bakaloreya nan Atizay (BA)</strong> – Syans Politik, Inivèsite Atlantik Florid</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Metriz nan Atizay (MA)</strong> – Syans Politik, Inivèsite Atlantik Florid</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Metriz nan Syans (MS)</strong> – Jistis Kriminèl, Inivèsite Piblik Ameriken</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Metriz nan Syans (MS)</strong> – Jeni ak Jestion Pwojè, Inivèsite Liberty</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Metriz nan Syans (MS)</strong> – Relasyon Entènasyonal (Panse Chinwa), Inivèsite Liberty</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Doktora nan Filozofi (PhD)</strong> – Sikoloji (Endistriyèl-Òganizasyonèl), Inivèsite Grand Canyon</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Diplòm Pòsgradev nan Lwa (PGDL)</strong> – Inivèsite Leeds Beckett (UK)</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Metriz nan Lwa (LLM)</strong> – Inivèsite Leeds Beckett (UK)</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Bakaloreya nan Lwa (LLB)</strong> – Inivèsite Metwopolitèn Lond (UK) (an kou, 2026)</span></li></ul></div><div class=\"mb-12\"><h2 class=\"text-2xl font-bold text-black mb-6\">Sètifika</h2><ul class=\"space-y-3 text-base text-black/85\"><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Sètifika Pwoliferasyon Nikleyè</strong> – Sant Edikasyon Politik Non-Pwoliferasyon 2025</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Sètifika Pwofesyonèl Manadjè Pwojè</strong> – Enstiti Jestion Pwofesyonèl 2023</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Sètifika Sèk Sigma Nwa</strong> – Asosyasyon Entènasyonal pou Sètifikasyon Sèk Sigma 2023</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Endistri Konstriksyon: Chemen Anvan</strong> – Inivèsite Columbia 2024</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Jestion Pwojè</strong> – Inivèsite Columbia 2024</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Estimasyon Pri Konstriksyon</strong> – Inivèsite Columbia 2024</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Orè Konstriksyon</strong> – Inivèsite Columbia 2024</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Finans Konstriksyon</strong> – Inivèsite Columbia 2024</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Sètifika nan Etid Lapè</strong> – Inivèsite Atlantik Florid 2002</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Sètifika nan Relijyon ak Etid Etnik</strong> – Inivèsite Atlantik Florid 2005</span></li></ul></div><div><h2 class=\"text-2xl font-bold text-black mb-6\">Lisans Pwofesyonèl Eta</h2><ul class=\"space-y-3 text-base text-black/85\"><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Kontraktè Jeneral Sètifye</strong> 2023</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Kontraktè Tèt Sètifye</strong> 2023</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Kontraktè HVAC Sètifye</strong> 2023</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Notè Florid</strong> 2024</span></li></ul></div>"
+    "description": "Istwa akademik, sètifikasyon ak lisans pwofesyonèl Rudolph.",
+    "backToAbout": "Retounen nan Konsènan Rudolph",
+    "subtitle": "Rudolph kwè ke preparasyon enpòtan. Istwa akademik li gen ladan l:",
+    "content": "<div class=\"mb-12\"><h2 class=\"text-2xl font-bold text-black mb-6\">Istwa Akademik</h2><ul class=\"space-y-3 text-base text-black/85\"><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Bakalwa nan Ar (BA)</strong> – Syans Politik, Inivèsite Atlantik Florid</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Mèt nan Ar (MA)</strong> – Syans Politik, Inivèsite Atlantik Florid</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Mèt nan Syans (MS)</strong> – Jistis Kriminèl, Inivèsite Piblik Ameriken</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Mèt nan Syans (MS)</strong> – Jeni ak Jesyon Pwojè, Inivèsite Liberty</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Mèt nan Syans (MS)</strong> – Relasyon Entènasyonal (Pansay Chinwa), Inivèsite Liberty</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Doktora nan Filozofi (PhD)</strong> – Sikoloji (Òganizasyonèl-Endistriyèl), Inivèsite Grand Canyon</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Diplòm Post-Gradye nan Dwa (PGDL)</strong> – Inivèsite Leeds Beckett (UK)</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Mèt nan Dwa (LLM)</strong> – Inivèsite Leeds Beckett (UK)</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Bakalwa nan Dwa (LLB)</strong> – Inivèsite London Metropolitan (UK) (an pwogrè, 2026)</span></li></ul></div><div class=\"mb-12\"><h2 class=\"text-2xl font-bold text-black mb-6\">Sètifikasyon</h2><ul class=\"space-y-3 text-base text-black/85\"><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Sètifika Proliferasyon Nikleyè</strong> – Sant Edikasyon Politik Non-Proliferasyon 2025</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Sètifikasyon Pwofesyonèl Manadjè Pwojè</strong> – Enstiti Jesyon Pwofesyonèl 2023</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Sètifikasyon Senti Nwa Lean Six Sigma</strong> – Asosyasyon Entènasyonal pou Sètifikasyon Six Sigma 2023</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Endistri Konstriksyon: Chemen k ap Vini an</strong> – Inivèsite Columbia 2024</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Jesyon Pwojè</strong> – Inivèsite Columbia 2024</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Estimasyon Pri Konstriksyon</strong> – Inivèsite Columbia 2024</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Planifikasyon Konstriksyon</strong> – Inivèsite Columbia 2024</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Finans Konstriksyon</strong> – Inivèsite Columbia 2024</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Sètifika nan Etid Lapè</strong> – Inivèsite Atlantik Florid 2002</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Sètifika nan Relijyon ak Etid Etnik</strong> – Inivèsite Atlantik Florid 2005</span></li></ul></div><div><h2 class=\"text-2xl font-bold text-black mb-6\">Lisans Pwofesyonèl Eta</h2><ul class=\"space-y-3 text-base text-black/85\"><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Kontraktè Jeneral Sètifye</strong> 2023</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Kontraktè Toiture Sètifye</strong> 2023</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Kontraktè HVAC Sètifye</strong> 2023</span></li><li class=\"flex gap-3\"><span class=\"mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red\"></span><span><strong>Notè Florid</strong> 2024</span></li></ul></div>"
   },
   "whyIWantToRun": {
-    "title": "Poukisa mwen ap kandide pou Distri 6",
-    "description": "Rudolph Tinker eksplike poukisa li ap kandide pou Komisyon Konte Palm Beach Distri 6.",
-    "backToAbout": "Retounen nan Sou Rudolph",
-    "content": "<p class=\"mb-6\">Mwen ap kandide pou Komisyon Konte Palm Beach Distri 6 paske gouvènman konte a pèdi kontak ak reyalite — epi moun chak jou ap peye pri a.</p><p class=\"mb-6\">Pou kòmanse, taks pwopriyete yo kontinye monte ak ti kras pou montre pou sa.</p><p class=\"mb-6\">Pi mal, abòdabilite kontinye ap andeyò rive pou anpil rezidan – sa dwe sispann!</p><p class=\"mb-6\">E fanmi yo ap sere pou chak kòb, pandan ke administratè konte yo ap gaspiye lajan epi pwoteje tèt yo olye piblik la.</p><p class=\"mb-6\">An reyalite, dapre Chèf Finansye Florid la, Konte Palm Beach te siyale pou plis pase <strong>$344 milyon</strong> nan depans gaspiye oswa kesyonab. Sa pa politik — se lajan kontribyab ki te ka ale nan direksyon taks pwopriyete ki pi ba, ranje wout, amelyore drenaj, soulaje trafik, epi finalman envesti nan kominote ki te inyore pandan plizyè deseni!</p><p class=\"mb-6\">Olye, rezidan yo di ke \"pa gen lajan.\" Sa tradui nan gonfle bidjè piblik yo san yo pa responsab.</p><p class=\"mb-6\"><strong>E isit la se ENJOU!</strong></p><p class=\"mb-6\">Tout <strong>sèt</strong> Komisyonè Konte Palm Beach te apwouve inanimite kontra sekirite <strong>$3.3 milyon</strong> ak Biwo Chèf Konte Palm Beach (PBSO) sou 4 novanm 2025. Lè ou divize nimewo sa a pa sèt komisyonè, sa soti nan apeprè <strong>$471,000 pou chak komisyonè</strong> — plis pase kat fwa salè anyèl yon komisyonè.</p><p class=\"mb-6\"><strong>KITE SA SINK IN!</strong></p><p class=\"mb-6\">Nan yon moman kote mèt kay yo ap lite, taks yo ap monte, epi kominote yo di yo aksepte mwens, politisyen yo ap depanse plis pase <strong>400%</strong> salè yo sou detay sekirite finanse pa kontribyab yo!</p><p class=\"mb-6\"><strong>Ki wont!</strong></p><p class=\"mb-6\">Mwen vle klè: <strong>Mwen p ap aksepte yon detay sekirite finanse pa kontribyab tankou sa – janm!</strong></p><p class=\"mb-6\">Sèvis piblik pa sou izole tèt ou nan moun ou sèvi. Ou pa ta dwe nan biwo piblik si ou pa disponib pou moun ou sèvi.</p><p class=\"mb-6\">Pi mal se ke pandan politisyen yo ap pwoteje tèt yo, kominote tankou Loxahatchee Groves ap pèdi sèvis aplikasyon lalwa akòz gwo pri kontra polis yo.</p><p class=\"mb-6\">Fanmi yo di pa gen ase resous — men yon jan kanmenm toujou gen lajan pou pwoteje ofisyèl eli yo.</p><p class=\"mb-6\"><strong>Sa pa lidèchip!</strong></p><p class=\"mb-6\"><strong>Sa se privilèj!</strong></p><p class=\"mb-6\"><strong>E desizyon tankou sa yo ak anpil lòt efò depans gaspiye bezwen fini jodi a!</strong></p><p class=\"mb-6\">Kòm yon kontraktè jeneral ki gen lisans, mwen wè premye men ki jan move planifikasyon ak move desizyon konte ogmante depans pou tout moun. Kòm yon veteran, ki te sèvi onorabman nan Lame Etazini, mwen konnen lidèchip vle di responsabilite, responsabilite, ak sèvis — pa ego! E kòm yon edikatè, mwen anseye moun ki jan gouvènman an sipoze fonksyone, paske kominote enfòme mande yon pi bon gouvènman.</p><p class=\"mb-6\">Ou ta dwe konnen - <strong>Mwen pa kandide pou pwoteje estati quo a!</strong></p><p class=\"mb-6\"><strong>Mwen kandide pou chanje ki jan Konte nou an fè biznis!</strong></p><p class=\"mb-6\"><strong>Ase gaspiyaj!</strong></p><p class=\"mb-6\"><strong>Ase neglijans!</strong></p><p class=\"mb-6\"><strong>Ase ak politisyen ki ap pwoteje tèt yo pandan fanmi Konte Palm Beach ap lite!</strong></p><p class=\"mb-6\">Chak kominote Konte Palm Beach merite tande. Chak kominote Konte Palm Beach merite <strong>RESPE</strong>. E chak desizyon ta dwe fèt ak moun ki viv avèk li nan tèt.</p><p class=\"mb-6\">Mwen kandide paske Distri 6 merite <strong>lidèchip REYÈL</strong> ki koute, planifye responsab, depanse avèk sajès, epi parèt nan travay!</p><h2 class=\"mb-6\">Mwen se Rudolph \"Rudy\" Tinker!</h2><p class=\"mb-6\"><em>Youn nan nou — K ap travay pou tout nou!</em></p><p><strong>Vote Rudy pou Distri 6!</strong></p>"
+    "title": "Poukisa m ap kandida pou Distrik 6",
+    "description": "Rudolph Tinker eksplike poukisa li kandida pou Komisyon Konte Palm Beach Distrik 6.",
+    "backToAbout": "Retounen nan Konsènan Rudolph",
+    "content": "<p class=\"mb-6\">M ap kandida pou Komisyon Konte Palm Beach Distrik 6 paske gouvènman konte a pèdi kontak ak reyalite a — epi moun òdinè ap peye pri a.</p><p class=\"mb-6\">Pou kòmanse, taks sou pwopriyete kontinye ap ogmante ak anpil ti kras sa nou ka wè an retou.</p><p class=\"mb-6\">Sa k pi mal la, mwayen pou moun viv kontinye ap rete lwen anpil rezidan — sa dwe sispann!</p><p class=\"mb-6\">E fanmi yo ap peze jiska dènye santim, pandan ke sanble administratè konte yo ap gaspiye lajan epi pwoteje tèt yo olye pou yo pwoteje piblik la.</p><p class=\"mb-6\">An reyalite, selon Chèf Ofisye Finans Florid la, yo te lonje dwèt sou Konte Palm Beach pou plis pase <strong>$344 milyon</strong> nan depans gaspiyaj oswa dout. Sa se pa politik — se lajan kontribyab ki te ka ale nan taks sou pwopriyete ki pi ba, repare wout, amelyore drenaj, soulaje trafik, epi finalman envèsti nan kominote yo te inyore pandan plizyè deseni.</p><p class=\"mb-6\">Olye de sa, yo di rezidan yo ke \"pa gen lajan\". Sa vle di gonfle bidjè piblik yo san rann kont.</p><p class=\"mb-6\"><strong>E men ENSILT la!</strong></p><p class=\"mb-6\">Tout <strong>sèt</strong> Komisyonè Konte Palm Beach yo te apwouve nan fason inanim kontra sekirite <strong>$3.3 milyon</strong> avèk Biwo Sheriff Konte Palm Beach (PBSO) nan dat 4 novanm 2025. Lè ou divize nimewo sa a pa sèt komisyonè, sa bay anviwon <strong>$471,000 pou chak komisyonè</strong> — plis pase kat fwa salè anyèl yon komisyonè.</p><p class=\"mb-6\"><strong>KITE SA POZE NAN TÈT OU!</strong></p><p class=\"mb-6\">Nan yon moman kote pwopriyetè kay yo ap lite, taks yo ap ogmante, epi yo di kominote yo pou yo aksepte mwens, politisyen yo ap depanse plis pase <strong>400%</strong> nan salè yo nan detay sekirite kontribyab yo peye!</p><p class=\"mb-6\"><strong>SA SE YON HONTE!</strong></p><p class=\"mb-6\">Mwen vle klè: <strong>Mwen p ap janm aksepte yon detay sekirite kontribyab peye konsa — jamè!</strong></p><p class=\"mb-6\">Sèvis piblik pa konsènan izole tèt ou lwen moun w ap sèvi yo. Ou pa ta dwe nan yon pòs piblik si ou pa disponib pou moun w ap sèvi yo.</p><p class=\"mb-6\">Sa k pi mal toujou se ke pandan politisyen yo ap pwoteje tèt yo, kominote tankou Loxahatchee Groves ap pèdi sèvis ranfòsman lalwa akòz gwo koute kontra lapolis yo.</p><p class=\"mb-6\">Yo di fanmi yo ke pa gen ase resous — men entansyonèlman toujou gen lajan pou pwoteje ofisyèl eli yo.</p><p class=\"mb-6\"><strong>Sa se pa lidèchip!</strong></p><p class=\"mb-6\"><strong>Sa se privilèj!</strong></p><p class=\"mb-6\"><strong>E desizyon tankou sa yo ak anpil lòt efò depans gaspiyay dwe fini jodi a!</strong></p><p class=\"mb-6\">Kòm yon kontraktè jeneral ki gen lisans, mwen wè premye men fason move planifikasyon ak move desizyon konte a ogmante koute pou tout moun. Kòm yon veteran, ki te sèvi onorabman nan Lame Etazini, mwen konnen ke lidèchip vle di responsablite, rann kont ak sèvis — pa ego! Epi kòm yon edikatè, mwen anseye moun fason gouvènman an sipoze travay, paske kominote ki enfòme yo mande yon pi bon gouvènman.</p><p class=\"mb-6\">Ou dwe konnen - <strong>Mwen pa kandida pou m pwoteje status quo a!</strong></p><p class=\"mb-6\"><strong>Mwen kandida pou m chanje jan Konte nou an ap fè biznis!</strong></p><p class=\"mb-6\"><strong>Fini ak gaspiyaj!</strong></p><p class=\"mb-6\"><strong>Fini ak neglijans!</strong></p><p class=\"mb-6\"><strong>Fini ak politisyen k ap pwoteje tèt yo pandan fanmi Konte Palm Beach yo ap lite!</strong></p><p class=\"mb-6\">Chak kominote nan Konte Palm Beach merite pou yo koute li. Chak kominote nan Konte Palm Beach merite <strong>RESPE</strong>. Epi chak desizyon dwe pran avèk moun k ap viv ladan l yo an tèt.</p><p class=\"mb-6\">Mwen kandida paske Distrik 6 merite yon <strong>lidèchip REYÈL</strong> ki koute, ki planifye nan fason responsab, ki depanse nan fason saj, epi ki parèt nan travay la!</p><h2 class=\"mb-6\">Mwen se Rudolph \"Rudy\" Tinker!</h2><p class=\"mb-6\"><em>Youn nan nou — K ap travay pou nou tout!</em></p><p><strong>Vote pou Rudy pou Distrik 6!</strong></p>"
   },
   "district6": {
-    "title": "Distri 6",
-    "description": "Aprann sou Distri 6 Konte Palm Beach ak wòl yon Komisyonè Konte.",
-    "headerTitle": "Sou Komisyon Konte Palm Beach Distri 6",
-    "mapCaption": "Kat limit Distri 6",
-    "content": "<p class=\"lead font-medium text-black\">6yèm Distri Komisyon Konte Palm Beach se youn nan pi gwo ak pi divès distri nan Florid. Kouvri apeprè 1,300 mil kare, Distri 6 etann soti nan kominote lwès yo sou bò Lak Okeechobee rive nan banlye santral ak lwès k ap grandi rapidman nan Konte Palm Beach.</p><p>Distri 6 gen ladan Royal Palm Beach, Loxahatchee Groves, The Acreage, Wellington, Westlake, Belle Glade, South Bay, Pahokee, ak pòsyon lwès Lake Worth, ansanm ak zòn vas nan Konte Palm Beach ki pa enkòpore. Kòm montre nan kat la, distri a kouvri yon gwo zòn kontinyèl, ak yon konsantrasyon enpòtan nan tè riral ak agrikòl.</p><p>Enpòtan, Distri 6 genyen pi gwo rejyon agrikòl lès Larivyè Mississippi, ki pwodui legim sezon fredi ki apwovizyone manje nan tout Florid ak nasyon an. Melanj inik sa a nan kominote agrikòl, katye riral, ak zòn banlye k ap grandi rapidman fè Distri 6 diferan de nenpòt lòt distri nan Konte Palm Beach.</p><h2 class=\"text-2xl font-bold text-black mt-10 mb-4\">Kisa yon Komisyonè Konte Palm Beach Fè?</h2><p>Bòd Komisyonè Konte Palm Beach (BCC) se kò prensipal lejislatif ak fè politik konte a. Komisyonè yo responsab pou mete priyorite nan tout konte a epi pran desizyon ki afekte dirèkteman lavi chak jou rezidan yo.</p><p class=\"font-semibold text-black mt-6\">Komisyonè Konte yo:</p><ul class=\"list-disc pl-5 space-y-2 mt-2\"><li>Adopte òdonans ak politik nan tout konte a</li><li>Apwouve bidjè konte a epi otorize tout depans nan fon konte a</li><li>Siveye sèvis piblik prensipal ak pwojè enfrastrikti</li></ul><p class=\"font-semibold text-black mt-6\">Anplis, Bòd Komisyonè Konte a sèvi tou kòm:</p><ul class=\"list-disc pl-5 space-y-2 mt-2\"><li>Bòd Gouvènman Otorite Dechè Solid</li><li>Bòd Kontwòl Anviwònman</li><li>Bòd Zonaj pou Konte Palm Beach ki pa enkòpore</li></ul><p class=\"mt-4\">Sa vle di komisyonè yo gen enfliyans dirèk sou taks, koleksyon dechè, pwoteksyon anviwònman, itilizasyon tè, zonaj, enfrastrikti, ak sèvis piblik—espesyalman nan zòn ki pa enkòpore tankou anpil nan Distri 6.</p><h2 class=\"text-2xl font-bold text-black mt-10 mb-4\">Kijan Bòd la Eli</h2><p>Konte Palm Beach reprezante pa sèt Komisyonè Konte, chak eli nan yon distri sèl manm pou tèm kat ane ki pa menm tan.</p><ul class=\"list-disc pl-5 space-y-2 mt-2\"><li>Distri 2, 4, ak 6 parèt sou bilten eleksyon gouvènè</li><li>Distri 1, 3, 5, ak 7 parèt sou bilten eleksyon prezidansyèl</li></ul><p class=\"mt-4\">Bòd Komisyonè Konte a tipikman rankontre premye ak twazyèm madi chak mwa pou fè odyans piblik epi vote sou atik ajanda ki afekte tout konte a.</p>"
+    "title": "Distrik 6",
+    "description": "Aprann sou Distrik 6 Konte Palm Beach ak wòl yon Komisyonè Konte.",
+    "headerTitle": "Konsènan Komisyon Konte Palm Beach Distrik 6",
+    "mapCaption": "Map limit Distrik 6 yo",
+    "content": "<p class=\"lead font-medium text-black\">6yèm Distrik Komisyon Konte Palm Beach la se youn nan distrik ki pi gwo e ki pi divèsifye nan Florid. Li kouvri anviwon 1,300 mil kare, Distrik 6 la soti nan kominote lwès yo bò Lak Okeechobee rive nan banlye santral ak lwès Konte Palm Beach k ap grandi rapidman yo.</p><p>Distrik 6 la gen ladan Royal Palm Beach, Loxahatchee Groves, The Acreage, Wellington, Westlake, Belle Glade, South Bay, Pahokee, ak pòsyon lwès Lake Worth, ansanm ak gwo zòn nan Konte Palm Beach ki pa enkòpore. Jan sa montre sou map la, distrik la kouvri yon gwo zòn kontigid, ak yon gwo konsantrasyon tè riral ak agrikòl.</p><p>Sa ki enpòtan, Distrik 6 la genyen pi gwo rejyon agrikòl bò solèy leve Rivyè Mississippi a, l ap pwodui legim sezon fredi ki bay manje nan tout Florid ak nan nasyon an. Melanj inik sa a nan kominote agrikòl, katye riral ak zòn banlye k ap grandi rapid la fè Distrik 6 la pa sanble ak okenn lòt distrik nan Konte Palm Beach.</p><h2 class=\"text-2xl font-bold text-black mt-10 mb-4\">Kisa yon Komisyonè Konte Palm Beach fè?</h2><p>Konsèy Komisyonè Konte Palm Beach (BCC) se prensipal kò lejislatif ak politik k ap deside pou konte a. Komisyonè yo responsab pou etabli priyorite nan tout konte a epi pran desizyon ki afekte dirèkteman lavi chak jou rezidan yo.</p><p class=\"font-semibold text-black mt-6\">Komisyonè Konte yo:</p><ul class=\"list-disc pl-5 space-y-2 mt-2\"><li>Yo dekrete òdonans ak politik nan tout konte a</li><li>Yo apwouve bidjè konte a epi yo otorize tout depans fon konte yo</li><li>Yo sipèvize gwo sèvis piblik ak pwojè enfrastrikti yo</li></ul><p class=\"font-semibold text-black mt-6\">Anplis de sa, Konsèy Komisyonè Konte a sèvi tou kòm:</p><ul class=\"list-disc pl-5 space-y-2 mt-2\"><li>Konsèy Administrasyon Otorite Fatra Solid yo</li><li>Konsèy Kontwòl Anviwònman an</li><li>Konsèy Zonaj pou Konte Palm Beach ki pa enkòpore a</li></ul><p class=\"mt-4\">Sa vle di komisyonè yo gen enfliyans dirèk sou taks, koleksyon fatra, pwoteksyon anviwònman, itilizasyon tè, zonaj, enfrastrikti ak sèvis piblik yo—sitou nan zòn ki pa enkòpore yo tankou gwo pati nan Distrik 6 la.</p><h2 class=\"text-2xl font-bold text-black mt-10 mb-4\">Kijan Konsèy la Eli</h2><p>Konte Palm Beach reprezante pa sèt Komisyonè Konte, chak moun eli nan yon sèl distrik pou manda kat ane ki dekale.</p><ul class=\"list-disc pl-5 space-y-2 mt-2\"><li>Distrik 2, 4, ak 6 parèt sou bilten vòt eleksyon gouvènman an</li><li>Distrik 1, 3, 5, ak 7 parèt sou bilten vòt eleksyon prezidansyèl la</li></ul><p class=\"mt-4\">Konsèy Komisyonè Konte a anjeneral reyini nan premye ak twazyèm madi chak mwa pou òganize odyans piblik epi vote sou eleman ajanda ki afekte tout konte a.</p>"
   },
   "petition": {
     "title": "Siyen Petisyon an",
-    "metaDescription": "Ede mete yon demokrat sou bilten vòt la — Pa gen enterè espesyal, pa gen taks sou bilten vòt.",
-    "headerTitle": "Ede mete youn nan nou, k ap travay pou tout nou, sou bilten vòt la — Petisyon, pa politik peye pou jwe",
-    "description": "Pou kalifye pou bilten vòt la nan Distri 6, kandida yo fòse yo chwazi youn nan de chemen:",
+    "metaDescription": "Ede mete yon Demokrat sou bilten vòt la — pa gen enterè espesyal, pa gen taks sou bilten vòt la.",
+    "headerTitle": "Ede mete youn nan nou, k ap travay pou nou tout, sou bilten vòt la — Petisyon, pa politik peye-pou-jwe",
+    "description": "Pou kalifye pou bilten vòt la nan Distrik 6, kandida yo oblije chwazi youn nan de chemen:",
     "option1": "Peye plis pase $8,000 nan frè, oswa",
-    "option2": "Kolekte 1,500 petisyon votè valab",
-    "ballotTax": "Frè sa a pa sou demokrasi—se yon taks sou bilten vòt ki favorize moun ki andedan ak gwo donatè yo.",
-    "grassroots": "Mwen ap chwazi wout baz la.",
-    "ask": "Olye pou m peye wout mwen nan bilten vòt la, mwen ap mande votè demokrat Distri 6 yo pou ede kalifye kanpay sa a nan bon fason: ak petisyon, pa ak lajan.",
-    "downloadButton": "Telechaje petisyon an (PDF)",
-    "printAndMail": "Enprime epi voye fòmilè ki anba a nan adrès sa a:",
+    "option2": "Kolekte 1,500 petisyon valid nan men votè yo",
+    "ballotTax": "Frè sa a pa konsènan demokrasi, se yon taks sou bilten vòt ki favorize moun anndan yo ak gwo donatè yo.",
+    "grassroots": "Mwen chwazi wout baz la.",
+    "ask": "Olye pou m peye chemen m sou bilten vòt la, m ap mande votè Demokrat nan Distrik 6 yo pou yo ede kalifye kanpay sa a nan fason ki kòrèk la: ak petisyon, pa ak lajan.",
+    "downloadButton": "Telechaje petisyon (PDF)",
+    "printAndMail": "Enprime epi voye fòm lan nan adrès sa a:",
     "address": "14611 Southern Blvd Unit # 634\nLoxahatchee FL 33470",
-    "pdfNotSupported": "Navigatè ou a pa sipòte wè PDF anligne.",
+    "pdfNotSupported": "Navigatè w la pa sipòte gade PDF sou entènèt.",
     "downloadLink": "Telechaje PDF la isit la"
   },
   "volunteer": {
     "title": "Volontè",
-    "description": "Antre nan kanpay la pou ede Rudy bay rezilta reyèl pou Distri 6.",
-    "headerTitle": "Antre nan Ekip la",
-    "headerDescription": "Kanpay sa a se mache ak vwazen tankou ou. Kit ou ka frape pòt, fè apèl, oswa jis mete yon siy—nou bezwen èd ou.",
-    "howToVolunteer": "Kijan ou ta renmen volontè?",
+    "description": "Únete a la campaña para ayudar a Rudy a entregar resultados reales para el Distrito 6.",
+    "headerTitle": "Únete al Equipo",
+    "headerDescription": "Kanpay sa a fèt gras ak vwazen tankou ou. Kit ou ka frape pòt, fè apèl, oswa senpleman mete yon afich—nou bezwen èd ou.",
+    "howToVolunteer": "Kouman ou ta renmen sèvi kòm volontè?",
     "activities": {
-      "hostMeetGreet": "Òganize yon rankont ak salitasyon",
+      "hostMeetGreet": "Òganize yon rankont",
       "knockDoors": "Frape pòt",
       "makeCalls": "Fè apèl telefòn",
-      "placeYardSign": "Mete yon siy lakou",
+      "placeYardSign": "Mete yon afich nan jaden",
       "helpElectionDay": "Ede nan jou eleksyon an"
     },
     "form": {
-      "fullName": "Non Konplè",
+      "fullName": "Non konplè",
       "address": "Adrès",
-      "phoneNumber": "Nimewo Telefòn",
-      "email": "Imèl",
-      "submitButton": "Antre nan ekip la"
+      "phoneNumber": "Nimewo telefòn",
+      "email": "Adrès Imèl",
+      "submitButton": "Únete al equipo"
     },
     "thankYou": {
-      "title": "Mèsi pou Volontè!",
-      "description": "Nou te resevwa enfòmasyon ou. Yon moun nan ekip la pral kontakte ou byento pou kòmanse.",
-      "returnHome": "Retounen nan Kay la"
+      "title": "¡Mèsi paske ou te sèvi kòm volontè!",
+      "description": "Nou te resevwa enfòmasyon ou yo. Yon moun nan ekip la pral kontakte w talè pou kòmanse.",
+      "returnHome": "Retounen nan Paj Akèy"
     }
   },
   "donate": {
-    "title": "Fè yon Don",
-    "metaDescription": "Sipòte kanpay Rudy Tinker pou Komisyonè Konte Palm Beach Distri 6.",
+    "title": "Bay Lajan",
+    "metaDescription": "Sipòte kanpay Rudy Tinker pou Komisyonè Konte Palm Beach Distrik 6.",
     "supportTitle": "Sipòte Kanpay la",
-    "supportDescription": "Kontribisyon ou ede nou jwenn plis votè epi reyalize plan 10 pwen nou an pou Distri 6.",
-    "whyTitle": "Poukisa Sipò Ou Enpòtan",
-    "whyDescription": "Fè yon kanpay baz vle di konte sou sipòtè tankou ou, pa sou enterè espesyal oswa gwo donatè. Chak kontribisyon ede nou:",
-    "benefit1": "Rive jwenn votè nan tout Distri 6 ak mesaj nou an",
-    "benefit2": "Bati yon kanpay ki konsantre sou responsablite, pa sou politik",
-    "benefit3": "Reyalize plan 10 pwen nou an pou yon chanjman reyèl",
-    "disclaimer": "Lwa Florid pèmèt yon kontribisyon maksimòm $1,000 pou chak moun ak $1,000 pou chak kòporasyon pou Eleksyon Primè a. Pou Eleksyon Jeneral la, lwa Florid pèmèt yon kontribisyon maksimòm $1,000 pou chak moun ak $1,000 pou chak kòporasyon kèlkeswa kantite lajan yo te bay nan Eleksyon Primè a. Kontribisyon yo dwe soti nan yon sitwayen ameriken oswa rezidan pèmanan Ozetazini epi yo pa dediktib pou taks federal.",
-    "paidFor": "Peye pa Rudolph Tinker, Demokrat, pou Komisyon Konte Palm Beach, Distri 6.",
+    "supportDescription": "Kontribisyon w ede nou rive jwenn plis votè epi akonpli plan 10 pwen nou an pou Distrik 6 la.",
+    "whyTitle": "Poukisa Sipò w Enpòtan",
+    "whyDescription": "Fè yon kanpay baz vle di konte sou sipòtè tankou ou, pa sou enterè espesyal oswa gwo donatè yo. Chak kontribisyon ede nou:",
+    "benefit1": "Rive jwenn votè yo nan tout Distrik 6 la ak mesaj nou an",
+    "benefit2": "Bati yon kanpay ki konsantre sou rann kont, pa sou politik",
+    "benefit3": "Akonpli plan 10 pwen nou an pou yon chanjman reyèl",
+    "disclaimer": "Lwa Florid la pèmèt yon kontribisyon maksimòm $1,000 pou chak moun ak $1,000 pou chak kòporasyon pou Eleksyon Primè yo. Pou Eleksyon Jeneral yo, lwa Florid la pèmèt yon kontribisyon maksimòm $1,000 pou chak moun ak $1,000 pou chak kòporasyon kèlkeswa kantite lajan yo te bay nan Eleksyon Primè yo. Kontribisyon yo dwe soti nan yon sitwayen Ameriken oswa rezidan pèmanan Ozetazini epi yo pa dediktib pou rezon taks federal.",
+    "paidFor": "Peye pa Rudolph Tinker, Demokrat, pou Komisyon Konte Palm Beach, Distrik 6.",
     "form": {
       "firstName": "Prenon",
       "lastName": "Non",
       "email": "Adrès Imèl",
-      "phone": "Nimewo Telefòn",
-      "address": "Adrès Ri",
+      "phone": "Nimewo telefòn",
+      "address": "Adrès",
       "city": "Vil",
       "state": "Eta",
       "zip": "Kòd Postal",
       "amount": "Kantite Kontribisyon",
-      "maxContribution": "Kontribisyon maksimòm: $1,000 pou chak moun pa eleksyon",
+      "maxContribution": "Kontribisyon maksimòm: $1,000 pou chak moun pou chak eleksyon",
       "paymentMethod": "Metòd Peman",
       "creditCard": "Kat Kredi",
       "check": "Chèk",
       "employerCheck": "Mwen pa fè kontribisyon sa a nan non yon patwon",
-      "citizenCheck": "Mwen se yon sitwayen ameriken oswa rezidan pèmanan",
-      "submit": "Voye Don an"
+      "citizenCheck": "Mwen se yon sitwayen Ameriken oswa rezidan pèmanan",
+      "submit": "Voye Don"
     }
   },
   "veterans": {
-    "title": "Sèvis ak Defans pou Veteran yo",
-    "headerTitle": "Sèvis ak Defans pou Veteran yo",
-    "headerDescription": "Istwa sèvis militè Rudolph Tinker ak angajman li pou veteran yo nan Konte Palm Beach.",
-    "metaDescription": "Istwa sèvis militè Rudolph Tinker ak angajman li pou veteran yo nan Konte Palm Beach.",
+    "title": "Sèvis ak Depans pou Veteran yo",
+    "headerTitle": "Sèvis ak Depans pou Veteran yo",
+    "headerDescription": "Pakou militè Rudolph Tinker ak defans li pou veteran yo nan Konte Palm Beach.",
+    "metaDescription": "Pakou militè Rudolph Tinker ak defans li pou veteran yo nan Konte Palm Beach.",
     "service": {
       "title": "Yon Eritaj Sèvis",
-      "subtitle": "Vwayaj Rudolph Tinker nan Lame a",
-      "content": "<p>Rudolph \"Rudy\" Tinker te angaje nan <strong>Lame Etazini</strong> an 2002, ak yon gwo sans devwa apre evènman 11 Septanm yo. Li te sèvi avèk onè soti <strong>2002 rive 2005</strong> pandan Global War on Terror (Gè Mondyal kont Teworis), kote Rudy aprann vrè sans lidèchip, disiplin, ak sakrifis.</p><p>Sèvis li a pa t sèlman sou mete inifòm; se te sou pwoteje valè nou kenbe chè epi asire ke moun ki sèvi peyi nou an pa janm bliye lè yo retounen lakay yo. Jodi a, li pote menm konsantrasyon sou misyon sa a nan kanpay li pou Komisyon Konte a.</p>"
+      "subtitle": "Pakou Rudolph Tinker nan Lame a",
+      "content": "<p>Rudolph “Rudy” Tinker te angaje nan Lame Etazini an 2002, ak yon sans pwofon devwa apre evènman 11 septanm yo. Li te sèvi onorabman soti 2002 rive 2005 pandan Lagè Global kont Teroris la, kote li te aprann vrè sans lidèchip, disiplin ak sakrifis.</p><p>Sèvis li pa t sèlman konsènan mete yon inifòm; se te konsènan pwoteje valè nou cheri yo epi asire ke moun ki sèvi peyi nou an pa janm bliye lè yo tounen lakay yo. Jodi a, Rudy pote menm apwòch oryante sou misyon sa a nan kanpay li pou Komisyon Konte a.</p>"
     },
     "va": {
-      "title": "VA Konte Palm Beach",
-      "subtitle": "Sipòte Ewo Nou yo Lokalman",
-      "content": "<p><strong>Sant Medikal VA West Palm Beach</strong> la se yon soutyen enpòtan pou dè milye veteran nan kominote nou an. Rudy kwè gouvènman lokal la dwe jwe yon wòl aktif, an patenarya ak VA a, pou asire veteran yo gen aksè san pwoblèm a swen sante, resous pou sante mantal, ak asistans lojman.</p><p>Kòm Komisyonè ou, Rudy pral defann plis opsyon transpò pou veteran yo rive nan VA a epi pouse inisyativ lokal ki fè lyen ant avantaj federal yo ak bezwen lokal yo.</p>"
+      "title": "VA nan Konte Palm Beach",
+      "subtitle": "Sipòte Ewo nou yo nanivo Lokal",
+      "content": "<p>Sante Medikal VA nan West Palm Beach se yon resous vital pou dè milye veteran nan kominote nou an. Rudy kwè ke gouvènman lokal la dwe jwe yon wòl aktif nan kolaborasyon ak VA pou asire veteran yo gen aksè kontinyèl nan swen sante, sèvis sante mantal ak asistans pou lojman.</p><p>Kòm Komisyonè w la, Rudy pral defann opsyon transpò elaji pou veteran yo ka rive nan VA epi li pral ankouraje inisyativ lokal ki konble espas ant benefis federal ak bezwen lokal yo.</p>"
     },
     "share": {
-      "title": "Pataje Istwa Ou",
+      "title": "Pataje Istwa W",
       "subtitle": "Sèvis Ou Enpòtan",
-      "description": "Èske ou se yon veteran oswa yon manm fanmi yon veteran nan Distri 6? Nou vle tande istwa ou. Pataje eksperyans ou, defi ou, oswa foto sèvis ou. Ansanm, nou ka asire West Palm Beach rete yon kominote ki onore moun ki te sèvi.",
+      "description": "Èske w se yon veteran oswa yon manm fanmi youn nan Distrik 6 la? Nou vle konnen istwa w. Pataje eksperyans ou, defi ou oswa foto sèvis ou. Ansanm, nou ka asire ke West Palm Beach rete yon kominote ki onore moun ki te sèvi yo.",
       "form": {
         "name": "Non konplè",
-        "email": "Adrès imel",
-        "story": "Istwa ou",
-        "upload": "Telechaje foto oswa dokiman",
+        "email": "Adrès imèl",
+        "story": "Istwa w la",
+        "upload": "Telechaje imaj oswa dokiman",
         "submit": "Pataje istwa"
       },
       "thankYou": {
-        "title": "Mèsi paske ou pataje",
-        "description": "Nou resevwa istwa ou. Mèsi pou sèvis ou, epi mèsi paske ou kontribye nan istwa kominote nou an."
+        "title": "Mèsi paske w te pataje",
+        "description": "Nou te resevwa istwa w la. Mèsi pou sèvis ou epi paske w pote kontribisyon w nan istwa kominote nou an."
+      }
+    }
+  },
+  "priorities": {
+    "labels": {
+      "impact": "Enpak la",
+      "supportTitle": "Sipòte objektif sa a",
+      "supportDesc": "Ede Rudolph bay rezilta reyèl pou Distri 6 lè w sipòte kanpay la jodi a.",
+      "petition": "Siyen Petisyon an",
+      "donate": "Bay Lajan Kounye a",
+      "nextSteps": "Pwochen etap nan plan an",
+      "related": "Priyorite Ki Gen Rapò",
+      "prevPriority": "Priyorite Anvan",
+      "nextPriority": "Priyorite Pwochen"
+    },
+    "items": {
+      "property-taxes": {
+        "slug": "/property-tax",
+        "title": "Property Tax",
+        "sections": [
+          {
+            "heading": "Tax",
+            "bullets": [
+              "Provide a 100% county property tax exemption for homestead property owners age 65 and over who have maintained Palm Beach County residency and paid property taxes for at least 15 consecutive years, subject to Florida constitutional and statutory limits.",
+              "Twenty-five years paid. No more county property taxes.",
+              "Long-term Palm Beach County homeowners deserve real relief.",
+              "Freeze county property tax rates and implement annual rollbacks funded by eliminating wasteful county spending, prioritizing efficiency, audits, and administrative cost reductions."
+            ]
+          },
+          {
+            "heading": "Delinquent Tax",
+            "bullets": [
+              "Allow Any payment method for late property tax.",
+              "Delay tax certificate sales until July of the delinquent year.",
+              "Increase early payment discount from 4% to 10%.",
+              "Reduce delinquent interest from 18% to 9%",
+              "Extend Tax Deed application from 2 years to 5 ears on homestead homes."
+            ]
+          }
+        ]
+      },
+      "government-services": {
+        "slug": "/government-services",
+        "title": "Government Services",
+        "sections": [
+          {
+            "heading": "Code Enforcement",
+            "bullets": [
+              "Code enforcement has become legalized harassment.",
+              "If code enforcement can’t prove a real health or safety risk, they won’t fine you. Period",
+              "Cap & Eliminate Excessive Fines",
+              "Daily fines on homesteads will be capped and abolished where abusive.",
+              "Zero Selective Enforcement",
+              "Same rules, same treatment—no targeting by neighborhood, income, or politics",
+              "Stop importing bureaucrats. Hire locals who live in the community and understand how people actually live.",
+              "We’re shifting from Code Enforcement to Community Compliance & Assistance—focused on fixing problems, not punishing people."
+            ]
+          },
+          {
+            "heading": "Building Department",
+            "bullets": [
+              "Service, Not Obstruction",
+              "The Building Department exists to help projects move safely and legally—not to delay, intimidate, or over-complicate approvals.",
+              "Fast-Track for Minor & Residential Work",
+              "Establish guaranteed turnaround times for residential permits, repairs, and small projects—no months-long delays for basic work.",
+              "Right to Challenge Without Retaliation",
+              "Contractors and homeowners may appeal decisions without fear of blacklisting, delays, or targeted enforcement.",
+              "Automatic Amnesty for Old Permits",
+              "Any inactive permit 10, 20, or 30 years old on a property where Palm Beach County has continuously collected property taxes shall be administratively closed without penalty. You can’t tax a property for decades and then pretend the work never existed. Close the permit. Move on.",
+              "No Punishment for New Homeowners",
+              "Buyers will not be fined or penalized for permit issues created by prior owners. Responsibility follows the violator—not the victim.",
+              "Your roof protects your family.",
+              "Five days. Period. No homeowner waits weeks or months for a roof permit."
+            ]
+          },
+          {
+            "heading": "Agriculture Exemption Department",
+            "bullets": [
+              "If your land is zoned Residential Ag and you qualify, you get the exemption. No more games. No more denial.",
+              "If land is zoned for agriculture and is being used for any legitimate agricultural purpose, it qualifies. Letting land rest and grow is still land management, not neglect.",
+              "Intent Matters",
+              "Agricultural use includes preparation, recovery, rotation, and land conditioning—not just harvest.",
+              "If your land can reasonably support the animal with proper management, one cow can qualify—especially on residential-ag or small farm parcels."
+            ]
+          }
+        ]
+      },
+      "glades-first": {
+        "slug": "/glades-first-initiative",
+        "title": "Glades First Initiative",
+        "sections": [
+          {
+            "heading": "Affordable, Healthy Housing",
+            "bullets": [
+              "Safe, affordable housing and improved maintenance of existing neighborhoods are priorities, especially where poverty is high."
+            ]
+          },
+          {
+            "heading": "Respect the Glades Voice",
+            "bullets": [
+              "Ensure the Glades has a real seat at the table—fair county funding, representation, and follow-through, not election-season visits.",
+              "Major county decisions must include direct input from Glades residents."
+            ]
+          },
+          {
+            "heading": "Infrastructure Repair & Services",
+            "bullets": [
+              "Better roads, drainage, utilities, and public services are repeatedly cited as needed improvements that would make living conditions safer and fairer."
+            ]
+          },
+          {
+            "heading": "Clear Air and Water",
+            "bullets": [
+              "Protect Glades communities from smoke, burning, and industrial air pollution that harms health.",
+              "Ensure clean drinking water and protect canals, wells, and Lake Okeechobee from contamination."
+            ]
+          }
+        ]
+      },
+      "youth-engagement": {
+        "slug": "/western-area-youth-engagement",
+        "title": "Western Area Youth Engagement",
+        "sections": [
+          {
+            "heading": "Idle time creates problems. Opportunity builds futures.",
+            "bullets": [
+              "Give kids something to do, somewhere to go, and a future to build—right here in our western communities.",
+              "Community gyms & rec centers",
+              "Aqua center",
+              "Motor Sports",
+              "BMX Park"
+            ]
+          }
+        ]
+      },
+      "infrastructure": {
+        "slug": "/infrastructure",
+        "title": "Infrastructure",
+        "sections": [
+          {
+            "heading": "Fix Roads & Potholes",
+            "bullets": [
+              "Resurface unsafe roads and prioritize rural and Glades areas that have been ignored."
+            ]
+          },
+          {
+            "heading": "Inadequate Drainage & Flooding",
+            "bullets": [
+              "I will push for regular canal maintenance, improved culverts, and real flood control—not excuses."
+            ]
+          },
+          {
+            "heading": "Address Traffic & Growth Impacts",
+            "bullets": [
+              "I will demand road improvements keep pace with development to reduce congestion and accidents."
+            ]
+          },
+          {
+            "heading": "Existing Road Projects in district 6",
+            "bullets": [
+              "End road project delays in District 6. Get construction moving, fix unsafe roads, and relieve traffic congestion—now, not later."
+            ]
+          },
+          {
+            "heading": "Overdevelopment",
+            "bullets": [
+              "Stop reckless overdevelopment by requiring roads, drainage, water, and schools to be fully in place before new approvals, not after.",
+              "Put rural residents first—listen to them and respect how they want their neighborhoods preserved."
+            ]
+          }
+        ]
+      },
+      "public-safety": {
+        "slug": "/public-safety",
+        "title": "Commitments to Public Safety",
+        "sections": [
+          {
+            "heading": "Crush Violent Crime",
+            "bullets": [
+              "Partner with the Sheriff and local law enforcement to fund and support data-driven strategies that target violent crime and protect our communities."
+            ]
+          },
+          {
+            "heading": "Community Policing in Every Neighborhood",
+            "bullets": [
+              "Ensure community policing exists countywide by building long-term relationships, trust, and local partnerships that address the root causes of crime."
+            ]
+          },
+          {
+            "heading": "Transparency Builds Trust",
+            "bullets": [
+              "Support mandatory body-camera activation and require public release within 72 hours for major incidents to protect both citizens and officers."
+            ]
+          },
+          {
+            "heading": "Protect the Innocent",
+            "bullets": [
+              "Push for automatic clearing of records for innocent individuals and the removal of false arrests from law-enforcement databases."
+            ]
+          },
+          {
+            "heading": "Mental Health & Crisis Response",
+            "bullets": [
+              "Expand mental health and crisis response teams so the right professionals respond to non-violent emergencies, improving safety for everyone."
+            ]
+          }
+        ]
+      },
+      "small-business": {
+        "slug": "/small-business",
+        "title": "Small Business",
+        "sections": [
+          {
+            "heading": "Local First Contracting",
+            "bullets": [
+              "Prioritize District 6 and Palm Beach County small businesses for county contracts, repairs, and services."
+            ]
+          },
+          {
+            "heading": "Support Home-Based & Rural Businesses",
+            "bullets": [
+              "Protect home-based, agricultural, and rural businesses from overregulation while ensuring fair rules."
+            ]
+          },
+          {
+            "heading": "Lower the Cost of Doing Business",
+            "bullets": [
+              "Reduce fees where possible and fight unnecessary cost increases that hurt local operators."
+            ]
+          },
+          {
+            "heading": "Building Permits and Violations",
+            "bullets": [
+              "Streamline permits, inspections, and approvals so small businesses can open, expand, and hire without unnecessary delays. 5 day roofing Permits."
+            ]
+          },
+          {
+            "heading": "Engagement",
+            "bullets": [
+              "Visit local shops, farms, and home-based businesses to understand real challenges firsthand."
+            ]
+          },
+          {
+            "heading": "Clear, Plain Communication",
+            "bullets": [
+              "Provide simple guides and updates so owners know what’s required without needing lawyers or consultants."
+            ]
+          }
+        ]
       }
     }
   }
