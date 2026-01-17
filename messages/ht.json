@@ -495,5 +495,115 @@
         ]
       }
     }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Règleman sou Konfidansyalite",
+      "description": "Règleman sou Konfidansyalite pou komite kanpay Florid Rudolph Tinker."
+    },
+    "title": "Règleman sou Konfidansyalite",
+    "effectiveDateLabel": "Dat aplikasyon:",
+    "intro": "Règleman sa a eksplike kijan komite kanpay Florid Rudolph Tinker ranmase, itilize, epi pwoteje enfòmasyon lè ou vizite oswa itilize sit sa a.",
+    "s1": {
+      "title": "1. Enfòmasyon nou ranmase",
+      "lead": "Nou ka ranmase enfòmasyon sa yo:",
+      "personal": {
+        "title": "Enfòmasyon pèsonèl ou bay",
+        "items": {
+          "name": "Non",
+          "email": "Adrès imel",
+          "phone": "Nimewo telefòn",
+          "forms": "Enfòmasyon ou soumèt atravè fòm"
+        }
+      },
+      "auto": {
+        "title": "Enfòmasyon ki ranmase otomatikman",
+        "items": {
+          "ip": "Adrès IP",
+          "device": "Kalite aparèy ak navigatè",
+          "pages": "Paj ou vizite sou sit la"
+        }
+      },
+      "note": "Enfòmasyon sa yo ranmase atravè zouti analiz."
+    },
+    "s2": {
+      "title": "2. Kijan enfòmasyon ranmase",
+      "lead": "Nou ranmase enfòmasyon atravè:",
+      "items": {
+        "forms": "Fòm sou sit la",
+        "email": "Enskripsyon imel",
+        "donations": "Paj donasyon twazyèm pati",
+        "cookies": "Bonbon (cookies) ak analiz"
+      }
+    },
+    "s3": {
+      "title": "3. Donasyon",
+      "p1": "Donasyon sou sit sa a trete pa ActBlue. Nou pa estoke enfòmasyon kat kredi.",
+      "p2": "Enfòmasyon sou donasyon ka piblik selon lwa eleksyon yo.",
+      "p3": "Tanpri gade règleman konfidansyalite ActBlue."
+    },
+    "s4": {
+      "title": "4. Itilizasyon enfòmasyon",
+      "lead": "Nou itilize enfòmasyon pou:",
+      "items": {
+        "updates": "Voye enfòmasyon kanpay",
+        "respond": "Reponn mesaj",
+        "acknowledge": "Trete donasyon",
+        "improve": "Amelyore sit la",
+        "comply": "Respekte lwa yo"
+      }
+    },
+    "s5": {
+      "title": "5. Bonbon ak analiz",
+      "p1": "Nou itilize Google Analytics pou konprann itilizasyon sit la.",
+      "p2": "Ou ka dezaktive bonbon yo nan navigatè ou."
+    },
+    "s6": {
+      "title": "6. Pataje ak vant done",
+      "items": {
+        "noSale": "Nou pa vann enfòmasyon pèsonèl.",
+        "noCommercialShare": "Nou pa pataje enfòmasyon pou rezon komèsyal.",
+        "providers": "Nou pataje sèlman ak founisè konfyans."
+      }
+    },
+    "s7": {
+      "title": "7. Limit jeyografik",
+      "p1": "Sit sa a fèt sèlman pou rezidan Etazini."
+    },
+    "s8": {
+      "title": "8. Sekirite done",
+      "p1": "Nou pran mezi rezonab pou pwoteje done ou."
+    },
+    "s9": {
+      "title": "9. Dwa ou (GDPR & CCPA)",
+      "lead": "Ou ka gen dwa pou:",
+      "items": {
+        "access": "Mande aksè a done ou",
+        "correctDelete": "Mande koreksyon oswa efasman",
+        "optOut": "Sispann resevwa kominikasyon"
+      },
+      "ccpa": "Rezidan Kalifòni gen dwa anba CCPA.",
+      "gdpr": "Rezidan Inyon Ewopeyen gen dwa anba GDPR.",
+      "contact": "Kontakte nou pou itilize dwa sa yo."
+    },
+    "s10": {
+      "title": "10. Timoun",
+      "p1": "Sit sa a pa fèt pou timoun ki poko gen 13 an."
+    },
+    "s11": {
+      "title": "11. Chanjman",
+      "p1": "Nou ka mete ajou règleman sa a."
+    },
+    "s12": {
+      "title": "12. Kontakte nou",
+      "lead": "Pou kesyon sou konfidansyalite:"
+    },
+    "contact": {
+      "org": "Komite Kanpay Rudolph Tinker",
+      "addr1": "14611 Southern Blvd, Inite #634",
+      "addr2": "Loxahatchee, FL 33470",
+      "emailLabel": "Imel:"
+    },
+    "disclaimer": "Piblisite politik peye. Peye ak apwouve pa komite kanpay Florid Rudolph Tinker."
   }
 }
