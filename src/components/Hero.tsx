@@ -36,7 +36,7 @@ export default function Hero() {
                 </div>
 
                 <div className="relative z-10 mx-auto flex min-h-[calc(110dvh-100px)] max-w-7xl items-center pt-[2vh] pb-12 md:pb-8" style={{ paddingLeft: "calc(1rem + 20px)", paddingRight: "calc(1rem + 20px)" }}>
-                    <div className="grid w-full grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-2 lg:gap-12">
+                    <div className="grid w-full grid-cols-1 gap-6 pt-[15vh] sm:gap-8 lg:grid-cols-2 lg:gap-12">
                         {/* Left side - Content */}
                         <div className="flex flex-col justify-center w-full max-w-2xl">
                             <div className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold text-white w-fit">
@@ -60,7 +60,7 @@ export default function Hero() {
                                     {t('signPetition')}
                                 </Button>
 
-                                <Button href="#plan" variant="plan" size="md">
+                                <Button href="#plan" className="text-center" variant="plan" size="md">
                                     {t('seePoints')}
                                 </Button>
                             </div>
