@@ -17,7 +17,7 @@ export default function Hero() {
             <div className="absolute bottom-0 left-0 right-0 top-0 z-[1] pointer-events-none" style={{ background: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 45%, rgba(0,0,0,0.6) 100%)' }}></div>
 
             {/* ABOVE THE FOLD - First Vertical Div */}
-            <div className="relative min-h-[110dvh]">
+            <div className="relative min-h-[100dvh]">
                 <div
                     className="absolute inset-0 z-0 bg-[url('/img/Hero-Bg-Image.webp')] bg-cover bg-center bg-no-repeat"
                     aria-hidden="true"
@@ -25,11 +25,11 @@ export default function Hero() {
 
                 {/* Dark overlay */}
                 <div className="absolute top-0 bottom-0 left-0 right-0 z-[1]">
-                    <div className="relative h-full max-w-6xl mx-auto px-4 flex justify-center md:justify-end items-end flex-wrap" style={{ textAlign: 'right' }}>
+                    <div className="relative h-full max-w-6xl mx-auto px-4 flex justify-end items-end flex-wrap" style={{ textAlign: 'right' }}>
                         <img
                             src="/img/hero-rudolph-tinker.webp"
                             alt="Rudolph Tinker"
-                            className="w-auto sm:h-[55%] md:h-[65%] lg:h-[70%] max-w-[65%] sm:max-w-[85%] md:max-w-[90%] lg:max-w-[95%] object-contain"
+                            className="w-auto sm:h-[55%] md:h-[65%] lg:h-[70%] max-w-[50%] sm:max-w-[85%] md:max-w-[90%] lg:max-w-[95%] object-contain"
                             style={{ zIndex: -1 }}
                         />
                     </div>
@@ -51,7 +51,7 @@ export default function Hero() {
                                 {t('subtitle')}
                             </p>
 
-                            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                            <div className="mt-7 flex flex-col gap-3 sm:flex-row w-1/2 sm:w-auto">
                                 <Button
                                     href="/petition"
                                     variant="petition"
