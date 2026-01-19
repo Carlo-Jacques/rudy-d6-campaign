@@ -91,7 +91,7 @@ export default async function PriorityPage({ params }: Props) {
             href="/#plan"
             className="mb-8 inline-flex items-center gap-2 text-sm font-bold text-white/80 hover:text-white transition-colors"
           >
-            ← {t_common('aboutRudy')}
+            ← {t_common('plan')}
           </Link>
           <div className="max-w-4xl">
             <h1 className="text-4xl font-black tracking-tight text-white sm:text-6xl uppercase leading-tight">
