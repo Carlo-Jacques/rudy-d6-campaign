@@ -38,7 +38,7 @@
       "description": "\n\nYou paid. I deliver. Or I’m gone.\n\nOne of Us. Working for All of Us."
     },
     "plan": {
-      "title": "The 10-Point Plan",
+      "title": "The Seven-Point Plan",
       "subtitle": "Short, specific commitments. Simple scorecard reporting.",
       "whyRudy": "Why Rudy →"
     },
@@ -114,7 +114,7 @@
     "address": "14611 Southern Blvd Unit # 634\nLoxahatchee FL 33470",
     "pdfNotSupported": "Your browser does not support inline PDF viewing.",
     "viewPdf": "View the PDF here",
-    "aboutRudy": "Rudolph \"Rudy\" Tinker is a U.S. Army veteran, small business owner, contractor, and educator who has called Palm Beach County District 6 home for more than 27 years and believes government should work for the people it serves. He is running because taxes and costs keep rising while waste, poor planning, and unaccountable county decisions hurt families and small businesses. His 10-Point Plan delivers clear, practical solutions to cut waste, lower costs, reform county services, and restore responsible, people-first leadership."
+    "aboutRudy": "Rudolph \"Rudy\" Tinker is a U.S. Army veteran, small business owner, contractor, and educator who has called Palm Beach County District 6 home for more than 27 years and believes government should work for the people it serves. He is running because taxes and costs keep rising while waste, poor planning, and unaccountable county decisions hurt families and small businesses. His seven-point plan delivers clear, practical solutions to cut waste, lower costs, reform county services, and restore responsible, people-first leadership."
   },
   "bio": {
     "title": "Bio",
@@ -188,12 +188,12 @@
     "title": "Donate",
     "metaDescription": "Support Rudy Tinker's campaign for Palm Beach County Commissioner District 6.",
     "supportTitle": "Support the Campaign",
-    "supportDescription": "Your contribution helps us reach more voters and deliver on our 10-point plan for District 6.",
+    "supportDescription": "Your contribution helps us reach more voters and deliver on our seven-point plan for District 6.",
     "whyTitle": "Why Your Support Matters",
     "whyDescription": "Running a grassroots campaign means relying on supporters like you, not special interests or big donors. Every contribution helps us:",
     "benefit1": "Reach voters across District 6 with our message",
     "benefit2": "Build a campaign focused on accountability, not politics",
-    "benefit3": "Deliver on our 10-point plan for real change",
+    "benefit3": "Deliver on our seven-point plan for real change",
     "disclaimer": "Florida law permits a maximum contribution of $1,000 per individual and $1,000 per corporation for the Primary Election. For the General Election, Florida law permits a maximum contribution of $1,000 per individual and $1,000 per corporation regardless of the amount given in the Primary Election. Contributions must be from a US Citizen or permanent resident in the US and are not deductible for Federal Tax purposes.",
     "paidFor": "Paid for by Rudolph Tinker, Democrat, for Palm Beach County Commission, District 6.",
     "form": {
@@ -267,7 +267,7 @@
           {
             "heading": "Tax",
             "bullets": [
-              "Provide a 100% county property tax exemption for homestead property owners age 65 and over who have maintained Palm Beach County residency and paid property taxes for at least 15 consecutive years, subject to Florida constitutional and statutory limits.",
+              "Provide a 100% county property tax exemption for homestead property owners age 65 and over who have maintained Palm Beach County residency and paid property taxes for at least 15 consecutive years.",
               "Twenty-five years paid. No more county property taxes.",
               "Long-term Palm Beach County homeowners deserve real relief.",
               "Freeze county property tax rates and implement annual rollbacks funded by eliminating wasteful county spending, prioritizing efficiency, audits, and administrative cost reductions."
@@ -280,7 +280,13 @@
               "Delay tax certificate sales until July of the delinquent year.",
               "Increase early payment discount from 4% to 10%.",
               "Reduce delinquent interest from 18% to 9%",
-              "Extend Tax Deed application from 2 years to 5 ears on homestead homes."
+              "Extend Tax Deed application from 2 years to 5 years on homestead homes."
+            ]
+          },
+          {
+            "heading": "Building Department",
+            "bullets": [
+              "Your roof protects your family. Five days. Period. No homeowner waits weeks or months for a roof permit."
             ]
           }
         ]

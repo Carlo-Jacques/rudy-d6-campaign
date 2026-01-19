@@ -79,11 +79,13 @@ export default async function PriorityPage({ params }: Props) {
       <div
         className="relative py-16 sm:py-24 border-b border-gray-100"
         style={{
-          backgroundImage: "linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('/img/rudolph-tinker-plan.webp')",
+          backgroundImage: "url('/img/rudolph-tinker-plan.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center top",
         }}
       >
+        <div className="absolute inset-0 bg-black/70 z-0" />
+
         <ContentContainer className="relative z-10 transition-all">
           <Link
             href="/#plan"
