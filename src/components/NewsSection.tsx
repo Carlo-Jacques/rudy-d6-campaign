@@ -39,6 +39,14 @@ const articles: NewsArticle[] = [
     excerpt: "Rudolph Tinker, a local activist and criminal justice and political science professor, told CBS12 News he does not believe the proposal will ultimately become law in Florida, saying it's 'actually infringing on the First Amendment, the freedom to petition, freedom to assemble.'",
     url: "https://cbs12.com/news/local/gov-desantis-proposed-protest-crack-down-draws-pushback",
   },
+  {
+    id: "3",
+    date: "1/12/2026",
+    category: "Grants",
+    title: "Grants Up To $10,000 Available For Palm Beach County Residents",
+    excerpt: "Palm Beach County’s Office of Community Revitalization (OCR) is officially opening applications for its Neighborhood Engagement Transformation (NEAT) grants.",
+    url: "https://bocanewsnow.com/2026/01/12/grants-up-to-10000-available-for-palm-beach-county-residents/?fbclid=IwY2xjawPcdshleHRuA2FlbQIxMABicmlkETFGbGJ4eVFOYVpCaTdCc3Vyc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHq0vCHg0w9dauOWMwJ2WH-3_nT_6cXjW2f8hZ6Mw4YKJjQ6iMfwA80q1gB8f_aem_mnHBi2WbKkRjr0oNmXv9zA",
+  },
 ];
 
 const categories = ["All", ...Array.from(new Set(articles.map((a) => a.category)))];
@@ -47,10 +55,11 @@ export default function NewsSection() {
   const t = useTranslations("home.news");
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const filteredArticles =
+  const filteredArticles = (
     selectedCategory === "All"
       ? articles
-      : articles.filter((article) => article.category === selectedCategory);
+      : articles.filter((article) => article.category === selectedCategory)
+  ).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
     <section id="news" className="bg-white">
