@@ -5,10 +5,10 @@ export const site = {
   // volunteerUrl: "/volunteer",
   // petitionUrl: "/petition",
   social: {
-    facebook: "https://facebook.com",
-    instagram: "https://instagram.com",
-    x: "https://x.com",
-    youtube: "https://youtube.com",
+    facebook: "https://www.facebook.com/profile.php?id=61587048170741",
+    instagram: "https://www.instagram.com/rudolphtinker.for.district6/",
+    x: "https://x.com/RudolphTinker",
+    youtube: "https://www.youtube.com/@RudolphTinker",
     linkedin: "https://www.linkedin.com/in/dr-rudolph-tinker-phd-pmp-4825b748/",
   },
 };
