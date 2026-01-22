@@ -89,7 +89,7 @@ export default function Header() {
           <motion.img
             src="/img/logo-rudy.webp"
             alt="Rudy Campaign Logo"
-            className="w-auto object-contain rounded-full"
+            className="w-auto object-contain"
             animate={{
               height: isHomePage ? (scrolled ? 60 : 86) : 60
             }}

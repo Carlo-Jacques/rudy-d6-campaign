@@ -40,7 +40,7 @@ export default function Footer() {
               <img
                 src="/img/logo-rudy.webp"
                 alt="Rudolph Tinker for Palm Beach Commissioner District 6"
-                className="h-36 w-36 rounded-full object-cover"
+                className="h-36 w-auto object-contain"
               />
             </Link>
             <div className="space-y-2 text-sm">
