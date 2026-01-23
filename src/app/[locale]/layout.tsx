@@ -6,7 +6,6 @@ import { routing } from '@/i18n/routing';
 import Header from "@/components/Header";
 import MobileStickyCta from "@/components/MobileStickyCta";
 import Footer from "@/components/Footer";
-import AccessibilityPanel from "@/components/a11y/AccessibilityPanel";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -40,8 +39,8 @@ export default async function LocaleLayout({
 
         <Footer />
 
-        {/* Global accessibility controls (client-side) */}
-        <AccessibilityPanel />
+        {/*<AccessibilityPanel /> Global accessibility controls (client-side) */}
+
       </NextIntlClientProvider>
     </div>
   );
