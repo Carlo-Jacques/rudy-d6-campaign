@@ -21,7 +21,7 @@ export default async function HomePage({
       <Hero />
 
       {/* PLEDGE */}
-      <section className="text-white w-full">
+      <section className="text-white w-full bg-patriot-red">
         <div className="mx-auto max-w-7xl px-4 py-16 text-center" style={{ paddingLeft: "calc(1rem + 20px)", paddingRight: "calc(1rem + 20px)" }}>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight whitespace-pre-line text-flag-gradient">
             {t('pledge.title')}

@@ -21,7 +21,7 @@ export default function EndorsementForm() {
         <form action="/api/form/endorsement" method="POST" encType="multipart/form-data" className="space-y-6">
             <div className="grid gap-6 sm:grid-cols-2">
                 <div>
-                    <label htmlFor={`${id}-firstName`} className="block text-sm font-semibold text-white">
+                    <label htmlFor={`${id}-firstName`} className="block text-sm font-semibold text-patriot-blue">
                         {t('firstName')}
                     </label>
                     <input
@@ -34,7 +34,7 @@ export default function EndorsementForm() {
                 </div>
 
                 <div>
-                    <label htmlFor={`${id}-lastName`} className="block text-sm font-semibold text-white">
+                    <label htmlFor={`${id}-lastName`} className="block text-sm font-semibold text-patriot-blue">
                         {t('lastName')}
                     </label>
                     <input
@@ -47,7 +47,7 @@ export default function EndorsementForm() {
                 </div>
 
                 <div>
-                    <label htmlFor={`${id}-email`} className="block text-sm font-semibold text-white">
+                    <label htmlFor={`${id}-email`} className="block text-sm font-semibold text-patriot-blue">
                         {t('email')}
                     </label>
                     <input
@@ -60,7 +60,7 @@ export default function EndorsementForm() {
                 </div>
 
                 <div>
-                    <label htmlFor={`${id}-phone`} className="block text-sm font-semibold text-white">
+                    <label htmlFor={`${id}-phone`} className="block text-sm font-semibold text-patriot-blue">
                         {t('phone')}
                     </label>
                     <input
@@ -73,13 +73,13 @@ export default function EndorsementForm() {
                 </div>
 
                 <div className="sm:col-span-2">
-                    <label htmlFor={`${id}-file`} className="block text-sm font-semibold text-white">
+                    <label htmlFor={`${id}-file`} className="block text-sm font-semibold text-patriot-blue">
                         {t('photo')}
                     </label>
                     <div className="mt-2 flex items-center gap-4">
                         <label
                             htmlFor={`${id}-file`}
-                            className="cursor-pointer rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                            className="cursor-pointer rounded-md bg-patriot-blue px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-patriot-blue/90"
                         >
                             Choose file
                             <input
@@ -92,7 +92,7 @@ export default function EndorsementForm() {
                             />
                         </label>
                         {fileName && (
-                            <span className="text-sm text-white truncate max-w-[200px]">
+                            <span className="text-sm text-patriot-blue/70 truncate max-w-[200px]">
                                 {fileName}
                             </span>
                         )}

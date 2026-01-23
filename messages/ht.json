@@ -615,6 +615,11 @@
       "phone": "Nimewo telefòn",
       "photo": "Telechaje foto ou",
       "submit": "Voye Aprobasyon"
+    },
+    "thankYou": {
+      "title": "Mèsi pou Aprobasyon w la!",
+      "description": "Nou resevwa aprobasyon w la. Sipò w vle di anpil pou nou epi li ede bati yon Distrik 6 ki pi fò.",
+      "returnHome": "Retounen lakay"
     }
   }
 }

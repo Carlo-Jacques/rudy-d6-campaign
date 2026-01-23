@@ -621,6 +621,11 @@
       "phone": "Phone Number",
       "photo": "Upload Your Photo",
       "submit": "Submit Endorsement"
+    },
+    "thankYou": {
+      "title": "Thank You for Your Endorsement!",
+      "description": "We've received your endorsement. Your support means the world to us and helps build a stronger District 6.",
+      "returnHome": "Return to Home"
     }
   }
 }

@@ -615,6 +615,11 @@
       "phone": "Número de Teléfono",
       "photo": "Sube tu foto",
       "submit": "Enviar Endoso"
+    },
+    "thankYou": {
+      "title": "¡Gracias por su respaldo!",
+      "description": "Hemos recibido su respaldo. Su apoyo significa mucho para nosotros y ayuda a construir un Distrito 6 más fuerte.",
+      "returnHome": "Volver al inicio"
     }
   }
 }

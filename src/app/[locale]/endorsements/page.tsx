@@ -12,9 +12,9 @@ export default async function EndorsementsPage({
     const t = await getTranslations('common');
 
     return (
-        <main className="bg-white">
+        <main className="bg-patriot-white">
             {/* Hero Section */}
-            <div className="relative mt-[25px] sm:mt-0 py-20 sm:py-24"
+            <section className="relative mt-[25px] sm:mt-0 py-20 sm:py-24"
                 style={{
                     backgroundImage: "url('/img/endorsement-banner-rudy.webp')",
                     backgroundSize: "cover",
@@ -33,17 +33,17 @@ export default async function EndorsementsPage({
                         Proud to be supported by community leaders and organizations across District 6.
                     </p>
                 </ContentContainer>
-            </div>
+            </section>
 
-            {/* Endorsements Grid */}
-            <section className="py-16">
+            {/* Endorsements Grid Section (section[2]) */}
+            <section className="bg-patriot-red py-16 text-white">
                 <ContentContainer>
                     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                         {/* Placeholder endorsement cards */}
                         {Array.from({ length: 12 }).map((_, i) => (
                             <div
                                 key={i}
-                                className="aspect-square rounded-lg bg-gray-300 transition-all hover:bg-gray-400"
+                                className="aspect-square rounded-lg bg-white/20 transition-all hover:bg-white/30 border border-white/10"
                                 aria-label={`Endorsement placeholder ${i + 1}`}
                             />
                         ))}
@@ -52,9 +52,9 @@ export default async function EndorsementsPage({
             </section>
 
             {/* Endorsement Form Section */}
-            <section className="bg-patriot-red py-16">
+            <section className="bg-patriot-white py-16">
                 <ContentContainer className="max-w-3xl">
-                    <h2 className="text-center text-3xl font-bold text-white md:text-4xl">
+                    <h2 className="text-center text-3xl font-bold text-patriot-blue md:text-4xl">
                         I Endorse Rudolph Tinker!
                     </h2>
                     <div className="mt-8">
