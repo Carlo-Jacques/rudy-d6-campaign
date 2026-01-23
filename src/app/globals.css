@@ -1,9 +1,49 @@
 @import "tailwindcss";
 
+/* Font scaling (site-wide) */
+html {
+  font-size: calc(16px * var(--a11y-font-scale));
+}
+
+/* High contrast mode */
+html[data-a11y-contrast="high"] {
+  filter: contrast(1.25) saturate(1.15);
+}
+
+/* Invert mode (useful for some low-vision users) */
+html[data-a11y-contrast="invert"] {
+  filter: invert(1) hue-rotate(180deg) contrast(1.05);
+}
+
+/* Hide images */
+html[data-a11y-hide-images="1"] img,
+html[data-a11y-hide-images="1"] picture,
+html[data-a11y-hide-images="1"] video,
+html[data-a11y-hide-images="1"] svg {
+  visibility: hidden !important;
+}
+
+/* Keep layout stable if images are hidden (optional) */
+html[data-a11y-hide-images="1"] img {
+  background: transparent !important;
+}
+
+/* Reduced motion (in addition to OS preference) */
+html[data-a11y-reduce-motion="1"] * {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+
 /* Lock site to light mode */
 :root {
   --background: #ffffff;
   --foreground: #000000;
+  --a11y-font-scale: 1;
+  --a11y-contrast: normal;
+  /* normal | high | invert */
+  --a11y-hide-images: 0;
+  /* 0 | 1 */
 }
 
 @theme inline {
