@@ -6,6 +6,7 @@ import { routing } from '@/i18n/routing';
 import Header from "@/components/Header";
 import MobileStickyCta from "@/components/MobileStickyCta";
 import Footer from "@/components/Footer";
+import AccessibilityPanel from "@/components/a11y/AccessibilityPanel";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -20,16 +21,12 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
-  // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
 
-  // Enable static rendering
   setRequestLocale(locale);
 
-  // Providing all messages to the client
-  // side is the easiest way to get started
   const messages = await getMessages();
 
   return (
@@ -37,20 +34,15 @@ export default async function LocaleLayout({
       <NextIntlClientProvider messages={messages}>
         <Header />
 
-        {/* 
-          Mobile bottom padding ensures content & footer
-          are not hidden behind sticky petition bar 
-        */}
-        <div>
-          {children}
-        </div>
+        <div>{children}</div>
 
-        {/* Mobile-only sticky CTA */}
         <MobileStickyCta />
 
         <Footer />
+
+        {/* Global accessibility controls (client-side) */}
+        <AccessibilityPanel />
       </NextIntlClientProvider>
     </div>
   );
 }
-

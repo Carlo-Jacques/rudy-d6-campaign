@@ -1,21 +1,32 @@
 @import "tailwindcss";
 
-/* Font scaling (site-wide) */
-html {
-  font-size: calc(16px * var(--a11y-font-scale));
+/* =========================
+   Accessibility: defaults
+   ========================= */
+:root {
+  --a11y-font-scale: 1;
+  /* 0.9–1.5 typical */
+  --a11y-hide-images: 0;
+  /* 0 | 1 */
+  --a11y-hide-bg: 0;
+  /* 0 | 1 */
 }
 
-/* High contrast mode */
+/* Apply font scaling site-wide */
+html {
+  font-size: calc(16px * var(--a11y-font-scale, 1));
+}
+
+/* Contrast modes */
 html[data-a11y-contrast="high"] {
   filter: contrast(1.25) saturate(1.15);
 }
 
-/* Invert mode (useful for some low-vision users) */
 html[data-a11y-contrast="invert"] {
   filter: invert(1) hue-rotate(180deg) contrast(1.05);
 }
 
-/* Hide images */
+/* Hide inline media */
 html[data-a11y-hide-images="1"] img,
 html[data-a11y-hide-images="1"] picture,
 html[data-a11y-hide-images="1"] video,
@@ -23,117 +34,23 @@ html[data-a11y-hide-images="1"] svg {
   visibility: hidden !important;
 }
 
-/* Keep layout stable if images are hidden (optional) */
-html[data-a11y-hide-images="1"] img {
-  background: transparent !important;
+/* Optional: keep layout stable */
+html[data-a11y-hide-images="1"] img,
+html[data-a11y-hide-images="1"] video,
+html[data-a11y-hide-images="1"] svg {
+  opacity: 0 !important;
 }
 
-/* Reduced motion (in addition to OS preference) */
-html[data-a11y-reduce-motion="1"] * {
+/* Hide CSS background images (hero backgrounds, section art, etc.) */
+html[data-a11y-hide-bg="1"] * {
+  background-image: none !important;
+}
+
+/* Reduced motion (additional override beyond OS setting) */
+html[data-a11y-reduce-motion="1"] *,
+html[data-a11y-reduce-motion="1"] *::before,
+html[data-a11y-reduce-motion="1"] *::after {
   animation: none !important;
   transition: none !important;
   scroll-behavior: auto !important;
-}
-
-/* Lock site to light mode */
-:root {
-  --background: #ffffff;
-  --foreground: #000000;
-  --a11y-font-scale: 1;
-  --a11y-contrast: normal;
-  /* normal | high | invert */
-  --a11y-hide-images: 0;
-  /* 0 | 1 */
-}
-
-@theme inline {
-  /* Core colors */
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-
-  /* Fonts */
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-
-  /* 🇺🇸 Campaign colorway */
-  --color-patriot-red: #B31942;
-  --color-patriot-blue: #0A3161;
-  --color-patriot-white: #FFFFFF;
-}
-
-/* Explicitly disable dark mode overrides */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #ffffff;
-    --foreground: #000000;
-  }
-}
-
-/* Base body styles */
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  cursor: url('/img/american-flag-cursor.png') 0 0, auto;
-}
-
-/* Custom cursor for interactive elements */
-a,
-button,
-input[type="submit"],
-input[type="button"],
-select {
-  cursor: url('/img/american-flag-cursor.png') 0 0, pointer;
-}
-
-/* Icon Font Styles - Linea Basic */
-.icon {
-  display: inline-block;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  speak: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-basic-todo-txt:before {
-  content: "\e000";
-  font-family: "linea-basic-10" !important;
-}
-
-/* If icon font is not loaded, show a fallback */
-@supports not (font-family: "linea-basic-10") {
-  .icon-basic-todo-txt:before {
-    content: "📋";
-    font-family: Arial, Helvetica, sans-serif;
-  }
-}
-
-.responsive-nowrap {
-  white-space: normal;
-  /* mobile default */
-}
-
-@media (min-width: 1024px) {
-  .responsive-nowrap {
-    white-space: nowrap;
-  }
-}
-
-.text-flag-gradient {
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.15),
-      rgba(0, 0, 0, 0.15)),
-    url("/img/american-flag-cursor.png");
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
