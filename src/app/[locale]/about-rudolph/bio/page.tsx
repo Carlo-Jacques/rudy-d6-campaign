@@ -13,7 +13,7 @@ export async function generateMetadata({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('bio');
-  
+
   return {
     title: `${t('title')} | About Rudolph | ${site.name}`,
     description: t('description'),
@@ -46,7 +46,7 @@ export default async function BioPage({
       >
         {/* Background overlay */}
         <div className="absolute inset-0 bg-black/50 z-0" />
-        
+
         {/* Content */}
         <ContentContainer className="relative z-10">
           <Link
@@ -69,12 +69,14 @@ export default async function BioPage({
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12 lg:items-start">
           {/* Left side - Content (second on mobile, left on desktop) */}
           <div className="order-2 lg:order-1">
-            <style dangerouslySetInnerHTML={{__html: `
+            <style dangerouslySetInnerHTML={{
+              __html: `
               .bio-article p {
                 line-height: 2.0 !important;
+                margin-bottom: 2rem !important;
               }
             `}} />
-            <article className="bio-article prose prose-lg max-w-none prose-headings:font-extrabold prose-strong:font-bold prose-p:text-black/80 prose-p:mb-6 prose-h2:mt-10 prose-h2:mb-6">
+            <article className="bio-article prose prose-lg max-w-none prose-headings:font-extrabold prose-strong:font-bold prose-p:text-black/80 prose-p:mb-10 prose-h2:mt-10 prose-h2:mb-6">
               <section className="bio">
                 <div dangerouslySetInnerHTML={{ __html: bioContent }} />
               </section>
