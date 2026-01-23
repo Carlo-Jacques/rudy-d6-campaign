@@ -239,7 +239,7 @@
         "name": "Non konplè",
         "email": "Adrès imèl",
         "story": "Istwa w la",
-        "upload": "Telechaje imaj oswa dokiman",
+        "upload": "Telechaje foto sèvis ou",
         "submit": "Pataje istwa"
       },
       "thankYou": {
@@ -606,5 +606,15 @@
       "emailLabel": "Imel:"
     },
     "disclaimer": "Piblisite politik peye. Peye ak apwouve pa komite kanpay Florid Rudolph Tinker."
+  },
+  "endorsements": {
+    "form": {
+      "firstName": "Prenon",
+      "lastName": "Non",
+      "email": "Adrès Imèl",
+      "phone": "Nimewo telefòn",
+      "photo": "Telechaje foto ou",
+      "submit": "Voye Aprobasyon"
+    }
   }
 }

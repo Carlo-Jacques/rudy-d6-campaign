@@ -239,7 +239,7 @@
         "name": "Nombre completo",
         "email": "Correo electrónico",
         "story": "Tu historia",
-        "upload": "Subir imágenes o documentos",
+        "upload": "Sube fotos de tu servicio",
         "submit": "Compartir historia"
       },
       "thankYou": {
@@ -606,5 +606,15 @@
       "emailLabel": "Correo electrónico:"
     },
     "disclaimer": "Publicidad política pagada. Pagada y aprobada por el comité de campaña de Florida de Rudolph Tinker."
+  },
+  "endorsements": {
+    "form": {
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "email": "Correo Electrónico",
+      "phone": "Número de Teléfono",
+      "photo": "Sube tu foto",
+      "submit": "Enviar Endoso"
+    }
   }
 }

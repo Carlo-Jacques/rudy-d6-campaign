@@ -15,17 +15,35 @@ export default async function VeteranPage({
     return (
         <main className="bg-white">
             {/* Header */}
-            <div className="relative py-20 sm:py-24"
-                style={{
-                    backgroundImage: "url('/img/army-military-red-white-blue.webp')",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center center",
-                    backgroundRepeat: "no-repeat",
-                    backgroundColor: "#00214e",
-                }}
-            >
-                {/* Background overlay */}
-                <div className="absolute inset-0 bg-black/60 z-0" />
+            <header className="relative overflow-hidden aspect-[3/1] max-sm:aspect-[4/5] flex items-center justify-center">
+                {/* Responsive Background Image */}
+                <div
+                    className="absolute inset-0 bg-no-repeat bg-center"
+                    style={{
+                        backgroundColor: "#00214e",
+                        backgroundSize: "contain"
+                    }}
+                >
+                    <style dangerouslySetInnerHTML={{
+                        __html: `
+                        .veteran-banner-bg {
+                            background-image: url('/img/veterans-desktop.webp');
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                        }
+                        @media (max-width: 639px) {
+                            .veteran-banner-bg {
+                                background-image: url('/img/veterans-mobile.webp');
+                                background-size: 100% 100%;
+                            }
+                        }
+                        `
+                    }} />
+                    <div className="absolute inset-0 veteran-banner-bg" />
+                    {/* Background overlay */}
+                    <div className="absolute inset-0 bg-black/60 z-0" />
+                </div>
                 <ContentContainer className="relative z-10 text-center max-w-3xl">
                     <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
                         {t('headerTitle')}
@@ -34,7 +52,7 @@ export default async function VeteranPage({
                         {t('headerDescription')}
                     </p>
                 </ContentContainer>
-            </div>
+            </header>
 
             {/* Service History Section */}
             <section>
@@ -63,16 +81,16 @@ export default async function VeteranPage({
             </section>
 
             {/* VA Section */}
-            <section className="bg-gray-50 py-20 border-y border-gray-100">
+            <section className="bg-patriot-red py-20 border-y border-patriot-red">
                 <ContentContainer>
                     <div className="mx-auto max-w-3xl text-center">
-                        <h2 className="text-sm font-bold uppercase tracking-widest text-patriot-red">
+                        <h2 className="text-sm font-bold uppercase tracking-widest text-white/90">
                             {t('va.subtitle')}
                         </h2>
-                        <h3 className="mt-2 text-3xl font-extrabold tracking-tight text-black sm:text-4xl">
+                        <h3 className="mt-2 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
                             {t('va.title')}
                         </h3>
-                        <div className="mt-8 text-lg leading-relaxed text-gray-700" dangerouslySetInnerHTML={{ __html: t.raw('va.content') }} />
+                        <div className="mt-8 text-lg leading-relaxed text-white/90" dangerouslySetInnerHTML={{ __html: t.raw('va.content') }} />
                     </div>
                 </ContentContainer>
             </section>

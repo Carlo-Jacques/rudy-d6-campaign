@@ -12,7 +12,7 @@ export async function generateMetadata({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('district6');
-  
+
   return {
     title: `${t('title')} | ${site.name}`,
     description: t('description'),
@@ -33,23 +33,36 @@ export default async function District6Page({
   return (
     <main className="bg-white">
       {/* Header */}
-      <div className="relative py-20 sm:py-24"
-        style={{
-          backgroundImage: "url('/img/district-6-banner.webp')",
-          backgroundSize: "cover",
-          backgroundPosition: "center center",
-          backgroundRepeat: "no-repeat",
-          backgroundColor: "#00214e",
-        }}
-      >
-        {/* Background overlay */}
-        <div className="absolute inset-0 bg-black/50 z-0" />
+      <header className="relative py-20 sm:py-24 overflow-hidden">
+        {/* Responsive Background Image */}
+        <div
+          className="absolute inset-0 bg-no-repeat bg-cover bg-center"
+          style={{
+            backgroundColor: "#00214e",
+          }}
+        >
+          <style dangerouslySetInnerHTML={{
+            __html: `
+            .d6-banner-bg {
+              background-image: url('/img/district-6-banner-mobile.png');
+            }
+            @media (min-width: 640px) {
+              .d6-banner-bg {
+                background-image: url('/img/district-6-banner-desktop.webp');
+              }
+            }
+            `
+          }} />
+          <div className="absolute inset-0 d6-banner-bg" />
+          {/* Background overlay */}
+          <div className="absolute inset-0 bg-black/60 z-0" />
+        </div>
         <ContentContainer className="relative z-10 text-center">
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
             {t('headerTitle')}
           </h1>
         </ContentContainer>
-      </div>
+      </header>
 
       <ContentContainer className="grid grid-cols-1 gap-12 py-12 lg:grid-cols-2 lg:py-20">
         {/* Left Column: Content */}

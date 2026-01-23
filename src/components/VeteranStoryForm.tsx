@@ -74,6 +74,7 @@ export default function VeteranStoryForm() {
                                 name="attachments"
                                 id={`${id}-file`}
                                 multiple
+                                accept="image/*"
                                 onChange={handleFileChange}
                                 className="sr-only"
                             />

@@ -16,9 +16,9 @@ export default async function EndorsementsPage({
             {/* Hero Section */}
             <div className="relative py-20 sm:py-24"
                 style={{
-                    backgroundImage: "url('/img/endorsements-background.webp')",
+                    backgroundImage: "url('/img/endorsement-banner-rudy.webp')",
                     backgroundSize: "cover",
-                    backgroundPosition: "center center",
+                    backgroundPosition: "center top",
                     backgroundRepeat: "no-repeat",
                     backgroundColor: "rgb(0, 33, 78)",
                 }}
