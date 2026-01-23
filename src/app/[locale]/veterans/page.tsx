@@ -15,7 +15,7 @@ export default async function VeteranPage({
     return (
         <main className="bg-white">
             {/* Header */}
-            <header className="relative overflow-hidden aspect-[3/1] max-sm:aspect-[4/5] flex items-center justify-center">
+            <header className="relative py-20 sm:py-24 max-md:aspect-[4/5] max-md:py-0 overflow-hidden flex items-center justify-center">
                 {/* Responsive Background Image */}
                 <div
                     className="absolute inset-0 bg-no-repeat bg-center"

@@ -14,7 +14,7 @@ export default async function EndorsementsPage({
     return (
         <main className="bg-white">
             {/* Hero Section */}
-            <div className="relative py-20 sm:py-24"
+            <div className="relative mt-[25px] sm:mt-0 py-20 sm:py-24"
                 style={{
                     backgroundImage: "url('/img/endorsement-banner-rudy.webp')",
                     backgroundSize: "cover",
