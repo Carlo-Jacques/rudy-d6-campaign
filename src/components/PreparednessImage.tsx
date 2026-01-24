@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
-export default function WhyIWantToRunImage() {
+export default function PreparednessImage() {
     const [isVisible, setIsVisible] = useState(false);
     const imageRef = useRef<HTMLDivElement>(null);
 
@@ -41,13 +41,13 @@ export default function WhyIWantToRunImage() {
         >
             <div
                 className={`w-full transition-all duration-1000 ease-out ${isVisible
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-8"
+                        ? "opacity-100 translate-y-0"
+                        : "opacity-0 translate-y-8"
                     }`}
             >
                 <Image
-                    src="/img/rudolph-tinker-why-i-want-to-run-poster.webp"
-                    alt="Rudolph Tinker"
+                    src="/img/rudolph-tinker-preparedness.webp"
+                    alt="Rudolph Tinker Preparedness"
                     width={600}
                     height={800}
                     className="w-full h-auto rounded-lg object-cover shadow-xl"
