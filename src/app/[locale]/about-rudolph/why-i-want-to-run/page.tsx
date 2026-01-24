@@ -1,6 +1,7 @@
 import { getTranslations, getMessages, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import ContentContainer from "@/components/ContentContainer";
+import WhyIWantToRunImage from "@/components/WhyIWantToRunImage";
 import { site } from "@/lib/site";
 import { Metadata } from "next";
 
@@ -62,18 +63,34 @@ export default async function WhyIWantToRunPage({
 
       {/* Content */}
       <ContentContainer className="py-12">
-        <article
-          className="
-            prose prose-lg max-w-none
-            prose-p:my-4 sm:prose-p:my-5 lg:prose-p:my-6
-            prose-p:leading-relaxed
-            prose-p:text-black/80
-            prose-headings:font-extrabold
-            prose-strong:font-bold
-            prose-h2:mt-10 prose-h2:mb-6
-            "
-          dangerouslySetInnerHTML={{ __html: content }}
-        />
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12 lg:items-start">
+          {/* Left side - Content (second on mobile, left on desktop) */}
+          <div className="order-2 lg:order-1">
+            <style dangerouslySetInnerHTML={{
+              __html: `
+              .run-article p {
+                line-height: 2.0 !important;
+                margin-bottom: 2rem !important;
+              }
+            `}} />
+            <article
+              className="
+                run-article prose prose-lg max-w-none
+                prose-p:leading-relaxed
+                prose-p:text-black/80
+                prose-headings:font-extrabold
+                prose-strong:font-bold
+                prose-h2:mt-10 prose-h2:mb-6
+                "
+              dangerouslySetInnerHTML={{ __html: content }}
+            />
+          </div>
+
+          {/* Right side - Image (first on mobile, right on desktop) */}
+          <div className="order-1 lg:order-2 lg:sticky lg:top-12 lg:self-start">
+            <WhyIWantToRunImage />
+          </div>
+        </div>
       </ContentContainer>
     </main>
   );
