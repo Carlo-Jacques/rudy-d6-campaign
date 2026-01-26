@@ -16,7 +16,7 @@ export default function BioImage() {
                     }
                 });
             },
-            { 
+            {
                 threshold: 0.1,
                 rootMargin: "0px 0px -100px 0px"
             }
@@ -40,15 +40,14 @@ export default function BioImage() {
             className="flex items-start"
         >
             <div
-                className={`w-full transition-all duration-1000 ease-out ${
-                    isVisible
+                className={`w-full transition-all duration-1000 ease-out ${isVisible
                         ? "opacity-100 translate-y-0"
                         : "opacity-0 translate-y-8"
-                }`}
+                    }`}
             >
                 <Image
-                    src="/img/rudolph-thinking.webp"
-                    alt="Rudolph Tinker"
+                    src="/img/rudy_and_family.webp"
+                    alt="Rudolph Tinker and Family"
                     width={600}
                     height={800}
                     className="w-full h-auto rounded-lg object-cover"
