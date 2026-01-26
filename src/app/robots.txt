@@ -1,0 +1,36 @@
+User-agent: *
+Allow: /
+
+# Ensure bots can render pages (important for SEO visibility)
+Allow: /_next/static/
+Allow: /_next/image/
+Allow: /assets/
+Allow: /images/
+Allow: /img/
+Allow: /uploads/
+Allow: /fonts/
+
+# Allow well-known paths (verification, security.txt, etc.)
+Allow: /.well-known/
+
+# Block only non-public / low-value areas
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /drafts/
+Disallow: /staging/
+Disallow: /dev/
+
+# If you have on-site search results pages, they are usually low-value:
+Disallow: /search
+
+# Prevent crawl waste on common tracking parameters (safe “hint”; crawlers may ignore)
+Disallow: /*?utm_
+Disallow: /*?gclid=
+Disallow: /*?fbclid=
+Disallow: /*?ref=
+
+# Sitemaps
+Sitemap: https://rudolphtinker.com/sitemap.xml
+Sitemap: https://rudolphtinker.com/page-sitemap.xml
+Sitemap: https://rudolphtinker.com/post-sitemap.xml
