@@ -5,7 +5,7 @@ export const site = {
   // volunteerUrl: "/volunteer",
   // petitionUrl: "/petition",
   social: {
-    facebook: "https://www.facebook.com/profile.php?id=61587048170741",
+    facebook: "https://www.facebook.com/profile.php?id=61586688257662",
     instagram: "https://www.instagram.com/rudolphtinker.for.district6/",
     x: "https://x.com/RudolphTinker",
     youtube: "https://www.youtube.com/@RudolphTinker",
