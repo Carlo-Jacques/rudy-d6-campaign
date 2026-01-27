@@ -130,6 +130,12 @@ export default async function VeteranPage({
                         </div>
                     </div>
 
+                    {/* Disclaimer */}
+                    <div className="mt-24 border-t border-gray-100 pt-12 text-center">
+                        <p className="max-w-2xl mx-auto text-sm text-gray-500 leading-relaxed italic">
+                            {t('disclaimer')}
+                        </p>
+                    </div>
                 </ContentContainer>
             </section>
         </main>
