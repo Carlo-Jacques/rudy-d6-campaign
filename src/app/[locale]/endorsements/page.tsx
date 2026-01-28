@@ -31,6 +31,12 @@ export default async function EndorsementsPage({
             business: "Skyline Motel",
             logo: "/img/endorsements/Skyline_motel_logo.PNG",
             url: "#",
+        },
+        {
+            name: "Viktoriia Zelenkova",
+            business: "Vyder General Contractors",
+            logo: "/img/endorsements/vyder_general_contractors_logo.webp",
+            url: "#",
         }
     ];
 
@@ -86,7 +92,7 @@ export default async function EndorsementsPage({
                         ))}
 
                         {/* Remaining placeholders */}
-                        {Array.from({ length: 5 }).map((_, i) => (
+                        {Array.from({ length: 4 }).map((_, i) => (
                             <div
                                 key={`placeholder-${i}`}
                                 className="aspect-square rounded-2xl bg-white/5 border border-white/5 opacity-40"
