@@ -16,8 +16,21 @@ export default async function EndorsementsPage({
     const endorsements = [
         {
             name: "Carlo Jacques",
+            business: "Charlotte's Web Design",
             logo: "/img/endorsements/charlottes_web_design_logo.webp",
             url: "https://charlottesweb.design/",
+        },
+        {
+            name: "Israel Perez",
+            business: "I.P. Screen Enclosures",
+            logo: "/img/endorsements/ip_screen_logo.jpg",
+            url: "https://www.facebook.com/people/Ip-Screen-Enclosures-LLC/61583392904282/",
+        },
+        {
+            name: "Minesh Mohan",
+            business: "Skyline Motel",
+            logo: "/img/endorsements/Skyline_motel_logo.PNG",
+            url: "#",
         }
     ];
 
@@ -66,14 +79,14 @@ export default async function EndorsementsPage({
                                     />
                                 </div>
                                 <h3 className="text-xl font-bold tracking-tight text-white group-hover:text-white/90">
-                                    Charlotte's Web Design
+                                    {endorsement.business}
                                 </h3>
-                                <h4>{endorsement.name}</h4>
+                                <h4 className="text-sm font-medium text-white/80 mt-1">{endorsement.name}</h4>
                             </Link>
                         ))}
 
                         {/* Remaining placeholders */}
-                        {Array.from({ length: 7 }).map((_, i) => (
+                        {Array.from({ length: 5 }).map((_, i) => (
                             <div
                                 key={`placeholder-${i}`}
                                 className="aspect-square rounded-2xl bg-white/5 border border-white/5 opacity-40"
