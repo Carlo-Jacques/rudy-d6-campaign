@@ -221,7 +221,7 @@
     "headerTitle": "Sèvis ak Depans pou Veteran yo",
     "headerDescription": "Pakou militè Rudolph Tinker ak defans li pou veteran yo nan Konte Palm Beach.",
     "metaDescription": "Pakou militè Rudolph Tinker ak defans li pou veteran yo nan Konte Palm Beach.",
-    "disclaimer": "Rudolph Tinker se yon manm retrete nan Lame Ameriken an. Itilizasyon ran militè li, tit travay li, ak foto li nan inifòm pa vle di Depatman Lame oswa Depatman Defans la apiye li.",
+    "disclaimer": "Rudolph Tinker se yon veteran nan Lame Ameriken an. Itilizasyon ran militè li, tit travay li, ak foto li nan inifòm pa vle di Depatman Lame oswa Depatman Defans la apiye li.",
     "service": {
       "title": "Yon Eritaj Sèvis",
       "subtitle": "Pakou Rudolph Tinker nan Lame a",
@@ -616,6 +616,7 @@
       "email": "Adrès Imèl",
       "phone": "Nimewo telefòn",
       "photo": "Telechaje foto ou",
+      "endorsingReason": "Poukisa w ap apiye Rudolph Tinker?",
       "submit": "Voye Aprobasyon"
     },
     "thankYou": {

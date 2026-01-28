@@ -1,6 +1,8 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import EndorsementForm from "@/components/EndorsementForm";
 import ContentContainer from "@/components/ContentContainer";
+import Image from "next/image";
+import { Link } from "@/i18n/navigation";
 
 export default async function EndorsementsPage({
     params,
@@ -10,6 +12,14 @@ export default async function EndorsementsPage({
     const { locale } = await params;
     setRequestLocale(locale);
     const t = await getTranslations('common');
+
+    const endorsements = [
+        {
+            name: "Carlo Jacques",
+            logo: "/img/endorsements/charlottes_web_design_logo.webp",
+            url: "https://charlottesweb.design/",
+        }
+    ];
 
     return (
         <main className="bg-patriot-white">
@@ -35,16 +45,38 @@ export default async function EndorsementsPage({
                 </ContentContainer>
             </section>
 
-            {/* Endorsements Grid Section (section[2]) */}
+            {/* Endorsements Grid Section */}
             <section className="bg-patriot-red py-16 text-white">
                 <ContentContainer>
-                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                        {/* Placeholder endorsement cards */}
-                        {Array.from({ length: 12 }).map((_, i) => (
-                            <div
+                    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                        {endorsements.map((endorsement, i) => (
+                            <Link
                                 key={i}
-                                className="aspect-square rounded-lg bg-white/20 transition-all hover:bg-white/30 border border-white/10"
-                                aria-label={`Endorsement placeholder ${i + 1}`}
+                                href={endorsement.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group flex flex-col items-center justify-center p-8 rounded-2xl bg-white/10 hover:bg-white/20 transition-all duration-300 border border-white/10 hover:border-white/20 hover:scale-[1.02] shadow-xl text-center"
+                            >
+                                <div className="relative w-full aspect-square mb-6">
+                                    <Image
+                                        src={endorsement.logo}
+                                        alt={`${endorsement.name} logo`}
+                                        fill
+                                        className="object-contain"
+                                    />
+                                </div>
+                                <h3 className="text-xl font-bold tracking-tight text-white group-hover:text-white/90">
+                                    Charlotte's Web Design
+                                </h3>
+                                <h4>{endorsement.name}</h4>
+                            </Link>
+                        ))}
+
+                        {/* Remaining placeholders */}
+                        {Array.from({ length: 7 }).map((_, i) => (
+                            <div
+                                key={`placeholder-${i}`}
+                                className="aspect-square rounded-2xl bg-white/5 border border-white/5 opacity-40"
                             />
                         ))}
                     </div>

@@ -221,7 +221,7 @@
     "headerTitle": "Servicio y Defensa de los Veteranos",
     "headerDescription": "La trayectoria militar de Rudolph Tinker y su defensa de los veteranos en el Condado de Palm Beach.",
     "metaDescription": "La trayectoria militar de Rudolph Tinker y su defensa de los veteranos en el Condado de Palm Beach.",
-    "disclaimer": "Rudolph Tinker es un miembro retirado del Ejército de los EE. UU. El uso de su rango militar, títulos de trabajo y fotografías en uniforme no implica el respaldo del Departamento del Ejército o del Departamento de Defensa.",
+    "disclaimer": "Rudolph Tinker es un veterano del Ejército de los EE. UU. El uso de su rango militar, títulos de trabajo y fotografías en uniforme no implica el respaldo del Departamento del Ejército o del Departamento de Defensa.",
     "service": {
       "title": "Un Legado de Servicio",
       "subtitle": "La Trayectoria de Rudolph Tinker en el Ejército",
@@ -616,6 +616,7 @@
       "email": "Correo Electrónico",
       "phone": "Número de Teléfono",
       "photo": "Sube tu foto",
+      "endorsingReason": "¿Por qué respalda a Rudolph Tinker?",
       "submit": "Enviar Endoso"
     },
     "thankYou": {

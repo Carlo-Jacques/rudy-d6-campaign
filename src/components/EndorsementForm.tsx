@@ -73,6 +73,19 @@ export default function EndorsementForm() {
                 </div>
 
                 <div className="sm:col-span-2">
+                    <label htmlFor={`${id}-reason`} className="block text-sm font-semibold text-patriot-blue">
+                        {t('endorsingReason')}
+                    </label>
+                    <textarea
+                        name="reason"
+                        id={`${id}-reason`}
+                        rows={4}
+                        required
+                        className="mt-2 block w-full rounded-md border-0 bg-white py-2.5 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-patriot-blue sm:text-sm sm:leading-6"
+                    />
+                </div>
+
+                <div className="sm:col-span-2">
                     <label htmlFor={`${id}-file`} className="block text-sm font-semibold text-patriot-blue">
                         Upload Your Logo
                     </label>

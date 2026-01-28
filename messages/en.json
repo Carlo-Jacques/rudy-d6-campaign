@@ -221,7 +221,7 @@
     "headerTitle": "Veterans' Service & Advocacy",
     "headerDescription": "Rudolph Tinker's military service history and advocacy for veterans in Palm Beach County.",
     "metaDescription": "Rudolph Tinker's military service history and advocacy for veterans in Palm Beach County.",
-    "disclaimer": "Rudolph Tinker is a retired member of the U.S. Army. Use of his military rank, job titles, and photographs in uniform does not imply endorsement by the Department of the Army or the Department of Defense.",
+    "disclaimer": "Rudolph Tinker is a veteran of the U.S. Army. Use of his military rank, job titles, and photographs in uniform does not imply endorsement by the Department of the Army or the Department of Defense.",
     "service": {
       "title": "A Legacy of Service",
       "subtitle": "Rudolph Tinker’s Army Journey",
@@ -622,6 +622,7 @@
       "email": "Email Address",
       "phone": "Phone Number",
       "photo": "Upload Your Photo",
+      "endorsingReason": "Why are you endorsing Rudolph Tinker?",
       "submit": "Submit Endorsement"
     },
     "thankYou": {

@@ -8,6 +8,7 @@ export async function POST(req: Request) {
         const lastName = (formData.get("lastName")?.toString() || "").trim() || "N/A";
         const email = (formData.get("email")?.toString() || "").trim() || "N/A";
         const phone = (formData.get("phone")?.toString() || "").trim() || "N/A";
+        const reason = (formData.get("reason")?.toString() || "").trim() || "N/A";
         const photo = formData.get("photo") as File | null;
 
         // --- ENV VARS (do NOT hardcode creds) ---
@@ -54,12 +55,17 @@ export async function POST(req: Request) {
 Name: ${firstName} ${lastName}
 Email: ${email}
 Phone: ${phone}
+Reason: ${reason}
 `,
             html: `
         <h2>New Endorsement Submission</h2>
         <p><strong>Name:</strong> ${escapeHtml(firstName)} ${escapeHtml(lastName)}</p>
         <p><strong>Email:</strong> ${escapeHtml(email)}</p>
         <p><strong>Phone:</strong> ${escapeHtml(phone)}</p>
+        <p><strong>Reason for Endorsement:</strong></p>
+        <blockquote style="border-left: 4px solid #ccc; padding-left: 1rem; margin-left: 0;">
+            ${escapeHtml(reason)}
+        </blockquote>
       `,
             attachments,
         };
