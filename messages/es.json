@@ -245,7 +245,8 @@
       },
       "thankYou": {
         "title": "Gracias por compartir",
-        "description": "Hemos recibido tu historia. Gracias por tu servicio y por aportar a la historia de nuestra comunidad."
+        "description": "Hemos recibido tu historia. Gracias por tu servicio y por aportar a la historia de nuestra comunidad.",
+        "returnHome": "Volver al Inicio"
       }
     }
   },

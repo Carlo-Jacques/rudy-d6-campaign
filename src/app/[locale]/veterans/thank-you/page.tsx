@@ -1,16 +1,15 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import ContentContainer from "@/components/ContentContainer";
 import Button from "@/components/ui/Button";
 import SuccessAnimation from "@/components/SuccessAnimation";
 
-export default async function EndorsementThankYouPage({
+export default async function VeteranThankYouPage({
     params,
 }: {
     params: Promise<{ locale: string }>;
 }) {
     const { locale } = await params;
     setRequestLocale(locale);
-    const t = await getTranslations('endorsements.thankYou');
+    const t = await getTranslations('veterans.share.thankYou');
 
     return (
         <main className="flex min-h-[70vh] flex-col items-center justify-center bg-patriot-red px-4 py-20 text-center text-white">

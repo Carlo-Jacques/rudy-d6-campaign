@@ -74,7 +74,7 @@ export default function EndorsementForm() {
 
                 <div className="sm:col-span-2">
                     <label htmlFor={`${id}-file`} className="block text-sm font-semibold text-patriot-blue">
-                        {t('photo')}
+                        Upload Your Logo
                     </label>
                     <div className="mt-2 flex items-center gap-4">
                         <label

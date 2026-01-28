@@ -117,10 +117,11 @@ export default async function PriorityPage({ params }: Props) {
                     {section.bullets.map((bullet: string, j: number) => (
                       <li key={j} className="flex gap-4 items-start text-lg text-gray-700">
                         <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-patriot-red" />
-                        <span>{bullet}</span>
+                        <span dangerouslySetInnerHTML={{ __html: bullet }} />
                       </li>
                     ))}
                   </ul>
+
                 </div>
               ))}
             </div>

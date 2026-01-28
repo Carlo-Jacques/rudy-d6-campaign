@@ -245,7 +245,8 @@
       },
       "thankYou": {
         "title": "Mèsi paske w te pataje",
-        "description": "Nou te resevwa istwa w la. Mèsi pou sèvis ou epi paske w pote kontribisyon w nan istwa kominote nou an."
+        "description": "Nou te resevwa istwa w la. Mèsi pou sèvis ou epi paske w pote kontribisyon w nan istwa kominote nou an.",
+        "returnHome": "Retounen nan Paj Akèy"
       }
     }
   },

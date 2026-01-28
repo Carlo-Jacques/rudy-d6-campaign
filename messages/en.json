@@ -245,7 +245,8 @@
       },
       "thankYou": {
         "title": "Thank You for Sharing",
-        "description": "We have received your story. Thank you for your service and for contributing to our community's history."
+        "description": "We have received your story. Thank you for your service and for contributing to our community's history.",
+        "returnHome": "Return to Home"
       }
     }
   },

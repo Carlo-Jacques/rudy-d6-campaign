@@ -2,7 +2,7 @@ import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/cn";
 import type React from "react";
 
-type ButtonVariant = "petition" | "donate" | "plan" | "ghost";
+type ButtonVariant = "petition" | "donate" | "plan" | "ghost" | "white";
 type ButtonSize = "sm" | "md" | "lg";
 
 type AnchorProps = React.AnchorHTMLAttributes<HTMLAnchorElement>;
@@ -51,6 +51,9 @@ const variants: Record<ButtonVariant, string> = {
   ghost:
     "bg-transparent text-patriot-blue border border-patriot-blue/30 " +
     "hover:-translate-y-[1px] hover:bg-patriot-blue/[0.04] hover:border-patriot-blue/45",
+  white:
+    "bg-white text-patriot-blue shadow-sm " +
+    "hover:-translate-y-[1px] hover:shadow-md hover:bg-gray-50",
 };
 
 export default function Button(props: Props) {

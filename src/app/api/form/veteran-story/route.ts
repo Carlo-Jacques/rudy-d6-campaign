@@ -4,22 +4,12 @@ import nodemailer from "nodemailer";
 export async function POST(req: Request) {
     try {
         const formData = await req.formData();
-
         const name = (formData.get("name")?.toString() || "").trim() || "N/A";
-        const address = (formData.get("address")?.toString() || "").trim() || "N/A";
-        const phone = (formData.get("phone")?.toString() || "").trim() || "N/A";
         const email = (formData.get("email")?.toString() || "").trim() || "N/A";
-        const interest = (formData.get("interest")?.toString() || "").trim() || "N/A";
+        const story = (formData.get("story")?.toString() || "").trim() || "N/A";
+        const attachmentFiles = formData.getAll("attachments") as File[];
 
-        const volunteerActivities = formData
-            .getAll("volunteer_activities[]")
-            .map((v) => v?.toString().trim())
-            .filter(Boolean);
-
-        const activitiesStr =
-            volunteerActivities.length > 0 ? volunteerActivities.join(", ") : "None selected";
-
-        // --- ENV VARS (do NOT hardcode creds) ---
+        // --- ENV VARS ---
         const SMTP_HOST = process.env.SMTP_HOST;
         const SMTP_PORT = Number(process.env.SMTP_PORT || "465");
         const SMTP_SECURE = (process.env.SMTP_SECURE || "true").toLowerCase() === "true";
@@ -28,7 +18,7 @@ export async function POST(req: Request) {
 
         const MAIL_TO = process.env.MAIL_TO || "info@rudolphtinker.com";
         const MAIL_FROM = process.env.MAIL_FROM || `"Rudy Campaign Website" <${SMTP_USER || "no-reply@rudolphtinker.com"}>`;
-        const MAIL_REPLY_TO = process.env.MAIL_REPLY_TO || email; // reply to the volunteer if they provided one
+        const MAIL_REPLY_TO = process.env.MAIL_REPLY_TO || email;
 
         if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
             console.error("Missing SMTP env vars. Check SMTP_HOST/SMTP_USER/SMTP_PASS.");
@@ -38,40 +28,44 @@ export async function POST(req: Request) {
         const transporter = nodemailer.createTransport({
             host: SMTP_HOST,
             port: SMTP_PORT,
-            secure: SMTP_SECURE, // usually true for 465, false for 587
+            secure: SMTP_SECURE,
             auth: { user: SMTP_USER, pass: SMTP_PASS },
         });
 
         const subjectName = name === "N/A" ? "Unknown" : name;
 
+        const attachments: any[] = [];
+        for (const file of attachmentFiles) {
+            if (file && file.size > 0) {
+                const buffer = Buffer.from(await file.arrayBuffer());
+                attachments.push({
+                    filename: file.name,
+                    content: buffer,
+                });
+            }
+        }
+
         const mailOptions = {
             from: MAIL_FROM,
             to: MAIL_TO,
-            replyTo: MAIL_REPLY_TO, // helps you reply directly to the submitter
-            subject: `New Volunteer Sign-Up: ${subjectName}`,
-            text: `New Volunteer Submission
+            replyTo: MAIL_REPLY_TO,
+            subject: `New Veteran Story: ${subjectName}`,
+            text: `New Veteran Story Submission
 
 Name: ${name}
-Address: ${address}
-Phone: ${phone}
 Email: ${email}
 
-Interests:
-${interest}
-
-How they want to help:
-${activitiesStr}
+Story:
+${story}
 `,
             html: `
-        <h2>New Volunteer Submission</h2>
+        <h2>New Veteran Story Submission</h2>
         <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-        <p><strong>Address:</strong> ${escapeHtml(address)}</p>
-        <p><strong>Phone:</strong> ${escapeHtml(phone)}</p>
         <p><strong>Email:</strong> ${escapeHtml(email)}</p>
         <br/>
-        <p><strong>Interests:</strong><br/>${escapeHtml(interest)}</p>
-        <p><strong>Volunteer Activities:</strong><br/>${escapeHtml(activitiesStr)}</p>
+        <p><strong>Story:</strong><br/>${escapeHtml(story)}</p>
       `,
+            attachments,
         };
 
         await transporter.sendMail(mailOptions);
@@ -85,15 +79,15 @@ ${activitiesStr}
             if (match) locale = match[1];
         }
 
-        const thankYouPath = locale === "en" ? "/volunteer/thank-you" : `/${locale}/volunteer/thank-you`;
+        const thankYouPath = locale === "en" ? "/veterans/thank-you" : `/${locale}/veterans/thank-you`;
         return NextResponse.redirect(new URL(thankYouPath, req.url), 303);
+
     } catch (error) {
-        console.error("Error sending email:", error);
-        return NextResponse.json({ error: "Failed to send message" }, { status: 500 });
+        console.error("Error sending veteran story email:", error);
+        return NextResponse.json({ error: "Failed to send story" }, { status: 500 });
     }
 }
 
-// Minimal HTML escaping to avoid accidental HTML injection in email body
 function escapeHtml(input: string) {
     return input
         .replaceAll("&", "&amp;")
