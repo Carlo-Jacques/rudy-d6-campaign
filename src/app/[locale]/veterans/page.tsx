@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 import ContentContainer from '@/components/ContentContainer';
 import VeteranStoryForm from '@/components/VeteranStoryForm';
+import VeteranCarousel from '@/components/VeteranCarousel';
 
 export default async function VeteranPage({
     params,
@@ -83,7 +84,8 @@ export default async function VeteranPage({
             {/* VA Section */}
             <section className="bg-patriot-red py-20 border-y border-patriot-red">
                 <ContentContainer>
-                    <div className="mx-auto max-w-3xl text-center">
+                    {/* Main VA Content centered */}
+                    <div className="mx-auto max-w-3xl text-center mb-16">
                         <h2 className="text-sm font-bold uppercase tracking-widest text-white/90">
                             {t('va.subtitle')}
                         </h2>
@@ -91,6 +93,29 @@ export default async function VeteranPage({
                             {t('va.title')}
                         </h3>
                         <div className="mt-8 text-lg leading-relaxed text-white/90" dangerouslySetInnerHTML={{ __html: t.raw('va.content') }} />
+                    </div>
+
+                    {/* Child Grid for Testimonials (like endorsements page) */}
+                    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                        {/* Shawn Ellis Tile */}
+                        <div className="flex flex-col items-center text-center p-8 rounded-2xl bg-white/10 border border-white/10 shadow-xl transition-all duration-300 hover:bg-white/20 hover:scale-[1.02]">
+                            <div className="relative w-full aspect-[3/4] mb-6 overflow-hidden rounded-xl">
+                                <VeteranCarousel />
+                            </div>
+                            <h3 className="text-xl font-bold tracking-tight text-white">
+                                {t('shawn.name')}
+                            </h3>
+                            <h4 className="text-sm font-medium text-white/80 mt-1">
+                                {t('shawn.title')}
+                            </h4>
+                            <p className="mt-4 text-sm leading-relaxed text-white/90 italic">
+                                "{t('shawn.content')}"
+                            </p>
+                        </div>
+
+                        {/* Placeholders to maintain 3x1 grid visual */}
+                        <div className="h-full w-full rounded-2xl bg-white/5 border border-white/5 opacity-40 hidden sm:block" />
+                        <div className="h-full w-full rounded-2xl bg-white/5 border border-white/5 opacity-40 hidden lg:block" />
                     </div>
                 </ContentContainer>
             </section>
