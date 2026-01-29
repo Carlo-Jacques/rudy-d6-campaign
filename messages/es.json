@@ -4,6 +4,7 @@
     "endorsements": "Endosos",
     "district6": "Distrito 6",
     "volunteer": "Voluntario",
+    "gallery": "Galería",
     "donate": "Donar",
     "petition": "Petición",
     "priorities": "Prioridades",
@@ -634,5 +635,11 @@
       "description": "Hemos recibido su respaldo. Su apoyo significa mucho para nosotros y ayuda a construir un Distrito 6 más fuerte.",
       "returnHome": "Volver al inicio"
     }
+  },
+  "gallery": {
+    "title": "Galería de la Campaña",
+    "description": "Fotos y actualizaciones de la campaña.",
+    "metaDescription": "Ver fotos y actualizaciones de la campaña de Rudolph Tinker para el Distrito 6.",
+    "loadMore": "Cargar más"
   }
 }

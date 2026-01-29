@@ -4,6 +4,7 @@
     "endorsements": "Aprobasyon",
     "district6": "Distrik 6",
     "volunteer": "Volontè",
+    "gallery": "Galerie",
     "donate": "Fè yon don",
     "petition": "Petisyon",
     "priorities": "Priyorite",
@@ -634,5 +635,11 @@
       "description": "Nou resevwa aprobasyon w la. Sipò w vle di anpil pou nou epi li ede bati yon Distrik 6 ki pi fò.",
       "returnHome": "Retounen lakay"
     }
+  },
+  "gallery": {
+    "title": "Galri Kanpay",
+    "description": "Foto ak mizajou nan kanpay la.",
+    "metaDescription": "Gade foto ak mizajou kanpay Rudolph Tinker pou Distrik 6 la.",
+    "loadMore": "Chaje Plis"
   }
 }
