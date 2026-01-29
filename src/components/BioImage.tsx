@@ -41,12 +41,12 @@ export default function BioImage() {
         >
             <div
                 className={`w-full transition-all duration-1000 ease-out ${isVisible
-                        ? "opacity-100 translate-y-0"
-                        : "opacity-0 translate-y-8"
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
                     }`}
             >
                 <Image
-                    src="/img/rudy_and_family.webp"
+                    src="/img/rudolph_tinker_with_family.webp"
                     alt="Rudolph Tinker and Family"
                     width={600}
                     height={800}

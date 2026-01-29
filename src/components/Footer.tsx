@@ -38,7 +38,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="inline-block mb-6">
               <img
-                src="/img/logo-rudy.webp"
+                src="/img/rudolph_commisioner_district_6.webp"
                 alt="Rudolph Tinker for Palm Beach Commissioner District 6"
                 className="h-36 w-auto object-contain"
               />

@@ -87,7 +87,7 @@ export default function Header() {
       >
         <Link href="/" className={cn("flex items-center gap-2", isHomePage && !scrolled ? "mb-2" : "")}>
           <motion.img
-            src="/img/logo-rudy.webp"
+            src="/img/rudolph_commisioner_district_6.webp"
             alt="Rudy Campaign Logo"
             className="w-auto object-contain"
             animate={{

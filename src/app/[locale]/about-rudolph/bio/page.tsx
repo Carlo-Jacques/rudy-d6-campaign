@@ -84,7 +84,7 @@ export default async function BioPage({
           </div>
 
           {/* Right side - Image (first on mobile, right on desktop) */}
-          <div className="order-1 lg:order-2 lg:sticky lg:top-12 lg:self-start">
+          <div className="order-1 lg:order-2 lg:sticky lg:top-20 lg:self-start">
             <BioImage />
           </div>
         </div>
