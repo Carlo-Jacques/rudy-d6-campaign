@@ -37,6 +37,12 @@ export default async function EndorsementsPage({
             business: "Vyder General Contractors",
             logo: "/img/endorsements/vyder_general_contractors_logo.webp",
             url: "#",
+        },
+        {
+            name: "Noel H. Flasterstein",
+            business: "Law Offices of Noel H. Flasterstein, P.A.",
+            logo: "/img/endorsements/Noel_Flasterstein_Logo.png",
+            url: "https://flgunlaw.com/",
         }
     ];
 
@@ -74,7 +80,7 @@ export default async function EndorsementsPage({
                                 href={endorsement.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group flex flex-col items-center justify-center p-8 rounded-2xl bg-white/10 hover:bg-white/20 transition-all duration-300 border border-white/10 hover:border-white/20 hover:scale-[1.02] shadow-xl text-center"
+                                className="group flex flex-col items-center justify-center p-8 rounded-2xl bg-white/10 hover:bg-white/20 transition-all duration-300 border border-white/10 hover:border-white/20 hover:scale-[1.02] shadow-xl text-center h-full"
                             >
                                 <div className="relative w-full aspect-square mb-6">
                                     <Image
@@ -92,11 +98,15 @@ export default async function EndorsementsPage({
                         ))}
 
                         {/* Remaining placeholders */}
-                        {Array.from({ length: 4 }).map((_, i) => (
+                        {Array.from({ length: 3 }).map((_, i) => (
                             <div
                                 key={`placeholder-${i}`}
-                                className="aspect-square rounded-2xl bg-white/5 border border-white/5 opacity-40"
-                            />
+                                className="flex flex-col items-center justify-center p-8 rounded-2xl bg-white/5 border border-white/5 opacity-40 text-center h-full"
+                            >
+                                <div className="relative w-full aspect-square mb-6">
+                                    {/* Placeholder for logo */}
+                                </div>
+                            </div>
                         ))}
                     </div>
                 </ContentContainer>
