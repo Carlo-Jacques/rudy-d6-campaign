@@ -3,7 +3,7 @@
 # https://llmstxt.org/
 
 site: https://rudolphtinker.com
-site_name: Rudolph “Rudy” Tinker for Palm Beach County Commissioner – District 6
+site_name: Rudolph “Rudy” Tinker for Palm Beach County Commissioner District 6
 language: en-US
 region: US-FL
 content_type: political_campaign

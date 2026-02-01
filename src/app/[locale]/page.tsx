@@ -31,7 +31,7 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* 10-POINT PLAN */}
+      {/* 7-POINT PLAN */}
       <section id="plan" className="w-full overflow-hidden">
         {/* Header */}
         <div className="mx-auto max-w-7xl px-4 py-12" style={{ paddingLeft: "calc(1rem + 20px)", paddingRight: "calc(1rem + 20px)" }}>

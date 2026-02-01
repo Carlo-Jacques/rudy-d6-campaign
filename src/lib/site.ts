@@ -1,5 +1,5 @@
 export const site = {
-  name: "Rudolph Tinker for County Commissioner",
+  name: "Rudolph Tinker for Palm Beach County Commissioner District 6",
   district: "District 6",
   // donateUrl: "/donate",
   // volunteerUrl: "/volunteer",
