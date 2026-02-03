@@ -43,6 +43,18 @@ export default async function EndorsementsPage({
             business: "Law Offices of Noel H. Flasterstein, P.A.",
             logo: "/img/endorsements/Noel_Flasterstein_Logo.png",
             url: "https://flgunlaw.com/",
+        },
+        {
+            name: "Dev Ramgoolam",
+            business: "Sunshine Tents & Event Rentals",
+            logo: "/img/endorsements/Sunshine_Tents_Event_Rentals.webp",
+            url: "https://sunshinetentsfl.com/",
+        },
+        {
+            name: "Racheem Sagay",
+            business: "BioBusters Remediation, LLC",
+            logo: "/img/endorsements/BioBusters_Remediation_LLC.webp",
+            url: "https://thebiobusters.com/",
         }
     ];
 
