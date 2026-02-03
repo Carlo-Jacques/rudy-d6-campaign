@@ -206,6 +206,17 @@ export default function Header() {
           <Link
             className={cn(
               "text-sm font-medium transition-colors",
+              pathname === "/gallery"
+                ? "text-patriot-red"
+                : scrolled ? "text-black hover:text-black" : "text-white hover:text-white/80"
+            )}
+            href="/gallery"
+          >
+            Gallery
+          </Link>
+          <Link
+            className={cn(
+              "text-sm font-medium transition-colors",
               pathname === t('urls.veterans')
                 ? "text-patriot-red"
                 : scrolled ? "text-black hover:text-black" : "text-white hover:text-white/80"
@@ -469,6 +480,18 @@ export default function Header() {
                 )}
               >
                 {t('district6')}
+              </Link>
+              <Link
+                href="/gallery"
+                onClick={() => setOpen(false)}
+                className={cn(
+                  "rounded-xl px-3 py-3 text-base font-semibold transition-colors",
+                  pathname === "/gallery"
+                    ? "text-patriot-red bg-patriot-red/5"
+                    : "hover:bg-black/5"
+                )}
+              >
+                Gallery
               </Link>
               <Link
                 href={t('urls.veterans')}

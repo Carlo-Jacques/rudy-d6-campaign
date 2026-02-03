@@ -19,42 +19,56 @@ export default async function EndorsementsPage({
             business: "Charlotte's Web Design",
             logo: "/img/endorsements/charlottes_web_design_logo.webp",
             url: "https://charlottesweb.design/",
+            comment: "Rudolph Tinker has also been forthright with me and I endorse his candidacy",
         },
         {
             name: "Israel Perez",
             business: "I.P. Screen Enclosures",
             logo: "/img/endorsements/ip_screen_logo.jpg",
             url: "https://www.facebook.com/people/Ip-Screen-Enclosures-LLC/61583392904282/",
+            comment: "I've known Rudy for a long time and trust him",
         },
         {
             name: "Minesh Mohan",
             business: "Skyline Motel",
             logo: "/img/endorsements/Skyline_motel_logo.PNG",
             url: "#",
+            comment: "I endorse Rudolph Tinker",
         },
         {
             name: "Viktoriia Zelenkova",
             business: "Vyder General Contractors",
             logo: "/img/endorsements/vyder_general_contractors_logo.webp",
             url: "#",
+            comment: "Awesome Contractor!!!!!!!!!!!",
         },
         {
             name: "Noel H. Flasterstein",
             business: "Law Offices of Noel H. Flasterstein, P.A.",
             logo: "/img/endorsements/Noel_Flasterstein_Logo.png",
             url: "https://flgunlaw.com/",
+            comment: "Rudy helped with a permitting and contracting issue when no one else did",
         },
         {
             name: "Dev Ramgoolam",
             business: "Sunshine Tents & Event Rentals",
             logo: "/img/endorsements/Sunshine_Tents_Event_Rentals.webp",
             url: "https://sunshinetentsfl.com/",
+            comment: "Rudolph is a military veteran who has done a lot for our country.",
         },
         {
             name: "Racheem Sagay",
             business: "BioBusters Remediation, LLC",
             logo: "/img/endorsements/BioBusters_Remediation_LLC.webp",
             url: "https://thebiobusters.com/",
+            comment: "I believe in the principles in the values that Rudolph stands for; lower property taxes, youth recreation centers, and revamping code enforcement.",
+        },
+        {
+            name: "Chris Kleppin, Esq.",
+            business: "Kleppin Law Firm",
+            logo: "/img/endorsements/kleppin_logo.webp",
+            url: "https://www.kleppinlawfirm.com",
+            comment: "I endorse Rudolph Tinker.",
         }
     ];
 
@@ -92,7 +106,7 @@ export default async function EndorsementsPage({
                                 href={endorsement.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group flex flex-col items-center justify-center p-8 rounded-2xl bg-white/10 hover:bg-white/20 transition-all duration-300 border border-white/10 hover:border-white/20 hover:scale-[1.02] shadow-xl text-center h-full"
+                                className="group flex flex-col items-center justify-start p-8 rounded-2xl bg-white/10 hover:bg-white/20 transition-all duration-300 border border-white/10 hover:border-white/20 hover:scale-[1.02] shadow-xl text-center h-full"
                             >
                                 <div className="relative w-full aspect-square mb-6">
                                     <Image
@@ -106,6 +120,11 @@ export default async function EndorsementsPage({
                                     {endorsement.business}
                                 </h3>
                                 <h4 className="text-sm font-medium text-white/80 mt-1">{endorsement.name}</h4>
+                                {endorsement.comment && (
+                                    <p className="text-sm text-white/90 mt-4 italic">
+                                        &quot;{endorsement.comment}&quot;
+                                    </p>
+                                )}
                             </Link>
                         ))}
 

@@ -11,63 +11,27 @@ export default function GalleryPage() {
     const galleryItems = [
         {
             id: '1',
-            src: '/img/D6-Map.jpg',
-            alt: 'District 6 Map',
-            caption: 'Covering 1,300 square miles, District 6 is the heart of Palm Beach County, blending agricultural heritage with growing communities.'
+            src: '/img/gallery/John%20McGovern%20Fundraiser/1.jpeg',
+            alt: 'John McGovern Fundraiser',
+            caption: 'John McGovern Fundraiser'
         },
         {
             id: '2',
-            src: '/img/rudolph-tinker-preparedness.webp',
-            alt: 'Community Preparedness',
-            caption: 'Ensuring our neighborhoods are ready for any challenge, from storm season to economic shifts. Preparation is the key to resilience.'
+            src: '/img/gallery/John%20McGovern%20Fundraiser/2.jpeg',
+            alt: 'John McGovern Fundraiser',
+            caption: 'John McGovern Fundraiser'
         },
         {
             id: '3',
-            src: '/img/veterans-desktop.webp',
-            alt: 'Supporting Veterans',
-            caption: 'Advocating for those who served. We must ensure our veterans have access to the resources and support they earned.'
+            src: '/img/gallery/John%20McGovern%20Fundraiser/3.jpeg',
+            alt: 'John McGovern Fundraiser',
+            caption: 'John McGovern Fundraiser'
         },
         {
             id: '4',
-            src: '/img/rudolph-tinker-why-i-want-to-run-poster.webp',
-            alt: 'Why I Run',
-            caption: 'A campaign built on principles, not politics. Rudolph Tinker is running to bring transparency and accountability back to the county commission.'
-        },
-        {
-            id: '5',
-            src: '/img/military-rudolph-tinker-garage.webp',
-            alt: 'Service & Duty',
-            caption: 'From serving in the U.S. Army to serving the community, duty has always been the guiding principle of Rudolph’s life.'
-        },
-        {
-            id: '6',
-            src: '/img/rudy-away-look.JPG',
-            alt: 'Vision for the Future',
-            caption: 'Looking ahead to a brighter future for District 6. Strategizing on how to lower taxes while improving infrastructure.'
-        },
-        {
-            id: '7',
-            src: '/img/rudy_and_family.webp',
-            alt: 'Family First',
-            caption: 'Strong families make strong communities. Building a district where families can thrive, grow, and feel safe.'
-        },
-        {
-            id: '8',
-            src: '/img/endorsement-banner-rudy.webp',
-            alt: 'Community Support',
-            caption: 'Grateful for the overwhelming support from local leaders, business owners, and residents who believe in our mission.'
-        },
-        {
-            id: '9',
-            src: '/img/loxahatchee-hero-2.webp',
-            alt: 'Loxahatchee Landscapes',
-            caption: 'Preserving the unique rural character and natural beauty of Loxahatchee and our western communities.'
-        },
-        {
-            id: '10',
-            src: '/img/image_6483441-preparedness.JPG',
-            alt: 'Field Work',
-            caption: 'Boots on the ground. Assessing infrastructure needs directly at the source to ensure efficient and effective solutions.'
+            src: '/img/gallery/John%20McGovern%20Fundraiser/4.jpeg',
+            alt: 'John McGovern Fundraiser',
+            caption: 'John McGovern Fundraiser'
         }
     ];
 

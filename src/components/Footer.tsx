@@ -115,6 +115,19 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/gallery"
+                  className={cn(
+                    "text-sm font-medium transition-colors",
+                    pathname === "/gallery"
+                      ? "text-patriot-red"
+                      : "text-white/80 hover:text-white"
+                  )}
+                >
+                  Gallery
+                </Link>
+              </li>
+              <li>
+                <Link
                   href={t('urls.veterans')}
                   className={cn(
                     "text-sm font-medium transition-colors",
