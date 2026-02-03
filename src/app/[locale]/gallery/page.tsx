@@ -32,6 +32,12 @@ export default function GalleryPage() {
             src: '/img/gallery/John%20McGovern%20Fundraiser/4.jpeg',
             alt: 'John McGovern Fundraiser',
             caption: 'John McGovern Fundraiser'
+        },
+        {
+            id: '5',
+            src: '/img/gallery/John%20McGovern%20Fundraiser/5.jpeg',
+            alt: 'John McGovern Fundraiser',
+            caption: 'John McGovern Fundraiser'
         }
     ];
 
