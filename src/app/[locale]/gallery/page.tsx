@@ -11,33 +11,33 @@ export default function GalleryPage() {
     const galleryItems = [
         {
             id: '1',
-            src: '/img/gallery/John%20McGovern%20Fundraiser/1.jpeg',
+            src: '/img/gallery/John McGovern Fundraiser 1.jpeg',
             alt: 'John McGovern Fundraiser',
             caption: 'John McGovern Fundraiser'
         },
         {
             id: '2',
-            src: '/img/gallery/John%20McGovern%20Fundraiser/2.jpeg',
+            src: '/img/gallery/John McGovern Fundraiser 2.jpeg',
             alt: 'John McGovern Fundraiser',
             caption: 'John McGovern Fundraiser'
         },
         {
             id: '3',
-            src: '/img/gallery/John%20McGovern%20Fundraiser/3.jpeg',
+            src: '/img/gallery/John McGovern Fundraiser 3.jpeg',
             alt: 'John McGovern Fundraiser',
             caption: 'John McGovern Fundraiser'
         },
         {
             id: '4',
-            src: '/img/gallery/John%20McGovern%20Fundraiser/4.jpeg',
-            alt: 'John McGovern Fundraiser',
-            caption: 'John McGovern Fundraiser'
+            src: '/img/gallery/Loading Container for CAFCI to Send to Jamaica Hurrican Melissa Relief.jpeg',
+            alt: 'Loading Container for CAFCI to Send to Jamaica Hurricane Melissa Relief',
+            caption: 'Loading Container for CAFCI to Send to Jamaica Hurricane Melissa Relief'
         },
         {
             id: '5',
-            src: '/img/gallery/John%20McGovern%20Fundraiser/5.jpeg',
-            alt: 'John McGovern Fundraiser',
-            caption: 'John McGovern Fundraiser'
+            src: "/img/gallery/Voter's Registration Office - Officially Filed.jpeg",
+            alt: "Voter's Registration Office - Officially Filed",
+            caption: "Voter's Registration Office - Officially Filed"
         }
     ];
 
