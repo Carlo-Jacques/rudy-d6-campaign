@@ -641,5 +641,9 @@
     "description": "Foto ak mizajou nan kanpay la.",
     "metaDescription": "Gade foto ak mizajou kanpay Rudolph Tinker pou Distrik 6 la.",
     "loadMore": "Chaje Plis"
+  },
+  "notFound": {
+    "message": "Paj sa a pa egziste.",
+    "cta": "Retounen lakay"
   }
 }

@@ -646,5 +646,9 @@
     "description": "Photos and updates from the campaign trail.",
     "metaDescription": "View photos and updates from Rudolph Tinker's campaign for District 6.",
     "loadMore": "Load More"
+  },
+  "notFound": {
+    "message": "This page doesn’t exist.",
+    "cta": "Return home"
   }
 }

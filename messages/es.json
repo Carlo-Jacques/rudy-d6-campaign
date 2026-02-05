@@ -641,5 +641,9 @@
     "description": "Fotos y actualizaciones de la campaña.",
     "metaDescription": "Ver fotos y actualizaciones de la campaña de Rudolph Tinker para el Distrito 6.",
     "loadMore": "Cargar más"
+  },
+  "notFound": {
+    "message": "Esta página no existe.",
+    "cta": "Volver al inicio"
   }
 }
