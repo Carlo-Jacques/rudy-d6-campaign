@@ -1,3 +1,5 @@
+import fs from 'fs';
+import path from 'path';
 import { useTranslations } from 'next-intl';
 import MasonryGallery from '@/components/MasonryGallery';
 import Header from '@/components/Header';
@@ -5,41 +7,32 @@ import Footer from '@/components/Footer';
 
 export default function GalleryPage() {
     const t = useTranslations('gallery');
-    const tCommon = useTranslations('common');
 
-    // Placeholder data - in a real app this might come from a CMS or structured JSON
-    const galleryItems = [
-        {
-            id: '1',
-            src: '/img/gallery/John McGovern Fundraiser 1.jpeg',
-            alt: 'John McGovern Fundraiser',
-            caption: 'John McGovern Fundraiser'
-        },
-        {
-            id: '2',
-            src: '/img/gallery/John McGovern Fundraiser 2.jpeg',
-            alt: 'John McGovern Fundraiser',
-            caption: 'John McGovern Fundraiser'
-        },
-        {
-            id: '3',
-            src: '/img/gallery/John McGovern Fundraiser 3.jpeg',
-            alt: 'John McGovern Fundraiser',
-            caption: 'John McGovern Fundraiser'
-        },
-        {
-            id: '4',
-            src: '/img/gallery/Loading Container for CAFCI to Send to Jamaica Hurrican Melissa Relief.jpeg',
-            alt: 'Loading Container for CAFCI to Send to Jamaica Hurricane Melissa Relief',
-            caption: 'Loading Container for CAFCI to Send to Jamaica Hurricane Melissa Relief'
-        },
-        {
-            id: '5',
-            src: "/img/gallery/Voter's Registration Office - Officially Filed.jpeg",
-            alt: "Voter's Registration Office - Officially Filed",
-            caption: "Voter's Registration Office - Officially Filed"
-        }
-    ];
+    // Dynamically read images from public/img/gallery
+    const galleryDir = path.join(process.cwd(), 'public', 'img', 'gallery');
+    let galleryItems: { id: string; src: string; alt: string; caption: string }[] = [];
+
+    try {
+        const files = fs.readdirSync(galleryDir);
+        galleryItems = files
+            .filter(file => file.toLowerCase().endsWith('.webp'))
+            .map((file, index) => {
+                const nameWithoutExt = path.parse(file).name;
+                // Basic cleanup of filename for alt/caption
+                const cleanName = nameWithoutExt
+                    .replace(/\(\d+\)/g, '') // Remove (1), (2), etc.
+                    .trim();
+
+                return {
+                    id: String(index + 1),
+                    src: `/img/gallery/${file}`,
+                    alt: cleanName,
+                    caption: cleanName
+                };
+            });
+    } catch (error) {
+        console.error('Error reading gallery directory:', error);
+    }
 
     return (
         <>

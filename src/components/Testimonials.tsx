@@ -83,12 +83,42 @@ export default function Testimonials() {
                             key={index}
                             onClick={() => setCurrentIndex(index)}
                             className={`h-2.5 rounded-full transition-all duration-300 ${index === currentIndex
-                                    ? "w-8 bg-patriot-red"
-                                    : "w-2.5 bg-white/30 hover:bg-white/50"
+                                ? "w-8 bg-patriot-red"
+                                : "w-2.5 bg-white/30 hover:bg-white/50"
                                 }`}
                             aria-label={`Go to slide ${index + 1}`}
                         />
                     ))}
+                </div>
+
+                {/* Read Reviews Link */}
+                <div className="mt-8 text-center px-4">
+                    <a
+                        href="https://www.ratemyprofessors.com/professor/2997560"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors duration-200 group"
+                    >
+                        <span className="text-sm font-semibold tracking-wide uppercase border-b border-white/20 pb-0.5 group-hover:border-white/50 transition-colors">
+                            Read Reviews
+                        </span>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="translate-y-px"
+                        >
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
             </div>
 
