@@ -45,14 +45,21 @@ export default function MasonryGallery({ items }: MasonryGalleryProps) {
                         transition={{ duration: 0.2 }}
                     >
                         <div className="relative w-full">
-                            <Image
-                                src={item.src}
-                                alt={item.alt}
-                                width={item.width || 800}
-                                height={item.height || 600}
-                                className="w-full h-auto object-cover"
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                            />
+                            {item.src.toLowerCase().endsWith('.pdf') ? (
+                                <div className="w-full aspect-[3/4] bg-gray-100 flex flex-col items-center justify-center p-6 text-center border overflow-hidden">
+                                    <Image src="/file.svg" alt="PDF Icon" width={64} height={64} className="mb-4 opacity-50" />
+                                    <span className="text-gray-600 font-medium line-clamp-3">{item.alt}</span>
+                                </div>
+                            ) : (
+                                <Image
+                                    src={item.src}
+                                    alt={item.alt}
+                                    width={item.width || 800}
+                                    height={item.height || 600}
+                                    className="w-full h-auto object-cover"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                />
+                            )}
                             {/* Hover Caption Preview */}
                             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <p className="text-white text-sm font-medium line-clamp-2">{item.caption}</p>
@@ -92,29 +99,39 @@ export default function MasonryGallery({ items }: MasonryGalleryProps) {
                             className="relative max-w-5xl w-full max-h-full bg-white rounded-lg overflow-hidden shadow-2xl flex flex-col"
                             onClick={(e) => e.stopPropagation()} // Prevent close on clicking content
                         >
-                            {/* Image */}
-                            <div className="relative w-full h-auto max-h-[60vh] md:max-h-[70vh] flex items-center justify-center overflow-hidden bg-gray-50">
-                                {/* Dynamic Blurred Background */}
-                                <div className="absolute inset-0 z-0">
-                                    <Image
+                            {/* Content */}
+                            <div className="relative w-full h-auto max-h-[60vh] md:max-h-[70vh] flex flex-col items-center justify-center overflow-hidden bg-gray-50">
+                                {selectedItem.src.toLowerCase().endsWith('.pdf') ? (
+                                    <iframe
                                         src={selectedItem.src}
-                                        alt=""
-                                        fill
-                                        className="object-cover blur-2xl scale-110 saturate-150"
-                                        aria-hidden="true"
-                                        quality={50}
+                                        className="relative z-10 w-full h-[60vh] md:h-[70vh] shadow-2xl bg-white border-0"
+                                        title={selectedItem.alt}
                                     />
-                                </div>
+                                ) : (
+                                    <>
+                                        {/* Dynamic Blurred Background */}
+                                        <div className="absolute inset-0 z-0">
+                                            <Image
+                                                src={selectedItem.src}
+                                                alt=""
+                                                fill
+                                                className="object-cover blur-2xl scale-110 saturate-150"
+                                                aria-hidden="true"
+                                                quality={50}
+                                            />
+                                        </div>
 
-                                {/* Main Image */}
-                                <Image
-                                    src={selectedItem.src}
-                                    alt={selectedItem.alt}
-                                    width={1200}
-                                    height={800}
-                                    className="relative z-10 w-auto h-auto max-w-full max-h-[60vh] md:max-h-[70vh] object-contain shadow-2xl"
-                                    priority
-                                />
+                                        {/* Main Image */}
+                                        <Image
+                                            src={selectedItem.src}
+                                            alt={selectedItem.alt}
+                                            width={1200}
+                                            height={800}
+                                            className="relative z-10 w-auto h-auto max-w-full max-h-[60vh] md:max-h-[70vh] object-contain shadow-2xl"
+                                            priority
+                                        />
+                                    </>
+                                )}
                             </div>
 
                             {/* Caption Section */}

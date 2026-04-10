@@ -15,7 +15,10 @@ export default function GalleryPage() {
     try {
         const files = fs.readdirSync(galleryDir);
         galleryItems = files
-            .filter(file => file.toLowerCase().endsWith('.webp'))
+            .filter(file => {
+                const ext = path.extname(file).toLowerCase();
+                return ['.webp', '.png', '.jpg', '.jpeg', '.pdf'].includes(ext);
+            })
             .map((file, index) => {
                 const nameWithoutExt = path.parse(file).name;
                 // Basic cleanup of filename for alt/caption
@@ -24,8 +27,8 @@ export default function GalleryPage() {
                     .trim();
 
                 return {
-                    id: String(index + 1),
-                    src: `/img/gallery/${file}`,
+                    id: `gallery-item-${index}`,
+                    src: `/img/gallery/${encodeURIComponent(file)}`,
                     alt: cleanName,
                     caption: cleanName
                 };
