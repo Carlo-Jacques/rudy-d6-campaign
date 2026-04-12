@@ -178,19 +178,6 @@ export default function Footer() {
                   Donate
                 </Link>
               </li>
-              <li>
-                <Link
-                  href={t('urls.petition')}
-                  className={cn(
-                    "text-sm font-medium transition-colors",
-                    pathname === t('urls.petition')
-                      ? "text-patriot-red"
-                      : "text-white/80 hover:text-white"
-                  )}
-                >
-                  Petition
-                </Link>
-              </li>
             </ul>
           </div>
 

@@ -313,13 +313,6 @@ export default function Header() {
             {t('donate')}
           </Button>
 
-          <Button
-            href={t('urls.petition')}
-            variant="petition"
-            size="sm"
-          >
-            {t('petition')}
-          </Button>
 
           <LanguageSwitcher scrolled={isHomePage ? scrolled : true} />
         </nav>
@@ -327,14 +320,6 @@ export default function Header() {
         {/* Mobile controls */}
         <div className="flex items-center gap-2 md:hidden">
           <LanguageSwitcher scrolled={isHomePage ? scrolled : true} />
-
-          <Button
-            href={t('urls.petition')}
-            variant="petition"
-            size="md"
-          >
-            {t('petition')}
-          </Button>
 
 
           <button
@@ -594,15 +579,6 @@ export default function Header() {
               </Link>
 
               <div className="mt-2 grid gap-2">
-                <Button
-                  href={t('urls.petition')}
-                  variant="petition"
-                  size="md"
-                  className="w-full"
-                >
-                  {t('petition')}
-                </Button>
-
                 <Button href={t('urls.donate')} variant="donate" size="md" className="w-full">
                   {t('donate')}
                 </Button>

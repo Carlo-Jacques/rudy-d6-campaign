@@ -71,56 +71,12 @@ export default function Hero() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                         {/* Left Side - Petition Div */}
                         <div className="rounded-3xl border border-black/10 bg-white p-6 sm:p-8 md:-mt-36" style={{ display: 'flex', flexWrap: 'wrap', zIndex: 1 }}>
-                            <div className="w-full">
-                                <h2 className="text-xl font-bold">
-                                    {tHome('petition.title')}
-                                </h2>
-
-                                <p className="mt-3 text-black/75">
-                                    {tHome('petition.description')}
-                                </p>
-
-                                <ul className="mt-4 list-disc space-y-2 pl-5 text-black/80">
-                                    <li>
-                                        {tHome('petition.option1')}
-                                    </li>
-                                    <li>
-                                        {tHome('petition.option2')}
-                                    </li>
-                                </ul>
-
-                                <p className="mt-4 text-black/75">
-                                    {tHome('petition.ballotTax')}
-                                </p>
-
-                                <p className="mt-4 font-semibold text-black">{tHome('petition.grassroots')}</p>
-
-                                <p className="mt-4 text-black/75">
-                                    {tHome('petition.ask')}
-                                </p>
-
-                                <div className="mt-6 p-4 bg-black/[0.02] rounded-lg border border-black/10">
-                                    <p className="text-sm font-semibold text-black mb-2">{tHome('petition.printAndMail')}</p>
-                                    <p className="text-sm text-black/80 whitespace-pre-line">
-                                        {tHome('petition.address')}
-                                    </p>
-                                </div>
-
-                                {/* PDF Viewer */}
-                                <div className="mt-6 relative w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] border border-black/10 rounded-lg overflow-hidden bg-gray-100">
-                                    <iframe
-                                        src="/documents/petition_form.pdf#view=FitH"
-                                        className="w-full h-full"
-                                        title="Petition Form"
-                                        onError={() => setShowFallback(true)}
-                                    />
-                                    {showFallback && (
-                                        <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center text-gray-500 bg-gray-100">
-                                            <p className="mb-2">{tHome('petition.pdfNotSupported')}</p>
-                                            <a href="/documents/petition_form.pdf" className="text-patriot-blue hover:underline font-medium">{tHome('petition.downloadLink')}</a>
-                                        </div>
-                                    )}
-                                </div>
+                            <div className="w-full flex flex-col justify-center items-center">
+                                <img
+                                    src="/img/gallery/Petition%20Update.png"
+                                    alt="Petition Qualified Update"
+                                    className="w-full h-auto rounded-lg object-contain border border-black/10 shadow-sm"
+                                />
                             </div>
                         </div>
 
