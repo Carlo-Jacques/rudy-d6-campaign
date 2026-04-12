@@ -61,9 +61,11 @@ export default function MasonryGallery({ items }: MasonryGalleryProps) {
                                 />
                             )}
                             {/* Hover Caption Preview */}
-                            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <p className="text-white text-sm font-medium line-clamp-2">{item.caption}</p>
-                            </div>
+                            {item.caption && (
+                                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <p className="text-white text-sm font-medium line-clamp-2">{item.caption}</p>
+                                </div>
+                            )}
                         </div>
                     </motion.div>
                 ))}
@@ -135,17 +137,23 @@ export default function MasonryGallery({ items }: MasonryGalleryProps) {
                             </div>
 
                             {/* Caption Section */}
-                            <motion.div
-                                className="p-6 bg-white overflow-y-auto max-h-[30vh]"
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.2 }}
-                            >
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">{selectedItem.alt}</h3>
-                                <p className="text-gray-600 text-base leading-relaxed">
-                                    {selectedItem.caption}
-                                </p>
-                            </motion.div>
+                            {(selectedItem.alt || selectedItem.caption) && (
+                                <motion.div
+                                    className="p-6 bg-white overflow-y-auto max-h-[30vh]"
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.2 }}
+                                >
+                                    {selectedItem.alt && (
+                                        <h3 className="text-xl font-bold text-gray-900 mb-2">{selectedItem.alt}</h3>
+                                    )}
+                                    {selectedItem.caption && (
+                                        <p className="text-gray-600 text-base leading-relaxed">
+                                            {selectedItem.caption}
+                                        </p>
+                                    )}
+                                </motion.div>
+                            )}
                         </motion.div>
                     </motion.div>
                 )}

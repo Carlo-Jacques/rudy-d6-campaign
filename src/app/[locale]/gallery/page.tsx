@@ -21,6 +21,17 @@ export default function GalleryPage() {
             })
             .map((file, index) => {
                 const nameWithoutExt = path.parse(file).name;
+
+                // Keep title and caption empty for WhatsApp images
+                if (nameWithoutExt.toLowerCase().startsWith('whatsapp')) {
+                    return {
+                        id: `gallery-item-${index}`,
+                        src: `/img/gallery/${encodeURIComponent(file)}`,
+                        alt: '',
+                        caption: ''
+                    };
+                }
+
                 // Basic cleanup of filename for alt/caption
                 const cleanName = nameWithoutExt
                     .replace(/\(\d+\)/g, '') // Remove (1), (2), etc.
