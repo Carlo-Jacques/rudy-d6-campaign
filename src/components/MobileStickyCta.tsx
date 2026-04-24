@@ -15,16 +15,7 @@ export default function MobileStickyCta() {
 
       <div className="relative border-t border-black/10 px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3">
         <div className="mx-auto flex max-w-6xl justify-center items-center gap-2">
-          <Button
-            href={t_common("urls.petition")}
-            variant="petition"
-            size="md"
-          >
-            {t("signPetition")}
-          </Button>
-
-
-          <Button href={t_common("urls.donate")} variant="donate" size="md" className="shrink-0">
+          <Button href={t_common("urls.donate")} variant="donate" size="md" className="w-full max-w-sm">
             {t("donate")}
           </Button>
         </div>

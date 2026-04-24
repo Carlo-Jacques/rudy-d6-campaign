@@ -46,9 +46,15 @@ export default function MasonryGallery({ items }: MasonryGalleryProps) {
                     >
                         <div className="relative w-full">
                             {item.src.toLowerCase().endsWith('.pdf') ? (
-                                <div className="w-full aspect-[3/4] bg-gray-100 flex flex-col items-center justify-center p-6 text-center border overflow-hidden">
-                                    <Image src="/file.svg" alt="PDF Icon" width={64} height={64} className="mb-4 opacity-50" />
-                                    <span className="text-gray-600 font-medium line-clamp-3">{item.alt}</span>
+                                <div className="relative w-full aspect-[3/4] bg-gray-100 flex flex-col items-center justify-center border overflow-hidden">
+                                    <iframe 
+                                        src={`${item.src}#toolbar=0&navpanes=0&scrollbar=0`} 
+                                        className="absolute inset-0 w-full h-full border-0 pointer-events-none" 
+                                        title={item.alt}
+                                        scrolling="no"
+                                    />
+                                    {/* Invisible overlay to prevent interaction */}
+                                    <div className="absolute inset-0 z-10 bg-transparent"></div>
                                 </div>
                             ) : (
                                 <Image

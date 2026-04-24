@@ -186,7 +186,7 @@ export default function Header() {
               "text-sm font-medium transition-colors",
               pathname === "/endorsements"
                 ? "text-patriot-red"
-                : scrolled ? "text-black hover:text-black" : "text-white hover:text-white/80"
+                : (isHomePage && !scrolled) ? "text-white hover:text-white/80" : "text-black hover:text-black"
             )}
             href="/endorsements"
           >
@@ -197,7 +197,7 @@ export default function Header() {
               "text-sm font-medium transition-colors",
               pathname === "/district-6"
                 ? "text-patriot-red"
-                : scrolled ? "text-black hover:text-black" : "text-white hover:text-white/80"
+                : (isHomePage && !scrolled) ? "text-white hover:text-white/80" : "text-black hover:text-black"
             )}
             href="/district-6"
           >
@@ -208,7 +208,7 @@ export default function Header() {
               "text-sm font-medium transition-colors",
               pathname === "/gallery"
                 ? "text-patriot-red"
-                : scrolled ? "text-black hover:text-black" : "text-white hover:text-white/80"
+                : (isHomePage && !scrolled) ? "text-white hover:text-white/80" : "text-black hover:text-black"
             )}
             href="/gallery"
           >
@@ -217,9 +217,20 @@ export default function Header() {
           <Link
             className={cn(
               "text-sm font-medium transition-colors",
+              pathname === "/news"
+                ? "text-patriot-red"
+                : (isHomePage && !scrolled) ? "text-white hover:text-white/80" : "text-black hover:text-black"
+            )}
+            href="/news"
+          >
+            News
+          </Link>
+          <Link
+            className={cn(
+              "text-sm font-medium transition-colors",
               pathname === t('urls.veterans')
                 ? "text-patriot-red"
-                : scrolled ? "text-black hover:text-black" : "text-white hover:text-white/80"
+                : (isHomePage && !scrolled) ? "text-white hover:text-white/80" : "text-black hover:text-black"
             )}
             href={t('urls.veterans')}
           >
@@ -302,7 +313,7 @@ export default function Header() {
               "text-sm font-medium transition-colors",
               pathname === t('urls.volunteer')
                 ? "text-patriot-red"
-                : scrolled ? "text-black hover:text-black" : "text-white hover:text-white/80"
+                : (isHomePage && !scrolled) ? "text-white hover:text-white/80" : "text-black hover:text-black"
             )}
             href={t('urls.volunteer')}
           >
@@ -477,6 +488,18 @@ export default function Header() {
                 )}
               >
                 Gallery
+              </Link>
+              <Link
+                href="/news"
+                onClick={() => setOpen(false)}
+                className={cn(
+                  "rounded-xl px-3 py-3 text-base font-semibold transition-colors",
+                  pathname === "/news"
+                    ? "text-patriot-red bg-patriot-red/5"
+                    : "hover:bg-black/5"
+                )}
+              >
+                News
               </Link>
               <Link
                 href={t('urls.veterans')}
