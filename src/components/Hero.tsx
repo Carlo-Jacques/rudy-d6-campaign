@@ -73,7 +73,7 @@ export default function Hero() {
                         <div className="rounded-3xl border border-black/10 bg-white p-6 sm:p-8 md:-mt-36" style={{ display: 'flex', flexWrap: 'wrap', zIndex: 1 }}>
                             <div className="w-full flex flex-col justify-center items-center">
                                 <img
-                                    src="/img/gallery/Mission%20accomplished_%20petition%20success%20announced.png"
+                                    src="/img/Mission accomplished_ petition success announced.webp"
                                     alt="Mission accomplished, petition success announced"
                                     className="w-full h-auto rounded-lg object-contain border border-black/10 shadow-sm"
                                 />
