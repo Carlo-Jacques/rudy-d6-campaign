@@ -35,6 +35,7 @@ export default function GalleryPage() {
                 // Basic cleanup of filename for alt/caption
                 const cleanName = nameWithoutExt
                     .replace(/\(\d+\)/g, '') // Remove (1), (2), etc.
+                    .replace(/_/g, ' ')      // Replace underscores with spaces
                     .trim();
 
                 return {
