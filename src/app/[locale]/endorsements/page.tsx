@@ -24,7 +24,7 @@ export default async function EndorsementsPage({
         {
             name: "Carlo Jacques",
             business: "Charlotte's Web Design",
-            logo: "/img/endorsements/charlottes_web_design_logo.webp",
+            logo: "/img/endorsements/charlottes_web_design_logo.png",
             url: "https://charlottesweb.design/",
             comment: "Rudolph Tinker has been forthright, transparent, and principled in every interaction I’ve had with him. He listens, he follows through, and he leads with integrity. I proudly endorse his candidacy and believe he will serve District 6 with honesty and accountability.",
         },
@@ -38,7 +38,7 @@ export default async function EndorsementsPage({
         {
             name: "Minesh Mohan",
             business: "Skyline Motel",
-            logo: "/img/endorsements/Skyline_motel_logo.PNG",
+            logo: "/img/endorsements/skyline_motel.webp",
             url: "#",
             comment: "I’ve known Rudolph since 1995, and over the years I’ve watched him grow into a disciplined, educated, and principled leader. His dedication to education, his service in the military, and his success as a businessperson all reflect his commitment to hard work and accountability. Most importantly, he has always stayed dedicated to his community and the people around him.",
         },
