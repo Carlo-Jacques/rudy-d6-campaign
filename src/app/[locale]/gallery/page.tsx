@@ -17,7 +17,7 @@ export default function GalleryPage() {
         galleryItems = files
             .filter(file => {
                 const ext = path.extname(file).toLowerCase();
-                return ['.webp', '.png', '.jpg', '.jpeg', '.pdf'].includes(ext);
+                return ['.webp', '.png', '.jpg', '.jpeg', '.pdf', '.mp4'].includes(ext);
             })
             .map((file, index) => {
                 const nameWithoutExt = path.parse(file).name;

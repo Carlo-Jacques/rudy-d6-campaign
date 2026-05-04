@@ -56,6 +56,27 @@ export default function MasonryGallery({ items }: MasonryGalleryProps) {
                                     {/* Invisible overlay to prevent interaction */}
                                     <div className="absolute inset-0 z-10 bg-transparent"></div>
                                 </div>
+                            ) : item.src.toLowerCase().endsWith('.mp4') ? (
+                                <div className="relative w-full aspect-video bg-black flex flex-col items-center justify-center overflow-hidden">
+                                    <video
+                                        src={item.src}
+                                        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                                        muted
+                                        loop
+                                        autoPlay
+                                        playsInline
+                                    />
+                                    {/* Invisible overlay to prevent interaction */}
+                                    <div className="absolute inset-0 z-10 bg-transparent"></div>
+                                    {/* Play icon overlay */}
+                                    <div className="absolute inset-0 flex items-center justify-center z-20">
+                                        <div className="rounded-full bg-white/20 backdrop-blur-sm p-4">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
                             ) : (
                                 <Image
                                     src={item.src}
@@ -114,6 +135,13 @@ export default function MasonryGallery({ items }: MasonryGalleryProps) {
                                         src={selectedItem.src}
                                         className="relative z-10 w-full h-[60vh] md:h-[70vh] shadow-2xl bg-white border-0"
                                         title={selectedItem.alt}
+                                    />
+                                ) : selectedItem.src.toLowerCase().endsWith('.mp4') ? (
+                                    <video
+                                        src={selectedItem.src}
+                                        className="relative z-10 w-auto h-auto max-w-full max-h-[60vh] md:max-h-[70vh] object-contain shadow-2xl bg-black"
+                                        controls
+                                        autoPlay
                                     />
                                 ) : (
                                     <>

@@ -16,6 +16,14 @@ type NewsArticle = {
 
 const articles: NewsArticle[] = [
   {
+    id: "4",
+    date: "5/2/2026",
+    category: "Campaign",
+    title: "Acreage/Loxahatchee Resident Eyes County Commission Seat",
+    excerpt: "If Acreage/Loxahatchee resident Rudolph “Rudy” Tinker was going to qualify for the Palm Beach County Commission’s District 6 race via petition, he knew he was going to have to get creative. Door knocking was getting him little more than sore knuckles.",
+    url: "https://gotowncrier.com/2026/05/acreage-loxahatchee-resident-eyes-county-commission-seat/",
+  },
+  {
     id: "0",
     date: "1/9/2026",
     category: "Aid",

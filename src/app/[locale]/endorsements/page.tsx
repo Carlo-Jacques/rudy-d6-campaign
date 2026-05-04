@@ -15,6 +15,13 @@ export default async function EndorsementsPage({
 
     const endorsements = [
         {
+            name: "Pat Emmert, President",
+            business: "Palm Beach/Treasure Coast AFL-CIO",
+            logo: "/img/endorsements/Unions of Palm Beach-Treasure Coast AFL-CIO.png",
+            url: "https://flaflcio.org/",
+            comment: "",
+        },
+        {
             name: "Carlo Jacques",
             business: "Charlotte's Web Design",
             logo: "/img/endorsements/charlottes_web_design_logo.webp",
