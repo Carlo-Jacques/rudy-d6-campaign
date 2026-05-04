@@ -17,9 +17,9 @@ export default async function EndorsementsPage({
         {
             name: "Pat Emmert, President",
             business: "Palm Beach/Treasure Coast AFL-CIO",
-            logo: "/img/endorsements/Unions of Palm Beach-Treasure Coast AFL-CIO.png",
+            logo: "/img/endorsements/Palm-Beach-LOGO.webp",
             url: "https://flaflcio.org/",
-            comment: "",
+            comment: "Rudolph Tinker has received the endorsement of Unions of Palm Beach-treasure Coast AFL-CIO for Palm Beach County Commisioner, District 6.",
         },
         {
             name: "Carlo Jacques",
