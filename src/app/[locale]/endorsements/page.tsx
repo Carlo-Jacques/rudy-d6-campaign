@@ -15,11 +15,33 @@ export default async function EndorsementsPage({
 
     const endorsements = [
         {
+            name: "Janet B. Taylor",
+            business: "Former Hendry County Commissioner & Civil Rights Pioneer",
+            logo: "/img/endorsements/Taylor Endorsement.webp",
+            url: "#",
+            description: "Janet B. Taylor is a civil rights pioneer, former law enforcement officer, and one of Hendry County's most respected public servants. A former farmworker, she broke barriers as the first Black female police officer in the history of the Clewiston Police Department and later served 22 years as a Hendry County Commissioner from 1994 to 2016.\n\nCommissioner Taylor has dedicated her life to public service, community advocacy, and expanding opportunities for future generations. I am honored to have the endorsement of such a distinguished leader and trailblazer.",
+        },
+        {
+            name: "Gordan Longhofer, President",
+            business: "Palm Beach County Classroom Teachers Association (PBCCTA)",
+            logo: "/img/endorsements/PBCCTA.png",
+            url: "https://palmbeachcountycta.org",
+            description: "The Palm Beach County Classroom Teachers Association (PBCCTA), representing nearly 7,000 educators, has officially endorsed Dr. Rudolph \"Rudy\" Tinker for Palm Beach County Commission District 6.\n\nThe endorsement was unanimously recommended by the PBCCTA Political Action Committee in recognition of Dr. Tinker's commitment to public education, teachers, and student success.",
+            comment: "We are proud to endorse Dr. Rudolph 'Rudy' Tinker and look forward to working with him on issues important to educators, students, and our communities.",
+        },
+        {
+            name: "Martha Baker, RN, President",
+            business: "SEIU Florida State Council",
+            logo: "/img/endorsements/SEIU.png",
+            url: "https://www.seiufl.org/",
+            description: "Representing more than 60,000 active and retired members across Florida and 2.1 million members nationwide, SEIU Florida has officially endorsed Dr. Rudolph \"Rudy\" Tinker for Palm Beach County Commission District 6.\n\nSEIU Florida supports Dr. Tinker's commitment to working families, economic opportunity, quality public services, and strong communities.",
+        },
+        {
             name: "Pat Emmert, President",
             business: "Palm Beach/Treasure Coast AFL-CIO",
             logo: "/img/endorsements/Palm-Beach-AFL-CIO.webp",
             url: "https://flaflcio.org/",
-            comment: "Rudolph Tinker has received the endorsement of Unions of Palm Beach-treasure Coast AFL-CIO for Palm Beach County Commisioner, District 6.",
+            description: "Rudolph Tinker has received the endorsement of Unions of Palm Beach-treasure Coast AFL-CIO for Palm Beach County Commisioner, District 6.",
         },
         {
             name: "Carlo Jacques",
@@ -141,8 +163,13 @@ export default async function EndorsementsPage({
                                     {endorsement.business}
                                 </h3>
                                 <h4 className="text-sm font-medium text-white/80 mt-1">{endorsement.name}</h4>
+                                {endorsement.description && (
+                                    <p className="text-sm text-white/90 mt-4 leading-relaxed text-left w-full whitespace-pre-line">
+                                        {endorsement.description}
+                                    </p>
+                                )}
                                 {endorsement.comment && (
-                                    <p className="text-sm text-white/90 mt-4 italic">
+                                    <p className="text-sm text-white/90 mt-4 italic leading-relaxed text-left w-full">
                                         &quot;{endorsement.comment}&quot;
                                     </p>
                                 )}
