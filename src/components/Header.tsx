@@ -4,7 +4,6 @@ import { Link, usePathname } from "@/i18n/navigation";
 import { useTranslations } from 'next-intl';
 import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { site } from "@/lib/site";
 import { cn } from "@/lib/cn";
 import Button from "@/components/ui/Button";
 import { landingPageTiles } from "@/lib/priorities";
@@ -320,7 +319,7 @@ export default function Header() {
             {t('volunteer')}
           </Link>
 
-          <Button href={t('urls.donate')} variant="donate" size="sm">
+          <Button href={t('urls.donate')} variant="donate">
             {t('donate')}
           </Button>
 
