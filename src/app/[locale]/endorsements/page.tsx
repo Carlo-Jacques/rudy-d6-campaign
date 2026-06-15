@@ -1,8 +1,7 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import EndorsementForm from "@/components/EndorsementForm";
 import ContentContainer from "@/components/ContentContainer";
-import Image from "next/image";
-import { Link } from "@/i18n/navigation";
+import EndorsementsGrid from "@/components/EndorsementsGrid";
 
 export default async function EndorsementsPage({
     params,
@@ -14,6 +13,7 @@ export default async function EndorsementsPage({
     const t = await getTranslations('common');
 
     const endorsements = [
+        /* Temporarily hiding Janet B. Taylor endorsement
         {
             name: "Janet B. Taylor",
             business: "Former Hendry County Commissioner & Civil Rights Pioneer",
@@ -21,6 +21,7 @@ export default async function EndorsementsPage({
             url: "#",
             description: "Janet B. Taylor is a civil rights pioneer, former law enforcement officer, and one of Hendry County's most respected public servants. A former farmworker, she broke barriers as the first Black female police officer in the history of the Clewiston Police Department and later served 22 years as a Hendry County Commissioner from 1994 to 2016.\n\nCommissioner Taylor has dedicated her life to public service, community advocacy, and expanding opportunities for future generations. I am honored to have the endorsement of such a distinguished leader and trailblazer.",
         },
+        */
         {
             name: "Gordan Longhofer, President",
             business: "Palm Beach County Classroom Teachers Association (PBCCTA)",
@@ -42,6 +43,33 @@ export default async function EndorsementsPage({
             logo: "/img/endorsements/Palm-Beach-AFL-CIO.webp",
             url: "https://flaflcio.org/",
             description: "Rudolph Tinker has received the endorsement of Unions of Palm Beach-treasure Coast AFL-CIO for Palm Beach County Commisioner, District 6.",
+        },
+        {
+            name: "Barbara King",
+            business: "Commissioner, City of Pahokee",
+            logo: "/img/endorsements/Commissioner Barbara King.webp",
+            url: "",
+            comment: "Dr. Rudolph Tinker is the kind of leader Palm Beach County needs - experienced, committed, and ready to fight for our families. He's someone who truly lives in our community and understands our challenges. He has my full support!",
+        },
+        {
+            name: "Marcia Andrews",
+            business: "Palm Beach School District 6 Commissioner",
+            logo: "/img/endorsements/Commissioner Marcia Andrews.webp",
+            url: "",
+            comment: "He is outstanding, got his signatures, military veteran, teacher and professor, has lived in his community for more than 25 years",
+        },
+        {
+            name: "Dr. Robert Watson",
+            business: "Professor",
+            logo: "/img/endorsements/DrRobert Watson.webp",
+            url: "",
+        },
+        {
+            name: "Angie Nixon",
+            business: "Florida House Representative",
+            logo: "/img/endorsements/FL Rep Angie Nixon.webp",
+            url: "",
+            comment: "Dr. Rudy Tinker is a man of integrity, vision, and commitment to our community. He will be a strong voice for District 6 and will work tirelessly to improve the lives of our residents. I am proud to endorse him for Palm Beach County Commissioner",
         },
         {
             name: "Carlo Jacques",
@@ -142,52 +170,7 @@ export default async function EndorsementsPage({
             {/* Endorsements Grid Section */}
             <section className="bg-patriot-red py-16 text-white">
                 <ContentContainer>
-                    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                        {endorsements.map((endorsement, i) => (
-                            <Link
-                                key={i}
-                                href={endorsement.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group flex flex-col items-center justify-start p-8 rounded-2xl bg-white/10 hover:bg-white/20 transition-all duration-300 border border-white/10 hover:border-white/20 hover:scale-[1.02] shadow-xl text-center h-full"
-                            >
-                                <div className="relative w-full aspect-square mb-6">
-                                    <Image
-                                        src={endorsement.logo}
-                                        alt={`${endorsement.name} logo`}
-                                        fill
-                                        className="object-contain"
-                                    />
-                                </div>
-                                <h3 className="text-xl font-bold tracking-tight text-white group-hover:text-white/90">
-                                    {endorsement.business}
-                                </h3>
-                                <h4 className="text-sm font-medium text-white/80 mt-1">{endorsement.name}</h4>
-                                {endorsement.description && (
-                                    <p className="text-sm text-white/90 mt-4 leading-relaxed text-left w-full whitespace-pre-line">
-                                        {endorsement.description}
-                                    </p>
-                                )}
-                                {endorsement.comment && (
-                                    <p className="text-sm text-white/90 mt-4 italic leading-relaxed text-left w-full">
-                                        &quot;{endorsement.comment}&quot;
-                                    </p>
-                                )}
-                            </Link>
-                        ))}
-
-                        {/* Remaining placeholders */}
-                        {Array.from({ length: 2 }).map((_, i) => (
-                            <div
-                                key={`placeholder-${i}`}
-                                className="flex flex-col items-center justify-center p-8 rounded-2xl bg-white/5 border border-white/5 opacity-40 text-center h-full"
-                            >
-                                <div className="relative w-full aspect-square mb-6">
-                                    {/* Placeholder for logo */}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+                    <EndorsementsGrid endorsements={endorsements} />
                 </ContentContainer>
             </section>
 
