@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { setRequestLocale } from 'next-intl/server';
@@ -6,6 +7,37 @@ import { routing } from '@/i18n/routing';
 import Header from "@/components/Header";
 import MobileStickyCta from "@/components/MobileStickyCta";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://rudolphtinker.com"),
+  title: "Rudolph “Rudy” Tinker for Palm Beach County Commission – District 6",
+  description:
+    "Rudolph “Rudy” Tinker is running for Palm Beach County Commission District 6 to bring accountability, affordability, and real leadership to county government.",
+  openGraph: {
+    title: "Rudolph “Rudy” Tinker for Palm Beach County Commission – District 6",
+    description:
+      "Army veteran, contractor, educator, and candidate for Palm Beach County Commission District 6.",
+    url: "https://rudolphtinker.com/en",
+    siteName: "Rudolph “Rudy” Tinker",
+    images: [
+      {
+        url: "/img/rudolph-tinker.webp",
+        width: 1200,
+        height: 630,
+        alt: "Rudolph Rudy Tinker",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rudolph “Rudy” Tinker for Palm Beach County Commission – District 6",
+    description:
+      "Army veteran, contractor, educator, and candidate for Palm Beach County Commission District 6.",
+    images: ["/img/rudolph-tinker.webp"],
+  },
+};
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
