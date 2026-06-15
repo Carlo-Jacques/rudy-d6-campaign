@@ -74,10 +74,10 @@ export default function EndorsementsGrid({ endorsements }: EndorsementsGridProps
                                         className="object-contain"
                                     />
                                 </div>
-                                <h3 className="text-xl font-bold tracking-tight text-white group-hover:text-white/90">
+                                <h3 className="text-xl font-bold tracking-tight text-white group-hover:text-white/90 text-center w-full">
                                     {endorsement.business}
                                 </h3>
-                                <h4 className="text-sm font-medium text-white/80 mt-1">{endorsement.name}</h4>
+                                <h4 className="text-sm font-medium text-white/80 mt-1 text-center w-full">{endorsement.name}</h4>
                                 {endorsement.description && (
                                     <p className="text-sm text-white/90 mt-4 leading-relaxed text-left w-full whitespace-pre-line">
                                         {endorsement.description}
@@ -100,7 +100,7 @@ export default function EndorsementsGrid({ endorsements }: EndorsementsGridProps
                             onClick={() => handleOpenModal(endorsement)}
                             initial="initial"
                             whileHover="hover"
-                            className="group text-left flex flex-col items-center justify-start p-8 rounded-2xl bg-white/10 hover:bg-white/20 transition-all duration-300 border border-white/10 hover:border-white/20 hover:scale-[1.02] shadow-xl text-center h-full cursor-pointer w-full focus:outline-none focus:ring-2 focus:ring-white/50"
+                            className="group flex flex-col items-center justify-start p-8 rounded-2xl bg-white/10 hover:bg-white/20 transition-all duration-300 border border-white/10 hover:border-white/20 hover:scale-[1.02] shadow-xl text-center h-full cursor-pointer w-full focus:outline-none focus:ring-2 focus:ring-white/50"
                         >
                             {/* Image Container with Lighthouse Sweep Effect */}
                             <div className="relative w-full aspect-square mb-6 overflow-hidden rounded-xl bg-black/5">
@@ -119,10 +119,10 @@ export default function EndorsementsGrid({ endorsements }: EndorsementsGridProps
                                 />
                             </div>
                             
-                            <h3 className="text-xl font-bold tracking-tight text-white group-hover:text-white/90">
+                            <h3 className="text-xl font-bold tracking-tight text-white group-hover:text-white/90 text-center w-full">
                                 {endorsement.business}
                             </h3>
-                            <h4 className="text-sm font-medium text-white/80 mt-1">{endorsement.name}</h4>
+                            <h4 className="text-sm font-medium text-white/80 mt-1 text-center w-full">{endorsement.name}</h4>
                             {endorsement.description && (
                                 <p className="text-sm text-white/90 mt-4 leading-relaxed text-left w-full whitespace-pre-line line-clamp-4">
                                     {endorsement.description}
