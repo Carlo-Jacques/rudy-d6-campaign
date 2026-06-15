@@ -3,11 +3,14 @@
 import Button from "@/components/ui/Button";
 import { useId, useState } from "react";
 import { useTranslations } from 'next-intl';
+import { Link } from "@/i18n/navigation";
 
 export default function VeteranStoryForm() {
     const t = useTranslations('veterans.share.form');
+    const tConsent = useTranslations('common.smsConsent');
     const id = useId();
     const [fileName, setFileName] = useState<string>("");
+    const [phone, setPhone] = useState<string>("");
 
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.files && e.target.files[0]) {
@@ -47,6 +50,21 @@ export default function VeteranStoryForm() {
                 </div>
 
                 <div className="sm:col-span-2">
+                    <label htmlFor={`${id}-phone`} className="block text-sm font-semibold text-gray-900">
+                        {t('phone')}
+                    </label>
+                    <input
+                        type="tel"
+                        name="phone"
+                        id={`${id}-phone`}
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        className="mt-2 block w-full rounded-md border-0 py-2.5 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-patriot-blue sm:text-sm sm:leading-6"
+                        placeholder="(555) 123-4567"
+                    />
+                </div>
+
+                <div className="sm:col-span-2">
                     <label htmlFor={`${id}-story`} className="block text-sm font-semibold text-gray-900">
                         {t('story')}
                     </label>
@@ -58,6 +76,28 @@ export default function VeteranStoryForm() {
                         className="mt-2 block w-full rounded-md border-0 py-2.5 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-patriot-blue sm:text-sm sm:leading-6"
                     />
                 </div>
+
+                <div className="sm:col-span-2">
+                    <label className="flex items-start gap-3 text-sm text-gray-600 cursor-pointer">
+                        <input
+                            type="checkbox"
+                            name="sms_consent"
+                            required={!!phone}
+                            className="mt-1 h-4 w-4 rounded border-gray-300 text-patriot-blue focus:ring-patriot-blue"
+                        />
+                        <span className="text-gray-900">
+                            {tConsent('agreeText')}{" "}
+                            <Link href="/privacy" className="text-patriot-blue hover:underline font-semibold">
+                                {tConsent('privacyPolicy')}
+                            </Link>{" "}
+                            |{" "}
+                            <Link href="/sms-terms" className="text-patriot-blue hover:underline font-semibold">
+                                {tConsent('smsTerms')}
+                            </Link>
+                        </span>
+                    </label>
+                </div>
+
 
                 <div className="sm:col-span-2">
                     <label htmlFor={`${id}-file`} className="block text-sm font-semibold text-gray-900">

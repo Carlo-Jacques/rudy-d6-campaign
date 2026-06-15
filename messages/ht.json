@@ -254,6 +254,7 @@
       "form": {
         "name": "Non konplè",
         "email": "Adrès imèl",
+        "phone": "Nimewo telefòn (opsyonèl)",
         "story": "Istwa w la",
         "upload": "Telechaje foto sèvis ou",
         "submit": "Pataje istwa"

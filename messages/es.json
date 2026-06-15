@@ -254,6 +254,7 @@
       "form": {
         "name": "Nombre completo",
         "email": "Correo electrónico",
+        "phone": "Número de teléfono (opcional)",
         "story": "Tu historia",
         "upload": "Sube fotos de tu servicio",
         "submit": "Compartir historia"

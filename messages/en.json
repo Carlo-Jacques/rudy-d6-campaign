@@ -253,6 +253,7 @@
       "form": {
         "name": "Full Name",
         "email": "Email Address",
+        "phone": "Phone Number (optional)",
         "story": "Your Story",
         "upload": "Upload Photos of Your Service",
         "submit": "Share Story"

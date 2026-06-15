@@ -6,6 +6,7 @@ export async function POST(req: Request) {
         const formData = await req.formData();
         const name = (formData.get("name")?.toString() || "").trim() || "N/A";
         const email = (formData.get("email")?.toString() || "").trim() || "N/A";
+        const phone = (formData.get("phone")?.toString() || "").trim() || "N/A";
         const story = (formData.get("story")?.toString() || "").trim() || "N/A";
         const attachmentFiles = formData.getAll("attachments") as File[];
 
@@ -54,6 +55,7 @@ export async function POST(req: Request) {
 
 Name: ${name}
 Email: ${email}
+Phone: ${phone}
 
 Story:
 ${story}
@@ -62,6 +64,7 @@ ${story}
         <h2>New Veteran Story Submission</h2>
         <p><strong>Name:</strong> ${escapeHtml(name)}</p>
         <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+        <p><strong>Phone:</strong> ${escapeHtml(phone)}</p>
         <br/>
         <p><strong>Story:</strong><br/>${escapeHtml(story)}</p>
       `,
