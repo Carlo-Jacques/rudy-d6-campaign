@@ -10,11 +10,11 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rudolphtinker.com"),
-  title: "Rudolph “Rudy” Tinker for Palm Beach County Commission – District 6",
+  title: "Dr. Rudolph “Rudy” Tinker for Palm Beach County Commission – District 6",
   description:
-    "Rudolph “Rudy” Tinker is running for Palm Beach County Commission District 6 to bring accountability, affordability, and real leadership to county government.",
+    "Dr. Rudolph “Rudy” Tinker is running for Palm Beach County Commission District 6 to bring accountability, affordability, and real leadership to county government.",
   openGraph: {
-    title: "Rudolph “Rudy” Tinker for Palm Beach County Commission – District 6",
+    title: "Dr. Rudolph “Rudy” Tinker for Palm Beach County Commission – District 6",
     description:
       "Army veteran, contractor, educator, and candidate for Palm Beach County Commission District 6.",
     url: "https://rudolphtinker.com/en",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rudolph “Rudy” Tinker for Palm Beach County Commission – District 6",
+    title: "Dr. Rudolph “Rudy” Tinker for Palm Beach County Commission – District 6",
     description:
       "Army veteran, contractor, educator, and candidate for Palm Beach County Commission District 6.",
     images: ["/img/rudolph-tinker.webp"],
