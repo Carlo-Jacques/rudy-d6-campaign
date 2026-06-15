@@ -74,7 +74,7 @@ export default async function District6Page({
         <div className="relative lg:h-full">
           <div className="sticky top-24 overflow-hidden rounded-2xl border border-black/10 shadow-lg">
             <Image
-              src="/img/D6-Map.jpg"
+              src="/img/Palm-Beach-County-District-6-Map.webp"
               alt="Map of Palm Beach County District 6"
               width={800}
               height={1000}
