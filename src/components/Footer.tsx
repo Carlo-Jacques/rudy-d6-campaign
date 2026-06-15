@@ -52,9 +52,14 @@ export default function Footer() {
               <p>Phone: <a href="tel:5616601580" className="font-semibold text-white/80 hover:text-white transition-colors">(561) 660-1580</a> | <a href="tel:5616602436" className="font-semibold text-white/80 hover:text-white transition-colors">(561) 660-2436</a></p>
               <p>E-mail: <a href="mailto:info@rudolphtinker.com" className="text-sm font-medium text-white/80 hover:text-white transition-colors">info@rudolphtinker.com</a></p>
             </div>
-            <Link href="/privacy" className="mt-6 inline-block text-sm font-medium text-white/80 hover:text-white transition-colors uppercase">
-              Privacy Policy
-            </Link>
+            <div className="mt-6 flex flex-col gap-2">
+              <Link href="/privacy" className="text-sm font-medium text-white/80 hover:text-white transition-colors uppercase">
+                Privacy Policy
+              </Link>
+              <Link href="/sms-terms" className="text-sm font-medium text-white/80 hover:text-white transition-colors uppercase">
+                SMS Terms
+              </Link>
+            </div>
           </div>
 
           {/* Middle Column - Quick Links */}

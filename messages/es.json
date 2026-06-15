@@ -27,6 +27,11 @@
       "volunteer": "/volunteer",
       "petition": "/petition",
       "veterans": "/veterans"
+    },
+    "smsConsent": {
+      "agreeText": "Acepto recibir llamadas de campaña, mensajes de texto y mensajes de voz de Amigos de Rudolph Tinker en el número proporcionado, incluso a través de tecnología automatizada. Se pueden aplicar tarifas de mensajes y datos. La frecuencia de los mensajes varía. Responda STOP para optar por la exclusión, HELP para obtener ayuda.",
+      "privacyPolicy": "Política de privacidad",
+      "smsTerms": "Términos de SMS"
     }
   },
   "mobileCta": {
@@ -504,113 +509,45 @@
   },
   "privacy": {
     "meta": {
-      "title": "Política de Privacidad",
-      "description": "Política de Privacidad del comité de campaña de Florida de Rudolph Tinker."
+      "title": "Política de privacidad",
+      "description": "Política de privacidad del sitio web de la campaña de Amigos de Rudolph Tinker."
     },
-    "title": "Política de Privacidad",
-    "effectiveDateLabel": "Fecha de vigencia:",
-    "intro": "Esta Política de Privacidad explica cómo el comité de campaña de Florida de Rudolph Tinker (“nosotros”) recopila, utiliza y protege la información cuando usted visita o interactúa con este sitio web.",
-    "s1": {
-      "title": "1. Información que recopilamos",
-      "lead": "Podemos recopilar los siguientes tipos de información cuando usted la proporciona voluntariamente o cuando utiliza este sitio web:",
-      "personal": {
-        "title": "Información personal que usted proporciona",
-        "items": {
-          "name": "Nombre",
-          "email": "Dirección de correo electrónico",
-          "phone": "Número de teléfono",
-          "forms": "Información enviada a través de formularios de contacto o registros"
-        }
-      },
-      "auto": {
-        "title": "Información recopilada automáticamente",
-        "items": {
-          "ip": "Dirección IP",
-          "device": "Tipo de navegador y dispositivo",
-          "pages": "Páginas visitadas e interacciones en el sitio"
-        }
-      },
-      "note": "Esta información se recopila mediante herramientas de análisis y tecnologías web estándar."
+    "title": "POLÍTICA DE PRIVACIDAD",
+    "intro": "Amigos de Rudolph Tinker (“la Campaña”) opera este sitio web. Esta política explica qué información recopilamos y cómo la utilizamos.",
+    "whatWeCollect": {
+      "label": "Qué recopilamos:",
+      "text": "Cuando se registra, dona o se ofrece como voluntario, podemos recopilar su nombre, dirección de correo electrónico, número de teléfono y código postal."
     },
-    "s2": {
-      "title": "2. Cómo se recopila la información",
-      "lead": "La información se recopila a través de:",
-      "items": {
-        "forms": "Formularios del sitio web",
-        "email": "Registros por correo electrónico",
-        "donations": "Páginas de donación operadas por terceros",
-        "cookies": "Cookies y herramientas de análisis"
-      }
+    "howWeUseIt": {
+      "label": "Cómo la usamos:",
+      "text": "Para enviarle noticias de la campaña, invitaciones a eventos, recordatorios de votación y mensajes de recaudación de fondos — por correo electrónico, llamada telefónica, mensaje de texto y correo de voz — y para cumplir con la ley de financiamiento de campañas."
     },
-    "s3": {
-      "title": "3. Donaciones",
-      "p1": "Las donaciones realizadas a través de este sitio web son procesadas por ActBlue, un procesador de pagos de terceros. No almacenamos ni procesamos información de tarjetas de pago.",
-      "p2": "La información relacionada con contribuciones políticas puede divulgarse públicamente según lo exijan las leyes electorales federales o del estado de Florida.",
-      "p3": "Consulte la política de privacidad de ActBlue para obtener más información."
+    "textMessaging": {
+      "label": "Mensajes de texto:",
+      "text": "No se compartirá información móvil con terceros o afiliados con fines de marketing o promoción. Los datos de consentimiento y opción de exclusión de mensajes de texto no se compartirán con terceros, excepto con los proveedores que envían mensajes en nuestro nombre."
     },
-    "s4": {
-      "title": "4. Uso de la información",
-      "lead": "Utilizamos la información recopilada para:",
-      "items": {
-        "updates": "Compartir actualizaciones e información de la campaña",
-        "respond": "Responder consultas y mensajes",
-        "acknowledge": "Procesar y reconocer contribuciones",
-        "improve": "Mejorar el rendimiento y la experiencia del sitio web",
-        "comply": "Cumplir con obligaciones legales y de informes"
-      }
+    "sharing": {
+      "label": "Compartir:",
+      "text": "No vendemos su información personal. La compartimos únicamente con los proveedores que nos ayudan a operar (como nuestra plataforma de mensajería) y según lo exija la ley."
     },
-    "s5": {
-      "title": "5. Análisis y cookies",
-      "p1": "Este sitio web utiliza Google Analytics para comprender cómo los visitantes usan el sitio.",
-      "p2": "Puede desactivar las cookies mediante la configuración de su navegador."
-    },
-    "s6": {
-      "title": "6. Compartición y venta de datos",
-      "items": {
-        "noSale": "No vendemos información personal.",
-        "noCommercialShare": "No compartimos información personal con terceros con fines comerciales.",
-        "providers": "La información solo se comparte con proveedores confiables para fines operativos y legales."
-      }
-    },
-    "s7": {
-      "title": "7. Alcance geográfico",
-      "p1": "Este sitio web está destinado únicamente a residentes de los Estados Unidos."
-    },
-    "s8": {
-      "title": "8. Seguridad de los datos",
-      "p1": "Tomamos medidas razonables para proteger la información personal, aunque ningún sistema es completamente seguro."
-    },
-    "s9": {
-      "title": "9. Sus derechos (GDPR y CCPA)",
-      "lead": "Dependiendo de su ubicación, usted puede tener derecho a:",
-      "items": {
-        "access": "Solicitar acceso a su información personal",
-        "correctDelete": "Solicitar corrección o eliminación de su información",
-        "optOut": "Cancelar la suscripción a las comunicaciones"
-      },
-      "ccpa": "Los residentes de California tienen derechos adicionales bajo la Ley de Privacidad del Consumidor de California (CCPA).",
-      "gdpr": "Los residentes de la Unión Europea pueden tener derechos bajo el Reglamento General de Protección de Datos (GDPR).",
-      "contact": "Para ejercer estos derechos, contáctenos."
-    },
-    "s10": {
-      "title": "10. Privacidad de menores",
-      "p1": "Este sitio web no está destinado a menores de 13 años."
-    },
-    "s11": {
-      "title": "11. Cambios a esta política",
-      "p1": "Podemos actualizar esta Política de Privacidad periódicamente."
-    },
-    "s12": {
-      "title": "12. Información de contacto",
-      "lead": "Para preguntas relacionadas con la privacidad, contáctenos:"
+    "optingOut": {
+      "label": "Exclusión voluntaria:",
+      "text1": "Responda STOP a cualquier mensaje de texto para dejar de recibir mensajes. Solicite ser eliminado de nuestra lista de llamadas en cualquier momento. Envíe un correo electrónico a",
+      "text2": "para que se elimine su información."
     },
     "contact": {
-      "org": "Comité de Campaña de Rudolph Tinker",
-      "addr1": "14611 Southern Blvd, Unidad #634",
-      "addr2": "Loxahatchee, FL 33470",
-      "emailLabel": "Correo electrónico:"
+      "label": "Contacto:",
+      "text1": "Amigos de Rudolph Tinker —"
+    }
+  },
+  "smsTerms": {
+    "meta": {
+      "title": "Términos de SMS y mensajes de texto",
+      "description": "Términos y condiciones de SMS y mensajes de texto de Amigos de Rudolph Tinker."
     },
-    "disclaimer": "Publicidad política pagada. Pagada y aprobada por el comité de campaña de Florida de Rudolph Tinker."
+    "title": "TÉRMINOS DE SMS Y MENSAJES DE TEXTO",
+    "text1": "Al registrarse, acepta recibir mensajes recurrentes de la campaña — incluidos mensajes de texto, llamadas telefónicas y mensajes de voz pregrabados — de Amigos de Rudolph Tinker. La frecuencia de los mensajes varía. Se pueden aplicar tarifas de mensajes y datos. El consentimiento no es una condición para donar o recibir servicios. Responda STOP para cancelar, responda HELP para obtener ayuda, o comuníquese con",
+    "text2": "Los operadores de telefonía móvil no son responsables por mensajes retrasados o no entregados. Consulte nuestra Política de privacidad en"
   },
   "endorsements": {
     "form": {

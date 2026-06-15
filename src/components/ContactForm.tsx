@@ -1,10 +1,14 @@
 "use client";
 
 import Button from "@/components/ui/Button";
-import { useId } from "react";
+import { useId, useState } from "react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export default function ContactForm() {
     const id = useId();
+    const [phone, setPhone] = useState("");
+    const tConsent = useTranslations("common.smsConsent");
 
     return (
         <form action="/api/form/contact" method="POST" className="space-y-4">
@@ -44,9 +48,32 @@ export default function ContactForm() {
                     type="tel"
                     name="phone"
                     id={`${id}-phone`}
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
                     className="block w-full rounded-md border-0 bg-white/95 py-2.5 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-patriot-blue sm:text-sm sm:leading-6"
                     placeholder="(555) 123-4567"
                 />
+            </div>
+
+            <div>
+                <label className="flex items-start gap-3 text-sm text-white/90 cursor-pointer">
+                    <input
+                        type="checkbox"
+                        name="sms_consent"
+                        required={!!phone}
+                        className="mt-1 h-4 w-4 rounded border-gray-300 text-patriot-blue focus:ring-patriot-blue"
+                    />
+                    <span>
+                        {tConsent('agreeText')}{" "}
+                        <Link href="/privacy" className="text-white hover:underline font-semibold decoration-white">
+                            {tConsent('privacyPolicy')}
+                        </Link>{" "}
+                        |{" "}
+                        <Link href="/sms-terms" className="text-white hover:underline font-semibold decoration-white">
+                            {tConsent('smsTerms')}
+                        </Link>
+                    </span>
+                </label>
             </div>
 
             <div>

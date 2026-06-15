@@ -27,6 +27,11 @@
       "volunteer": "/volunteer",
       "petition": "/petition",
       "veterans": "/veterans"
+    },
+    "smsConsent": {
+      "agreeText": "Mwen dakò pou m resevwa apèl kanpay, mesaj tèks, ak mesaj vwa nan men Zanmi Rudolph Tinker nan nimewo yo bay la, enkli atravè teknoloji otomatik. Pousantaj mesaj ak done yo ka aplike. Frekans mesaj yo varye. Reponn STOP pou w retire kò w, HELP pou w jwenn èd.",
+      "privacyPolicy": "Politik Privite",
+      "smsTerms": "Kondisyon pou SMS"
     }
   },
   "mobileCta": {
@@ -504,113 +509,45 @@
   },
   "privacy": {
     "meta": {
-      "title": "Règleman sou Konfidansyalite",
-      "description": "Règleman sou Konfidansyalite pou komite kanpay Florid Rudolph Tinker."
+      "title": "Politik privite",
+      "description": "Politik privite pou sit entènèt kanpay Zanmi Rudolph Tinker."
     },
-    "title": "Règleman sou Konfidansyalite",
-    "effectiveDateLabel": "Dat aplikasyon:",
-    "intro": "Règleman sa a eksplike kijan komite kanpay Florid Rudolph Tinker ranmase, itilize, epi pwoteje enfòmasyon lè ou vizite oswa itilize sit sa a.",
-    "s1": {
-      "title": "1. Enfòmasyon nou ranmase",
-      "lead": "Nou ka ranmase enfòmasyon sa yo:",
-      "personal": {
-        "title": "Enfòmasyon pèsonèl ou bay",
-        "items": {
-          "name": "Non",
-          "email": "Adrès imel",
-          "phone": "Nimewo telefòn",
-          "forms": "Enfòmasyon ou soumèt atravè fòm"
-        }
-      },
-      "auto": {
-        "title": "Enfòmasyon ki ranmase otomatikman",
-        "items": {
-          "ip": "Adrès IP",
-          "device": "Kalite aparèy ak navigatè",
-          "pages": "Paj ou vizite sou sit la"
-        }
-      },
-      "note": "Enfòmasyon sa yo ranmase atravè zouti analiz."
+    "title": "POLITIK PRIVITE",
+    "intro": "Zanmi Rudolph Tinker (“Kanpay la”) ap opere sit entènèt sa a. Politik sa a eksplike ki enfòmasyon nou kolekte ak kijan nou itilize li.",
+    "whatWeCollect": {
+      "label": "Sa nou kolekte:",
+      "text": "Lè ou enskri, fè don, oswa travay kòm volontè, nou ka kolekte non ou, adrès imèl, nimewo telefòn, ak kòd postal (ZIP)."
     },
-    "s2": {
-      "title": "2. Kijan enfòmasyon ranmase",
-      "lead": "Nou ranmase enfòmasyon atravè:",
-      "items": {
-        "forms": "Fòm sou sit la",
-        "email": "Enskripsyon imel",
-        "donations": "Paj donasyon twazyèm pati",
-        "cookies": "Bonbon (cookies) ak analiz"
-      }
+    "howWeUseIt": {
+      "label": "Kijan nou itilize li:",
+      "text": "Pou voye nouvèl kanpay ba ou, envitasyon pou evènman, rapèl pou vote, ak mesaj pou ranmase lajan — pa imèl, apèl telefòn, mesaj tèks, ak mesaj vwa — epi pou konfòme nou ak lalwa sou finansman kanpay."
     },
-    "s3": {
-      "title": "3. Donasyon",
-      "p1": "Donasyon sou sit sa a trete pa ActBlue. Nou pa estoke enfòmasyon kat kredi.",
-      "p2": "Enfòmasyon sou donasyon ka piblik selon lwa eleksyon yo.",
-      "p3": "Tanpri gade règleman konfidansyalite ActBlue."
+    "textMessaging": {
+      "label": "Mesaj tèks:",
+      "text": "Yo p ap pataje okenn enfòmasyon mobil avèk twazyèm pati oswa afilye pou rezon maketing oswa pwomosyon. Done enskripsyon (opt-in) pou mesaj tèks ak konsantman p ap pataje avèk okenn twazyèm pati, eksepte pou vandè k ap voye mesaj nan non nou."
     },
-    "s4": {
-      "title": "4. Itilizasyon enfòmasyon",
-      "lead": "Nou itilize enfòmasyon pou:",
-      "items": {
-        "updates": "Voye enfòmasyon kanpay",
-        "respond": "Reponn mesaj",
-        "acknowledge": "Trete donasyon",
-        "improve": "Amelyore sit la",
-        "comply": "Respekte lwa yo"
-      }
+    "sharing": {
+      "label": "Pataje:",
+      "text": "Nou pa vann enfòmasyon pèsonèl ou. Nou pataje li sèlman avèk vandè ki ede nou opere (tankou platfòm mesaj nou an) ak jan lalwa mande sa."
     },
-    "s5": {
-      "title": "5. Bonbon ak analiz",
-      "p1": "Nou itilize Google Analytics pou konprann itilizasyon sit la.",
-      "p2": "Ou ka dezaktive bonbon yo nan navigatè ou."
-    },
-    "s6": {
-      "title": "6. Pataje ak vant done",
-      "items": {
-        "noSale": "Nou pa vann enfòmasyon pèsonèl.",
-        "noCommercialShare": "Nou pa pataje enfòmasyon pou rezon komèsyal.",
-        "providers": "Nou pataje sèlman ak founisè konfyans."
-      }
-    },
-    "s7": {
-      "title": "7. Limit jeyografik",
-      "p1": "Sit sa a fèt sèlman pou rezidan Etazini."
-    },
-    "s8": {
-      "title": "8. Sekirite done",
-      "p1": "Nou pran mezi rezonab pou pwoteje done ou."
-    },
-    "s9": {
-      "title": "9. Dwa ou (GDPR & CCPA)",
-      "lead": "Ou ka gen dwa pou:",
-      "items": {
-        "access": "Mande aksè a done ou",
-        "correctDelete": "Mande koreksyon oswa efasman",
-        "optOut": "Sispann resevwa kominikasyon"
-      },
-      "ccpa": "Rezidan Kalifòni gen dwa anba CCPA.",
-      "gdpr": "Rezidan Inyon Ewopeyen gen dwa anba GDPR.",
-      "contact": "Kontakte nou pou itilize dwa sa yo."
-    },
-    "s10": {
-      "title": "10. Timoun",
-      "p1": "Sit sa a pa fèt pou timoun ki poko gen 13 an."
-    },
-    "s11": {
-      "title": "11. Chanjman",
-      "p1": "Nou ka mete ajou règleman sa a."
-    },
-    "s12": {
-      "title": "12. Kontakte nou",
-      "lead": "Pou kesyon sou konfidansyalite:"
+    "optingOut": {
+      "label": "Retire kò ou:",
+      "text1": "Reponn STOP nan nenpòt mesaj tèks pou w sispann resevwa tèks. Mande pou yo retire w nan lis apèl nou an nenpòt lè. Voye yon imèl bay",
+      "text2": "pou efase enfòmasyon ou yo."
     },
     "contact": {
-      "org": "Komite Kanpay Rudolph Tinker",
-      "addr1": "14611 Southern Blvd, Inite #634",
-      "addr2": "Loxahatchee, FL 33470",
-      "emailLabel": "Imel:"
+      "label": "Kontak:",
+      "text1": "Zanmi Rudolph Tinker —"
+    }
+  },
+  "smsTerms": {
+    "meta": {
+      "title": "Kondisyon pou SMS ak Mesaj Tèks",
+      "description": "Kondisyon pou SMS ak Mesaj Tèks pou Zanmi Rudolph Tinker."
     },
-    "disclaimer": "Piblisite politik peye. Peye ak apwouve pa komite kanpay Florid Rudolph Tinker."
+    "title": "KONDISYON POU SMS AK MESAJ TÈKS",
+    "text1": "Lè ou enskri, ou dakò pou w resevwa mesaj kanpay renouvlab — tankou mesaj tèks, apèl telefòn, ak mesaj vwa pre-anrejistre — nan men Zanmi Rudolph Tinker. Frekans mesaj yo varye. Pousantaj mesaj ak done yo ka aplike. Konsantman se pa yon kondisyon pou w fè don oswa pou w resevwa sèvis. Reponn STOP pou w anile, reponn HELP pou w jwenn èd, oswa kontakte",
+    "text2": "Operatè mobil yo pa responsab pou mesaj ki anreta oswa ki pa delivre. Gade Politik Privite nou an nan"
   },
   "endorsements": {
     "form": {

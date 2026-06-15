@@ -1,18 +1,15 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
-import { useTranslations } from "next-intl";
-
-const EFFECTIVE_DATE = "2025-01-16";
-const PRIVACY_EMAIL = "info@rudycampaign.com";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 // Localized metadata (App Router)
 export async function generateMetadata({
     params,
 }: {
-    params: { locale: string };
+    params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
+    const { locale } = await params;
     const t = await getTranslations({
-        locale: params.locale,
+        locale,
         namespace: "privacy",
     });
 
@@ -23,135 +20,67 @@ export async function generateMetadata({
 }
 
 // IMPORTANT: Accept params so the route is fully compatible with /[locale]/...
-export default function PrivacyPolicyPage({
+export default async function PrivacyPolicyPage({
     params,
 }: {
-    params: { locale: string };
+    params: Promise<{ locale: string }>;
 }) {
-    // params is not required by useTranslations, but keeping it avoids route/typing mismatch
-    void params;
+    const { locale } = await params;
+    setRequestLocale(locale);
 
-    const t = useTranslations("privacy");
+    const t = await getTranslations("privacy");
 
     return (
-        <main className="mx-auto max-w-4xl px-6 pt-28 pb-12">
-            <header className="mb-6">
-                <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+        <main className="mx-auto max-w-4xl px-6 pt-32 pb-16 min-h-[60vh] flex flex-col justify-center">
+            <header className="mb-10 border-b border-gray-100 pb-8">
+                <h1 className="text-4xl font-extrabold tracking-tight text-patriot-blue sm:text-5xl uppercase">
                     {t("title")}
                 </h1>
-                <p className="mt-2 text-sm text-gray-600">
-                    <span className="font-semibold">{t("effectiveDateLabel")}</span>{" "}
-                    {EFFECTIVE_DATE}
-                </p>
             </header>
 
-            <article
-                className="
-          prose prose-gray max-w-none
-          leading-loose
-          prose-p:my-0
-          prose-li:my-0
-          prose-ul:my-0
-          prose-h2:mt-8 prose-h2:mb-2
-          prose-h3:mt-6 prose-h3:mb-2
-        "
-            >
-                <p>{t("intro")}</p>
+            <article className="prose prose-gray max-w-none leading-relaxed space-y-8 text-gray-700 text-lg">
+                <p className="text-xl text-gray-900 font-medium leading-relaxed">
+                    {t("intro")}
+                </p>
 
-                <h2>{t("s1.title")}</h2>
-                <p>{t("s1.lead")}</p>
+                <div className="space-y-6">
+                    <p>
+                        <strong className="text-black block mb-1 text-lg font-bold">{t("whatWeCollect.label")}</strong>
+                        {t("whatWeCollect.text")}
+                    </p>
 
-                <h3>{t("s1.personal.title")}</h3>
-                <ul>
-                    <li>{t("s1.personal.items.name")}</li>
-                    <li>{t("s1.personal.items.email")}</li>
-                    <li>{t("s1.personal.items.phone")}</li>
-                    <li>{t("s1.personal.items.forms")}</li>
-                </ul>
+                    <p>
+                        <strong className="text-black block mb-1 text-lg font-bold">{t("howWeUseIt.label")}</strong>
+                        {t("howWeUseIt.text")}
+                    </p>
 
-                <h3>{t("s1.auto.title")}</h3>
-                <ul>
-                    <li>{t("s1.auto.items.ip")}</li>
-                    <li>{t("s1.auto.items.device")}</li>
-                    <li>{t("s1.auto.items.pages")}</li>
-                </ul>
+                    <p>
+                        <strong className="text-black block mb-1 text-lg font-bold">{t("textMessaging.label")}</strong>
+                        {t("textMessaging.text")}
+                    </p>
 
-                <p>{t("s1.note")}</p>
+                    <p>
+                        <strong className="text-black block mb-1 text-lg font-bold">{t("sharing.label")}</strong>
+                        {t("sharing.text")}
+                    </p>
 
-                <h2>{t("s2.title")}</h2>
-                <p>{t("s2.lead")}</p>
-                <ul>
-                    <li>{t("s2.items.forms")}</li>
-                    <li>{t("s2.items.email")}</li>
-                    <li>{t("s2.items.donations")}</li>
-                    <li>{t("s2.items.cookies")}</li>
-                </ul>
+                    <p>
+                        <strong className="text-black block mb-1 text-lg font-bold">{t("optingOut.label")}</strong>
+                        {t("optingOut.text1")}{" "}
+                        <a href="mailto:info@rudolphtinker.com" className="text-patriot-red hover:underline font-semibold">
+                            info@rudolphtinker.com
+                        </a>{" "}
+                        {t("optingOut.text2")}
+                    </p>
 
-                <h2>{t("s3.title")}</h2>
-                <p>{t("s3.p1")}</p>
-                <p>{t("s3.p2")}</p>
-                <p>{t("s3.p3")}</p>
-
-                <h2>{t("s4.title")}</h2>
-                <p>{t("s4.lead")}</p>
-                <ul>
-                    <li>{t("s4.items.updates")}</li>
-                    <li>{t("s4.items.respond")}</li>
-                    <li>{t("s4.items.acknowledge")}</li>
-                    <li>{t("s4.items.improve")}</li>
-                    <li>{t("s4.items.comply")}</li>
-                </ul>
-
-                <h2>{t("s5.title")}</h2>
-                <p>{t("s5.p1")}</p>
-                <p>{t("s5.p2")}</p>
-
-                <h2>{t("s6.title")}</h2>
-                <ul>
-                    <li>{t("s6.items.noSale")}</li>
-                    <li>{t("s6.items.noCommercialShare")}</li>
-                    <li>{t("s6.items.providers")}</li>
-                </ul>
-
-                <h2>{t("s7.title")}</h2>
-                <p>{t("s7.p1")}</p>
-
-                <h2>{t("s8.title")}</h2>
-                <p>{t("s8.p1")}</p>
-
-                <h2>{t("s9.title")}</h2>
-                <p>{t("s9.lead")}</p>
-                <ul>
-                    <li>{t("s9.items.access")}</li>
-                    <li>{t("s9.items.correctDelete")}</li>
-                    <li>{t("s9.items.optOut")}</li>
-                </ul>
-                <p>{t("s9.ccpa")}</p>
-                <p>{t("s9.gdpr")}</p>
-                <p>{t("s9.contact")}</p>
-
-                <h2>{t("s10.title")}</h2>
-                <p>{t("s10.p1")}</p>
-
-                <h2>{t("s11.title")}</h2>
-                <p>{t("s11.p1")}</p>
-
-                <h2>{t("s12.title")}</h2>
-                <p>{t("s12.lead")}</p>
-
-                <div className="not-prose rounded-2xl border border-gray-200 bg-white p-6">
-                    <div className="font-semibold">{t("contact.org")}</div>
-                    <div>{t("contact.addr1")}</div>
-                    <div>{t("contact.addr2")}</div>
-                    <div className="mt-2">
-                        {t("contact.emailLabel")}{" "}
-                        <span className="font-medium">{PRIVACY_EMAIL}</span>
-                    </div>
+                    <p className="pt-6 border-t border-gray-100">
+                        <strong className="text-black inline-block mr-1 font-bold">{t("contact.label")}</strong>{" "}
+                        {t("contact.text1")}{" "}
+                        <a href="mailto:info@rudolphtinker.com" className="text-patriot-blue hover:underline font-semibold">
+                            info@rudolphtinker.com
+                        </a>
+                    </p>
                 </div>
-
-                <hr />
-
-                <p className="text-sm text-gray-600">{t("disclaimer")}</p>
             </article>
         </main>
     );
