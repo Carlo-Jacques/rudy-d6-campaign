@@ -45,6 +45,32 @@ export default async function EndorsementsPage({
             description: "Rudolph Tinker has received the endorsement of Unions of Palm Beach-treasure Coast AFL-CIO for Palm Beach County Commisioner, District 6.",
         },
         {
+            name: "Judith Thomas",
+            business: "Commissioner, Town of Lake Park",
+            logo: "/img/endorsements/Commissioner Judith Thomas Lake Park.webp",
+            url: "",
+            comment: "Dr. Rudolph \"Rudy\" Tinker is a man of integrity, service, and vision. He has a proven track record of leadership in education, the military, and our community. I am confident that he will be a strong voice for District 6 and work tirelessly to improve the lives of our residents. I am proud to endorse Dr. Rudy Tinker for Palm Beach Commissioner.",
+        },
+        {
+            name: "Michael J. Hensley",
+            business: "Vice Mayor, Town of Lake Park",
+            logo: "/img/endorsements/Vice Mayor Michael J. Hensley Lake Park.webp",
+            url: "",
+        },
+        {
+            name: "Dale Holness",
+            business: "Former Mayor, Broward County",
+            logo: "/img/endorsements/Former Mayor of Broward County Dale Holness.webp",
+            url: "",
+        },
+        {
+            name: "Roger Michaud",
+            business: "Mayor, Town of Lake Park",
+            logo: "/img/endorsements/Mayor Roger Michaud of Lake Park.webp",
+            url: "",
+            comment: "As your Mayor, I know the importance of leadership, integrity, and putting our community first. Dr. Rudolph \"Rudy\" Tinker exemplifies those values. He has the experience, the vision, and the commitment to serve all residents of District 6 with honor and dedication. I am proud to endorse Dr. Rudy Tinker for Palm Beach County Commissioner",
+        },
+        {
             name: "Barbara King",
             business: "Commissioner, City of Pahokee",
             logo: "/img/endorsements/Commissioner Barbara King.webp",

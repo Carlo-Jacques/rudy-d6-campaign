@@ -124,12 +124,12 @@ export default function EndorsementsGrid({ endorsements }: EndorsementsGridProps
                             </h3>
                             <h4 className="text-sm font-medium text-white/80 mt-1 text-center w-full">{endorsement.name}</h4>
                             {endorsement.description && (
-                                <p className="text-sm text-white/90 mt-4 leading-relaxed text-left w-full whitespace-pre-line line-clamp-4">
+                                <p className="text-sm text-white/90 mt-4 leading-relaxed text-left w-full whitespace-pre-line">
                                     {endorsement.description}
                                 </p>
                             )}
                             {endorsement.comment && (
-                                <p className="text-sm text-white/90 mt-4 italic leading-relaxed text-left w-full line-clamp-4">
+                                <p className="text-sm text-white/90 mt-4 italic leading-relaxed text-left w-full">
                                     &quot;{endorsement.comment}&quot;
                                 </p>
                             )}
