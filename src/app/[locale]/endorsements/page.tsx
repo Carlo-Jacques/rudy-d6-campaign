@@ -71,6 +71,12 @@ export default async function EndorsementsPage({
             comment: "As your Mayor, I know the importance of leadership, integrity, and putting our community first. Dr. Rudolph \"Rudy\" Tinker exemplifies those values. He has the experience, the vision, and the commitment to serve all residents of District 6 with honor and dedication. I am proud to endorse Dr. Rudy Tinker for Palm Beach County Commissioner",
         },
         {
+            name: "Lewis Kirschner",
+            business: "Former Ulster County Legislator, Treasurer & Commissioner",
+            logo: "/img/endorsements/Lewis Kirschner.webp",
+            url: "",
+        },
+        {
             name: "Barbara King",
             business: "Commissioner, City of Pahokee",
             logo: "/img/endorsements/Commissioner Barbara King.webp",
