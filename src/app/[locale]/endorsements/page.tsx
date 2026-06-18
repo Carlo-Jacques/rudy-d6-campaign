@@ -104,6 +104,13 @@ export default async function EndorsementsPage({
             comment: "Dr. Rudy Tinker is a man of integrity, vision, and commitment to our community. He will be a strong voice for District 6 and will work tirelessly to improve the lives of our residents. I am proud to endorse him for Palm Beach County Commissioner",
         },
         {
+            name: "Travis Ingraham",
+            business: "Carver Water Tech",
+            logo: "/img/endorsements/Carver Water.webp",
+            url: "https://carverwatertech.com/",
+            comment: "Major Tinker and I serve in the same Army Reserve unit. In the short time I've known him, his leadership, discipline, and integrity stand out immediately, the same qualities that make a good officer make a good public servant. Combine that with his PhD, contracting background, and small business experience, and District 6 is getting someone who actually knows how to get things done. Rudy has my full endorsement.",
+        },
+        {
             name: "Carlo Jacques",
             business: "Charlotte's Web Design",
             logo: "/img/endorsements/charlottes_web_design_logo.png",
