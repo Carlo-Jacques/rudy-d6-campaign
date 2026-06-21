@@ -84,7 +84,7 @@ export default function EndorsementsGrid({ endorsements }: EndorsementsGridProps
                                     </p>
                                 )}
                                 {endorsement.comment && (
-                                    <p className="text-sm text-white/90 mt-4 italic leading-relaxed text-left w-full">
+                                    <p className="text-sm text-white/90 mt-4 italic leading-relaxed text-left w-full whitespace-pre-line">
                                         &quot;{endorsement.comment}&quot;
                                     </p>
                                 )}
@@ -129,7 +129,7 @@ export default function EndorsementsGrid({ endorsements }: EndorsementsGridProps
                                 </p>
                             )}
                             {endorsement.comment && (
-                                <p className="text-sm text-white/90 mt-4 italic leading-relaxed text-left w-full">
+                                <p className="text-sm text-white/90 mt-4 italic leading-relaxed text-left w-full whitespace-pre-line">
                                     &quot;{endorsement.comment}&quot;
                                 </p>
                             )}

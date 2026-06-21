@@ -45,6 +45,13 @@ export default async function EndorsementsPage({
             description: "Rudolph Tinker has received the endorsement of Unions of Palm Beach-treasure Coast AFL-CIO for Palm Beach County Commisioner, District 6.",
         },
         {
+            name: "Thomas Masters",
+            business: "Former Mayor of Riviera Beach",
+            logo: "/img/endorsements/Mayor Thomas Masters.webp",
+            url: "",
+            comment: "Dr. Rudolph \"Rudy\" Tinker is a very hard working man. I met him in 2002 as a Congressional Intern for the late Congressman Alcee Hastings. Mr. Dr. Tinker at that time volunteered at my church radio station helping people repair their credit, giving free advice.\n\nThis is the type of people that do it without looking for anything in return and never spoken about it.",
+        },
+        {
             name: "Judith Thomas",
             business: "Commissioner, Town of Lake Park",
             logo: "/img/endorsements/Commissioner Judith Thomas Lake Park.webp",
