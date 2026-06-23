@@ -74,6 +74,16 @@ export default function ContactForm() {
                         </Link>
                     </span>
                 </label>
+                <p className="mt-2 text-xs text-white/70 leading-relaxed">
+                    {tConsent('disclaimerText')}{" "}
+                    <Link href="/privacy" className="text-white hover:underline font-semibold decoration-white">
+                        {tConsent('privacyPolicy')}
+                    </Link>{" "}
+                    {tConsent('and')}{" "}
+                    <Link href="/sms-terms" className="text-white hover:underline font-semibold decoration-white">
+                        {tConsent('smsTerms')}
+                    </Link>.
+                </p>
             </div>
 
             <div>

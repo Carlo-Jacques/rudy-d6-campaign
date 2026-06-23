@@ -30,6 +30,8 @@
     },
     "smsConsent": {
       "agreeText": "Mwen dakò pou m resevwa apèl kanpay, mesaj tèks, ak mesaj vwa nan men Zanmi Rudolph Tinker nan nimewo yo bay la, enkli atravè teknoloji otomatik. Pousantaj mesaj ak done yo ka aplike. Frekans mesaj yo varye. Reponn STOP pou w retire kò w, HELP pou w jwenn èd.",
+      "disclaimerText": "Lè w soumèt fòm sa a epi enskri pou mesaj tèks, ou dakò pou resevwa kontak votè, demann don, opòtinite volontè, mizajou kanpay, ak mesaj enfòmasyon nan men Zanmi Rudolph Tinker. Pousantaj mesaj ak done yo ka aplike. Frekans mesaj yo varye. Reponn STOP pou dezabòne. Reponn HELP pou èd. Gade",
+      "and": "ak",
       "privacyPolicy": "Politik Privite",
       "smsTerms": "Kondisyon pou SMS"
     }

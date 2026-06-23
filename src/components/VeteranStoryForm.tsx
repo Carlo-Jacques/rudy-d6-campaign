@@ -96,6 +96,16 @@ export default function VeteranStoryForm() {
                             </Link>
                         </span>
                     </label>
+                    <p className="mt-2 text-xs text-gray-500 leading-relaxed">
+                        {tConsent('disclaimerText')}{" "}
+                        <Link href="/privacy" className="text-patriot-blue hover:underline font-semibold">
+                            {tConsent('privacyPolicy')}
+                        </Link>{" "}
+                        {tConsent('and')}{" "}
+                        <Link href="/sms-terms" className="text-patriot-blue hover:underline font-semibold">
+                            {tConsent('smsTerms')}
+                        </Link>.
+                    </p>
                 </div>
 
 

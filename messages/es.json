@@ -30,6 +30,8 @@
     },
     "smsConsent": {
       "agreeText": "Acepto recibir llamadas de campaña, mensajes de texto y mensajes de voz de Amigos de Rudolph Tinker en el número proporcionado, incluso a través de tecnología automatizada. Se pueden aplicar tarifas de mensajes y datos. La frecuencia de los mensajes varía. Responda STOP para optar por la exclusión, HELP para obtener ayuda.",
+      "disclaimerText": "Al enviar este formulario e inscribirse para recibir mensajes de texto, usted acepta recibir comunicaciones de contacto con votantes, solicitudes de donación, oportunidades de voluntariado, actualizaciones de campaña y mensajes informativos de Amigos de Rudolph Tinker. Se pueden aplicar tarifas de mensajes y datos. La frecuencia de los mensajes varía. Responda STOP para cancelar la suscripción. Responda HELP para obtener ayuda. Vea nuestra",
+      "and": "y",
       "privacyPolicy": "Política de privacidad",
       "smsTerms": "Términos de SMS"
     }

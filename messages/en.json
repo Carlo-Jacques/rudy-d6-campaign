@@ -28,7 +28,9 @@
       "veterans": "/veterans"
     },
     "smsConsent": {
-      "agreeText": "I agree to receive campaign calls, text messages, and voicemail messages from Friends of Rudolph Tinker at the number provided, including via automated technology. Msg & data rates may apply. Msg frequency varies. Reply STOP to opt out, HELP for help.",
+      "agreeText": "I agree to receive campaign calls, text messages, and voicemail messages from Friends of Rudolph Tinker, including messages related to campaign updates, events, volunteer opportunities, voter outreach, and donation or fundraising requests, at the number provided, including via automated technology. Consent is not a condition of donation or support. Msg & data rates may apply. Msg frequency varies. Reply STOP to opt out, HELP for help.",
+      "disclaimerText": "By submitting this form and signing up for texts, you consent to receive voter contact, donation requests, volunteer opportunities, campaign updates, and informational messages from Friends of Rudolph Tinker. Msg & data rates may apply. Msg frequency varies. Reply STOP to unsubscribe. Reply HELP for help. View our",
+      "and": "and",
       "privacyPolicy": "Privacy Policy",
       "smsTerms": "SMS Terms"
     }
