@@ -20,8 +20,45 @@ export default function VeteranStoryForm() {
         }
     };
 
+    const [submitting, setSubmitting] = useState(false);
+
+    const handleSubmit = async (
+        e: React.SyntheticEvent<HTMLFormElement, SubmitEvent>
+    ) => {
+        e.preventDefault();
+        setSubmitting(true);
+
+        try {
+            await window.grecaptcha.enterprise.ready(async () => {
+                const token = await window.grecaptcha.enterprise.execute(
+                    process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!,
+                    { action: "veteran_story_form" }
+                );
+
+                const formData = new FormData(e.currentTarget);
+                formData.append("recaptchaToken", token);
+
+                const res = await fetch("/api/form/veteran-story", {
+                    method: "POST",
+                    body: formData,
+                });
+
+                if (!res.ok) {
+                    throw new Error("Form submission failed");
+                }
+
+                window.location.href = "/thank-you";
+            });
+        } catch (error) {
+            console.error(error);
+            alert("Something went wrong. Please try again.");
+        } finally {
+            setSubmitting(false);
+        }
+    };
+
     return (
-        <form action="/api/form/veteran-story" method="POST" encType="multipart/form-data" className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid gap-6 sm:grid-cols-2">
                 <div className="sm:col-span-2">
                     <label htmlFor={`${id}-name`} className="block text-sm font-semibold text-gray-900">
@@ -143,8 +180,9 @@ export default function VeteranStoryForm() {
                     type="submit"
                     variant="donate"
                     size="lg"
+                    disabled={submitting}
                 >
-                    {t('submit')}
+                    {submitting ? "Submitting..." : t('submit')}
                 </Button>
             </div>
         </form>

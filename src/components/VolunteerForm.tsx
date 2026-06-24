@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "@/components/ui/Button";
-import { useId, useState } from "react";
+import { useId, useState, type FormEventHandler } from "react";
 import { useTranslations } from 'next-intl';
 import { Link } from "@/i18n/navigation";
 
@@ -27,8 +27,43 @@ export default function VolunteerForm() {
         );
     };
 
+    const [submitting, setSubmitting] = useState(false);
+
+    const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement, SubmitEvent>) => {
+        e.preventDefault();
+        setSubmitting(true);
+
+        try {
+            await window.grecaptcha.enterprise.ready(async () => {
+                const token = await window.grecaptcha.enterprise.execute(
+                    process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!,
+                    { action: "volunteer_form" }
+                );
+
+                const formData = new FormData(e.currentTarget);
+                formData.append("recaptchaToken", token);
+
+                const res = await fetch("/api/form/volunteer", {
+                    method: "POST",
+                    body: formData,
+                });
+
+                if (!res.ok) {
+                    throw new Error("Form submission failed");
+                }
+
+                window.location.href = "/thank-you";
+            });
+        } catch (error) {
+            console.error(error);
+            alert("Something went wrong. Please try again.");
+        } finally {
+            setSubmitting(false);
+        }
+    };
+
     return (
-        <form action="/api/form/volunteer" method="POST" className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid gap-6 sm:grid-cols-2">
                 <div className="sm:col-span-2">
                     <span className="block text-sm font-semibold text-gray-900 mb-4">
@@ -155,8 +190,9 @@ export default function VolunteerForm() {
                     type="submit"
                     variant="donate"
                     size="lg"
+                    disabled={submitting}
                 >
-                    {t('form.submitButton')}
+                    {submitting ? "Submitting..." : t('form.submitButton')}
                 </Button>
             </div>
         </form>
