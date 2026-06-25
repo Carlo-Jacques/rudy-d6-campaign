@@ -29,8 +29,12 @@ export default function VolunteerForm() {
 
     const [submitting, setSubmitting] = useState(false);
 
-    const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement, SubmitEvent>) => {
+    const handleSubmit = async (
+        e: React.SyntheticEvent<HTMLFormElement, SubmitEvent>
+    ) => {
         e.preventDefault();
+
+        const form = e.currentTarget;
         setSubmitting(true);
 
         try {
@@ -40,7 +44,7 @@ export default function VolunteerForm() {
                     { action: "volunteer_form" }
                 );
 
-                const formData = new FormData(e.currentTarget);
+                const formData = new FormData(form);
                 formData.append("recaptchaToken", token);
 
                 const res = await fetch("/api/form/volunteer", {
@@ -52,7 +56,7 @@ export default function VolunteerForm() {
                     throw new Error("Form submission failed");
                 }
 
-                window.location.href = "/thank-you";
+                window.location.href = "/volunteer/thank-you";
             });
         } catch (error) {
             console.error(error);

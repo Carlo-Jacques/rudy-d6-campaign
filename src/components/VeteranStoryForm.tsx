@@ -22,10 +22,10 @@ export default function VeteranStoryForm() {
 
     const [submitting, setSubmitting] = useState(false);
 
-    const handleSubmit = async (
-        e: React.SyntheticEvent<HTMLFormElement, SubmitEvent>
-    ) => {
+    const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement, SubmitEvent>) => {
         e.preventDefault();
+
+        const form = e.currentTarget; // important
         setSubmitting(true);
 
         try {
@@ -35,7 +35,7 @@ export default function VeteranStoryForm() {
                     { action: "veteran_story_form" }
                 );
 
-                const formData = new FormData(e.currentTarget);
+                const formData = new FormData(form);
                 formData.append("recaptchaToken", token);
 
                 const res = await fetch("/api/form/veteran-story", {
@@ -47,7 +47,7 @@ export default function VeteranStoryForm() {
                     throw new Error("Form submission failed");
                 }
 
-                window.location.href = "/thank-you";
+                window.location.href = "/veterans/thank-you";
             });
         } catch (error) {
             console.error(error);
