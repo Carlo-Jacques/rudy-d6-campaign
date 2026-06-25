@@ -167,8 +167,8 @@ export default async function PriorityPage({ params }: Props) {
                     {t_labels('supportDesc')}
                   </p>
                   <div className="space-y-4">
-                    <Button href={t_common('urls.petition')} variant="petition" size="lg" className="w-full justify-center text-lg py-6">
-                      {t_labels('petition')}
+                    <Button href={t_common('urls.volunteer')} variant="petition" size="lg" className="w-full justify-center text-lg py-6">
+                      {t_common('volunteer')}
                     </Button>
                     <Button href={t_common('urls.donate')} variant="donate" size="lg" className="w-full justify-center text-lg py-6" target="_blank">
                       {t_labels('donate')}

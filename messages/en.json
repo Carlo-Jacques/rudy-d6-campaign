@@ -378,6 +378,13 @@
         "title": "Glades First Initiative",
         "sections": [
           {
+            "heading": "Clean Air & Water",
+            "bullets": [
+              "Promote cleaner air for healthier families and communities.",
+              "Protect our waterways through improved drainage, maintenance, and water quality initiatives."
+            ]
+          },
+          {
             "heading": "Affordable, Healthy Housing",
             "bullets": [
               "Safe, affordable housing and improved maintenance of existing neighborhoods are priorities, especially where poverty is high."
