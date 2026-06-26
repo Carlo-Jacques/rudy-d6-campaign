@@ -45,6 +45,12 @@ export default async function EndorsementsPage({
             description: "Rudolph Tinker has received the endorsement of Unions of Palm Beach-treasure Coast AFL-CIO for Palm Beach County Commisioner, District 6.",
         },
         {
+            name: "Bernard Taylor",
+            business: "US Congressional District 21 Candidate",
+            logo: "/img/endorsements/Bernard Taylor.webp",
+            url: "",
+        },
+        {
             name: "Thomas Masters",
             business: "Former Mayor of Riviera Beach",
             logo: "/img/endorsements/Mayor Thomas Masters.webp",
