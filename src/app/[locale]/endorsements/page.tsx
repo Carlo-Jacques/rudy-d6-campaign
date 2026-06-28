@@ -43,6 +43,14 @@ export default async function EndorsementsPage({
             logo: "/img/endorsements/Palm-Beach-AFL-CIO.webp",
             url: "https://flaflcio.org/",
             description: "Rudolph Tinker has received the endorsement of Unions of Palm Beach-treasure Coast AFL-CIO for Palm Beach County Commisioner, District 6.",
+            comment: "Rudolph Tinker has received the endorsement of Unions of Palm Beach-treasure Coast AFL-CIO for Palm Beach County Commisioner, District 6.",
+        },
+        {
+            name: "",
+            business: "Democratic Veterans Caucus of Florida",
+            logo: "/img/endorsements/DVCF Endorsement.webp",
+            url: "",
+            comment: "Dr. Rudolph \"Rudy\" Tinker exemplifies the values of service, integrity, and leadershi[p that our veterans stand for. His dedication to his country, his community, and public service makes him the right choice for Palm Beach County Commissioner District 6.",
         },
         {
             name: "Bernard Taylor",
