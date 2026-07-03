@@ -232,7 +232,10 @@
     "service": {
       "title": "A Legacy of Service",
       "subtitle": "Rudolph Tinker’s Army Journey",
-      "content": "<p>Rudolph \"Rudy\" Tinker enlisted in the <strong>United States Army</strong> in 2002, driven by a deep sense of duty following the events of September 11th. Serving honorably from <strong>2002 to 2005</strong> during the Global War on Terror, Rudy learned the true meaning of leadership, discipline, and sacrifice.</p><p>His service wasn't just about the uniform; it was about protecting the values we hold dear and ensuring that those who serve our country are never forgotten when they return home. Today, he brings that same mission-driven focus to his campaign for County Commission.</p>"
+      "specialistTitle": "U.S. Army Specialist (2002 – 2005)",
+      "specialistContent": "<p class=\"mb-4\">Dr. Rudolph \"Rudy\" Tinker enlisted in the United States Army in 2002, driven by a deep sense of duty following the terrorist attacks of September 11, 2001. He served honorably from 2002 to 2005 during the Global War on Terror, where he learned the true meaning of leadership, discipline, teamwork, and sacrifice.</p><p>His service was never just about wearing the uniform—it was about defending the freedoms we cherish and ensuring that those who answer the call to serve are never forgotten when they return home.</p>",
+      "majorTitle": "U.S. Army Reserve Major (2026 – Present)",
+      "majorContent": "<p class=\"mb-4\">After spending 21 years as a civilian, building a successful career as a professor, licensed general contractor, and community leader, Rudy felt called to serve his country once again. In 2023, he entered the Army's Direct Commission Program, and in 2026 he was commissioned as an Engineer Officer in the United States Army Reserve with the rank of Major. His return to military service reflects his lifelong commitment to serving something greater than himself.</p><p>Today, Rudy brings that same mission-focused leadership, integrity, and commitment to public service to his campaign for Palm Beach County Commission, District 6. Whether serving in uniform or serving his community, Rudy believes leadership means putting people first, solving problems, and always answering the call to serve.</p>"
     },
     "va": {
       "title": "Palm Beach County VA",

@@ -56,26 +56,71 @@ export default async function VeteranPage({
             </header>
 
             {/* Service History Section */}
-            <section>
+            <section className="py-20 sm:py-24 bg-slate-50/50 overflow-hidden">
                 <ContentContainer>
-                    <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-                        <div>
-                            <h2 className="text-sm font-bold uppercase tracking-widest text-patriot-red">
-                                {t('service.subtitle')}
-                            </h2>
-                            <h3 className="mt-2 text-3xl font-extrabold tracking-tight text-black sm:text-4xl">
-                                {t('service.title')}
-                            </h3>
-                            <div className="mt-6 text-lg leading-relaxed text-gray-700" dangerouslySetInnerHTML={{ __html: t.raw('service.content') }} />
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <h2 className="text-sm font-bold uppercase tracking-widest text-patriot-red">
+                            {t('service.subtitle')}
+                        </h2>
+                        <h3 className="mt-2 text-3xl font-extrabold tracking-tight text-black sm:text-4xl">
+                            {t('service.title')}
+                        </h3>
+                    </div>
+
+                    <div className="relative max-w-5xl mx-auto mt-12">
+                        {/* Vertical Timeline Line */}
+                        <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-patriot-red via-patriot-blue to-patriot-blue/20 -translate-x-1/2 hidden sm:block" />
+                        <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-patriot-red via-patriot-blue to-patriot-blue/20 sm:hidden" />
+
+                        {/* Specialist Block (2002 - 2005) */}
+                        <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 items-center mb-16 sm:mb-24">
+                            {/* Dot */}
+                            <div className="absolute left-4 sm:left-1/2 w-4 h-4 rounded-full bg-patriot-red border-4 border-white shadow-md -translate-x-1/2 z-10" />
+
+                            <div className="pl-10 sm:pl-0 sm:pr-8 md:pr-12 sm:text-right">
+                                <h4 className="text-xl md:text-2xl font-bold text-patriot-blue">
+                                    {t('service.specialistTitle')}
+                                </h4>
+                                <div className="mt-4 text-base md:text-lg leading-relaxed text-gray-700 space-y-4" dangerouslySetInnerHTML={{ __html: t.raw('service.specialistContent') }} />
+                            </div>
+
+                            <div className="pl-10 sm:pl-8 md:pl-12">
+                                <div className="relative aspect-[4/5] max-w-sm mx-auto sm:mx-0 overflow-hidden rounded-2xl shadow-xl border border-gray-200 transition-all duration-300 hover:scale-[1.01] hover:shadow-2xl">
+                                    <Image
+                                        src="/img/veterans/Specialist Rudolph Tinker.webp"
+                                        alt="Rudolph Tinker US Army"
+                                        fill
+                                        className="object-cover object-top"
+                                        priority
+                                    />
+                                </div>
+                            </div>
                         </div>
-                        <div className="relative aspect-[4/5] overflow-hidden">
-                            <Image
-                                src="/img/military_rudolph_tinker_portrait_transparent.webp"
-                                alt="Rudolph Tinker Military Portrait"
-                                fill
-                                className="object-cover object-top"
-                                priority
-                            />
+
+                        {/* Major Block (2026 - Present) */}
+                        <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 items-center">
+                            {/* Dot */}
+                            <div className="absolute left-4 sm:left-1/2 w-4 h-4 rounded-full bg-patriot-blue border-4 border-white shadow-md -translate-x-1/2 z-10" />
+
+                            <div className="pl-10 sm:pl-0 sm:pr-8 md:pr-12 order-2 sm:order-1">
+                                <div className="relative aspect-[2/3] max-w-sm mx-auto sm:mr-0 sm:ml-auto overflow-hidden rounded-2xl shadow-xl border border-gray-200 transition-all duration-300 hover:scale-[1.01] hover:shadow-2xl">
+                                    <Image
+                                        src="/img/veterans/Major Rudolph Tinker.webp"
+                                        alt="Major Rudolph Tinker Portrait"
+                                        fill
+                                        style={{ objectPosition: 'center 35%' }}
+                                        className="object-cover"
+                                        priority
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="pl-10 sm:pl-8 md:pl-12 order-1 sm:order-2">
+                                <h4 className="text-xl md:text-2xl font-bold text-patriot-red">
+                                    {t('service.majorTitle')}
+                                </h4>
+                                <div className="mt-4 text-base md:text-lg leading-relaxed text-gray-700 space-y-4" dangerouslySetInnerHTML={{ __html: t.raw('service.majorContent') }} />
+                            </div>
                         </div>
                     </div>
                 </ContentContainer>
