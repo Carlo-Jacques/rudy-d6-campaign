@@ -53,6 +53,26 @@ export default async function EndorsementsPage({
             comment: "Dr. Rudolph \"Rudy\" Tinker exemplifies the values of service, integrity, and leadershi[p that our veterans stand for. His dedication to his country, his community, and public service makes him the right choice for Palm Beach County Commissioner District 6.",
         },
         {
+            name: "",
+            business: "VoteVets",
+            logo: "/img/endorsements/VoteVets-logo+(navy).webp",
+            url: "https://votevets.org/",
+        },
+        {
+            name: "Clara \"Tasha\" Murvin",
+            business: "Vice Mayor of Pahokee",
+            logo: "/img/endorsements/Clara Murvin.webp",
+            url: "",
+            comment: "I wanted to personally share why I choose to endorse Dr. Rudolph \"Rudy\" Tinker for Palm Beach County Commission, District 6.\n\nMy endorsement was not made lightly. It came after prayer, careful thought, listening to you speak, asking questions, and doing my own research.\n\nWhat stood out to me most was [Tinker] willingness to engage with residents, listen before speaking and approach issues with thoughtfulness and respect.\n\nI believe [Tinker] recognizes both the needs and potential of District 6, and that your leadership can help move our communities forward.",
+        },
+        {
+            name: "Allie Howard Biggs",
+            business: "Former City Commissioner & Vice Mayor of Pahokee",
+            logo: "/img/endorsements/Allie Howard Biggs.webp",
+            url: "",
+            comment: "Dr. Rudolph \"Rudy\" Tinker is a man of integrity, dedication, and vision. He understands the needs of our communities and will work tirelessly for a better future District 6.",
+        },
+        {
             name: "Bernard Taylor",
             business: "US Congressional District 21 Candidate",
             logo: "/img/endorsements/Bernard Taylor.webp",
