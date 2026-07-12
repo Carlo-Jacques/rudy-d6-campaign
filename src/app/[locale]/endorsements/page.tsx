@@ -59,6 +59,13 @@ export default async function EndorsementsPage({
             url: "https://votevets.org/",
         },
         {
+            name: "Dr. Robert Rabil",
+            business: "Professor at Florida Atlantic University",
+            logo: "/img/endorsements/Robert Rabil.webp",
+            url: "",
+            comment: "Dr. Rudolph Tinker is one of the most energetic and hardworking people I know. He is multi-talented, and he will get the job done.",
+        },
+        {
             name: "Clara \"Tasha\" Murvin",
             business: "Vice Mayor of Pahokee",
             logo: "/img/endorsements/Clara Murvin.webp",
