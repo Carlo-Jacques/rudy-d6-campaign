@@ -1,0 +1,69 @@
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    background: transparent;
+
+    -webkit-mask-image: linear-gradient(to right,
+            transparent 0%,
+            black 10%,
+            black 90%,
+            transparent 100%);
+
+    mask-image: linear-gradient(to right,
+            transparent 0%,
+            black 10%,
+            black 90%,
+            transparent 100%);
+}
+
+.marquee:hover .track {
+    animation-play-state: paused;
+}
+
+.track {
+    display: flex;
+    width: max-content;
+    animation: moveEndorsements 25s linear infinite;
+}
+
+.item {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 120px;
+    padding: 10px 20px;
+}
+
+.item a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@keyframes moveEndorsements {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 640px) {
+
+    .marquee::before,
+    .marquee::after {
+        width: 40px;
+    }
+}

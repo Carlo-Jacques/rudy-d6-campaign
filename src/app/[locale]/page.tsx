@@ -6,6 +6,7 @@ import PlanSectionClient from "@/components/PlanSectionClient";
 import Hero from "@/components/Hero";
 import NewsSection from "@/components/NewsSection";
 import Testimonials from "@/components/Testimonials";
+import EndorsementMarquee from "@/components/EndorsementMarquee";
 
 export default async function HomePage({
   params,
@@ -20,6 +21,11 @@ export default async function HomePage({
     <main className="overflow-x-hidden w-full">
       <Hero />
 
+      {/* ENDORSEMENTS */}
+      <section className="w-full py-12">
+        <EndorsementMarquee />
+      </section>
+
       {/* PLEDGE */}
       <section className="text-white w-full bg-patriot-red">
         <div className="mx-auto max-w-7xl px-4 py-16 text-center" style={{ paddingLeft: "calc(1rem + 20px)", paddingRight: "calc(1rem + 20px)" }}>
@@ -27,7 +33,6 @@ export default async function HomePage({
             {t('pledge.title')}
             {t('pledge.description')}
           </h2>
-
         </div>
       </section>
 
