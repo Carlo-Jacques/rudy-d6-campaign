@@ -31,28 +31,32 @@ const endorsements = [
 
 export default function EndorsementMarquee() {
     return (
-        <div className={styles.marquee}>
-            <div className={styles.track}>
-                {[...endorsements, ...endorsements].map((endorsement, index) => (
-                    <div className={styles.item} key={index}>
-                        <a
-                            href={endorsement.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={`Visit ${endorsement.alt}`}
-                            tabIndex={index >= endorsements.length ? -1 : 0}
-                        >
-                            <Image
-                                src={endorsement.src}
-                                alt={index < endorsements.length ? endorsement.alt : ""}
-                                width={180}
-                                height={100}
-                                className={styles.badge}
-                            />
-                        </a>
-                    </div>
-                ))}
+        <section className={styles.endorsementSection}>
+            <h2 className={styles.heading}>Endorsements</h2>
+
+            <div className={styles.marquee}>
+                <div className={styles.track}>
+                    {[...endorsements, ...endorsements].map((endorsement, index) => (
+                        <div className={styles.item} key={index}>
+                            <a
+                                href={endorsement.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={`Visit ${endorsement.alt}`}
+                                tabIndex={index >= endorsements.length ? -1 : 0}
+                            >
+                                <Image
+                                    src={endorsement.src}
+                                    alt={index < endorsements.length ? endorsement.alt : ""}
+                                    width={180}
+                                    height={100}
+                                    className={styles.badge}
+                                />
+                            </a>
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
+        </section>
     );
 }

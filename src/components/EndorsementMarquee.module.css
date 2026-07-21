@@ -16,6 +16,11 @@
             transparent 100%);
 }
 
+.endorsementSection {
+    padding: 24px 0;
+    background: transparent;
+}
+
 .marquee:hover .track {
     animation-play-state: paused;
 }
@@ -48,6 +53,14 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+.heading {
+    margin: 0 0 16px;
+    color: #173f35;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    text-align: center;
 }
 
 @keyframes moveEndorsements {
