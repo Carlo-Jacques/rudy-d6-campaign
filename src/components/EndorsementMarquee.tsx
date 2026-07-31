@@ -27,6 +27,19 @@ const endorsements = [
         alt: "VoteVets",
         href: "https://votevets.org/",
     },
+
+    {
+        src: "/img/endorsements/emgage_action_florida.webp",
+        alt: "Emgage Action Florida",
+        href: "https://emgageaction.org/",
+    },
+
+    {
+        src: "/img/endorsements/palm beach county democratic black caucus.webp",
+        alt: "Palm Beach County Democratic Black Caucus",
+        href: "https://pbcdbc.org/",
+    },
+
 ];
 
 export default function EndorsementMarquee() {

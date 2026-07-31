@@ -50,47 +50,55 @@ export default function Hero() {
                 </div>
 
                 {/*
-                  NAV-SAFE TOP OFFSET: --nav-h defaults to 96px below. Replace 96px with
-                  your actual fixed navbar height (or expose it as a CSS var from the
-                  Navbar component itself) so this stays correct if the navbar ever changes.
-                  We deliberately do NOT vertically-center this block anymore: centering
-                  a block that can grow (e.g. once the playlist card sits inside it) will
-                  push its top edge above the viewport and under the fixed navbar before
-                  the user scrolls. Top-anchoring with a guaranteed offset is the only way
-                  to make "never behind the navbar" true regardless of content height.
+                  --nav-h is 150px: your Header.tsx animates between 150px (unscrolled,
+                  top of homepage, transparent bg) and 70px (scrolled/other pages). 150px
+                  is the worst case that's actually visible pre-scroll, so that's what we
+                  reserve here via paddingTop.
+
+                  This section grows with its content (min-h, not h) — it is NOT clipped
+                  to one viewport. The inner column uses min-h-[calc(100dvh-var(--nav-h))]
+                  so that on a normal viewport the badge/headline/subtitle/button/playlist
+                  are spread out with even space between them (justify-between) filling the
+                  screen below the navbar; if the content ever needs more room than that
+                  (long translations, big playlist card, small phone), the column simply
+                  grows taller than that minimum and the page scrolls — nothing is clipped
+                  or squeezed.
                 */}
                 <div
-                    className="relative z-10 mx-auto flex min-h-[100dvh] max-w-7xl flex-col justify-center px-6 sm:px-10"
+                    className="relative z-10 mx-auto flex max-w-7xl flex-col px-6 sm:px-10"
                     style={{
                         paddingLeft: "calc(1.5rem + 20px)",
                         paddingRight: "calc(1.5rem + 20px)",
-                        paddingTop: "calc(var(--nav-h, 96px) + 2rem)",
-                        paddingBottom: "4rem",
+                        paddingTop: "var(--nav-h, 150px)",
+                        paddingBottom: "3rem",
                     }}
                 >
-                    <div className="grid w-full grid-cols-1 items-end gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
-                        {/* Left - message + playlist */}
-                        <div className="flex max-w-2xl flex-col justify-center">
+                    <div
+                        className="grid w-full grid-cols-1 gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8"
+                        style={{ minHeight: "calc(100dvh - var(--nav-h, 150px) - 3rem)" }}
+                    >
+                        {/* Left - message + playlist, evenly spaced top to bottom */}
+                        <div className="flex h-full flex-col justify-between">
                             <div className="inline-flex w-fit items-center gap-2 rounded-sm border-2 border-[#F5EFE3] bg-[#C8372E] px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#F5EFE3]">
                                 <span className="h-1.5 w-1.5 rounded-full bg-[#F5EFE3]" aria-hidden="true" />
                                 {t('badge')}
                             </div>
 
-                            <h1 className="font-display mt-6 text-[3rem] font-black uppercase leading-[0.92] tracking-tight text-[#F5EFE3] sm:text-[4.5rem] lg:text-[5.5rem]">
+                            <h1 className="font-display text-[3rem] font-black uppercase leading-[0.92] tracking-tight text-[#F5EFE3] sm:text-[4.5rem] lg:text-[5.5rem]">
                                 {t('title')}
                             </h1>
 
-                            <p className="mt-5 max-w-lg text-base text-[#F5EFE3]/80 sm:text-lg">
+                            <p className="max-w-lg text-base text-[#F5EFE3]/80 sm:text-lg">
                                 {t('subtitle')}
                             </p>
 
-                            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                            <div className="flex flex-col gap-3 sm:flex-row">
                                 <Button href="#plan" className="rounded-full text-center" variant="plan" size="md">
                                     {t('seePoints')}
                                 </Button>
                             </div>
 
-                            <div className="mt-12">
+                            <div className="max-w-sm">
                                 <HeroPlaylist />
                             </div>
                         </div>
