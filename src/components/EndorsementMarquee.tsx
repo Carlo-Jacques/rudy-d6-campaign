@@ -35,7 +35,7 @@ const endorsements = [
     },
 
     {
-        src: "/img/endorsements/palm beach county democratic black caucus.webp",
+        src: "/img/endorsements/palm-beach-county-democratic-black-caucus.webp",
         alt: "Palm Beach County Democratic Black Caucus",
         href: "https://pbcdbc.org/",
     },
